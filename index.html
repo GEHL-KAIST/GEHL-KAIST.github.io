@@ -259,6 +259,8 @@ main{display:block}
 .pub .doi{font-family:var(--mono);font-size:12.5px;margin-left:6px}
 @media (max-width:600px){ .pub-year{grid-template-columns:1fr;gap:8px} .pub-year .y{font-size:20px} }
 .legend{font-size:13px;color:var(--muted);margin-top:14px}
+.legend.above{margin:0 0 6px;font-size:15.5px;white-space:nowrap}
+@media (max-width:760px){ .legend.above{white-space:normal} }
 .legend .member{text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:3px;color:var(--fg)}
 
 /* Research (card per area) */
@@ -3018,8 +3020,8 @@ footer li{margin:4px 0}
       '<div class="tabs" role="tablist"><button role="tab" data-pt="journal" aria-selected="' + (pubState.type === 'journal') + '">Journal papers (' + jn + ')</button><button role="tab" data-pt="conference" aria-selected="' + (pubState.type === 'conference') + '">Conference proceedings (' + cn + ')</button></div>' +
       '<div class="filters"><button data-py="all" aria-pressed="' + (pubState.year === 'all') + '">All years</button>' + ys.map(function (y) { return '<button data-py="' + y + '" aria-pressed="' + (pubState.year === y) + '">' + y + '</button>'; }).join('') +
       '<input type="search" id="pub-q" placeholder="Search title, author, journal" value="' + attr(pubState.q) + '" aria-label="Search publications"></div>';
+    html += '<p class="legend above">' + '<span class="member">Underlined</span> authors are GEHL members. * marks the corresponding author. Numbering counts down from the most recent paper.</p>';
     html += shown.length ? pubListByYear(shown, shown.length) : '<div class="empty">No publications match.</div>';
-    html += '<p class="legend"><span class="member">Underlined</span> authors are GEHL members. * marks the corresponding author. Numbering counts down from the most recent paper.</p>';
     return html + '</div>';
   }
 
@@ -3051,8 +3053,8 @@ footer li{margin:4px 0}
     var kinds = {}; items.forEach(function (n) { kinds[n.kind || 'news'] = (kinds[n.kind || 'news'] || 0) + 1; });
     var shown = newsState.kind === 'all' ? items : items.filter(function (n) { return (n.kind || 'news') === newsState.kind; });
     var html = pageBand('news', 'News and Gallery') + '<div class="wrap">' +
-      '<div class="tabs" role="tablist">' + er.list.map(function (e) { return '<button role="tab" data-era="' + attr(e) + '" aria-selected="' + (newsState.era === e) + '">' + (e === 'before' ? 'Before KAIST (2021–2025)' : esc(e)) + ' <span class="muted">' + er.counts[e] + '</span></button>'; }).join('') + '</div>' +
-      '<div class="filters"><button data-nk="all" aria-pressed="' + (newsState.kind === 'all') + '">All</button>' + Object.keys(kinds).map(function (k) { return '<button data-nk="' + attr(k) + '" aria-pressed="' + (newsState.kind === k) + '">' + esc(kindLabel(k)) + ' ' + kinds[k] + '</button>'; }).join('') + '</div>';
+      '<div class="tabs" role="tablist">' + er.list.map(function (e) { return '<button role="tab" data-era="' + attr(e) + '" aria-selected="' + (newsState.era === e) + '">' + (e === 'before' ? 'Before KAIST (2021–2025)' : esc(e)) + ' <span class="muted">(' + er.counts[e] + ')</span></button>'; }).join('') + '</div>' +
+      '<div class="filters"><button data-nk="all" aria-pressed="' + (newsState.kind === 'all') + '">All</button>' + Object.keys(kinds).map(function (k) { return '<button data-nk="' + attr(k) + '" aria-pressed="' + (newsState.kind === k) + '">' + esc(kindLabel(k)) + ' (' + kinds[k] + ')</button>'; }).join('') + '</div>';
     html += shown.length ? '<div class="news-list">' + shown.map(newsItem).join('') + '</div>' : '<div class="empty">Nothing here yet.</div>';
     return html + '</div>';
   }
