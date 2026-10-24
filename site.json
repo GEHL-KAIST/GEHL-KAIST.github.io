@@ -736,46 +736,117 @@
     "nh": 1282,
     "src": "img/uploads/330ddc1c779edb545ea3d9e5f24da96d.jpg"
    }
-  }
- ],
- "alumni": [
-  {
-   "name": "Jinyong Kim",
-   "level": "M.S.",
-   "years": "2024 – 2025",
-   "note": "Department of Civil and Environmental Engineering, KAIST; primary advisor Prof. Jinhyun Choo (SNU)"
   },
   {
+   "id": "haewonseo-alumni",
    "name": "Haewon Seo",
-   "level": "Undergraduate",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate",
    "years": "2026",
-   "note": "Department of Civil and Environmental Engineering, KAIST"
+   "now": "Department of Civil and Environmental Engineering, KAIST",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   },
   {
+   "id": "nasutionahmadcarleone-alumni",
    "name": "Nasution Ahmad Carleone",
-   "level": "Undergraduate",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate",
    "years": "2025 – 2026",
-   "note": "Department of Civil and Environmental Engineering, KAIST"
+   "now": "Department of Civil and Environmental Engineering, KAIST",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   },
   {
+   "id": "jinyongkim-alumni",
+   "name": "Jinyong Kim",
+   "degree": "",
+   "group": "ms",
+   "role": "M.S. Student",
+   "status": "alumni",
+   "alumniLevel": "M.S.",
+   "years": "2024 – 2025",
+   "now": "Department of Civil and Environmental Engineering, KAIST; primary advisor Prof. Jinhyun Choo (SNU)",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
+  },
+  {
+   "id": "sungwoojoo-alumni",
    "name": "Sungwoo Joo",
-   "level": "Undergraduate",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate",
    "years": "2025",
-   "note": "Department of Chemical and Biomolecular Engineering, KAIST"
+   "now": "Department of Chemical and Biomolecular Engineering, KAIST",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   },
   {
+   "id": "sumincha-alumni",
    "name": "Sumin Cha",
-   "level": "Undergraduate",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate",
    "years": "2025",
-   "note": "Department of Mechanical Engineering, POSTECH"
+   "now": "Department of Mechanical Engineering, POSTECH",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   },
   {
+   "id": "tiffanylim-alumni",
    "name": "Tiffany Lim",
-   "level": "Undergraduate intern",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate intern",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate intern",
    "years": "2025",
-   "note": "Department of Environmental Earth Systems Science, NTU Singapore"
+   "now": "Department of Environmental Earth Systems Science, NTU Singapore",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   }
  ],
+ "alumni": [],
  "publications": [
   {
    "id": "j27",

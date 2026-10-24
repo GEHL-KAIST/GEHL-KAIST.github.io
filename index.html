@@ -171,7 +171,7 @@ main{display:block}
 
 /* People (SEED-style grid) */
 .pi-block{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:40px;align-items:start;padding:28px;margin-bottom:28px}
-.pi-block .avatar{width:100%;height:auto;aspect-ratio:4/5;border-radius:28px}
+.pi-block .avatar{width:100%;height:auto;aspect-ratio:1/1;border-radius:28px}
 .pi-block h3{font-size:26px}
 .pi-block .role{color:var(--muted);margin-top:4px}
 .pi-block .bio{margin-top:14px;font-size:15.5px}
@@ -191,9 +191,9 @@ main{display:block}
 .pcard .fav{position:relative;overflow:hidden;background:var(--soft)}
 .pcard .fav img{position:absolute;display:block;width:auto;max-width:none}
 .pcard .rpill{justify-self:start;margin-top:2px}
-.pcard .nm{font-family:var(--display);font-weight:700;font-size:17px;color:var(--heading)}
+.pcard .nm{font-family:var(--display);font-weight:700;font-size:22px;color:var(--heading)}
 .pcard:hover .nm{color:var(--brand)}
-.pcard .in{font-size:13.5px;color:var(--muted);line-height:1.4}
+.pcard .in{font-size:15.5px;color:var(--muted);line-height:1.45}
 .rpill .em{font-size:13px;margin-right:6px;letter-spacing:0;line-height:1;display:inline-block}
 .legend-em{font-size:14px;color:var(--fg);margin:0 0 10px}
 .rpill{display:inline-flex;align-items:center;justify-self:start;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:0 10px;height:22px;border-radius:999px;border:1px solid #B8C2CF;line-height:1;color:#465261;background:#EEF1F5}
@@ -334,7 +334,7 @@ table.projects td.per{font-family:var(--mono);font-size:13px;white-space:nowrap;
 .ko{font-size:14px;color:var(--muted);margin-top:16px}
 
 /* Footer */
-footer{border-top:1px solid var(--line);margin-top:40px;background:var(--surface)}
+footer{border-top:1px solid var(--line);margin-top:40px;background:#F4F4F4}
 footer .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;padding-block:36px;font-size:14px}
 footer .meet .line{white-space:nowrap}
 footer h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
@@ -380,6 +380,8 @@ footer li{margin:4px 0}
 .arow .b{display:flex;gap:6px}
 .arow .b button{font-size:12.5px;padding:4px 8px;border:1px solid var(--line-strong);border-radius:var(--radius)}
 .arow .b button.del{color:var(--accent);border-color:var(--accent)}
+.arow .b button.mv{padding:4px 6px;min-width:26px}
+.arow .b button[disabled]{opacity:.35;cursor:default}
 .thumbs{display:flex;gap:8px;flex-wrap:wrap}
 .thumbs .th{position:relative}
 .thumbs img{width:96px;height:72px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line)}
@@ -1165,46 +1167,117 @@ footer li{margin:4px 0}
     "nh": 1282,
     "src": "img/uploads/330ddc1c779edb545ea3d9e5f24da96d.jpg"
    }
-  }
- ],
- "alumni": [
-  {
-   "name": "Jinyong Kim",
-   "level": "M.S.",
-   "years": "2024 – 2025",
-   "note": "Department of Civil and Environmental Engineering, KAIST; primary advisor Prof. Jinhyun Choo (SNU)"
   },
   {
+   "id": "haewonseo-alumni",
    "name": "Haewon Seo",
-   "level": "Undergraduate",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate",
    "years": "2026",
-   "note": "Department of Civil and Environmental Engineering, KAIST"
+   "now": "Department of Civil and Environmental Engineering, KAIST",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   },
   {
+   "id": "nasutionahmadcarleone-alumni",
    "name": "Nasution Ahmad Carleone",
-   "level": "Undergraduate",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate",
    "years": "2025 – 2026",
-   "note": "Department of Civil and Environmental Engineering, KAIST"
+   "now": "Department of Civil and Environmental Engineering, KAIST",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   },
   {
+   "id": "jinyongkim-alumni",
+   "name": "Jinyong Kim",
+   "degree": "",
+   "group": "ms",
+   "role": "M.S. Student",
+   "status": "alumni",
+   "alumniLevel": "M.S.",
+   "years": "2024 – 2025",
+   "now": "Department of Civil and Environmental Engineering, KAIST; primary advisor Prof. Jinhyun Choo (SNU)",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
+  },
+  {
+   "id": "sungwoojoo-alumni",
    "name": "Sungwoo Joo",
-   "level": "Undergraduate",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate",
    "years": "2025",
-   "note": "Department of Chemical and Biomolecular Engineering, KAIST"
+   "now": "Department of Chemical and Biomolecular Engineering, KAIST",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   },
   {
+   "id": "sumincha-alumni",
    "name": "Sumin Cha",
-   "level": "Undergraduate",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate",
    "years": "2025",
-   "note": "Department of Mechanical Engineering, POSTECH"
+   "now": "Department of Mechanical Engineering, POSTECH",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   },
   {
+   "id": "tiffanylim-alumni",
    "name": "Tiffany Lim",
-   "level": "Undergraduate intern",
+   "degree": "",
+   "group": "ug",
+   "role": "Undergraduate intern",
+   "status": "alumni",
+   "alumniLevel": "Undergraduate intern",
    "years": "2025",
-   "note": "Department of Environmental Earth Systems Science, NTU Singapore"
+   "now": "Department of Environmental Earth Systems Science, NTU Singapore",
+   "interests": [],
+   "education": [],
+   "appointments": [],
+   "aliases": [],
+   "links": {},
+   "photo": "",
+   "photo2": ""
   }
  ],
+ "alumni": [],
  "publications": [
   {
    "id": "j27",
@@ -2553,6 +2626,7 @@ footer li{margin:4px 0}
   try { DATA = JSON.parse(document.getElementById('site-data').textContent); }
   catch (e) { DATA = { lab: {}, research: { areas: [] }, people: [], alumni: [], publications: [], news: [], projects: [], courses: [], culture: {} }; }
   DATA.people = DATA.people || []; DATA.alumni = DATA.alumni || []; DATA.publications = DATA.publications || [];
+  migrateAlumni(DATA);
   DATA.news = DATA.news || []; DATA.projects = DATA.projects || []; DATA.courses = DATA.courses || [];
   DATA.research = DATA.research || { areas: [] }; DATA.lab = DATA.lab || {}; DATA.culture = DATA.culture || {}; DATA.groupPhotos = DATA.groupPhotos || [];
 
@@ -2597,14 +2671,25 @@ footer li{margin:4px 0}
     return '<span class="avatar fav"><img src="' + attr(src) + '" alt="' + attr(p.name) + '" style="height:' + hd.toFixed(2) + '%;top:' + top.toFixed(2) + '%;left:' + left.toFixed(2) + '%"></span>';
   }
   function isAlumnus(p) { return p.status === 'alumni'; }
+  // Plain alumni entries (name/level/years/note) become member records with status "alumni", so every alumnus has a profile and one ordered list.
+  function migrateAlumni(data) {
+    if (!data.alumni || !data.alumni.length) return;
+    function endYear(a) { var m = String(a.years || '').match(/\d{4}(?!.*\d{4})/); return m ? parseInt(m[0], 10) : 0; }
+    var legacy = data.alumni.slice().sort(function (a, b) { return endYear(b) - endYear(a); });
+    legacy.forEach(function (a) {
+      var l = String(a.level || '').toLowerCase(), group = /ph\.?d/.test(l) ? 'phd' : /m\.?s|master/.test(l) ? 'ms' : /postdoc/.test(l) ? 'postdoc' : 'ug';
+      var role = group === 'phd' ? 'Ph.D. Student' : group === 'ms' ? 'M.S. Student' : group === 'postdoc' ? 'Postdoctoral Researcher' : (a.level || 'Undergraduate');
+      var base = String(a.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '') || 'alumnus', id = base + '-alumni', n = 2;
+      while (data.people.some(function (x) { return x.id === id; })) id = base + '-alumni' + (n++);
+      data.people.push({ id: id, name: a.name || '', degree: '', group: group, role: role, status: 'alumni', alumniLevel: a.level || '', years: a.years || '', now: a.note || '', interests: [], education: [], appointments: [], aliases: [], links: {}, photo: '', photo2: '' });
+    });
+    data.alumni = [];
+  }
   function currentPeople() { return DATA.people.filter(function (p) { return !isAlumnus(p); }); }
   var ALUMNI_LEVEL = { phd: 'Ph.D.', ms: 'M.S.', postdoc: 'Postdoc', ug: 'Undergraduate', staff: 'Staff', pi: 'Faculty' };
-  // Alumni list = members marked as alumni (clickable, full profile) + the plain alumni entries, newest first.
+  // Alumni list = members marked as alumni, in the order set in Manage site (every row opens the profile popup).
   function alumniList() {
-    var out = DATA.people.filter(isAlumnus).map(function (p) { return { pid: p.id, name: p.name, level: p.alumniLevel || ALUMNI_LEVEL[p.group] || p.role, years: p.years || '', note: p.now || '' }; });
-    DATA.alumni.forEach(function (a) { out.push(a); });
-    function endYear(a) { var m = String(a.years || '').match(/\d{4}(?!.*\d{4})/); return m ? parseInt(m[0], 10) : 0; }
-    return out.map(function (a, i) { return { a: a, i: i, y: endYear(a) }; }).sort(function (x, y) { return y.y - x.y || x.i - y.i; }).map(function (x) { return x.a; });
+    return DATA.people.filter(isAlumnus).map(function (p) { return { pid: p.id, name: p.name, level: p.alumniLevel || ALUMNI_LEVEL[p.group] || p.role, years: p.years || '', note: p.now || '' }; });
   }
   var GROUPS = [
     { id: 'pi', label: 'Principal Investigator', pill: 'Professor' },
