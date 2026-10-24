@@ -76,6 +76,7 @@ main{display:block}
 .btn.danger{border-color:var(--accent);color:var(--accent)}
 .btn.primary.danger{background:var(--accent);border-color:var(--accent);color:#fff}
 .chip{display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--line-strong);border-radius:999px;color:var(--muted);white-space:nowrap}
+.chip .kem,.filters .kem{font-size:13px;margin-right:5px;letter-spacing:0;line-height:1}
 .chip.kind-award{border-color:var(--accent);color:var(--accent)}
 .chip.kind-publication,.chip.kind-talk{border-color:var(--brand);color:var(--brand)}
 
@@ -2722,6 +2723,10 @@ footer li{margin:4px 0}
   function groupOf(id) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i].id === id) return GROUPS[i]; return { id: id, label: id, pill: id }; }
   var KINDS = { award: 'Award', publication: 'Publication', talk: 'Presentation', welcome: 'Welcome', event: 'Conference', visit: 'Visit', lablife: 'Lab life' };
   function kindLabel(k) { return KINDS[k] || (k ? k.charAt(0).toUpperCase() + k.slice(1) : 'News'); }
+  // category icons, carried over from the old site (🎉 📖 🎤 🎑 🚀) plus two new ones
+  var KIND_EMOJI = { award: '\uD83C\uDF89', publication: '\uD83D\uDCD6', talk: '\uD83C\uDFA4', welcome: '\uD83C\uDF8A', event: '\uD83D\uDE80', visit: '\uD83E\uDD1D', lablife: '\uD83D\uDCF8' };
+  function kindEmoji(k) { return KIND_EMOJI[k] || ''; }
+  function kindTag(k) { var e = kindEmoji(k); return (e ? '<span class="kem">' + e + '</span>' : '') + esc(kindLabel(k)); }
 
   // ---------- author parsing and member matching ----------
   var AUTHOR_RE = /([A-Z][A-Za-z'’\-]+(?:\s[A-Z][A-Za-z'’\-]+)*),?\s+((?:[A-Z]\.?\s?){1,4}?)\*?(?=\s*(?:,|;|$|\sand\s))/g;
@@ -2825,7 +2830,7 @@ footer li{margin:4px 0}
   function newsCard(n) {
     var img = (n.images || []).map(safeUrl).filter(Boolean)[0];
     return '<a class="news-card card" href="#news" data-news="' + attr(n.id) + '">' +
-      '<div class="d"><span>' + esc(fmtDate(n.date, n.dateLabel)) + '</span><span class="chip kind-' + attr(n.kind) + '">' + esc(kindLabel(n.kind)) + '</span></div>' +
+      '<div class="d"><span>' + esc(fmtDate(n.date, n.dateLabel)) + '</span><span class="chip kind-' + attr(n.kind) + '">' + kindTag(n.kind) + '</span></div>' +
       '<h3>' + esc(n.title) + '</h3>' +
       (n.body ? '<p>' + esc(n.body) + '</p>' : (n.who ? '<p>' + esc(n.who) + '</p>' : '')) +
       (img ? '<img src="' + attr(img) + '" alt="" loading="lazy">' : '') +
@@ -2834,7 +2839,7 @@ footer li{margin:4px 0}
   function newsItem(n) {
     var imgs = (n.images || []).map(safeUrl).filter(Boolean);
     return '<article class="news-item" id="news-' + attr(n.id) + '"><div class="d">' + esc(fmtDate(n.date, n.dateLabel)) + '</div><div>' +
-      '<div class="h"><h3>' + esc(n.title) + '</h3><span class="chip kind-' + attr(n.kind) + '">' + esc(kindLabel(n.kind)) + '</span></div>' +
+      '<div class="h"><h3>' + esc(n.title) + '</h3><span class="chip kind-' + attr(n.kind) + '">' + kindTag(n.kind) + '</span></div>' +
       (n.who ? '<div class="who">' + esc(n.who) + '</div>' : '') +
       (n.body ? '<p class="b">' + esc(n.body) + '</p>' : '') +
       (imgs.length ? '<div class="imgs">' + imgs.map(function (u) { return '<img src="' + attr(u) + '" alt="" loading="lazy">'; }).join('') + '</div>' : '') +
@@ -3054,7 +3059,7 @@ footer li{margin:4px 0}
     var shown = newsState.kind === 'all' ? items : items.filter(function (n) { return (n.kind || 'news') === newsState.kind; });
     var html = pageBand('news', 'News and Gallery') + '<div class="wrap">' +
       '<div class="tabs" role="tablist">' + er.list.map(function (e) { return '<button role="tab" data-era="' + attr(e) + '" aria-selected="' + (newsState.era === e) + '">' + (e === 'before' ? 'Before KAIST (2021–2025)' : esc(e)) + ' <span class="muted">(' + er.counts[e] + ')</span></button>'; }).join('') + '</div>' +
-      '<div class="filters"><button data-nk="all" aria-pressed="' + (newsState.kind === 'all') + '">All</button>' + Object.keys(kinds).map(function (k) { return '<button data-nk="' + attr(k) + '" aria-pressed="' + (newsState.kind === k) + '">' + esc(kindLabel(k)) + ' (' + kinds[k] + ')</button>'; }).join('') + '</div>';
+      '<div class="filters"><button data-nk="all" aria-pressed="' + (newsState.kind === 'all') + '">All</button>' + Object.keys(kinds).map(function (k) { return '<button data-nk="' + attr(k) + '" aria-pressed="' + (newsState.kind === k) + '">' + kindTag(k) + ' (' + kinds[k] + ')</button>'; }).join('') + '</div>';
     html += shown.length ? '<div class="news-list">' + shown.map(newsItem).join('') + '</div>' : '<div class="empty">Nothing here yet.</div>';
     return html + '</div>';
   }
@@ -3161,7 +3166,7 @@ footer li{margin:4px 0}
   render();
   try { var msg = sessionStorage.getItem('gehl-toast'); if (msg) { sessionStorage.removeItem('gehl-toast'); toast(msg, 4000); } } catch (e) { }
 
-  window.GEHL = { pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById };
+  window.GEHL = { pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById };
 })();
 </script>
 
