@@ -292,10 +292,11 @@ main{display:block}
 .interests{columns:2;column-gap:40px;margin:0;padding-left:18px;font-size:15px}
 .interests li{break-inside:avoid;margin:4px 0}
 @media (max-width:600px){ .interests{columns:1} }
-table.projects{width:100%;border-collapse:collapse;font-size:14.5px}
+table.projects{width:100%;border-collapse:collapse;font-size:14.5px;table-layout:fixed}
+table.projects .c-title{width:54%} table.projects .c-sponsor{width:22%} table.projects .c-period{width:13%} table.projects .c-role{width:11%}
 table.projects th{text-align:left;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:8px 10px 8px 0;border-bottom:1px solid var(--line-strong)}
 table.projects td{padding:12px 10px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
-table.projects td.per{font-family:var(--mono);font-size:13px;white-space:nowrap;color:var(--muted)}
+table.projects td.per{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .tablewrap{overflow-x:auto}
 @media (max-width:700px){ table.projects{min-width:620px} }
 
@@ -369,7 +370,7 @@ footer li{margin:4px 0}
 .form textarea{min-height:72px;resize:vertical}
 .form textarea.tall{min-height:320px;font-family:var(--mono);font-size:12.5px}
 .form textarea.mid{min-height:150px}
-.form .help{font-size:12.5px;color:var(--muted)}
+.form .help,.admin .body .help{font-size:12.5px;color:var(--muted)}
 .form .actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .form .match{font-size:13px;padding:8px 10px;border-radius:var(--radius);background:var(--soft)}
 .form .match b{font-weight:600}
@@ -2917,9 +2918,8 @@ footer li{margin:4px 0}
       html += '</section>';
     });
     html += '</div>';
-    if (R.interests && R.interests.length) html += '<section class="section"><div class="section-head"><h2>Research interests</h2></div><ul class="interests">' + R.interests.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul></section>';
     var on = DATA.projects.filter(function (p) { return p.status !== 'completed'; }), done = DATA.projects.filter(function (p) { return p.status === 'completed'; });
-    function ptable(list) { return '<div class="tablewrap"><table class="projects"><thead><tr><th>Project</th><th>Sponsor</th><th>Period</th><th>Role</th></tr></thead><tbody>' + list.map(function (p) { return '<tr><td>' + esc(p.title) + '</td><td>' + esc(p.sponsor) + '</td><td class="per">' + esc(p.period) + '</td><td>' + esc(p.role) + '</td></tr>'; }).join('') + '</tbody></table></div>'; }
+    function ptable(list) { return '<div class="tablewrap"><table class="projects"><colgroup><col class="c-title"><col class="c-sponsor"><col class="c-period"><col class="c-role"></colgroup><thead><tr><th>Project</th><th>Sponsor</th><th>Period</th><th>Role</th></tr></thead><tbody>' + list.map(function (p) { return '<tr><td>' + esc(p.title) + '</td><td>' + esc(p.sponsor) + '</td><td class="per">' + esc(p.period) + '</td><td>' + esc(p.role) + '</td></tr>'; }).join('') + '</tbody></table></div>'; }
     html += '<section class="section" id="projects"><div class="section-head"><h2>Projects</h2></div>' + (on.length ? '<div class="eyebrow" style="margin-bottom:10px">Ongoing</div>' + ptable(on) : '') + (done.length ? '<div class="eyebrow" style="margin:28px 0 10px">Completed</div>' + ptable(done) : '') + '</section>';
     return html + '</div>';
   }
