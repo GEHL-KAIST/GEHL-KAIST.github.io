@@ -309,8 +309,17 @@
     "LinkedIn": "https://www.linkedin.com/in/kil-wan-ko-16b12118b/",
     "CV": "https://drive.google.com/file/d/1zBMg1QisFHH7Hp7La9v3d9YR0JtAhXm7/view?usp=drive_link"
    },
-   "photo": "img/uploads/0107665a7096068188fbd9e529011285.jpg",
+   "photo": "img/uploads/ed68f092693d577c79ff817578922110.jpg",
    "photo2": "img/uploads/42ba3a9f0debc5225d9156a914bb1799.jpg",
+   "status": "current",
+   "face": {
+    "cx": 0.5493,
+    "cy": 0.4287,
+    "h": 0.0674,
+    "ar": 1.3333,
+    "nh": 1800,
+    "src": "img/uploads/ed68f092693d577c79ff817578922110.jpg"
+   },
    "bio": "Kil-Wan Ko studies geotechnical earthquake engineering and geohazards: dynamic soil-foundation-structure interaction, soil liquefaction, seismic site response, seismic fault modeling, ground-motion characterization, and the cracking and erosion of levees and dams caused by surface fault rupture. Before joining KAIST in 2025 he worked as a postdoctoral researcher at UC Davis, USC, and UC Berkeley.",
    "awards": [
     "Teaching Excellence Award, Department of Civil and Environmental Engineering, KAIST, 2026",
@@ -330,15 +339,7 @@
     "Member, Earthquake Engineering Society of Korea, 2021 – present",
     "Member, Korean Society of Geotechnical Engineers, 2016 – present"
    ],
-   "title2": "Associate Director, KOCED Geotechnical Centrifuge Testing Center",
-   "face": {
-    "cx": 0.3898,
-    "cy": 0.3639,
-    "h": 0.089,
-    "ar": 0.8475,
-    "nh": 2302,
-    "src": "img/uploads/0107665a7096068188fbd9e529011285.jpg"
-   }
+   "title2": "Associate Director, KOCED Geotechnical Centrifuge Testing Center"
   },
   {
    "id": "donghyeongchoi",
@@ -743,17 +744,28 @@
    "degree": "",
    "group": "ug",
    "role": "Undergraduate",
-   "status": "alumni",
-   "alumniLevel": "Undergraduate",
-   "years": "2026",
-   "now": "Department of Civil and Environmental Engineering, KAIST",
+   "since": "",
+   "affiliation": "",
+   "email": "",
    "interests": [],
    "education": [],
    "appointments": [],
    "aliases": [],
    "links": {},
-   "photo": "",
-   "photo2": ""
+   "photo": "img/uploads/8edfc3f9e051fb9a15a158afa4c68335.jpg",
+   "photo2": "",
+   "status": "alumni",
+   "years": "2026",
+   "now": "Department of Civil and Environmental Engineering, KAIST",
+   "alumniLevel": "Undergraduate",
+   "face": {
+    "cx": 0.7056,
+    "cy": 0.5427,
+    "h": 0.3097,
+    "ar": 0.7502,
+    "nh": 1357,
+    "src": "img/uploads/8edfc3f9e051fb9a15a158afa4c68335.jpg"
+   }
   },
   {
    "id": "nasutionahmadcarleone-alumni",
