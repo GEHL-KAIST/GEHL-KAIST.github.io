@@ -42,11 +42,6 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .brand:hover{text-decoration:none}
 .brand .logo{display:block;height:44px;width:auto;max-width:min(380px,64vw)}
 nav.main{margin-left:auto;display:flex;gap:4px}
-nav.main .dd{position:relative}
-nav.main .dd-menu{display:none;position:absolute;left:0;top:100%;min-width:220px;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:6px;z-index:12}
-nav.main .dd:hover .dd-menu,nav.main .dd:focus-within .dd-menu{display:block}
-nav.main .dd-menu a{font-size:14px;font-weight:400;padding:8px 10px;white-space:nowrap}
-nav.main .dd::after{content:"";position:absolute;left:0;right:0;top:100%;height:8px}
 nav.main a{display:block;padding:8px 10px;border-radius:var(--radius);color:var(--fg);font-size:14.5px;font-weight:500}
 nav.main a:hover{background:var(--soft);text-decoration:none}
 nav.main a[aria-current="page"]{color:var(--brand);box-shadow:inset 0 -2px 0 var(--brand);border-radius:0}
@@ -59,9 +54,6 @@ nav.main a[aria-current="page"]{color:var(--brand);box-shadow:inset 0 -2px 0 var
   nav.main.open{display:flex}
   nav.main a{padding:11px 8px;border-bottom:1px solid var(--line)}
   nav.main a[aria-current="page"]{box-shadow:none;background:var(--soft)}
-  nav.main .dd-menu{display:block;position:static;border:0;box-shadow:none;padding:0 0 0 18px;min-width:0}
-  nav.main .dd-menu a{font-size:14px;border-bottom:1px solid var(--line)}
-  nav.main .dd::after{display:none}
 }
 
 /* Sections */
@@ -196,19 +188,15 @@ main{display:block}
 .pcard{display:grid;gap:10px;padding:22px;align-content:start;color:inherit;text-align:left;min-width:0;transition:transform .15s ease,box-shadow .15s ease}
 .pcard:hover{text-decoration:none;transform:translateY(-2px)}
 .pcard .avatar{width:100%;max-width:260px;aspect-ratio:1/1;height:auto;border-radius:28px;justify-self:center;margin:4px 0 6px}
-.pcard .rpill{justify-self:center}
+.pcard .fav{position:relative;overflow:hidden;background:var(--soft)}
+.pcard .fav img{position:absolute;display:block;width:auto;max-width:none}
+.pcard .rpill{justify-self:start;margin-top:2px}
 .pcard .nm{font-family:var(--display);font-weight:700;font-size:17px;color:var(--heading)}
 .pcard:hover .nm{color:var(--brand)}
 .pcard .in{font-size:13.5px;color:var(--muted);line-height:1.4}
 .rpill .em{font-size:13px;margin-right:6px;letter-spacing:0;line-height:1;display:inline-block}
 .legend-em{font-size:14px;color:var(--fg);margin:0 0 10px}
-.rpill{display:inline-flex;align-items:center;justify-self:start;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:0 10px;height:22px;border-radius:999px;border:1px solid;line-height:1}
-.rpill.g-pi{color:#8A2E1F;border-color:#D9A79A;background:#FBEFEA}
-.rpill.g-postdoc{color:#1E6B45;border-color:#9ECBB1;background:#E9F6EE}
-.rpill.g-phd{color:#174A95;border-color:#9DB9E3;background:#E8EFFA}
-.rpill.g-ms{color:#7A4A05;border-color:#E3C48E;background:#FBF2E1}
-.rpill.g-ug{color:#5B3A8A;border-color:#C4B1E1;background:#F1EBF9}
-.rpill.g-staff{color:#465261;border-color:#B8C2CF;background:#EEF1F5}
+.rpill{display:inline-flex;align-items:center;justify-self:start;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:0 10px;height:22px;border-radius:999px;border:1px solid #B8C2CF;line-height:1;color:#465261;background:#EEF1F5}
 .avatar{display:block;border-radius:var(--radius);object-fit:cover;background:var(--soft);border:1px solid var(--line)}
 .group-title{display:flex;align-items:baseline;gap:12px;margin:30px 0 10px}
 .group-title h3{font-size:16px;font-family:var(--mono);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
@@ -217,6 +205,10 @@ main{display:block}
 .alumni li{list-style:none;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px;display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;align-items:start}
 .alumni li .em{line-height:1.5}
 .alumni .an{font-weight:500}
+.alumni .arow-btn{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;align-items:start;text-align:left;width:100%;color:inherit;font:inherit}
+.alumni li:has(.arow-btn){display:block}
+.alumni .arow-btn .an{color:var(--brand)}
+.alumni .arow-btn:hover .an{text-decoration:underline;text-underline-offset:3px}
 .alumni ul{margin:0;padding:0;display:contents}
 .alumni .lv{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:8px}
 .alumni .nt{display:block;color:var(--muted);font-size:13px}
@@ -389,6 +381,13 @@ footer li{margin:4px 0}
 .thumbs .th{position:relative}
 .thumbs img{width:96px;height:72px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line)}
 .thumbs button{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:var(--fg);color:var(--bg);font-size:12px;line-height:1}
+.thumbs.face-set{align-items:flex-start;gap:14px}
+.thumbs .th.big{display:inline-block;line-height:0}
+.thumbs .th.big img{width:auto;height:200px;max-width:260px;object-fit:contain;cursor:crosshair}
+.thumbs .fbox{position:absolute;border:2px solid var(--accent);border-radius:3px;pointer-events:none;box-shadow:0 0 0 1px rgba(255,255,255,.7)}
+.thumbs.face-set .help{flex:1 1 200px;line-height:1.45}
+.form label.inline{display:inline-flex;align-items:center;gap:8px;margin-top:6px}
+.form label.inline input[type=range]{width:160px;padding:0}
 .inline-confirm{display:inline-flex;gap:6px;align-items:center;font-size:12.5px}
 @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} }
 </style>
@@ -405,10 +404,10 @@ footer li{margin:4px 0}
     <nav class="main" id="main-nav" aria-label="Main">
       <a href="#home" data-nav="home">Home</a>
       <a href="#people" data-nav="people">Team</a>
-      <div class="dd"><a href="#research" data-nav="research">Research</a><div class="dd-menu"><a href="#research">Topics</a><a href="#projects">Projects</a></div></div>
-      <div class="dd"><a href="#publications" data-nav="publications">Publication</a><div class="dd-menu"><a href="#journal">Journal Papers</a><a href="#conference">Conference Proceedings</a></div></div>
+      <a href="#research" data-nav="research">Research</a>
+      <a href="#publications" data-nav="publications">Publication</a>
       <a href="#teaching" data-nav="teaching">Teaching</a>
-      <div class="dd"><a href="#news" data-nav="news">News and Gallery</a><div class="dd-menu" id="news-menu"></div></div>
+      <a href="#news" data-nav="news">News and Gallery</a>
       <a href="#join" data-nav="join">Join Us</a>
     </nav>
   </div>
@@ -471,18 +470,19 @@ footer li{margin:4px 0}
    "Geotechnical centrifuge modeling",
    "Numerical simulation",
    "Analytical modeling",
-   "Probabilistic approaches and uncertainty quantification",
+   "Probabilistic approaches",
+   "Uncertainty quantification",
    "Earthquake case-history analysis"
   ],
-  "founded": "Lab founded at KAIST in 2025",
+  "founded": "Lab founded in 2025",
   "banners": {
    "home": "img/uploads/1fbb799670b14cc64eb95d79283cd4d6.jpg",
-   "research": "img/uploads/18fe3aa108acef41a7893eb4c9cfd103.jpg",
-   "people": "",
-   "publications": "",
-   "teaching": "",
-   "news": "",
-   "join": "",
+   "research": "img/uploads/97bdf79a6e8c7280631d9b8a8942ecab.jpg",
+   "people": "img/uploads/783f913655b88ac957f83e522d98c8b3.jpg",
+   "publications": "img/uploads/5c7fb7c311c633b4f2699d0b24436726.jpg",
+   "teaching": "img/uploads/9775045ef1b653015cea490db31ec403.png",
+   "news": "img/uploads/7a706d87aab23214009b74cff9deb207.jpg",
+   "join": "img/uploads/54460bc6eaa71e4eb29b97ce5a9eb59a.jpg",
    "blossoms": ""
   }
  },
@@ -755,7 +755,15 @@ footer li{margin:4px 0}
     "Member, Earthquake Engineering Society of Korea, 2021 – present",
     "Member, Korean Society of Geotechnical Engineers, 2016 – present"
    ],
-   "title2": "Associate Director, KOCED Geotechnical Centrifuge Testing Center"
+   "title2": "Associate Director, KOCED Geotechnical Centrifuge Testing Center",
+   "face": {
+    "cx": 0.3898,
+    "cy": 0.3639,
+    "h": 0.089,
+    "ar": 0.8475,
+    "nh": 2302,
+    "src": "img/uploads/0107665a7096068188fbd9e529011285.jpg"
+   }
   },
   {
    "id": "donghyeongchoi",
@@ -764,6 +772,8 @@ footer li{margin:4px 0}
    "group": "postdoc",
    "role": "Postdoctoral Researcher",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Seismic incoherency"
@@ -773,9 +783,21 @@ footer li{margin:4px 0}
     "M.S., Civil and Environmental Engineering, KAIST, 2021",
     "B.S., Geological Science, Pusan National University, 2019"
    ],
+   "appointments": [],
    "aliases": [
     "Choi, D. H."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/604cdc4d11798516471fce1c831adc6b.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4773,
+    "cy": 0.3658,
+    "h": 0.1686,
+    "ar": 0.7085,
+    "nh": 868,
+    "src": "img/uploads/604cdc4d11798516471fce1c831adc6b.jpg"
+   }
   },
   {
    "id": "hwanwooseo",
@@ -784,6 +806,8 @@ footer li{margin:4px 0}
    "group": "postdoc",
    "role": "Postdoctoral Researcher",
    "since": "Summer 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Ground motion modeling",
     "Geophysical investigation"
@@ -792,32 +816,62 @@ footer li{margin:4px 0}
     "Ph.D., Disaster Management Engineering, UNIST, 2025",
     "B.S., Environmental Science and Engineering, UNIST, 2019"
    ],
+   "appointments": [],
    "aliases": [
     "Seo, H."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/ca001fbd17cc4c0f76da776b5ad157c6.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.49,
+    "cy": 0.35,
+    "h": 0.191,
+    "ar": 0.7093023255813954,
+    "nh": 344,
+    "src": "img/uploads/ca001fbd17cc4c0f76da776b5ad157c6.jpg"
+   }
   },
   {
    "id": "jaewookang",
    "name": "Jaewoo Kang",
+   "degree": "",
    "group": "phd",
    "role": "Ph.D. Student",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Dynamic soil-foundation-structure interaction"
    ],
    "education": [
     "B.S., Civil and Environmental Engineering, KAIST, 2023"
    ],
+   "appointments": [],
    "aliases": [
     "Kang, J."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/2e6c66ebd9e0abe7f786123078ac1403.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4625,
+    "cy": 0.4313,
+    "h": 0.2284,
+    "ar": 0.75,
+    "nh": 832,
+    "src": "img/uploads/2e6c66ebd9e0abe7f786123078ac1403.jpg"
+   }
   },
   {
    "id": "jinyongkim",
    "name": "Jinyong Kim",
+   "degree": "",
    "group": "phd",
    "role": "Ph.D. Student",
    "since": "Spring 2027",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Dynamic soil-foundation-structure interaction"
@@ -826,64 +880,124 @@ footer li{margin:4px 0}
     "M.S., Civil and Environmental Engineering, KAIST, 2026",
     "B.S., Civil Engineering, Kyung Hee University, 2023"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, J."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/53fde91f37c0dada6bfb07f25b460bfb.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4511,
+    "cy": 0.2879,
+    "h": 0.1399,
+    "ar": 0.75,
+    "nh": 1432,
+    "src": "img/uploads/53fde91f37c0dada6bfb07f25b460bfb.jpg"
+   }
   },
   {
    "id": "gunhakkim",
    "name": "Gunhak Kim",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Spring 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Topographic effects on site amplification"
    ],
    "education": [
     "B.S., Civil and Architectural Engineering, Sungkyunkwan University, 2026"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, G."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/8730b658673d6be2d1478ea3ed757729.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.5944,
+    "cy": 0.2958,
+    "h": 0.2185,
+    "ar": 0.7503,
+    "nh": 857,
+    "src": "img/uploads/8730b658673d6be2d1478ea3ed757729.jpg"
+   }
   },
   {
    "id": "changsungyim",
    "name": "Changsung Yim",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Fall 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Centrifuge and numerical modeling of blast-induced ground response"
    ],
    "education": [
     "B.S., Civil Engineering, Kyung Hee University, 2026"
    ],
+   "appointments": [],
    "aliases": [
     "Yim, C."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/9746336097795087e962259e15e82fa3.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4032,
+    "cy": 0.3521,
+    "h": 0.3878,
+    "ar": 0.75,
+    "nh": 1536,
+    "src": "img/uploads/9746336097795087e962259e15e82fa3.jpg"
+   }
   },
   {
    "id": "minseonglee",
    "name": "Minseong Lee",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Spring 2027",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Geophysical investigation"
    ],
    "education": [
     "B.S., Civil Engineering, Kyung Hee University, 2027"
    ],
+   "appointments": [],
    "aliases": [
     "Lee, M."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/69c3b0b5ab25c75435bac72fa965ce27.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.5167,
+    "cy": 0.3021,
+    "h": 0.2151,
+    "ar": 0.75,
+    "nh": 972,
+    "src": "img/uploads/69c3b0b5ab25c75435bac72fa965ce27.jpg"
+   }
   },
   {
    "id": "hyelimpark",
    "name": "Hyelim Park",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Spring 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Probabilistic liquefaction hazard assessment"
@@ -891,69 +1005,162 @@ footer li{margin:4px 0}
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Park, H."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/90bddd809654f7cb5948ecf9d23f661f.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.3776,
+    "cy": 0.3337,
+    "h": 0.2168,
+    "ar": 0.7496,
+    "nh": 1414,
+    "src": "img/uploads/90bddd809654f7cb5948ecf9d23f661f.jpg"
+   }
   },
   {
    "id": "kyeongminnoh",
    "name": "Kyeongmin Noh",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Ground motion modeling"
    ],
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Noh, K."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/905ccab9111f3028e89ab42e3f4f3016.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.3843,
+    "cy": 0.3427,
+    "h": 0.149,
+    "ar": 0.7502,
+    "nh": 1321,
+    "src": "img/uploads/905ccab9111f3028e89ab42e3f4f3016.jpg"
+   }
   },
   {
    "id": "wonilkim",
    "name": "Wonil Kim",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Fall 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [],
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, W."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/b62f4621904d1085fb011d97c3e86a86.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.47,
+    "cy": 0.25,
+    "h": 0.2,
+    "ar": 0.75,
+    "nh": 1152,
+    "src": "img/uploads/b62f4621904d1085fb011d97c3e86a86.jpg"
+   }
   },
   {
    "id": "chanseonlee",
    "name": "Chan Seon Lee",
+   "degree": "",
    "group": "staff",
    "role": "Administrative Assistant",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Lee, C. S."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.5249,
+    "cy": 0.4826,
+    "h": 0.0871,
+    "ar": 1,
+    "nh": 1280,
+    "src": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg"
+   }
   },
   {
    "id": "sungboklee",
    "name": "Sung-Bok Lee",
+   "degree": "",
    "group": "staff",
    "role": "Researcher and Operations Manager",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Lee, S. B."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/f26dab579d7b7aac5d9c780b95b4e4ed.png",
+   "photo2": "",
+   "face": {
+    "cx": 0.5535,
+    "cy": 0.3524,
+    "h": 0.3089,
+    "ar": 1,
+    "nh": 354,
+    "src": "img/uploads/f26dab579d7b7aac5d9c780b95b4e4ed.png"
+   }
   },
   {
    "id": "yonghyunkang",
    "name": "Yonghyun Kang",
+   "degree": "",
    "group": "staff",
    "role": "Research Engineer",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Kang, Y."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/330ddc1c779edb545ea3d9e5f24da96d.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4894,
+    "cy": 0.3677,
+    "h": 0.3976,
+    "ar": 0.9984,
+    "nh": 1282,
+    "src": "img/uploads/330ddc1c779edb545ea3d9e5f24da96d.jpg"
+   }
   }
  ],
  "alumni": [
@@ -2369,6 +2576,31 @@ footer li{margin:4px 0}
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="hsl(' + hue + ',30%,90%)"/><path d="M0 150 Q50 120 100 150 T200 150 V200 H0z" fill="hsl(' + hue + ',28%,82%)"/><text x="100" y="118" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="600" fill="hsl(' + hue + ',38%,30%)">' + esc(initials(person.name).toUpperCase()) + '</text></svg>';
     return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
   }
+  // Card photo framed on the detected face, so faces come out the same size on every card (PI excluded).
+  // face = {cx, cy, h, ar, nh}: face centre and box height as fractions of the photo, photo aspect ratio, natural height.
+  var FACE_T = 0.19, FACE_CY = 0.27;   // face box = 19% of the card height, centred 27% from the top (matches the preferred reference crop)
+  function cardPhoto(p) {
+    var src = avatarSrc(p), f = p.face;
+    if (!f || p.group === 'pi' || !safeUrl(p.photo) || f.src !== p.photo || !(f.h > 0) || !(f.ar > 0)) return '<img class="avatar" src="' + attr(src) + '" alt="' + attr(p.name) + '">';
+    var s = FACE_T / f.h, cover = Math.max(1, 1 / f.ar), smax = Math.max(cover, (f.nh || 1200) / 300);
+    // a tight head shot cannot be made smaller than the square crop allows: leave it as the plain crop
+    if (s < cover * 0.98) return '<img class="avatar" src="' + attr(src) + '" alt="' + attr(p.name) + '">';
+    s = Math.min(Math.max(s, cover), smax);
+    var hd = s * 100, wd = s * f.ar * 100;                     // displayed size, % of the square box
+    var top = FACE_CY * 100 - f.cy * hd, left = 50 - f.cx * wd;
+    top = Math.min(0, Math.max(100 - hd, top)); left = Math.min(0, Math.max(100 - wd, left));
+    return '<span class="avatar fav"><img src="' + attr(src) + '" alt="' + attr(p.name) + '" style="height:' + hd.toFixed(2) + '%;top:' + top.toFixed(2) + '%;left:' + left.toFixed(2) + '%"></span>';
+  }
+  function isAlumnus(p) { return p.status === 'alumni'; }
+  function currentPeople() { return DATA.people.filter(function (p) { return !isAlumnus(p); }); }
+  var ALUMNI_LEVEL = { phd: 'Ph.D.', ms: 'M.S.', postdoc: 'Postdoc', ug: 'Undergraduate', staff: 'Staff', pi: 'Faculty' };
+  // Alumni list = members marked as alumni (clickable, full profile) + the plain alumni entries, newest first.
+  function alumniList() {
+    var out = DATA.people.filter(isAlumnus).map(function (p) { return { pid: p.id, name: p.name + (p.degree ? ', ' + p.degree : ''), level: p.alumniLevel || ALUMNI_LEVEL[p.group] || p.role, years: p.years || '', note: p.now || '' }; });
+    DATA.alumni.forEach(function (a) { out.push(a); });
+    function endYear(a) { var m = String(a.years || '').match(/\d{4}(?!.*\d{4})/); return m ? parseInt(m[0], 10) : 0; }
+    return out.map(function (a, i) { return { a: a, i: i, y: endYear(a) }; }).sort(function (x, y) { return y.y - x.y || x.i - y.i; }).map(function (x) { return x.a; });
+  }
   var GROUPS = [
     { id: 'pi', label: 'Principal Investigator', pill: 'Professor' },
     { id: 'postdoc', label: 'Postdoctoral Researchers', pill: 'Postdoctoral Researcher' },
@@ -2508,7 +2740,6 @@ footer li{margin:4px 0}
   // ---------- views ----------
   function viewHome() {
     var L = DATA.lab, recent = sortByDateDesc(DATA.news).slice(0, L.homeNewsCount || 3);
-    var current = DATA.people.filter(function (p) { return p.group !== 'staff'; }).length;
     var jn = DATA.publications.filter(function (p) { return p.type === 'journal'; }).length;
     var cn = DATA.publications.filter(function (p) { return p.type === 'conference'; }).length;
     var pr = DATA.projects.filter(function (p) { return p.status === 'ongoing'; }).length;
@@ -2593,8 +2824,8 @@ footer li{margin:4px 0}
 
   var peopleFilter = 'all';
   function viewPeople() {
-    var pi = DATA.people.filter(function (p) { return p.group === 'pi'; });
-    var rest = DATA.people.filter(function (p) { return p.group !== 'pi'; });
+    var pi = currentPeople().filter(function (p) { return p.group === 'pi'; });
+    var rest = currentPeople().filter(function (p) { return p.group !== 'pi'; });
     var counts = {}; rest.forEach(function (p) { counts[p.group] = (counts[p.group] || 0) + 1; });
     var html = pageBand('people', 'Team') + '<div class="wrap">';
     pi.forEach(function (p) {
@@ -2611,18 +2842,22 @@ footer li{margin:4px 0}
     var shown = peopleFilter === 'all' ? rest : rest.filter(function (p) { return p.group === peopleFilter; });
     html += '<div class="people">' + shown.map(function (p) {
       return '<button class="card pcard" data-person="' + attr(p.id) + '">' +
-        '<span class="rpill g-' + attr(p.group) + '"><span class="em">' + (EMOJI[p.group] || '') + '</span>' + esc(groupOf(p.group).pill) + '</span>' +
-        '<img class="avatar" src="' + attr(avatarSrc(p)) + '" alt="' + attr(p.name) + '">' +
+        cardPhoto(p) +
+        '<span class="rpill"><span class="em">' + (EMOJI[p.group] || '') + '</span>' + esc(groupOf(p.group).pill) + '</span>' +
         '<span class="nm">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</span>' +
         '<span class="in">' + esc((p.interests || []).join(', ') || p.affiliation || p.role) + '</span></button>';
     }).join('') + '</div>';
-    if (DATA.alumni.length) {
-      var ac = {}; DATA.alumni.forEach(function (a) { var k = levelBucket(a.level); ac[k] = (ac[k] || 0) + 1; });
-      var shownAl = alumniFilter === 'all' ? DATA.alumni : DATA.alumni.filter(function (a) { return levelBucket(a.level) === alumniFilter; });
-      html += '<div class="group-title" style="margin-top:44px"><h3>Alumni and past members</h3><span class="count">' + DATA.alumni.length + '</span></div>' +
-        '<div class="pills" role="group" aria-label="Filter alumni"><button data-af="all" aria-pressed="' + (alumniFilter === 'all') + '">All <span class="c">' + DATA.alumni.length + '</span></button>' +
+    var al = alumniList();
+    if (al.length) {
+      var ac = {}; al.forEach(function (a) { var k = levelBucket(a.level); ac[k] = (ac[k] || 0) + 1; });
+      var shownAl = alumniFilter === 'all' ? al : al.filter(function (a) { return levelBucket(a.level) === alumniFilter; });
+      html += '<div class="group-title" style="margin-top:44px"><h3>Alumni and past members</h3><span class="count">' + al.length + '</span></div>' +
+        '<div class="pills" role="group" aria-label="Filter alumni"><button data-af="all" aria-pressed="' + (alumniFilter === 'all') + '">All <span class="c">' + al.length + '</span></button>' +
         ALUMNI_BUCKETS.map(function (bk) { return ac[bk[0]] ? '<button data-af="' + bk[0] + '" aria-pressed="' + (alumniFilter === bk[0]) + '">' + (EMOJI[bk[0]] ? EMOJI[bk[0]] + ' ' : '') + esc(bk[1]) + ' <span class="c">' + ac[bk[0]] + '</span></button>' : ''; }).join('') + '</div>' +
-        (shownAl.length ? '<div class="alumni"><ul>' + shownAl.map(function (a) { return '<li><span class="em">' + levelEmoji(a.level) + '</span><div class="al"><span class="an">' + esc(a.name) + '</span><span class="lv">' + esc(a.level) + (a.years ? ' · ' + esc(a.years) : '') + '</span>' + (a.note ? '<span class="nt">' + esc(a.note) + '</span>' : '') + '</div></li>'; }).join('') + '</ul></div>' : '<div class="empty">No alumni in this group yet.</div>');
+        (shownAl.length ? '<div class="alumni"><ul>' + shownAl.map(function (a) {
+          var body = '<span class="em">' + levelEmoji(a.level) + '</span><span class="al"><span class="an">' + esc(a.name) + '</span><span class="lv">' + esc(a.level) + (a.years ? ' · ' + esc(a.years) : '') + '</span>' + (a.note ? '<span class="nt">' + esc(a.note) + '</span>' : '') + '</span>';
+          return a.pid ? '<li><button class="arow-btn" data-person="' + attr(a.pid) + '" title="Open profile">' + body + '</button></li>' : '<li>' + body + '</li>';
+        }).join('') + '</ul></div>' : '<div class="empty">No alumni in this group yet.</div>');
     }
     return html + '</div>';
   }
@@ -2642,9 +2877,11 @@ footer li{margin:4px 0}
     return '<div class="modal" id="person-modal" role="dialog" aria-modal="true" aria-labelledby="pm-title"><div class="dlg">' +
       '<button class="close" data-close aria-label="Close">✕</button>' +
       '<div class="side"><img class="avatar" src="' + attr(avatarSrc(p, 'popup')) + '" alt="' + attr(p.name) + '">' + (links ? '<div class="links">' + links + '</div>' : '') + '</div>' +
-      '<div><span class="rpill g-' + attr(p.group) + '"><span class="em">' + (EMOJI[p.group] || '') + '</span>' + esc(p.group === 'pi' ? 'Principal Investigator' : groupOf(p.group).pill) + '</span>' +
+      '<div><span class="rpill"><span class="em">' + (EMOJI[p.group] || '') + '</span>' + esc(isAlumnus(p) ? 'Alumni' : p.group === 'pi' ? 'Principal Investigator' : groupOf(p.group).pill) + '</span>' +
       '<h2 id="pm-title">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</h2>' +
-      '<div class="role">' + esc(p.role) + (p.title2 ? ' · ' + esc(p.title2) : '') + (p.since ? ' · since ' + esc(p.since) : '') + (p.affiliation ? ' · ' + esc(p.affiliation) : '') + '</div>' +
+      (isAlumnus(p)
+        ? '<div class="role">' + esc(p.role) + (p.years ? ', ' + esc(p.years) : '') + (p.affiliation ? ' · ' + esc(p.affiliation) : '') + '</div>' + (p.now ? '<div class="role">Now: ' + esc(p.now) + '</div>' : '')
+        : '<div class="role">' + esc(p.role) + (p.title2 ? ' · ' + esc(p.title2) : '') + (p.since ? ' · since ' + esc(p.since) : '') + (p.affiliation ? ' · ' + esc(p.affiliation) : '') + '</div>') +
       (p.email ? '<div class="em">' + esc(p.email) + '</div>' : '') +
       (p.bio ? '<div class="sec"><p>' + esc(p.bio) + '</p></div>' : '') +
       list('Research interests', p.interests) + list('Education', p.education) + list('Experience', p.appointments) + list('Awards and honors', p.awards) + list('Professional service', p.service) +
@@ -2764,7 +3001,6 @@ footer li{margin:4px 0}
     var app = document.getElementById('app');
     app.innerHTML = VIEWS[currentView]();
     document.querySelectorAll('nav.main a[data-nav]').forEach(function (a) { if (a.dataset.nav === (NAV_PARENT[currentView] || currentView)) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    var nm = document.getElementById('news-menu'); if (nm) { var er = newsEras(); nm.innerHTML = er.list.map(function (e) { return '<a href="#news-' + attr(e) + '">' + (e === 'before' ? 'Before KAIST' : esc(e)) + '</a>'; }).join(''); }
     document.getElementById('main-nav').classList.remove('open');
     document.getElementById('menu-btn').setAttribute('aria-expanded', 'false');
     renderFooter();

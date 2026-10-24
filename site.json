@@ -44,18 +44,19 @@
    "Geotechnical centrifuge modeling",
    "Numerical simulation",
    "Analytical modeling",
-   "Probabilistic approaches and uncertainty quantification",
+   "Probabilistic approaches",
+   "Uncertainty quantification",
    "Earthquake case-history analysis"
   ],
-  "founded": "Lab founded at KAIST in 2025",
+  "founded": "Lab founded in 2025",
   "banners": {
    "home": "img/uploads/1fbb799670b14cc64eb95d79283cd4d6.jpg",
-   "research": "img/uploads/18fe3aa108acef41a7893eb4c9cfd103.jpg",
-   "people": "",
-   "publications": "",
-   "teaching": "",
-   "news": "",
-   "join": "",
+   "research": "img/uploads/97bdf79a6e8c7280631d9b8a8942ecab.jpg",
+   "people": "img/uploads/783f913655b88ac957f83e522d98c8b3.jpg",
+   "publications": "img/uploads/5c7fb7c311c633b4f2699d0b24436726.jpg",
+   "teaching": "img/uploads/9775045ef1b653015cea490db31ec403.png",
+   "news": "img/uploads/7a706d87aab23214009b74cff9deb207.jpg",
+   "join": "img/uploads/54460bc6eaa71e4eb29b97ce5a9eb59a.jpg",
    "blossoms": ""
   }
  },
@@ -328,7 +329,15 @@
     "Member, Earthquake Engineering Society of Korea, 2021 – present",
     "Member, Korean Society of Geotechnical Engineers, 2016 – present"
    ],
-   "title2": "Associate Director, KOCED Geotechnical Centrifuge Testing Center"
+   "title2": "Associate Director, KOCED Geotechnical Centrifuge Testing Center",
+   "face": {
+    "cx": 0.3898,
+    "cy": 0.3639,
+    "h": 0.089,
+    "ar": 0.8475,
+    "nh": 2302,
+    "src": "img/uploads/0107665a7096068188fbd9e529011285.jpg"
+   }
   },
   {
    "id": "donghyeongchoi",
@@ -337,6 +346,8 @@
    "group": "postdoc",
    "role": "Postdoctoral Researcher",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Seismic incoherency"
@@ -346,9 +357,21 @@
     "M.S., Civil and Environmental Engineering, KAIST, 2021",
     "B.S., Geological Science, Pusan National University, 2019"
    ],
+   "appointments": [],
    "aliases": [
     "Choi, D. H."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/604cdc4d11798516471fce1c831adc6b.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4773,
+    "cy": 0.3658,
+    "h": 0.1686,
+    "ar": 0.7085,
+    "nh": 868,
+    "src": "img/uploads/604cdc4d11798516471fce1c831adc6b.jpg"
+   }
   },
   {
    "id": "hwanwooseo",
@@ -357,6 +380,8 @@
    "group": "postdoc",
    "role": "Postdoctoral Researcher",
    "since": "Summer 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Ground motion modeling",
     "Geophysical investigation"
@@ -365,32 +390,62 @@
     "Ph.D., Disaster Management Engineering, UNIST, 2025",
     "B.S., Environmental Science and Engineering, UNIST, 2019"
    ],
+   "appointments": [],
    "aliases": [
     "Seo, H."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/ca001fbd17cc4c0f76da776b5ad157c6.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.49,
+    "cy": 0.35,
+    "h": 0.191,
+    "ar": 0.7093023255813954,
+    "nh": 344,
+    "src": "img/uploads/ca001fbd17cc4c0f76da776b5ad157c6.jpg"
+   }
   },
   {
    "id": "jaewookang",
    "name": "Jaewoo Kang",
+   "degree": "",
    "group": "phd",
    "role": "Ph.D. Student",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Dynamic soil-foundation-structure interaction"
    ],
    "education": [
     "B.S., Civil and Environmental Engineering, KAIST, 2023"
    ],
+   "appointments": [],
    "aliases": [
     "Kang, J."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/2e6c66ebd9e0abe7f786123078ac1403.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4625,
+    "cy": 0.4313,
+    "h": 0.2284,
+    "ar": 0.75,
+    "nh": 832,
+    "src": "img/uploads/2e6c66ebd9e0abe7f786123078ac1403.jpg"
+   }
   },
   {
    "id": "jinyongkim",
    "name": "Jinyong Kim",
+   "degree": "",
    "group": "phd",
    "role": "Ph.D. Student",
    "since": "Spring 2027",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Dynamic soil-foundation-structure interaction"
@@ -399,64 +454,124 @@
     "M.S., Civil and Environmental Engineering, KAIST, 2026",
     "B.S., Civil Engineering, Kyung Hee University, 2023"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, J."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/53fde91f37c0dada6bfb07f25b460bfb.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4511,
+    "cy": 0.2879,
+    "h": 0.1399,
+    "ar": 0.75,
+    "nh": 1432,
+    "src": "img/uploads/53fde91f37c0dada6bfb07f25b460bfb.jpg"
+   }
   },
   {
    "id": "gunhakkim",
    "name": "Gunhak Kim",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Spring 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Topographic effects on site amplification"
    ],
    "education": [
     "B.S., Civil and Architectural Engineering, Sungkyunkwan University, 2026"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, G."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/8730b658673d6be2d1478ea3ed757729.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.5944,
+    "cy": 0.2958,
+    "h": 0.2185,
+    "ar": 0.7503,
+    "nh": 857,
+    "src": "img/uploads/8730b658673d6be2d1478ea3ed757729.jpg"
+   }
   },
   {
    "id": "changsungyim",
    "name": "Changsung Yim",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Fall 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Centrifuge and numerical modeling of blast-induced ground response"
    ],
    "education": [
     "B.S., Civil Engineering, Kyung Hee University, 2026"
    ],
+   "appointments": [],
    "aliases": [
     "Yim, C."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/9746336097795087e962259e15e82fa3.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4032,
+    "cy": 0.3521,
+    "h": 0.3878,
+    "ar": 0.75,
+    "nh": 1536,
+    "src": "img/uploads/9746336097795087e962259e15e82fa3.jpg"
+   }
   },
   {
    "id": "minseonglee",
    "name": "Minseong Lee",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Spring 2027",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Geophysical investigation"
    ],
    "education": [
     "B.S., Civil Engineering, Kyung Hee University, 2027"
    ],
+   "appointments": [],
    "aliases": [
     "Lee, M."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/69c3b0b5ab25c75435bac72fa965ce27.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.5167,
+    "cy": 0.3021,
+    "h": 0.2151,
+    "ar": 0.75,
+    "nh": 972,
+    "src": "img/uploads/69c3b0b5ab25c75435bac72fa965ce27.jpg"
+   }
   },
   {
    "id": "hyelimpark",
    "name": "Hyelim Park",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Spring 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Probabilistic liquefaction hazard assessment"
@@ -464,69 +579,162 @@
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Park, H."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/90bddd809654f7cb5948ecf9d23f661f.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.3776,
+    "cy": 0.3337,
+    "h": 0.2168,
+    "ar": 0.7496,
+    "nh": 1414,
+    "src": "img/uploads/90bddd809654f7cb5948ecf9d23f661f.jpg"
+   }
   },
   {
    "id": "kyeongminnoh",
    "name": "Kyeongmin Noh",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Ground motion modeling"
    ],
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Noh, K."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/905ccab9111f3028e89ab42e3f4f3016.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.3843,
+    "cy": 0.3427,
+    "h": 0.149,
+    "ar": 0.7502,
+    "nh": 1321,
+    "src": "img/uploads/905ccab9111f3028e89ab42e3f4f3016.jpg"
+   }
   },
   {
    "id": "wonilkim",
    "name": "Wonil Kim",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Fall 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [],
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, W."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/b62f4621904d1085fb011d97c3e86a86.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.47,
+    "cy": 0.25,
+    "h": 0.2,
+    "ar": 0.75,
+    "nh": 1152,
+    "src": "img/uploads/b62f4621904d1085fb011d97c3e86a86.jpg"
+   }
   },
   {
    "id": "chanseonlee",
    "name": "Chan Seon Lee",
+   "degree": "",
    "group": "staff",
    "role": "Administrative Assistant",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Lee, C. S."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.5249,
+    "cy": 0.4826,
+    "h": 0.0871,
+    "ar": 1,
+    "nh": 1280,
+    "src": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg"
+   }
   },
   {
    "id": "sungboklee",
    "name": "Sung-Bok Lee",
+   "degree": "",
    "group": "staff",
    "role": "Researcher and Operations Manager",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Lee, S. B."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/f26dab579d7b7aac5d9c780b95b4e4ed.png",
+   "photo2": "",
+   "face": {
+    "cx": 0.5535,
+    "cy": 0.3524,
+    "h": 0.3089,
+    "ar": 1,
+    "nh": 354,
+    "src": "img/uploads/f26dab579d7b7aac5d9c780b95b4e4ed.png"
+   }
   },
   {
    "id": "yonghyunkang",
    "name": "Yonghyun Kang",
+   "degree": "",
    "group": "staff",
    "role": "Research Engineer",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Kang, Y."
-   ]
+   ],
+   "links": {},
+   "photo": "img/uploads/330ddc1c779edb545ea3d9e5f24da96d.jpg",
+   "photo2": "",
+   "face": {
+    "cx": 0.4894,
+    "cy": 0.3677,
+    "h": 0.3976,
+    "ar": 0.9984,
+    "nh": 1282,
+    "src": "img/uploads/330ddc1c779edb545ea3d9e5f24da96d.jpg"
+   }
   }
  ],
  "alumni": [
