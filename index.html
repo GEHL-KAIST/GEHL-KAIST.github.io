@@ -1,12 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>GEHL · Geotechnical Earthquake and GeoHazards Lab, KAIST</title>
-<meta name="description" content="Geotechnical Earthquake and GeoHazards Lab (GEHL), Department of Civil and Environmental Engineering, KAIST. Research, people, publications, teaching, and news.">
-<link rel="icon" href="img/favicon.png" type="image/png">
-<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>GEHL KAIST</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <style>
 /* Layout: one 1120px column under a sticky bar; Arial throughout (display = bold Arial, labels = small-caps-style tracked Arial); cards for Research and People, dividers elsewhere; the seismogram in the hero is the only flourish. */
 :root{
@@ -36,24 +30,32 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 [hidden]{display:none!important}
 
 /* Top bar */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface)}
-.top .wrap{display:flex;align-items:center;gap:20px;min-height:60px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface);box-shadow:0 2px 10px rgba(0,32,96,.10)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
 .brand{display:flex;align-items:center;flex:0 0 auto;min-width:0}
 .brand:hover{text-decoration:none}
-.brand .logo{display:block;height:46px;width:auto;max-width:min(320px,62vw);object-fit:contain;border-radius:6px}
+.brand .logo{display:block;height:44px;width:auto;max-width:min(380px,64vw)}
 nav.main{margin-left:auto;display:flex;gap:4px}
+nav.main .dd{position:relative}
+nav.main .dd-menu{display:none;position:absolute;left:0;top:100%;min-width:220px;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:6px;z-index:12}
+nav.main .dd:hover .dd-menu,nav.main .dd:focus-within .dd-menu{display:block}
+nav.main .dd-menu a{font-size:14px;font-weight:400;padding:8px 10px;white-space:nowrap}
+nav.main .dd::after{content:"";position:absolute;left:0;right:0;top:100%;height:8px}
 nav.main a{display:block;padding:8px 10px;border-radius:var(--radius);color:var(--fg);font-size:14.5px;font-weight:500}
 nav.main a:hover{background:var(--soft);text-decoration:none}
 nav.main a[aria-current="page"]{color:var(--brand);box-shadow:inset 0 -2px 0 var(--brand);border-radius:0}
 .menu-btn{display:none;margin-left:auto;padding:8px;border:1px solid var(--line);border-radius:var(--radius)}
 .menu-btn svg{display:block}
 @media (max-width:820px){
-  .brand .logo{height:42px;max-width:min(320px,70vw)}
+  .brand .logo{height:34px}
   .menu-btn{display:block}
   nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:8px max(16px,env(safe-area-inset-left,0px)) 12px;gap:0;box-shadow:var(--shadow)}
   nav.main.open{display:flex}
   nav.main a{padding:11px 8px;border-bottom:1px solid var(--line)}
   nav.main a[aria-current="page"]{box-shadow:none;background:var(--soft)}
+  nav.main .dd-menu{display:block;position:static;border:0;box-shadow:none;padding:0 0 0 18px;min-width:0}
+  nav.main .dd-menu a{font-size:14px;border-bottom:1px solid var(--line)}
+  nav.main .dd::after{display:none}
 }
 
 /* Sections */
@@ -64,16 +66,17 @@ main{display:block}
 .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
 .section-head h2{font-size:28px}
 .section-head .more{font-size:14px;white-space:nowrap}
-.lede{font-size:18px;line-height:1.5;max-width:64ch;color:var(--fg)}
+.lede{font-size:18px;line-height:1.5;color:var(--fg)}
 .lede.full{max-width:none}
-.prose{max-width:66ch}
+.prose{}
 .prose p + p{margin-top:12px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--brand);border-radius:var(--radius);color:var(--brand);font-weight:500;font-size:14.5px;line-height:1.2;background:var(--surface)}
-.btn:hover{background:var(--soft);text-decoration:none}
-.btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
-.btn.primary:hover{background:var(--brand-ink);border-color:var(--brand-ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid #B5B5B5;border-radius:var(--radius);color:#333;font-weight:500;font-size:14.5px;line-height:1.2;background:var(--surface)}
+.btn:hover{background:#F0F0F0;border-color:#8C8C8C;text-decoration:none}
+.btn.primary{background:var(--surface);color:#333;border-color:#B5B5B5}
+.btn.primary:hover{background:#F0F0F0;border-color:#8C8C8C}
 .btn.small{padding:6px 10px;font-size:13px}
 .btn.danger{border-color:var(--accent);color:var(--accent)}
+.btn.primary.danger{background:var(--accent);border-color:var(--accent);color:#fff}
 .chip{display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--line-strong);border-radius:999px;color:var(--muted);white-space:nowrap}
 .chip.kind-award{border-color:var(--accent);color:var(--accent)}
 .chip.kind-publication,.chip.kind-talk{border-color:var(--brand);color:var(--brand)}
@@ -81,43 +84,50 @@ main{display:block}
 /* Page band: every page opens with its title, sized like the lab name, over a faint banner image */
 .pband{position:relative;background:var(--surface);border-bottom:1px solid var(--line);overflow:hidden}
 .pband::before{content:"";position:absolute;inset:0;background-image:var(--banner);background-size:cover;background-position:center;opacity:.16;pointer-events:none}
-.pband .wrap{position:relative;padding-block:56px 40px}
-.pband.has-img .wrap{padding-block:72px 52px}
+.pband .wrap{position:relative;padding-block:64px 44px}
 .pband .page-title{font-size:clamp(26px,7vw,40px);font-weight:700;letter-spacing:-.012em;line-height:1.1;margin:0;text-align:center;white-space:normal;color:var(--heading)}
 :root.title-fit .pband .page-title{font-size:var(--title-size);white-space:nowrap}
-.pband .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:12px}
-.pband .tag{font-family:var(--display);font-weight:400;font-size:18px;color:var(--brand);letter-spacing:.01em}
-.pband .founded{font-size:13px;color:var(--fg);letter-spacing:.02em}
+.pband .row{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:14px;min-height:24px}
+.pband .tag{font-family:var(--display);font-weight:400;font-size:15px;color:var(--heading);letter-spacing:.34em;text-indent:.34em;white-space:nowrap}
+.pband .row .rule{flex:0 1 120px;height:1px;background:var(--heading);opacity:.45}
+.pband .founded{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:12px;font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+@media (max-width:600px){ .pband .tag{font-size:12.5px;letter-spacing:.22em;text-indent:.22em} .pband .row .rule{flex-basis:40px} }
 .hero{padding-block:30px 8px}
 .hero .intro{margin-top:0;max-width:none;font-size:17px;line-height:1.6;color:var(--fg)}
 .hero .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
 
 /* Group photo (home) and blossom gallery */
 .gp{margin-top:24px;border-top:1px solid var(--line)}
-.gp-card{overflow:hidden}
-.gp-card .ph{position:relative;aspect-ratio:16/7;max-width:100%;background:var(--soft);display:grid;place-items:center}
-.gp-card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gp-card{overflow:hidden;width:70%;margin:0 auto}
+@media (max-width:700px){ .gp-card{width:100%} }
+.gp-card .ph{position:relative;max-width:100%;background:var(--soft);display:grid;place-items:center}
+.gp-card .ph:not(.has){aspect-ratio:16/7}
+.gp-card .ph img{display:block;width:100%;height:auto}
 .gp-card .ph .empty-ph{text-align:center;color:var(--muted);padding:24px;font-size:15px;max-width:40ch}
 .gp-card .ph .empty-ph b{display:block;font-family:var(--display);font-weight:700;font-size:20px;color:var(--fg);margin-bottom:6px}
 .gp-card .cap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 22px}
 .gp-card .cap .t{font-size:15px}
 .gp-card .cap .t b{font-family:var(--display);font-weight:700;font-size:17px;display:block;margin-bottom:2px;color:var(--heading)}
-.blossoms{display:grid;gap:28px}
-.blossom{overflow:hidden}
-.blossom .ph{aspect-ratio:16/8;max-width:100%;background:var(--soft);position:relative;display:grid;place-items:center}
-.blossom .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.blossoms{display:grid;gap:28px;justify-items:stretch}
+.blossom{overflow:hidden;width:70%;margin:0 auto}
+@media (max-width:700px){ .blossom{width:100%} }
+.blossom .ph{max-width:100%;background:var(--soft);position:relative;display:grid;place-items:center}
+.blossom .ph:not(.has){aspect-ratio:16/8}
+.blossom .ph img{display:block;width:100%;height:auto}
 .blossom .ph .empty-ph{color:var(--muted);font-size:14.5px;text-align:center;padding:20px}
 .blossom .cap{padding:14px 22px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
 .blossom .cap .y{font-family:var(--display);font-weight:700;font-size:22px;color:var(--heading)}
 .blossom .cap .t{color:var(--muted);font-size:14.5px}
-@media (max-width:600px){ .gp-card .ph{aspect-ratio:4/3} .blossom .ph{aspect-ratio:4/3} }
+@media (max-width:600px){ .gp-card .ph:not(.has){aspect-ratio:4/3} .blossom .ph:not(.has){aspect-ratio:4/3} }
 
 /* Pillars (conceptual, picture-first) */
 .pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
 .pillar{display:grid;gap:8px;color:inherit;min-width:0;align-content:start}
 .pillar:hover{text-decoration:none}
-.pillar .ill{border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden;aspect-ratio:8/5;max-width:100%}
+.pillar .ill{border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden;aspect-ratio:3/2;max-width:100%}
 .pillar .ill svg{display:block;width:100%;height:100%}
+.pillar .ill img{display:block;width:100%;height:100%;object-fit:cover}
+.pillar .ill.photo{border:0}
 .pillar:hover .ill{border-color:var(--brand)}
 .pillar h3{font-size:16.5px;margin-top:4px}
 .pillar:hover h3{color:var(--brand)}
@@ -135,7 +145,7 @@ main{display:block}
 .news-item .h{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .news-item h3{font-size:18px}
 .news-item .who{font-size:13.5px;color:var(--muted)}
-.news-item .b{margin-top:6px;color:var(--fg);max-width:70ch;font-size:15px}
+.news-item .b{margin-top:6px;color:var(--fg);font-size:15px}
 .news-item .imgs{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .news-item .imgs img{width:200px;max-width:100%;height:140px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line)}
 @media (max-width:600px){ .news-item{grid-template-columns:1fr;gap:6px} }
@@ -159,31 +169,34 @@ main{display:block}
 
 /* Cards (Research, People, home news) */
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 2px rgba(10,30,60,.04),0 10px 28px rgba(10,30,60,.06)}
-.page-sub{color:var(--muted);font-size:16px;max-width:66ch;margin-top:28px;margin-bottom:22px}
+.page-sub{color:var(--muted);font-size:16px;margin-top:28px;margin-bottom:22px}
 
 /* People (SEED-style grid) */
 .pi-block{display:grid;grid-template-columns:280px minmax(0,1fr);gap:36px;align-items:start;padding:28px;margin-bottom:28px}
 .pi-block .avatar{width:280px;height:280px;border-radius:28px}
 .pi-block h3{font-size:26px}
 .pi-block .role{color:var(--muted);margin-top:4px}
-.pi-block .bio{margin-top:14px;max-width:66ch;font-size:15.5px}
+.pi-block .bio{margin-top:14px;font-size:15.5px}
 .pi-block .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;font-size:14px}
 @media (max-width:700px){ .pi-block{grid-template-columns:1fr;padding:20px} .pi-block .avatar{width:220px;height:220px} }
 .pills{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
-.pills button{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 12px;border-radius:999px;background:var(--soft);color:var(--fg);font-size:13.5px;font-weight:500}
+.pills button{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 12px;border-radius:999px;background:#EFEFEF;color:var(--fg);font-size:13.5px;font-weight:500}
 .pills button .c{font-family:var(--mono);font-size:11.5px;padding:1px 7px;border-radius:999px;background:var(--surface);color:var(--muted)}
-.pills button[aria-pressed="true"]{background:var(--brand);color:#fff}
+.pills button[aria-pressed="true"]{background:#4A4F57;color:#fff}
 .pills button[aria-pressed="true"] .c{background:rgba(255,255,255,.22);color:#fff}
 .people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 @media (max-width:760px){ .people{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:460px){ .people{grid-template-columns:1fr} }
-.pcard{display:grid;gap:10px;padding:22px;color:inherit;text-align:left;min-width:0;transition:transform .15s ease,box-shadow .15s ease}
+.pcard{display:grid;gap:10px;padding:22px;align-content:start;color:inherit;text-align:left;min-width:0;transition:transform .15s ease,box-shadow .15s ease}
 .pcard:hover{text-decoration:none;transform:translateY(-2px)}
-.pcard .avatar{width:100%;max-width:260px;aspect-ratio:1/1;height:auto;border-radius:28px;justify-self:center;margin-bottom:6px}
+.pcard .avatar{width:100%;max-width:260px;aspect-ratio:1/1;height:auto;border-radius:28px;justify-self:center;margin:4px 0 6px}
+.pcard .rpill{justify-self:center}
 .pcard .nm{font-family:var(--display);font-weight:700;font-size:17px;color:var(--heading)}
 .pcard:hover .nm{color:var(--brand)}
 .pcard .in{font-size:13.5px;color:var(--muted);line-height:1.4}
-.rpill{display:inline-block;justify-self:start;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:999px;border:1px solid;line-height:1.6}
+.rpill .em{font-size:13px;margin-right:6px;letter-spacing:0;line-height:1;display:inline-block}
+.legend-em{font-size:14px;color:var(--fg);margin:0 0 10px}
+.rpill{display:inline-flex;align-items:center;justify-self:start;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:0 10px;height:22px;border-radius:999px;border:1px solid;line-height:1}
 .rpill.g-pi{color:#8A2E1F;border-color:#D9A79A;background:#FBEFEA}
 .rpill.g-postdoc{color:#1E6B45;border-color:#9ECBB1;background:#E9F6EE}
 .rpill.g-phd{color:#174A95;border-color:#9DB9E3;background:#E8EFFA}
@@ -195,7 +208,9 @@ main{display:block}
 .group-title h3{font-size:16px;font-family:var(--mono);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .group-title .count{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
 .alumni{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 32px}
-.alumni li{list-style:none;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px}
+.alumni li{list-style:none;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px;display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;align-items:start}
+.alumni li .em{line-height:1.5}
+.alumni .an{font-weight:500}
 .alumni ul{margin:0;padding:0;display:contents}
 .alumni .lv{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:8px}
 .alumni .nt{display:block;color:var(--muted);font-size:13px}
@@ -205,7 +220,7 @@ main{display:block}
 .modal .dlg{position:relative;width:min(900px,100%);background:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:28px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;max-height:calc(100vh - 48px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));overflow:auto}
 .modal .close{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:50%;border:1px solid var(--line-strong);background:var(--surface);display:grid;place-items:center;font-size:16px;line-height:1}
 .modal .close:hover{background:var(--soft)}
-.modal .avatar{width:220px;height:220px;border-radius:28px}
+.modal .avatar{width:220px;height:auto;aspect-ratio:auto;border-radius:28px}
 .modal .side{display:grid;gap:12px;align-content:start}
 .modal .side .links{display:grid;gap:4px;font-size:13.5px}
 .modal h2{font-size:26px;margin-top:6px}
@@ -226,7 +241,7 @@ main{display:block}
 .modal .mp .a .member{color:var(--fg);text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:3px}
 .modal .mp .v{color:var(--muted);font-size:12.5px;font-family:var(--mono)}
 .modal .empty-note{font-size:13.5px;color:var(--muted)}
-@media (max-width:640px){ .modal .dlg{grid-template-columns:1fr;padding:20px;gap:16px} .modal .avatar{width:140px;height:140px} }
+@media (max-width:640px){ .modal .dlg{grid-template-columns:1fr;padding:20px;gap:16px} .modal .avatar{width:160px;height:auto} }
 
 /* Publications */
 .pub-year{display:grid;grid-template-columns:90px minmax(0,1fr);gap:20px;padding:22px 0;border-top:1px solid var(--line)}
@@ -300,7 +315,7 @@ table.projects td.per{font-family:var(--mono);font-size:13px;white-space:nowrap;
 .course .code{font-family:var(--mono);font-size:13.5px;color:var(--brand)}
 .course .term{font-size:13px;color:var(--muted);margin-top:4px}
 .course h3{font-size:20px}
-.course p{margin-top:8px;color:var(--muted);font-size:15px;max-width:70ch}
+.course p{margin-top:8px;color:var(--muted);font-size:15px;}
 @media (max-width:600px){ .course{grid-template-columns:1fr;gap:6px} }
 
 /* Join */
@@ -371,23 +386,22 @@ footer li{margin:4px 0}
 .inline-confirm{display:inline-flex;gap:6px;align-items:center;font-size:12.5px}
 @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} }
 </style>
-</head>
-<body>
+
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#home" data-nav="home" aria-label="GEHL home">
-      <img class="logo" src="img/logo.png" alt="KAIST CEE · Geotechnical Earthquake and GeoHazards Lab" width="990" height="115">
+      <img class="logo" src="img/logo-combined.svg" alt="KAIST CEE · Geotechnical Earthquake and GeoHazards Lab" width="959" height="131">
     </a>
     <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
       <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
     <nav class="main" id="main-nav" aria-label="Main">
       <a href="#home" data-nav="home">Home</a>
-      <a href="#research" data-nav="research">Research</a>
-      <a href="#people" data-nav="people">People</a>
-      <a href="#publications" data-nav="publications">Publications</a>
+      <a href="#people" data-nav="people">Team</a>
+      <div class="dd"><a href="#research" data-nav="research">Research</a><div class="dd-menu"><a href="#research">Topics</a><a href="#projects">Projects</a></div></div>
+      <div class="dd"><a href="#publications" data-nav="publications">Publication</a><div class="dd-menu"><a href="#journal">Journal Papers</a><a href="#conference">Conference Proceedings</a></div></div>
       <a href="#teaching" data-nav="teaching">Teaching</a>
-      <a href="#news" data-nav="news">News</a>
+      <div class="dd"><a href="#news" data-nav="news">News and Gallery</a><div class="dd-menu" id="news-menu"></div></div>
       <a href="#join" data-nav="join">Join Us</a>
     </nav>
   </div>
@@ -416,7 +430,7 @@ footer li{margin:4px 0}
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
   "email": "kilwanko@kaist.ac.kr",
   "meetings": "Meetings are by appointment. Please email first.",
-  "center": "KOCED Geotechnical Centrifuge Testing Center at KAIST",
+  "center": "",
   "mapUrl": "https://maps.google.com/?q=36.365769,127.362463",
   "legacyUrl": "https://sites.google.com/view/gehl-kaist/home",
   "homeNewsCount": 3,
@@ -424,22 +438,26 @@ footer li{margin:4px 0}
    {
     "icon": "ssi",
     "title": "Soil-foundation-structure interaction",
-    "text": "How the ground, the footing, and the building move together in an earthquake."
+    "text": "",
+    "image": "img/study/ssi.jpg"
    },
    {
     "icon": "liq",
     "title": "Soil liquefaction",
-    "text": "When shaking turns saturated sand into a fluid, read from the energy it dissipates."
+    "text": "",
+    "image": "img/study/liq.jpg"
    },
    {
     "icon": "site",
     "title": "Site response and ground motion",
-    "text": "How soil layers and terrain amplify the motion that reaches the surface."
+    "text": "",
+    "image": "img/study/site.png"
    },
    {
     "icon": "dam",
     "title": "Dams and levees on faults",
-    "text": "Cracking and leak erosion when a fault offsets the foundation of an embankment."
+    "text": "",
+    "image": "img/study/dam.jpg"
    }
   ],
   "methods": [
@@ -449,15 +467,15 @@ footer li{margin:4px 0}
    "Probabilistic approaches and uncertainty quantification",
    "Earthquake case-history analysis"
   ],
-  "founded": "Lab founded at KAIST in 2025",
+  "founded": "Lab founded in 2025",
   "banners": {
-   "home": "img/uploads/1fbb799670b14cc64eb95d79283cd4d6.jpg",
-   "research": "img/uploads/18fe3aa108acef41a7893eb4c9cfd103.jpg",
-   "people": "",
-   "publications": "",
-   "teaching": "",
-   "news": "",
-   "join": "",
+   "home": "/_blob/1fbb799670b14cc64eb95d79283cd4d6",
+   "research": "/_blob/97bdf79a6e8c7280631d9b8a8942ecab",
+   "people": "/_blob/783f913655b88ac957f83e522d98c8b3",
+   "publications": "/_blob/5c7fb7c311c633b4f2699d0b24436726",
+   "teaching": "/_blob/9775045ef1b653015cea490db31ec403",
+   "news": "/_blob/7a706d87aab23214009b74cff9deb207",
+   "join": "/_blob/54460bc6eaa71e4eb29b97ce5a9eb59a",
    "blossoms": ""
   }
  },
@@ -709,7 +727,8 @@ footer li{margin:4px 0}
     "LinkedIn": "https://www.linkedin.com/in/kil-wan-ko-16b12118b/",
     "CV": "https://drive.google.com/file/d/1zBMg1QisFHH7Hp7La9v3d9YR0JtAhXm7/view?usp=drive_link"
    },
-   "photo": "",
+   "photo": "/_blob/0107665a7096068188fbd9e529011285",
+   "photo2": "/_blob/42ba3a9f0debc5225d9156a914bb1799",
    "bio": "Kil-Wan Ko studies geotechnical earthquake engineering and geohazards: dynamic soil-foundation-structure interaction, soil liquefaction, seismic site response, seismic fault modeling, ground-motion characterization, and the cracking and erosion of levees and dams caused by surface fault rupture. Before joining KAIST in 2025 he worked as a postdoctoral researcher at UC Davis, USC, and UC Berkeley.",
    "awards": [
     "Teaching Excellence Award, Department of Civil and Environmental Engineering, KAIST, 2026",
@@ -738,6 +757,8 @@ footer li{margin:4px 0}
    "group": "postdoc",
    "role": "Postdoctoral Researcher",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Seismic incoherency"
@@ -747,9 +768,13 @@ footer li{margin:4px 0}
     "M.S., Civil and Environmental Engineering, KAIST, 2021",
     "B.S., Geological Science, Pusan National University, 2019"
    ],
+   "appointments": [],
    "aliases": [
     "Choi, D. H."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/604cdc4d11798516471fce1c831adc6b",
+   "photo2": ""
   },
   {
    "id": "hwanwooseo",
@@ -758,6 +783,8 @@ footer li{margin:4px 0}
    "group": "postdoc",
    "role": "Postdoctoral Researcher",
    "since": "Summer 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Ground motion modeling",
     "Geophysical investigation"
@@ -766,32 +793,46 @@ footer li{margin:4px 0}
     "Ph.D., Disaster Management Engineering, UNIST, 2025",
     "B.S., Environmental Science and Engineering, UNIST, 2019"
    ],
+   "appointments": [],
    "aliases": [
     "Seo, H."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/ca001fbd17cc4c0f76da776b5ad157c6",
+   "photo2": ""
   },
   {
    "id": "jaewookang",
    "name": "Jaewoo Kang",
+   "degree": "",
    "group": "phd",
    "role": "Ph.D. Student",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Dynamic soil-foundation-structure interaction"
    ],
    "education": [
     "B.S., Civil and Environmental Engineering, KAIST, 2023"
    ],
+   "appointments": [],
    "aliases": [
     "Kang, J."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/2e6c66ebd9e0abe7f786123078ac1403",
+   "photo2": ""
   },
   {
    "id": "jinyongkim",
    "name": "Jinyong Kim",
+   "degree": "",
    "group": "phd",
    "role": "Ph.D. Student",
    "since": "Spring 2027",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Dynamic soil-foundation-structure interaction"
@@ -800,64 +841,92 @@ footer li{margin:4px 0}
     "M.S., Civil and Environmental Engineering, KAIST, 2026",
     "B.S., Civil Engineering, Kyung Hee University, 2023"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, J."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/53fde91f37c0dada6bfb07f25b460bfb",
+   "photo2": ""
   },
   {
    "id": "gunhakkim",
    "name": "Gunhak Kim",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Spring 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Topographic effects on site amplification"
    ],
    "education": [
     "B.S., Civil and Architectural Engineering, Sungkyunkwan University, 2026"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, G."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/8730b658673d6be2d1478ea3ed757729",
+   "photo2": ""
   },
   {
    "id": "changsungyim",
    "name": "Changsung Yim",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Fall 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Centrifuge and numerical modeling of blast-induced ground response"
    ],
    "education": [
     "B.S., Civil Engineering, Kyung Hee University, 2026"
    ],
+   "appointments": [],
    "aliases": [
     "Yim, C."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/9746336097795087e962259e15e82fa3",
+   "photo2": ""
   },
   {
    "id": "minseonglee",
    "name": "Minseong Lee",
+   "degree": "",
    "group": "ms",
    "role": "M.S. Student",
    "since": "Spring 2027",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Geophysical investigation"
    ],
    "education": [
     "B.S., Civil Engineering, Kyung Hee University, 2027"
    ],
+   "appointments": [],
    "aliases": [
     "Lee, M."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/69c3b0b5ab25c75435bac72fa965ce27",
+   "photo2": ""
   },
   {
    "id": "hyelimpark",
    "name": "Hyelim Park",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Spring 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Soil liquefaction",
     "Probabilistic liquefaction hazard assessment"
@@ -865,69 +934,114 @@ footer li{margin:4px 0}
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Park, H."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/90bddd809654f7cb5948ecf9d23f661f",
+   "photo2": ""
   },
   {
    "id": "kyeongminnoh",
    "name": "Kyeongmin Noh",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Fall 2025",
+   "affiliation": "",
+   "email": "",
    "interests": [
     "Ground motion modeling"
    ],
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Noh, K."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/905ccab9111f3028e89ab42e3f4f3016",
+   "photo2": ""
   },
   {
    "id": "wonilkim",
    "name": "Wonil Kim",
+   "degree": "",
    "group": "ug",
    "role": "Undergraduate Researcher",
    "since": "Fall 2026",
+   "affiliation": "",
+   "email": "",
    "interests": [],
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
    ],
+   "appointments": [],
    "aliases": [
     "Kim, W."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/b62f4621904d1085fb011d97c3e86a86",
+   "photo2": ""
   },
   {
    "id": "chanseonlee",
    "name": "Chan Seon Lee",
+   "degree": "",
    "group": "staff",
    "role": "Administrative Assistant",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Lee, C. S."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/c73e3f00bfeab5e33c3182491c57a1ff",
+   "photo2": ""
   },
   {
    "id": "sungboklee",
    "name": "Sung-Bok Lee",
+   "degree": "",
    "group": "staff",
    "role": "Researcher and Operations Manager",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Lee, S. B."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/f26dab579d7b7aac5d9c780b95b4e4ed",
+   "photo2": ""
   },
   {
    "id": "yonghyunkang",
    "name": "Yonghyun Kang",
+   "degree": "",
    "group": "staff",
    "role": "Research Engineer",
+   "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
+   "email": "",
+   "interests": [],
+   "education": [],
+   "appointments": [],
    "aliases": [
     "Kang, Y."
-   ]
+   ],
+   "links": {},
+   "photo": "/_blob/330ddc1c779edb545ea3d9e5f24da96d",
+   "photo2": ""
   }
  ],
  "alumni": [
@@ -2268,14 +2382,7 @@ footer li{margin:4px 0}
    "year": 2026,
    "date": "2026-04-02",
    "caption": "Spring 2026. Cherry blossoms at KAIST and the lab's traditional strawberry party.",
-   "image": ""
-  },
-  {
-   "id": "gp2025",
-   "year": 2025,
-   "date": "2025-04-01",
-   "caption": "Spring 2025. GEHL's first spring at KAIST.",
-   "image": ""
+   "image": "/_blob/6661ce876bfad95300ff5ea5958fdfe7"
   }
  ],
  "teaching": {
@@ -2343,8 +2450,8 @@ footer li{margin:4px 0}
   function doiUrl(doi) { doi = String(doi || '').trim(); if (!doi) return ''; return /^https?:/i.test(doi) ? doi : 'https://doi.org/' + doi; }
   function hashColor(str) { var h = 0; for (var i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0; var hues = [212, 200, 225, 195, 240, 205]; return hues[h % hues.length]; }
   function initials(name) { var p = String(name || '').trim().split(/\s+/); return (p[0] ? p[0][0] : '') + (p.length > 1 ? p[p.length - 1][0] : ''); }
-  function avatarSrc(person) {
-    var u = safeUrl(person.photo);
+  function avatarSrc(person, which) {
+    var u = safeUrl(which === 'popup' && person.photo2 ? person.photo2 : person.photo);
     if (u) return u;
     var hue = hashColor(person.name || '');
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="hsl(' + hue + ',30%,90%)"/><path d="M0 150 Q50 120 100 150 T200 150 V200 H0z" fill="hsl(' + hue + ',28%,82%)"/><text x="100" y="118" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="600" fill="hsl(' + hue + ',38%,30%)">' + esc(initials(person.name).toUpperCase()) + '</text></svg>';
@@ -2358,6 +2465,11 @@ footer li{margin:4px 0}
     { id: 'ug', label: 'Undergraduate Researchers', pill: 'Undergraduate' },
     { id: 'staff', label: 'Centrifuge Center Staff', pill: 'Staff' }
   ];
+  var EMOJI = { pi: '\uD83D\uDC68\u200D\uD83C\uDFEB', postdoc: '\uD83E\uDDB8', phd: '\uD83E\uDDD1\u200D\uD83C\uDF93', ms: '\uD83E\uDDD1\u200D\uD83D\uDD2C', ug: '\uD83E\uDDDA', staff: '\uD83E\uDDD1\u200D\uD83D\uDD27' };
+  function levelBucket(level) { var l = String(level || '').toLowerCase(); if (/ph\.?d/.test(l)) return 'phd'; if (/m\.?s|master/.test(l)) return 'ms'; if (/postdoc/.test(l)) return 'postdoc'; if (/under|intern|visit|exchange/.test(l)) return 'ug'; return 'other'; }
+  var ALUMNI_BUCKETS = [['phd', 'Ph.D.'], ['ms', 'M.S.'], ['postdoc', 'Postdoc'], ['ug', 'Undergraduate'], ['other', 'Other']];
+  var alumniFilter = 'all';
+  function levelEmoji(level) { var l = String(level || '').toLowerCase(); if (/ph\.?d/.test(l)) return EMOJI.phd; if (/m\.?s|master/.test(l)) return EMOJI.ms; if (/postdoc/.test(l)) return EMOJI.postdoc; if (/under|intern|visit|exchange/.test(l)) return EMOJI.ug; return ''; }
   function groupOf(id) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i].id === id) return GROUPS[i]; return { id: id, label: id, pill: id }; }
   var KINDS = { award: 'Award', publication: 'Publication', talk: 'Presentation', welcome: 'Welcome', event: 'Conference', visit: 'Visit', lablife: 'Lab life' };
   function kindLabel(k) { return KINDS[k] || (k ? k.charAt(0).toUpperCase() + k.slice(1) : 'News'); }
@@ -2434,10 +2546,11 @@ footer li{margin:4px 0}
   };
   (function () { var g = '', rows = [[96, 14], [112, 30], [128, 14], [144, 30]]; rows.forEach(function (r) { for (var x = r[1]; x < 240; x += 32) g += '<circle cx="' + x + '" cy="' + r[0] + '" r="6"/>'; }); ICONS.liq = ICONS.liq.replace('GRAINS', g); })();
 
-  var PAGE_KEYS = [['home', 'Home'], ['research', 'Research'], ['people', 'People'], ['publications', 'Publications'], ['teaching', 'Teaching'], ['news', 'News and Gallery'], ['join', 'Join Us'], ['blossoms', 'Cherry Blossom Group Photos']];
+  var PAGE_KEYS = [['home', 'Home'], ['research', 'Research'], ['people', 'Team'], ['publications', 'Publication'], ['teaching', 'Teaching'], ['news', 'News and Gallery'], ['join', 'Join Us'], ['blossoms', 'Cherry Blossom Group Photos']];
   function bannerStyle(key) { var b = (DATA.lab.banners || {})[key]; var u = safeUrl(b); return u ? ' style="--banner:url(&quot;' + attr(u) + '&quot;)"' : ''; }
   function pageBand(key, title, extra) {
-    return '<section class="pband' + ((DATA.lab.banners || {})[key] ? ' has-img' : '') + '"' + bannerStyle(key) + '><div class="wrap"><h1 class="page-title">' + esc(title) + '</h1>' + (extra || '') + '</div></section>';
+    // every band keeps the home band's height: pages without a tagline row get an empty one
+    return '<section class="pband' + ((DATA.lab.banners || {})[key] ? ' has-img' : '') + '"' + bannerStyle(key) + '><div class="wrap"><h1 class="page-title">' + esc(title) + '</h1>' + (extra || '<div class="row" aria-hidden="true"><span class="tag">&nbsp;</span></div>') + '</div></section>';
   }
   // ---------- rendering blocks ----------
   function pubItem(pub, n, focusId) {
@@ -2487,7 +2600,7 @@ footer li{margin:4px 0}
     var jn = DATA.publications.filter(function (p) { return p.type === 'journal'; }).length;
     var cn = DATA.publications.filter(function (p) { return p.type === 'conference'; }).length;
     var pr = DATA.projects.filter(function (p) { return p.status === 'ongoing'; }).length;
-    return pageBand('home', L.name, '<div class="row"><div class="tag">' + esc(L.tagline) + '</div><div class="founded">' + esc(L.founded || '') + '</div></div>') +
+    return pageBand('home', L.name, '<div class="row motto"><span class="rule"></span><span class="tag">' + esc(String(L.tagline || '').toUpperCase()) + '</span><span class="rule"></span></div>' + (L.founded ? '<div class="founded">' + esc(L.founded) + '</div>' : '')) +
       '<section class="hero"><div class="wrap">' +
       '<p class="intro">' + esc(L.intro) + '</p>' +
       '<div class="actions"><a class="btn primary" href="#research">Explore the research</a><a class="btn" href="#people">Meet the team</a><a class="btn" href="#join">Join us</a></div>' +
@@ -2497,11 +2610,10 @@ footer li{margin:4px 0}
       (recent.length ? '<div class="news-cards">' + recent.map(newsCard).join('') + '</div>' : '<div class="empty">No news yet.</div>') +
       '</div></section>' +
       '<section class="section"><div class="wrap"><div class="section-head"><h2>What we study</h2><a class="more" href="#research">Research areas →</a></div>' +
-      ICON_DEFS + '<div class="pillars">' + (L.pillars || []).map(function (p, i) { return '<a class="pillar" href="#research"><div class="ill">' + (ICONS[p.icon] || '') + '</div><h3>' + esc(p.title) + '</h3><p>' + esc(p.text) + '</p></a>'; }).join('') + '</div>' +
-      '<div class="eyebrow" style="margin-top:32px">How we work</div><div class="methods">' + (L.methods || []).map(function (m) { return '<span>' + esc(m) + '</span>'; }).join('') + '</div>' +
-      '<p class="muted" style="margin-top:14px;font-size:14.5px">Experiments run at the ' + esc(L.center) + ', one of the largest geotechnical centrifuge facilities in Asia.</p>' +
-      '</div></section>' +
-      '<section class="section"><div class="wrap"><div class="section-head"><h2>Join GEHL</h2></div><p class="lede full">' + esc(DATA.culture.positions || '') + '</p><div class="actions" style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn primary" href="#join">How to apply</a></div></div></section>';
+      ICON_DEFS + '<div class="pillars">' + (L.pillars || []).map(function (p, i) { return '<a class="pillar" href="#research"><div class="ill' + (safeUrl(p.image) ? ' photo' : '') + '">' + (safeUrl(p.image) ? '<img src="' + attr(safeUrl(p.image)) + '" alt="' + attr(p.title) + '" loading="lazy">' : (ICONS[p.icon] || '')) + '</div><h3>' + esc(p.title) + '</h3>' + (p.text ? '<p>' + esc(p.text) + '</p>' : '') + '</a>'; }).join('') + '</div>' +
+      '<div class="eyebrow" style="margin-top:32px">Methodology</div><div class="methods">' + (L.methods || []).map(function (m) { return '<span>' + esc(m) + '</span>'; }).join('') + '</div>' +
+      '</div></section>' ;
+
   }
 
   function latestGroupPhoto() { return DATA.groupPhotos.slice().sort(function (a, b) { return (b.year - a.year) || (b.date || '').localeCompare(a.date || ''); })[0]; }
@@ -2509,9 +2621,9 @@ footer li{margin:4px 0}
     var g = latestGroupPhoto();
     var img = g ? safeUrl(g.image) : '';
     var year = g ? g.year : new Date().getFullYear();
-    return '<section class="section gp"><div class="wrap"><div class="section-head"><h2>Spring ' + esc(year) + ' group photo</h2><a class="more" href="#blossoms">Cherry blossom photos, every year →</a></div>' +
-      '<div class="card gp-card"><div class="ph">' + (img ? '<img src="' + attr(img) + '" alt="' + attr('GEHL group photo, spring ' + year) + '">' : '<div class="empty-ph"><b>Spring ' + esc(year) + '</b>This year\'s cherry blossom group photo goes here. The site owner can add it from Manage site → Group photos.</div>') + '</div>' +
-      '<div class="cap"><div class="t"><b>GEHL under the cherry blossoms, ' + esc(year) + '</b>' + esc(g && g.caption ? g.caption : 'Every spring the lab takes one group photo under the cherry blossoms on the KAIST campus.') + '</div><a class="btn" href="#blossoms">See every year\'s photo</a></div></div>' +
+    return '<section class="section gp"><div class="wrap"><div class="section-head"><h2>GEHL Group Photo</h2><a class="more" href="#blossoms">Cherry blossom photos, every year →</a></div>' +
+      '<div class="card gp-card"><div class="ph' + (img ? ' has' : '') + '">' + (img ? '<img src="' + attr(img) + '" alt="' + attr('GEHL group photo, spring ' + year) + '">' : '<div class="empty-ph"><b>Spring ' + esc(year) + '</b>This year\'s cherry blossom group photo goes here. The site owner can add it from Manage site → Group photos.</div>') + '</div>' +
+      '<div class="cap"><div class="t"><b>GEHL under the cherry blossoms, ' + esc(year) + '</b>' + esc(g && g.caption ? g.caption : 'Every spring the lab takes one group photo under the cherry blossoms on the KAIST campus.') + '</div></div></div>' +
       '</div></section>';
   }
   function viewBlossoms() {
@@ -2519,7 +2631,7 @@ footer li{margin:4px 0}
     var html = pageBand('blossoms', 'Cherry Blossom Group Photos') + '<div class="wrap"><p class="page-sub">One photo a year, taken under the cherry blossoms on the KAIST campus each spring. The newest year is first.</p>';
     html += list.length ? '<div class="blossoms">' + list.map(function (g) {
       var img = safeUrl(g.image);
-      return '<figure class="card blossom" id="blossom-' + attr(g.year) + '"><div class="ph">' + (img ? '<img src="' + attr(img) + '" alt="' + attr('GEHL group photo, spring ' + g.year) + '" loading="lazy">' : '<div class="empty-ph">Spring ' + esc(g.year) + ' photo not added yet.</div>') + '</div><figcaption class="cap"><span class="y">' + esc(g.year) + '</span><span class="t">' + esc(g.caption || '') + (g.date ? ' · ' + esc(fmtDate(g.date)) : '') + '</span></figcaption></figure>';
+      return '<figure class="card blossom" id="blossom-' + attr(g.year) + '"><div class="ph' + (img ? ' has' : '') + '">' + (img ? '<img src="' + attr(img) + '" alt="' + attr('GEHL group photo, spring ' + g.year) + '" loading="lazy">' : '<div class="empty-ph">Spring ' + esc(g.year) + ' photo not added yet.</div>') + '</div><figcaption class="cap"><span class="y">' + esc(g.year) + '</span><span class="t">' + esc(g.caption || '') + (g.date ? ' · ' + esc(fmtDate(g.date)) : '') + '</span></figcaption></figure>';
     }).join('') + '</div>' : '<div class="empty">No group photos yet.</div>';
     html += '<p class="muted" style="margin-top:24px;font-size:14px"><a href="#home">← Back to home</a></p>';
     return html + '</div>';
@@ -2563,7 +2675,7 @@ footer li{margin:4px 0}
     if (R.interests && R.interests.length) html += '<section class="section"><div class="section-head"><h2>Research interests</h2></div><ul class="interests">' + R.interests.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul></section>';
     var on = DATA.projects.filter(function (p) { return p.status !== 'completed'; }), done = DATA.projects.filter(function (p) { return p.status === 'completed'; });
     function ptable(list) { return '<div class="tablewrap"><table class="projects"><thead><tr><th>Project</th><th>Sponsor</th><th>Period</th><th>Role</th></tr></thead><tbody>' + list.map(function (p) { return '<tr><td>' + esc(p.title) + '</td><td>' + esc(p.sponsor) + '</td><td class="per">' + esc(p.period) + '</td><td>' + esc(p.role) + '</td></tr>'; }).join('') + '</tbody></table></div>'; }
-    html += '<section class="section"><div class="section-head"><h2>Projects</h2></div>' + (on.length ? '<div class="eyebrow" style="margin-bottom:10px">Ongoing</div>' + ptable(on) : '') + (done.length ? '<div class="eyebrow" style="margin:28px 0 10px">Completed</div>' + ptable(done) : '') + '</section>';
+    html += '<section class="section" id="projects"><div class="section-head"><h2>Projects</h2></div>' + (on.length ? '<div class="eyebrow" style="margin-bottom:10px">Ongoing</div>' + ptable(on) : '') + (done.length ? '<div class="eyebrow" style="margin:28px 0 10px">Completed</div>' + ptable(done) : '') + '</section>';
     return html + '</div>';
   }
 
@@ -2572,10 +2684,10 @@ footer li{margin:4px 0}
     var pi = DATA.people.filter(function (p) { return p.group === 'pi'; });
     var rest = DATA.people.filter(function (p) { return p.group !== 'pi'; });
     var counts = {}; rest.forEach(function (p) { counts[p.group] = (counts[p.group] || 0) + 1; });
-    var html = pageBand('people', 'People') + '<div class="wrap">';
+    var html = pageBand('people', 'Team') + '<div class="wrap">';
     pi.forEach(function (p) {
       html += '<section class="card pi-block"><img class="avatar" src="' + attr(avatarSrc(p)) + '" alt="' + attr(p.name) + '"><div>' +
-        '<span class="rpill g-pi">Principal Investigator</span><h3 style="margin-top:8px">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</h3>' +
+        '<span class="rpill g-pi"><span class="em">' + EMOJI.pi + '</span>Principal Investigator</span><h3 style="margin-top:8px">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</h3>' +
         '<div class="role">' + esc(p.role) + (p.title2 ? ' · ' + esc(p.title2) : '') + '</div>' +
         (p.bio ? '<p class="bio">' + esc(p.bio) + '</p>' : '') +
         '<div class="links">' + Object.keys(p.links || {}).map(function (k) { var u = safeUrl(p.links[k]); return u ? '<a href="' + attr(u) + '" target="_blank" rel="noopener">' + esc(k) + ' ↗</a>' : ''; }).join('') + '<button class="btn small" data-person="' + attr(p.id) + '">Full profile</button></div>' +
@@ -2586,13 +2698,19 @@ footer li{margin:4px 0}
     html += '</div>';
     var shown = peopleFilter === 'all' ? rest : rest.filter(function (p) { return p.group === peopleFilter; });
     html += '<div class="people">' + shown.map(function (p) {
-      return '<button class="card pcard" data-person="' + attr(p.id) + '"><img class="avatar" src="' + attr(avatarSrc(p)) + '" alt="' + attr(p.name) + '">' +
-        '<span class="rpill g-' + attr(p.group) + '">' + esc(groupOf(p.group).pill) + '</span>' +
+      return '<button class="card pcard" data-person="' + attr(p.id) + '">' +
+        '<span class="rpill g-' + attr(p.group) + '"><span class="em">' + (EMOJI[p.group] || '') + '</span>' + esc(groupOf(p.group).pill) + '</span>' +
+        '<img class="avatar" src="' + attr(avatarSrc(p)) + '" alt="' + attr(p.name) + '">' +
         '<span class="nm">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</span>' +
         '<span class="in">' + esc((p.interests || []).join(', ') || p.affiliation || p.role) + '</span></button>';
     }).join('') + '</div>';
     if (DATA.alumni.length) {
-      html += '<div class="group-title" style="margin-top:44px"><h3>Alumni and past members</h3><span class="count">' + DATA.alumni.length + '</span></div><div class="alumni"><ul>' + DATA.alumni.map(function (a) { return '<li>' + esc(a.name) + '<span class="lv">' + esc(a.level) + (a.years ? ' · ' + esc(a.years) : '') + '</span>' + (a.note ? '<span class="nt">' + esc(a.note) + '</span>' : '') + '</li>'; }).join('') + '</ul></div>';
+      var ac = {}; DATA.alumni.forEach(function (a) { var k = levelBucket(a.level); ac[k] = (ac[k] || 0) + 1; });
+      var shownAl = alumniFilter === 'all' ? DATA.alumni : DATA.alumni.filter(function (a) { return levelBucket(a.level) === alumniFilter; });
+      html += '<div class="group-title" style="margin-top:44px"><h3>Alumni and past members</h3><span class="count">' + DATA.alumni.length + '</span></div>' +
+        '<div class="pills" role="group" aria-label="Filter alumni"><button data-af="all" aria-pressed="' + (alumniFilter === 'all') + '">All <span class="c">' + DATA.alumni.length + '</span></button>' +
+        ALUMNI_BUCKETS.map(function (bk) { return ac[bk[0]] ? '<button data-af="' + bk[0] + '" aria-pressed="' + (alumniFilter === bk[0]) + '">' + (EMOJI[bk[0]] ? EMOJI[bk[0]] + ' ' : '') + esc(bk[1]) + ' <span class="c">' + ac[bk[0]] + '</span></button>' : ''; }).join('') + '</div>' +
+        (shownAl.length ? '<div class="alumni"><ul>' + shownAl.map(function (a) { return '<li><span class="em">' + levelEmoji(a.level) + '</span><div class="al"><span class="an">' + esc(a.name) + '</span><span class="lv">' + esc(a.level) + (a.years ? ' · ' + esc(a.years) : '') + '</span>' + (a.note ? '<span class="nt">' + esc(a.note) + '</span>' : '') + '</div></li>'; }).join('') + '</ul></div>' : '<div class="empty">No alumni in this group yet.</div>');
     }
     return html + '</div>';
   }
@@ -2611,8 +2729,8 @@ footer li{margin:4px 0}
     var links = Object.keys(p.links || {}).map(function (k) { var u = safeUrl(p.links[k]); return u ? '<a href="' + attr(u) + '" target="_blank" rel="noopener">' + esc(k) + ' ↗</a>' : ''; }).join('');
     return '<div class="modal" id="person-modal" role="dialog" aria-modal="true" aria-labelledby="pm-title"><div class="dlg">' +
       '<button class="close" data-close aria-label="Close">✕</button>' +
-      '<div class="side"><img class="avatar" src="' + attr(avatarSrc(p)) + '" alt="' + attr(p.name) + '">' + (links ? '<div class="links">' + links + '</div>' : '') + '</div>' +
-      '<div><span class="rpill g-' + attr(p.group) + '">' + esc(p.group === 'pi' ? 'Principal Investigator' : groupOf(p.group).pill) + '</span>' +
+      '<div class="side"><img class="avatar" src="' + attr(avatarSrc(p, 'popup')) + '" alt="' + attr(p.name) + '">' + (links ? '<div class="links">' + links + '</div>' : '') + '</div>' +
+      '<div><span class="rpill g-' + attr(p.group) + '"><span class="em">' + (EMOJI[p.group] || '') + '</span>' + esc(p.group === 'pi' ? 'Principal Investigator' : groupOf(p.group).pill) + '</span>' +
       '<h2 id="pm-title">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</h2>' +
       '<div class="role">' + esc(p.role) + (p.title2 ? ' · ' + esc(p.title2) : '') + (p.since ? ' · since ' + esc(p.since) : '') + (p.affiliation ? ' · ' + esc(p.affiliation) : '') + '</div>' +
       (p.email ? '<div class="em">' + esc(p.email) + '</div>' : '') +
@@ -2645,7 +2763,7 @@ footer li{margin:4px 0}
     var shown = all.filter(function (p) { return (pubState.year === 'all' || String(p.year) === pubState.year) && (!q || (p.title + ' ' + p.authors + ' ' + p.venue + ' ' + (p.note || '')).toLowerCase().indexOf(q) >= 0); });
     shown.sort(function (a, b) { return b.year - a.year; });
     var jn = DATA.publications.filter(function (p) { return p.type === 'journal'; }).length, cn = DATA.publications.length - jn;
-    var html = pageBand('publications', 'Publications') + '<div class="wrap">' +
+    var html = pageBand('publications', 'Publication') + '<div class="wrap">' +
       '<div class="tabs" role="tablist"><button role="tab" data-pt="journal" aria-selected="' + (pubState.type === 'journal') + '">Journal papers (' + jn + ')</button><button role="tab" data-pt="conference" aria-selected="' + (pubState.type === 'conference') + '">Conference proceedings (' + cn + ')</button></div>' +
       '<div class="filters"><button data-py="all" aria-pressed="' + (pubState.year === 'all') + '">All years</button>' + ys.map(function (y) { return '<button data-py="' + y + '" aria-pressed="' + (pubState.year === y) + '">' + y + '</button>'; }).join('') +
       '<input type="search" id="pub-q" placeholder="Search title, author, journal" value="' + attr(pubState.q) + '" aria-label="Search publications"></div>';
@@ -2699,8 +2817,8 @@ footer li{margin:4px 0}
       (C.goalsKo && C.goalsKo.length ? '<p class="ko">연구 목표: ' + C.goalsKo.map(esc).join(' · ') + '</p>' : '') + '</section>';
     html += '<section class="section"><div class="section-head"><h2>How to apply</h2></div><p class="prose">Email Prof. Kil-Wan Ko. One message with the items below is enough; there is no separate application form.</p>' +
       '<div class="apply">' +
-      '<div class="box"><h4>Email</h4><div class="copy-row"><span class="addr">' + esc(L.email) + '</span>' + copyBtn(L.email, 'Copy address') + '</div></div>' +
-      '<div class="box"><h4>Subject line</h4><div class="v"><code>' + esc(ap.subject) + '</code></div><div class="copy-row">' + copyBtn(ap.subject, 'Copy subject') + '</div></div>' +
+      '<div class="box"><h4>Email</h4><div class="copy-row"><span class="addr">' + esc(L.email) + '</span></div></div>' +
+      '<div class="box"><h4>Subject line</h4><div class="v"><code>' + esc(ap.subject) + '</code></div></div>' +
       '<div class="box"><h4>Contents</h4><div class="v">' + esc(ap.contents) + '</div></div>' +
       '<div class="box"><h4>Attachments</h4><div class="v">' + esc(ap.attachments) + '</div></div>' +
       '</div><p class="muted" style="margin-top:18px;font-size:14px">' + esc(L.meetings) + '</p></section>';
@@ -2712,7 +2830,7 @@ footer li{margin:4px 0}
     document.getElementById('footer').innerHTML =
       '<div><h4>' + esc(L.short) + ' · ' + esc(L.name) + '</h4><div>' + esc(L.department) + '<br>' + esc(L.university) + '<br>' + esc(L.address) + '</div>' +
       '<div class="small">' + esc(L.meetings) + '<br>© ' + new Date().getFullYear() + ' GEHL, KAIST.</div></div>' +
-      '<div><h4>Contact</h4><ul><li><span class="mono">' + esc(L.email) + '</span></li><li>' + copyBtn(L.email, 'Copy email') + '</li>' + (L.mapUrl ? '<li><a href="' + attr(L.mapUrl) + '" target="_blank" rel="noopener">Map ↗</a></li>' : '') + '</ul></div>' +
+      '<div><h4>Contact</h4><ul><li><span class="mono">' + esc(L.email) + '</span></li>' + (L.mapUrl ? '<li><a href="' + attr(L.mapUrl) + '" target="_blank" rel="noopener">Map ↗</a></li>' : '') + '</ul></div>' +
       '';
   }
 
@@ -2722,21 +2840,26 @@ footer li{margin:4px 0}
   function routeFromHash() {
     var h = (location.hash || '#home').slice(1);
     if (/^person-/.test(h)) return { view: 'people', person: h.slice(7) };
-    if (/^news-/.test(h)) return { view: 'news', news: h.slice(5) };
+    if (/^news-/.test(h)) { var v = h.slice(5); if (/^\d{4}$/.test(v) || v === 'before') { newsState.era = v; newsState.kind = 'all'; return { view: 'news' }; } return { view: 'news', news: v }; }
+    if (h === 'projects') return { view: 'research', scrollTo: 'projects' };
+    if (h === 'journal' || h === 'conference') { pubState.type = h; pubState.year = 'all'; return { view: 'publications' }; }
     return { view: VIEWS[h] ? h : 'home' };
   }
+  var NAV_PARENT = { blossoms: 'home' };
   function render(opts) {
     opts = opts || {};
     var r = routeFromHash(); currentView = r.view;
     var app = document.getElementById('app');
     app.innerHTML = VIEWS[currentView]();
-    document.querySelectorAll('nav.main a').forEach(function (a) { if (a.dataset.nav === (currentView === 'blossoms' ? 'home' : currentView)) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    document.querySelectorAll('nav.main a[data-nav]').forEach(function (a) { if (a.dataset.nav === (NAV_PARENT[currentView] || currentView)) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    var nm = document.getElementById('news-menu'); if (nm) { var er = newsEras(); nm.innerHTML = er.list.map(function (e) { return '<a href="#news-' + attr(e) + '">' + (e === 'before' ? 'Before KAIST' : esc(e)) + '</a>'; }).join(''); }
     document.getElementById('main-nav').classList.remove('open');
     document.getElementById('menu-btn').setAttribute('aria-expanded', 'false');
     renderFooter();
     fitTitle(); if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitle);
     if (r.person) openPerson(r.person); else if (!opts.keepModal) closeModal();
     if (r.news) { var t = document.getElementById('news-' + r.news); if (t) t.scrollIntoView({ block: 'start' }); }
+    else if (r.scrollTo) { var sec = document.getElementById(r.scrollTo); if (sec) { var top = sec.getBoundingClientRect().top + window.scrollY - 76; window.scrollTo(0, top); } }
     else if (!opts.keepScroll) window.scrollTo(0, 0);
     var q = document.getElementById('pub-q'); if (q && opts.focusSearch) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
   }
@@ -2744,12 +2867,13 @@ footer li{margin:4px 0}
 
   // ---------- events (delegated) ----------
   document.addEventListener('click', function (e) {
-    var t = e.target.closest('[data-person],[data-pf],[data-pt],[data-py],[data-era],[data-nk],[data-copy],[data-close],[data-news],#menu-btn');
+    var t = e.target.closest('[data-person],[data-pf],[data-af],[data-pt],[data-py],[data-era],[data-nk],[data-copy],[data-close],[data-news],#menu-btn');
     if (!t) { if (e.target.classList && e.target.classList.contains('modal')) closeModal(); return; }
     if (t.id === 'menu-btn') { var nav = document.getElementById('main-nav'); var open = nav.classList.toggle('open'); t.setAttribute('aria-expanded', String(open)); return; }
     if (t.dataset.person) { e.preventDefault(); openPerson(t.dataset.person); return; }
     if (t.hasAttribute('data-close')) { closeModal(); return; }
     if (t.dataset.pf) { peopleFilter = t.dataset.pf; render({ keepScroll: true }); return; }
+    if (t.dataset.af) { alumniFilter = t.dataset.af; render({ keepScroll: true }); return; }
     if (t.dataset.pt) { pubState.type = t.dataset.pt; pubState.year = 'all'; render({ keepScroll: true }); return; }
     if (t.dataset.py) { pubState.year = t.dataset.py; render({ keepScroll: true }); return; }
     if (t.dataset.era) { newsState.era = t.dataset.era; newsState.kind = 'all'; render({ keepScroll: true }); return; }
@@ -2788,5 +2912,413 @@ footer li{margin:4px 0}
 })();
 </script>
 
-</body>
-</html>
+<script>
+(function () {
+  'use strict';
+  var G = window.GEHL; if (!G || !window.claude || typeof window.claude.use !== 'function') return;
+  var esc = G.esc, D = G.data; D.groupPhotos = D.groupPhotos || [];
+  var S = { open: false, tab: 'home', form: null, dirty: 0, art: null, assets: null, status: '', err: false, confirm: null, busy: false };
+
+  Promise.all([window.claude.use('user'), window.claude.use('artifact'), window.claude.use('assets')]).then(function (r) {
+    var user = r[0]; S.art = r[1]; S.assets = r[2];
+    if (!user || !S.art) return;
+    return user.canEdit().then(function (ok) { if (ok) mountButton(); });
+  }).catch(function (e) { console.error("admin init", e); });
+
+  function mountButton() {
+    var root = document.getElementById('admin-root');
+    var b = document.createElement('button'); b.className = 'manage-btn'; b.id = 'manage-btn'; b.innerHTML = '<span class="dot"></span>Manage site';
+    b.addEventListener('click', function () { S.open = true; renderAdmin(); });
+    document.body.appendChild(b);
+    root.addEventListener('click', onClick); root.addEventListener('submit', onSubmit); root.addEventListener('input', onInput); root.addEventListener('change', onChange);
+  }
+  function setDirty() { S.dirty++; var b = document.getElementById('manage-btn'); if (b) b.classList.add('dirty'); G.rebuildIndex(); G.render({ keepScroll: true, keepModal: true }); }
+  function status(msg, err) { S.status = msg; S.err = !!err; var el = document.getElementById('admin-status'); if (el) { el.textContent = msg; el.className = 'status' + (err ? ' err' : ''); } }
+
+  // ---------- UI ----------
+  var TABS = [['home', 'Home'], ['photos', 'Home · Group photos'], ['people', 'Team'], ['projects', 'Research · Projects'], ['pubs', 'Publication'], ['news', 'News and Gallery'], ['banners', 'Title banners'], ['json', 'Everything (JSON)']];
+  function renderAdmin() {
+    var root = document.getElementById('admin-root');
+    var btn = document.getElementById('manage-btn');
+    if (!S.open) { root.innerHTML = ''; if (btn) btn.hidden = false; document.body.style.overflow = ''; return; }
+    if (btn) btn.hidden = true; document.body.style.overflow = 'hidden';
+    root.innerHTML = '<div class="admin"><div class="panel">' +
+      '<div class="ph"><h2>Manage site</h2><span class="sp"></span><button class="btn small" data-a="close">Close</button></div>' +
+      '<div class="tabs">' + TABS.map(function (t) { return '<button data-tab="' + t[0] + '" aria-selected="' + (S.tab === t[0]) + '">' + t[1] + '</button>'; }).join('') + '</div>' +
+      '<div class="body">' + tabBody() + '</div>' +
+      '<div class="pf"><span class="status' + (S.err ? ' err' : '') + '" id="admin-status">' + esc(S.status || (S.dirty ? S.dirty + ' unpublished change' + (S.dirty > 1 ? 's' : '') + '. Changes show on this page now; publish to make them live.' : 'Changes you save here show on the page immediately; press Publish to make them live for everyone.')) + '</span>' +
+      '<button class="btn primary" data-a="publish"' + (S.dirty && !S.busy ? '' : ' disabled') + '>Publish' + (S.dirty ? ' (' + S.dirty + ')' : '') + '</button></div>' +
+      '</div></div>';
+  }
+  function tabBody() {
+    switch (S.tab) {
+      case 'home': return formHome();
+      case 'news': return formNews() + listNews();
+      case 'pubs': return formPub() + listPubs();
+      case 'people': return formPerson() + listPeople() + alumniBlock();
+      case 'projects': return formProject() + listProjects();
+      case 'photos': return formPhoto() + listPhotos();
+      case 'banners': return bannersTab();
+      case 'json': return formJson();
+    }
+    return '';
+  }
+  function fld(label, name, value, opts) {
+    opts = opts || {};
+    var id = 'f-' + name, inner;
+    if (opts.type === 'textarea') inner = '<textarea id="' + id + '" name="' + name + '"' + (opts.cls ? ' class="' + opts.cls + '"' : '') + (opts.ph ? ' placeholder="' + esc(opts.ph) + '"' : '') + '>' + esc(value == null ? '' : value) + '</textarea>';
+    else if (opts.type === 'select') inner = '<select id="' + id + '" name="' + name + '">' + opts.options.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (String(value) === String(o[0]) ? ' selected' : '') + '>' + esc(o[1]) + '</option>'; }).join('') + '</select>';
+    else inner = '<input id="' + id + '" name="' + name + '" type="' + (opts.type || 'text') + '" value="' + esc(value == null ? '' : value) + '"' + (opts.ph ? ' placeholder="' + esc(opts.ph) + '"' : '') + (opts.req ? ' required' : '') + '>';
+    return '<label for="' + id + '">' + esc(label) + inner + (opts.help ? '<span class="help">' + esc(opts.help) + '</span>' : '') + '</label>';
+  }
+  function actions(isEdit) { return '<div class="actions"><button class="btn primary small" type="submit">' + (isEdit ? 'Save changes' : 'Add') + '</button>' + (isEdit ? '<button class="btn small" type="button" data-a="cancel">Cancel</button>' : '') + '</div>'; }
+  function rowBtns(type, id) {
+    if (S.confirm && S.confirm.type === type && S.confirm.id === id) return '<span class="inline-confirm">Delete? <button class="del" data-del-yes="' + esc(type) + '" data-id="' + esc(id) + '">Yes</button><button data-a="noconfirm">No</button></span>';
+    return '<button data-edit="' + esc(type) + '" data-id="' + esc(id) + '">Edit</button><button class="del" data-del="' + esc(type) + '" data-id="' + esc(id) + '">Delete</button>';
+  }
+  function splitAliases(v) {
+    v = String(v || '').trim(); if (!v) return [];
+    if (/[;\n]/.test(v)) return v.split(/[;\n]/).map(function (s) { return s.trim(); }).filter(Boolean);
+    return [v];
+  }
+  function lines(v) { return String(v || '').split(/\n/).map(function (s) { return s.trim(); }).filter(Boolean); }
+  function uid(prefix) { return prefix + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+  function slug(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '') || uid('p'); }
+
+  // ---- Home ----
+  function formHome() {
+    var L = D.lab, pil = L.pillars || [];
+    return '<form class="form" data-form="home"><h3>Home page text</h3>' +
+      fld('Lab name (title)', 'name', L.name, { req: true }) +
+      '<div class="row">' + fld('Motto (shown in capitals)', 'tagline', L.tagline) + fld('Founded line (bottom right)', 'founded', L.founded) + '</div>' +
+      fld('Introduction paragraph', 'intro', L.intro, { type: 'textarea' }) +
+      '<div class="row">' + fld('Recent news shown on home', 'homeNewsCount', L.homeNewsCount || 3, { type: 'number' }) + '</div>' +
+      '<h3 style="font-size:15px;margin-top:6px">What we study (four pictures)</h3>' +
+      pil.map(function (q, i) { return '<div class="row">' + fld('Title ' + (i + 1), 'ptitle' + i, q.title) + fld('One-line text ' + (i + 1), 'ptext' + i, q.text) + '</div>'; }).join('') +
+      fld('Methodology (one per line)', 'methods', (L.methods || []).join('\n'), { type: 'textarea' }) +
+      fld('Join Us page: open positions paragraph', 'positions', (D.culture || {}).positions, { type: 'textarea' }) +
+      actions(true) + '</form>';
+  }
+
+  // ---- News ----
+  function formNews() {
+    var f = S.form && S.form.type === 'news' ? S.form : { type: 'news', item: { date: new Date().toISOString().slice(0, 10), kind: 'award', who: '', title: '', body: '', images: [] } };
+    S.form = f; var it = f.item, isEdit = !!f.id;
+    var kinds = Object.keys(G.kinds).map(function (k) { return [k, G.kinds[k]]; });
+    return '<form class="form" data-form="news"><h3>' + (isEdit ? 'Edit news item' : 'Add a news item') + '</h3>' +
+      '<div class="row">' + fld('Date', 'date', it.date, { type: 'date', req: true }) + fld('Date label (optional, e.g. "Jun 15–19, 2026")', 'dateLabel', it.dateLabel) + fld('Category', 'kind', it.kind, { type: 'select', options: kinds }) + '</div>' +
+      '<div class="row">' + fld('Who (names, or GEHL)', 'who', it.who, { ph: 'Kil-Wan Ko' }) + fld('Era', 'era', it.era || '', { type: 'select', options: [['', 'At KAIST (by year)'], ['before', 'Before KAIST']] }) + '</div>' +
+      fld('Title', 'title', it.title, { req: true }) + fld('Text', 'body', it.body, { type: 'textarea' }) +
+      '<label>Photos<input type="file" accept="image/*,.heic,.heif" multiple data-upload="news"><span class="help">' + (S.assets ? 'JPEG, PNG, or iPhone HEIC; large photos are resized before upload.' : 'Photo upload is not available in this view. Ask Claude to add photos, or open the site from your own account.') + '</span></label>' +
+      '<div class="thumbs">' + (it.images || []).map(function (u, i) { return '<span class="th"><img src="' + esc(u) + '" alt=""><button type="button" data-rmimg="' + i + '" aria-label="Remove photo">×</button></span>'; }).join('') + '</div>' +
+      '<p class="help">The three most recent items by date appear on the home page automatically.</p>' + actions(isEdit) + '</form>';
+  }
+  function listNews() {
+    var items = D.news.slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+    return '<h3 style="font-size:15px;margin:6px 0 4px">All news (' + items.length + ')</h3><div class="alist">' + items.map(function (n) { return '<div class="arow"><span class="t">' + esc(n.title) + '<span class="s">' + esc(G.fmtDate(n.date, n.dateLabel)) + ' · ' + esc(G.kinds[n.kind] || n.kind) + (n.who ? ' · ' + esc(n.who) : '') + ((n.images || []).length ? ' · ' + n.images.length + ' photo' + (n.images.length > 1 ? 's' : '') : '') + '</span></span><span class="b">' + rowBtns('news', n.id) + '</span></div>'; }).join('') + '</div>';
+  }
+  // ---- Publications ----
+  function formPub() {
+    var f = S.form && S.form.type === 'pub' ? S.form : { type: 'pub', item: { type: 'journal', year: new Date().getFullYear(), authors: '', title: '', venue: '', detail: '', doi: '', url: '', note: '' } };
+    S.form = f; var it = f.item, isEdit = !!f.id;
+    return '<form class="form" data-form="pub"><h3>' + (isEdit ? 'Edit publication' : 'Add a publication') + '</h3>' +
+      '<div class="row">' + fld('Type', 'type', it.type, { type: 'select', options: [['journal', 'Journal paper'], ['conference', 'Conference proceeding']] }) + fld('Year', 'year', it.year, { type: 'number', req: true }) + '</div>' +
+      fld('Authors', 'authors', it.authors, { req: true, ph: 'Ko, K. W.*, Kayen, R., and Nweke, C.', help: 'Write each author as Surname, I. I. and mark the corresponding author with *. Names are matched to lab members automatically and the paper appears on their profiles.' }) +
+      '<div class="match" id="pub-match">' + matchPreview(it.authors) + '</div>' +
+      fld('Title', 'title', it.title, { req: true }) +
+      '<div class="row">' + fld('Journal or conference', 'venue', it.venue, { req: true }) + fld('Volume, pages, or place and date', 'detail', it.detail) + '</div>' +
+      '<div class="row">' + fld('DOI', 'doi', it.doi, { ph: '10.1061/...' }) + fld('URL (if no DOI)', 'url', it.url) + fld('Note (award, keynote, …)', 'note', it.note) + '</div>' +
+      actions(isEdit) + '</form>';
+  }
+  function matchPreview(authors) {
+    var m = G.matchMembers({ authors: authors || '' }), seen = {}, names = [];
+    m.forEach(function (x) { if (!seen[x.id]) { seen[x.id] = 1; var p = G.personById(x.id); if (p) names.push(esc(x.token.surname + ', ' + x.token.initials.split('').join('. ') + '.') + ' → <b>' + esc(p.name) + '</b>'); } });
+    return names.length ? 'Will appear on: ' + names.join(' · ') : 'No lab member matched yet. Members are matched by surname and initials (for example Ko, K. W.).';
+  }
+  function listPubs() {
+    var items = D.publications.slice().sort(function (a, b) { return b.year - a.year; });
+    return '<h3 style="font-size:15px;margin:6px 0 4px">All publications (' + items.length + ')</h3><div class="alist">' + items.map(function (p) { return '<div class="arow"><span class="t">' + esc(p.title) + '<span class="s">' + esc(p.year) + ' · ' + esc(p.type) + ' · ' + esc(p.venue) + '</span></span><span class="b">' + rowBtns('pub', p.id) + '</span></div>'; }).join('') + '</div>';
+  }
+  // ---- People ----
+  function formPerson() {
+    var f = S.form && S.form.type === 'person' ? S.form : { type: 'person', item: { name: '', degree: '', group: 'ms', role: 'M.S. Student', since: '', interests: [], education: [], aliases: [], email: '', links: {} } };
+    S.form = f; var it = f.item, isEdit = !!f.id;
+    var groups = G.groups.map(function (g) { return [g.id, g.label]; });
+    var links = Object.keys(it.links || {}).map(function (k) { return k + ' | ' + it.links[k]; }).join('\n');
+    return '<form class="form" data-form="person"><h3>' + (isEdit ? 'Edit member' : 'Add a member') + '</h3>' +
+      '<div class="row">' + fld('Full name', 'name', it.name, { req: true, ph: 'Jaewoo Kang' }) + fld('Degree suffix (Ph.D.)', 'degree', it.degree) + fld('Group', 'group', it.group, { type: 'select', options: groups }) + '</div>' +
+      '<div class="row">' + fld('Role / position', 'role', it.role, { req: true }) + fld('Since (Fall 2025)', 'since', it.since) + fld('Affiliation (staff)', 'affiliation', it.affiliation) + '</div>' +
+      '<div class="row">' + fld('Email', 'email', it.email) + fld('Author name forms', 'aliases', (it.aliases || []).join('; '), { ph: G.autoAlias(it.name) || 'Kang, J.', help: 'As the name appears in author lists, e.g. Ko, K. W. Separate several forms with a semicolon. Left empty, it is derived from the full name.' }) + '</div>' +
+      fld('Research interests (one per line)', 'interests', (it.interests || []).join('\n'), { type: 'textarea' }) +
+      fld('Education (one per line)', 'education', (it.education || []).join('\n'), { type: 'textarea' }) +
+      fld('Experience (one per line)', 'appointments', (it.appointments || []).join('\n'), { type: 'textarea' }) +
+      fld('Links (Label | URL, one per line)', 'links', links, { type: 'textarea', ph: 'Google Scholar | https://scholar.google.com/...' }) +
+      (it.group === 'pi' || it.awards || it.service || it.bio ? fld('Bio', 'bio', it.bio, { type: 'textarea' }) + fld('Awards (one per line)', 'awards', (it.awards || []).join('\n'), { type: 'textarea' }) + fld('Service (one per line)', 'service', (it.service || []).join('\n'), { type: 'textarea' }) + fld('Second title', 'title2', it.title2) : '') +
+      '<label>Photo<input type="file" accept="image/*,.heic,.heif" data-upload="person"><span class="help">' + (S.assets ? 'Square photos look best (they are shown with rounded corners).' : 'Photo upload is not available in this view.') + '</span></label>' +
+      (it.photo ? '<div class="thumbs"><span class="th"><img src="' + esc(it.photo) + '" alt=""><button type="button" data-rmphoto aria-label="Remove photo">×</button></span></div>' : '') +
+      '<label>Popup photo (optional)<input type="file" accept="image/*,.heic,.heif" data-upload="person2"><span class="help">Shown only in the profile popup. Leave empty to reuse the card photo.</span></label>' +
+      (it.photo2 ? '<div class="thumbs"><span class="th"><img src="' + esc(it.photo2) + '" alt=""><button type="button" data-rmphoto2 aria-label="Remove popup photo">×</button></span></div>' : '') +
+      actions(isEdit) + '</form>';
+  }
+  function listPeople() {
+    var order = {}; G.groups.forEach(function (g, i) { order[g.id] = i; });
+    var items = D.people.slice().sort(function (a, b) { return (order[a.group] || 0) - (order[b.group] || 0); });
+    return '<h3 style="font-size:15px;margin:6px 0 4px">Members (' + items.length + ')</h3><div class="alist">' + items.map(function (p) { return '<div class="arow"><span class="t">' + esc(p.name) + '<span class="s">' + esc(p.role) + ' · ' + esc(p.group) + (p.photo ? ' · photo' : ' · no photo') + '</span></span><span class="b">' + rowBtns('person', p.id) + '</span></div>'; }).join('') + '</div>';
+  }
+  function alumniBlock() {
+    return '<form class="form" data-form="alumni" style="margin-top:22px"><h3>Add an alumnus</h3><div class="row">' + fld('Name', 'name', '', { req: true }) + fld('Level', 'level', 'Undergraduate', { type: 'select', options: [['Ph.D.', 'Ph.D.'], ['M.S.', 'M.S.'], ['Postdoc', 'Postdoc'], ['Undergraduate', 'Undergraduate'], ['Undergraduate intern', 'Undergraduate intern'], ['Visiting', 'Visiting']] }) + fld('Years', 'years', '', { ph: '2025 – 2026' }) + '</div>' + fld('Note (department, next position)', 'note', '') + actions(false) + '</form>' +
+      '<h3 style="font-size:15px;margin:6px 0 4px">Alumni (' + D.alumni.length + ')</h3><div class="alist">' + D.alumni.map(function (a, i) { return '<div class="arow"><span class="t">' + esc(a.name) + '<span class="s">' + esc(a.level) + ' · ' + esc(a.years) + '</span></span><span class="b"><button class="del" data-del-alumni="' + i + '">Delete</button></span></div>'; }).join('') + '</div>';
+  }
+  // ---- Group photos ----
+  function formPhoto() {
+    var f = S.form && S.form.type === 'photo' ? S.form : { type: 'photo', item: { year: new Date().getFullYear(), date: '', caption: '', image: '' } };
+    S.form = f; var it = f.item, isEdit = !!f.id;
+    return '<form class="form" data-form="photo"><h3>' + (isEdit ? 'Edit group photo' : 'Add a cherry blossom group photo') + '</h3>' +
+      '<div class="row">' + fld('Year', 'year', it.year, { type: 'number', req: true }) + fld('Date taken', 'date', it.date, { type: 'date' }) + '</div>' +
+      fld('Caption', 'caption', it.caption, { ph: 'Spring 2027. Cherry blossoms at KAIST.' }) +
+      '<label>Photo<input type="file" accept="image/*,.heic,.heif" data-upload="photo"><span class="help">' + (S.assets ? 'The newest year is shown on the home page; all years appear on the Cherry Blossom page.' : 'Photo upload is not available in this view.') + '</span></label>' +
+      (it.image ? '<div class="thumbs"><span class="th"><img src="' + esc(it.image) + '" alt=""><button type="button" data-rmphoto aria-label="Remove photo">×</button></span></div>' : '') +
+      actions(isEdit) + '</form>';
+  }
+  function listPhotos() {
+    var items = D.groupPhotos.slice().sort(function (a, b) { return b.year - a.year; });
+    return '<h3 style="font-size:15px;margin:6px 0 4px">Group photos (' + items.length + ')</h3><div class="alist">' + items.map(function (g) { return '<div class="arow"><span class="t">Spring ' + esc(g.year) + '<span class="s">' + esc(g.caption || '') + (g.image ? ' · photo added' : ' · no photo yet') + '</span></span><span class="b">' + rowBtns('photo', g.id) + '</span></div>'; }).join('') + '</div>';
+  }
+
+  // ---- Title banners ----
+  function bannersTab() {
+    D.lab.banners = D.lab.banners || {};
+    return '<div class="form"><h3>Title banners</h3><p class="help">Each page opens with its title over a faint background image (shown at about 16% opacity, so almost any photo works). Wide images, around 2000 × 600 px, fit best.' + (S.assets ? '' : ' Photo upload is not available in this view.') + '</p>' +
+      G.pageKeys.map(function (k) {
+        var u = D.lab.banners[k[0]] || '';
+        return '<div class="arow"><span class="t">' + esc(k[1]) + '<span class="s">' + (u ? 'image set' : 'no image') + '</span></span><span class="b" style="align-items:center">' +
+          (u ? '<img src="' + esc(u) + '" alt="" style="width:96px;height:36px;object-fit:cover;border-radius:4px;border:1px solid var(--line)"><button class="del" data-rmbanner="' + esc(k[0]) + '">Remove</button>' : '') +
+          '<label class="btn small" style="cursor:pointer">' + (u ? 'Replace' : 'Upload') + '<input type="file" accept="image/*,.heic,.heif" data-upload="banner" data-key="' + esc(k[0]) + '" hidden></label></span></div>';
+      }).join('') + '</div>';
+  }
+
+  // ---- Projects ----
+  function formProject() {
+    var f = S.form && S.form.type === 'project' ? S.form : { type: 'project', item: { title: '', sponsor: '', period: '', role: 'PI', status: 'ongoing' } };
+    S.form = f; var it = f.item, isEdit = !!f.id;
+    return '<form class="form" data-form="project"><h3>' + (isEdit ? 'Edit project' : 'Add a project') + '</h3>' + fld('Title', 'title', it.title, { req: true }) +
+      '<div class="row">' + fld('Sponsor', 'sponsor', it.sponsor) + fld('Period', 'period', it.period, { ph: '2026.03 – present' }) + fld('Role', 'role', it.role) + fld('Status', 'status', it.status, { type: 'select', options: [['ongoing', 'Ongoing'], ['completed', 'Completed']] }) + '</div>' + actions(isEdit) + '</form>';
+  }
+  function listProjects() {
+    return '<h3 style="font-size:15px;margin:6px 0 4px">Projects (' + D.projects.length + ')</h3><div class="alist">' + D.projects.map(function (p, i) { return '<div class="arow"><span class="t">' + esc(p.title) + '<span class="s">' + esc(p.sponsor) + ' · ' + esc(p.period) + ' · ' + esc(p.status) + '</span></span><span class="b">' + rowBtns('project', String(i)) + '</span></div>'; }).join('') + '</div>';
+  }
+  // ---- JSON ----
+  function formJson() {
+    return '<form class="form" data-form="json"><h3>Everything as JSON</h3><p class="help">Research areas, lab text, courses, culture, and all lists live here. Edit carefully and press Apply; invalid JSON is rejected without changing anything. Research areas list selected publications by id (for example "j24").</p>' +
+      '<textarea name="json" class="tall" spellcheck="false">' + esc(JSON.stringify(D, null, 1)) + '</textarea><div class="actions"><button class="btn primary small" type="submit">Apply</button></div></form>';
+  }
+
+  // ---------- events ----------
+  function onClick(e) {
+    var t = e.target.closest('[data-a],[data-tab],[data-edit],[data-del],[data-del-yes],[data-del-alumni],[data-rmimg],[data-rmphoto],[data-rmphoto2],[data-rmbanner]');
+    if (!t) { if (e.target.classList.contains('admin')) { S.open = false; renderAdmin(); } return; }
+    if (t.dataset.a === 'close') { S.open = false; renderAdmin(); return; }
+    if (t.dataset.a === 'cancel') { S.form = null; S.confirm = null; renderAdmin(); return; }
+    if (t.dataset.a === 'noconfirm') { S.confirm = null; renderAdmin(); return; }
+    if (t.dataset.a === 'publish') { publish(); return; }
+    if (t.dataset.tab) { S.tab = t.dataset.tab; S.form = null; S.confirm = null; renderAdmin(); return; }
+    if (t.dataset.edit) { startEdit(t.dataset.edit, t.dataset.id); return; }
+    if (t.dataset.del) { S.confirm = { type: t.dataset.del, id: t.dataset.id }; renderAdmin(); return; }
+    if (t.dataset.delYes) { doDelete(t.dataset.delYes, t.dataset.id); return; }
+    if (t.dataset.delAlumni != null) { D.alumni.splice(parseInt(t.dataset.delAlumni, 10), 1); setDirty(); renderAdmin(); return; }
+    if (t.dataset.rmimg != null) { S.form.item.images.splice(parseInt(t.dataset.rmimg, 10), 1); renderAdmin(); return; }
+    if (t.hasAttribute('data-rmphoto')) { S.form.item.photo = ''; S.form.item.image = ''; renderAdmin(); return; }
+    if (t.hasAttribute('data-rmphoto2')) { S.form.item.photo2 = ''; renderAdmin(); return; }
+    if (t.dataset.rmbanner) { D.lab.banners[t.dataset.rmbanner] = ''; setDirty(); renderAdmin(); return; }
+  }
+  function startEdit(type, id) {
+    S.confirm = null;
+    var item;
+    if (type === 'news') item = D.news.filter(function (x) { return x.id === id; })[0];
+    else if (type === 'pub') item = D.publications.filter(function (x) { return x.id === id; })[0];
+    else if (type === 'person') item = G.personById(id);
+    else if (type === 'project') item = D.projects[parseInt(id, 10)];
+    else if (type === 'photo') item = D.groupPhotos.filter(function (x) { return x.id === id; })[0];
+    if (!item) return;
+    S.form = { type: type, id: id, item: JSON.parse(JSON.stringify(item)) };
+    renderAdmin();
+    var body = document.querySelector('.admin .body'); if (body) body.scrollTop = 0;
+  }
+  function doDelete(type, id) {
+    if (type === 'news') D.news = D.news.filter(function (x) { return x.id !== id; });
+    else if (type === 'pub') D.publications = D.publications.filter(function (x) { return x.id !== id; });
+    else if (type === 'person') D.people = D.people.filter(function (x) { return x.id !== id; });
+    else if (type === 'project') D.projects.splice(parseInt(id, 10), 1);
+    else if (type === 'photo') D.groupPhotos = D.groupPhotos.filter(function (x) { return x.id !== id; });
+    G.data.groupPhotos = D.groupPhotos; G.data.news = D.news; G.data.publications = D.publications; G.data.people = D.people;
+    S.confirm = null; if (S.form && S.form.id === id) S.form = null;
+    setDirty(); renderAdmin();
+  }
+  function onInput(e) {
+    if (e.target.name === 'authors') { var m = document.getElementById('pub-match'); if (m) m.innerHTML = matchPreview(e.target.value); }
+    if (S.form && e.target.form && e.target.form.dataset.form === S.form.type && e.target.name && e.target.type !== 'file') {
+      var v = e.target.value;
+      if (['interests', 'education', 'appointments', 'awards', 'service'].indexOf(e.target.name) >= 0) S.form.item[e.target.name] = lines(v);
+      else if (e.target.name === 'aliases') S.form.item.aliases = splitAliases(v);
+      else if (e.target.name === 'links') { var o = {}; lines(v).forEach(function (l) { var p = l.split('|'); if (p.length >= 2) o[p[0].trim()] = p.slice(1).join('|').trim(); }); S.form.item.links = o; }
+      else if (e.target.name !== 'json') S.form.item[e.target.name] = v;
+    }
+  }
+  function onChange(e) {
+    var up = e.target.dataset.upload; if (!up) return;
+    var files = Array.prototype.slice.call(e.target.files || []); if (!files.length) return;
+    if (!S.assets) { status('Photo upload is not available in this view.', true); return; }
+    S.busy = true; status('Uploading ' + files.length + ' photo' + (files.length > 1 ? 's' : '') + '…');
+    var chain = Promise.resolve();
+    files.forEach(function (f) {
+      chain = chain.then(function () { return toJpegIfHeic(f); }).then(shrink).then(function (blob) { return S.assets.upload(blob); }).then(function (res) {
+        if (up === 'news') { S.form.item.images = S.form.item.images || []; S.form.item.images.push(res.url); }
+        else if (up === 'person') S.form.item.photo = res.url;
+        else if (up === 'person2') S.form.item.photo2 = res.url;
+        else if (up === 'photo') S.form.item.image = res.url;
+        else if (up === 'banner') { D.lab.banners = D.lab.banners || {}; D.lab.banners[e.target.dataset.key] = res.url; }
+      });
+    });
+    chain.then(function () { S.busy = false; if (up === 'banner') { setDirty(); status('Banner set. Publish to make it live.'); } else status('Photo uploaded. Save the item, then publish.'); renderAdmin(); })
+      .catch(function (err) { S.busy = false; status('Upload failed: ' + (err && err.message || err), true); renderAdmin(); });
+  }
+  // HEIC (iPhone) photos: decoded in the browser with libheif's pure-JavaScript build (no wasm, no extra files), then re-encoded as JPEG.
+  var HEIC_LIB = 'https://cdn.jsdelivr.net/npm/libheif-js@1.19.8/libheif/libheif.js';
+  function isHeic(file) { return /image\/hei[cf]/i.test(file.type || '') || /\.hei[cf]$/i.test(file.name || ''); }
+  function loadHeicLib() {
+    if (window.libheif) return Promise.resolve();
+    if (loadHeicLib.p) return loadHeicLib.p;
+    loadHeicLib.p = new Promise(function (resolve, reject) {
+      var sc = document.createElement('script'); sc.src = HEIC_LIB; sc.async = true;
+      sc.onload = function () { window.libheif ? resolve() : reject(new Error('decoder script loaded but libheif is missing')); };
+      sc.onerror = function () { loadHeicLib.p = null; reject(new Error('decoder script could not be downloaded')); };
+      document.head.appendChild(sc);
+    });
+    return loadHeicLib.p;
+  }
+  function toJpegIfHeic(file) {
+    if (!isHeic(file)) return Promise.resolve(file);
+    status('Converting HEIC photo… (the first one loads a 2 MB decoder)');
+    var lib;
+    return loadHeicLib().then(function () {
+      // the script exposes either the module itself or a factory (possibly returning a promise)
+      if (loadHeicLib.lib) return loadHeicLib.lib;
+      var L = window.libheif;
+      return Promise.resolve(typeof L === 'function' && !L.HeifDecoder ? L() : L).then(function (m) { loadHeicLib.lib = m; return m; });
+    }).then(function (m) { lib = m; if (!lib || typeof lib.HeifDecoder !== 'function') throw new Error('decoder not available (' + Object.keys(lib || {}).slice(0, 5).join(',') + ')'); return file.arrayBuffer(); }).then(function (buf) {
+      var dec = new lib.HeifDecoder();
+      var imgs = dec.decode(new Uint8Array(buf));
+      if (!imgs || !imgs.length) throw new Error('no image found in the file');
+      var img = imgs[0], w = img.get_width(), h = img.get_height();
+      var c = document.createElement('canvas'); c.width = w; c.height = h;
+      var ctx = c.getContext('2d'); var id = ctx.createImageData(w, h);
+      return new Promise(function (resolve, reject) {
+        img.display(id, function (d) {
+          if (!d) return reject(new Error('decode failed'));
+          ctx.putImageData(id, 0, 0);
+          c.toBlob(function (b) { if (!b) return reject(new Error('JPEG encode failed')); resolve(new File([b], (file.name || 'photo').replace(/\.hei[cf]$/i, '') + '.jpg', { type: 'image/jpeg' })); }, 'image/jpeg', 0.92);
+        });
+      });
+    }).catch(function (err) { try { console.error('HEIC', err); } catch (e) { } throw new Error('HEIC conversion failed: ' + (err && err.message || err) + '. Please export the photo as JPEG and try again.'); });
+  }
+  function shrink(file) {
+    return new Promise(function (resolve) {
+      if (!/^image\//.test(file.type) || file.size < 500000) return resolve(file);
+      var img = new Image(), url = URL.createObjectURL(file);
+      img.onload = function () {
+        var max = 2400, w = img.width, h = img.height, sc = Math.min(1, max / Math.max(w, h));
+        var c = document.createElement('canvas'); c.width = Math.round(w * sc); c.height = Math.round(h * sc);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
+        c.toBlob(function (b) { resolve(b || file); }, 'image/jpeg', 0.86);
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); resolve(file); };
+      img.src = url;
+    });
+  }
+  function onSubmit(e) {
+    e.preventDefault();
+    var form = e.target, kind = form.dataset.form, fd = new FormData(form), v = function (k) { return (fd.get(k) || '').toString().trim(); };
+    if (kind === 'json') {
+      try { var obj = JSON.parse(v('json')); if (!obj || typeof obj !== 'object' || !Array.isArray(obj.people)) throw new Error('Expected an object with people, publications, and news arrays.'); }
+      catch (err) { status('Not applied: ' + err.message, true); return; }
+      Object.keys(D).forEach(function (k) { delete D[k]; }); Object.keys(obj).forEach(function (k) { D[k] = obj[k]; });
+      setDirty(); status('Applied.'); renderAdmin(); return;
+    }
+    if (kind === 'home') {
+      D.lab.name = v('name') || D.lab.name; D.lab.tagline = v('tagline'); D.lab.founded = v('founded'); D.lab.intro = v('intro');
+      D.lab.homeNewsCount = parseInt(v('homeNewsCount'), 10) || 3;
+      (D.lab.pillars || []).forEach(function (q, i) { q.title = v('ptitle' + i); q.text = v('ptext' + i); });
+      D.lab.methods = lines(v('methods'));
+      D.culture = D.culture || {}; D.culture.positions = v('positions');
+      setDirty(); status('Saved.'); renderAdmin(); return;
+    }
+    if (kind === 'alumni') { D.alumni.push({ name: v('name'), level: v('level'), years: v('years'), note: v('note') }); setDirty(); renderAdmin(); return; }
+    var f = S.form, it = f.item, isEdit = !!f.id;
+    if (kind === 'news') {
+      var n = { id: isEdit ? f.id : uid('n'), date: v('date'), dateLabel: v('dateLabel'), kind: v('kind'), who: v('who'), title: v('title'), body: v('body'), images: it.images || [] };
+      if (v('era') === 'before') n.era = 'before';
+      if (!n.date || !n.title) { status('Date and title are required.', true); return; }
+      if (isEdit) D.news = D.news.map(function (x) { return x.id === f.id ? n : x; }); else D.news.push(n);
+      G.data.news = D.news;
+    } else if (kind === 'pub') {
+      var p = { id: isEdit ? f.id : uid('p'), type: v('type'), year: parseInt(v('year'), 10) || new Date().getFullYear(), authors: v('authors'), title: v('title'), venue: v('venue'), detail: v('detail'), doi: v('doi').replace(/^https?:\/\/(dx\.)?doi\.org\//i, ''), url: v('url'), note: v('note') };
+      if (!p.authors || !p.title) { status('Authors and title are required.', true); return; }
+      if (isEdit) D.publications = D.publications.map(function (x) { return x.id === f.id ? p : x; }); else D.publications.push(p);
+      G.data.publications = D.publications;
+      var mm = G.matchMembers(p), ids = {}; mm.forEach(function (x) { ids[x.id] = 1; });
+      status(isEdit ? 'Saved.' : 'Added. ' + (Object.keys(ids).length ? 'It now appears on ' + Object.keys(ids).map(function (id) { var pp = G.personById(id); return pp ? pp.name : id; }).join(', ') + '.' : 'No member matched the author list.'));
+    } else if (kind === 'person') {
+      var q = { id: isEdit ? f.id : slug(v('name')), name: v('name'), degree: v('degree'), group: v('group'), role: v('role'), since: v('since'), affiliation: v('affiliation'), email: v('email'), interests: lines(v('interests')), education: lines(v('education')), appointments: lines(v('appointments')), aliases: splitAliases(v('aliases')), links: it.links || {}, photo: it.photo || '', photo2: it.photo2 || '' };
+      if (fd.has('bio')) { q.bio = v('bio'); q.awards = lines(v('awards')); q.service = lines(v('service')); q.title2 = v('title2'); }
+      if (!q.name) { status('Name is required.', true); return; }
+      if (!isEdit && G.personById(q.id)) q.id = uid(q.id);
+      if (isEdit) D.people = D.people.map(function (x) { return x.id === f.id ? q : x; }); else D.people.push(q);
+      G.data.people = D.people;
+    } else if (kind === 'project') {
+      var pr = { title: v('title'), sponsor: v('sponsor'), period: v('period'), role: v('role'), status: v('status') };
+      if (isEdit) D.projects[parseInt(f.id, 10)] = pr; else D.projects.push(pr);
+    } else if (kind === 'photo') {
+      var gp = { id: isEdit ? f.id : uid('gp'), year: parseInt(v('year'), 10) || new Date().getFullYear(), date: v('date'), caption: v('caption'), image: it.image || '' };
+      if (isEdit) D.groupPhotos = D.groupPhotos.map(function (x) { return x.id === f.id ? gp : x; }); else D.groupPhotos.push(gp);
+      G.data.groupPhotos = D.groupPhotos;
+    }
+    S.form = null; setDirty();
+    if (kind !== 'pub') status(isEdit ? 'Saved.' : 'Added.');
+    renderAdmin();
+  }
+
+  // ---------- publish ----------
+  function getSource() {
+    function ok(txt) { return txt && /id="site-data"/.test(txt); }
+    return fetch('index.html', { cache: 'no-store' }).then(function (r) { return r.ok ? r.text() : ''; }).catch(function () { return ''; })
+      .then(function (txt) { if (ok(txt)) return txt; return fetch(location.pathname || location.href, { cache: 'no-store' }).then(function (r) { return r.ok ? r.text() : ''; }).catch(function () { return ''; }); })
+      .then(function (txt) { if (!ok(txt)) throw new Error('Could not read the page source in this viewer. Ask Claude to publish the change instead.'); return txt; });
+  }
+  function serialize(data) { return JSON.stringify(data, null, 1).replace(/<\//g, '<\\/').replace(/<!(--)/g, '\\u003c!$1'); }
+  function publish() {
+    if (!S.art || S.busy) return;
+    S.busy = true; renderAdmin(); status('Publishing…');
+    getSource().then(function (src) {
+      var re = /(<script id="site-data" type="application\/json">)([\s\S]*?)(<\/script>)/;
+      if (!re.test(src)) throw new Error('Data block not found in the page source.');
+      var json = serialize(D);
+      var html = src.replace(re, function (m, a, b, c) { return a + '\n' + json + '\n' + c; });
+      if (!/^\s*<!doctype/i.test(html)) html = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>\n' + html + '\n</body></html>';
+      try { sessionStorage.setItem('gehl-toast', 'Published. The site is up to date.'); } catch (e) { }
+      return S.art.publish(html);
+    }).then(function () { S.dirty = 0; status('Published. Reloading…'); })
+      .catch(function (err) {
+        try { sessionStorage.removeItem('gehl-toast'); } catch (e) { }
+        S.busy = false;
+        var code = err && err.code;
+        if (code === 'conflict') status('Someone published a newer version first. The page is reloading to it; your unsaved edits are lost, please add them again.', true);
+        else if (code === 'not_writer' || code === 'not_granted') status('This account cannot publish the site.', true);
+        else if (code === 'too_large') status('The page is too large to publish. Remove some photos or ask Claude for help.', true);
+        else status('Publish failed: ' + (err && (err.message || err.code) || err), true);
+        renderAdmin();
+      });
+  }
+})();
+</script>
+
+</body></html>
