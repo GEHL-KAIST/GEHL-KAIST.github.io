@@ -10,7 +10,7 @@
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
   "email": "kilwanko@kaist.ac.kr",
   "meetings": "Meetings are by appointment. Please email first.",
-  "center": "KOCED Geotechnical Centrifuge Testing Center at KAIST",
+  "center": "",
   "mapUrl": "https://maps.google.com/?q=36.365769,127.362463",
   "legacyUrl": "https://sites.google.com/view/gehl-kaist/home",
   "homeNewsCount": 3,
@@ -18,22 +18,26 @@
    {
     "icon": "ssi",
     "title": "Soil-foundation-structure interaction",
-    "text": "How the ground, the footing, and the building move together in an earthquake."
+    "text": "",
+    "image": "img/study/ssi.jpg"
    },
    {
     "icon": "liq",
     "title": "Soil liquefaction",
-    "text": "When shaking turns saturated sand into a fluid, read from the energy it dissipates."
+    "text": "",
+    "image": "img/study/liq.jpg"
    },
    {
     "icon": "site",
     "title": "Site response and ground motion",
-    "text": "How soil layers and terrain amplify the motion that reaches the surface."
+    "text": "",
+    "image": "img/study/site.png"
    },
    {
     "icon": "dam",
     "title": "Dams and levees on faults",
-    "text": "Cracking and leak erosion when a fault offsets the foundation of an embankment."
+    "text": "",
+    "image": "img/study/dam.jpg"
    }
   ],
   "methods": [
@@ -303,7 +307,8 @@
     "LinkedIn": "https://www.linkedin.com/in/kil-wan-ko-16b12118b/",
     "CV": "https://drive.google.com/file/d/1zBMg1QisFHH7Hp7La9v3d9YR0JtAhXm7/view?usp=drive_link"
    },
-   "photo": "",
+   "photo": "img/uploads/0107665a7096068188fbd9e529011285.jpg",
+   "photo2": "img/uploads/42ba3a9f0debc5225d9156a914bb1799.jpg",
    "bio": "Kil-Wan Ko studies geotechnical earthquake engineering and geohazards: dynamic soil-foundation-structure interaction, soil liquefaction, seismic site response, seismic fault modeling, ground-motion characterization, and the cracking and erosion of levees and dams caused by surface fault rupture. Before joining KAIST in 2025 he worked as a postdoctoral researcher at UC Davis, USC, and UC Berkeley.",
    "awards": [
     "Teaching Excellence Award, Department of Civil and Environmental Engineering, KAIST, 2026",
@@ -1862,14 +1867,7 @@
    "year": 2026,
    "date": "2026-04-02",
    "caption": "Spring 2026. Cherry blossoms at KAIST and the lab's traditional strawberry party.",
-   "image": ""
-  },
-  {
-   "id": "gp2025",
-   "year": 2025,
-   "date": "2025-04-01",
-   "caption": "Spring 2025. GEHL's first spring at KAIST.",
-   "image": ""
+   "image": "img/uploads/6661ce876bfad95300ff5ea5958fdfe7.jpg"
   }
  ],
  "teaching": {
