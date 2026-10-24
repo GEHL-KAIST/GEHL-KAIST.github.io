@@ -9,7 +9,7 @@
   "university": "Korea Advanced Institute of Science and Technology (KAIST)",
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
   "email": "kilwanko@kaist.ac.kr",
-  "meetings": "Meetings are by appointment. Please email first.",
+  "meetings": "Meetings are available by appointment only.\nPlease email me.",
   "center": "",
   "mapUrl": "https://maps.google.com/?q=36.365769,127.362463",
   "legacyUrl": "https://sites.google.com/view/gehl-kaist/home",
@@ -58,7 +58,8 @@
    "news": "img/uploads/7a706d87aab23214009b74cff9deb207.jpg",
    "join": "img/uploads/54460bc6eaa71e4eb29b97ce5a9eb59a.jpg",
    "blossoms": ""
-  }
+  },
+  "copyright": "© Copyright 2025. Geotechnical Earthquake and Geohazards Lab All Rights Reserved."
  },
  "research": {
   "core": {

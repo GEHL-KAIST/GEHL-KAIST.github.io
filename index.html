@@ -170,13 +170,13 @@ main{display:block}
 .page-sub{color:var(--muted);font-size:16px;margin-top:28px;margin-bottom:22px}
 
 /* People (SEED-style grid) */
-.pi-block{display:grid;grid-template-columns:280px minmax(0,1fr);gap:36px;align-items:start;padding:28px;margin-bottom:28px}
-.pi-block .avatar{width:280px;height:280px;border-radius:28px}
+.pi-block{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:40px;align-items:start;padding:28px;margin-bottom:28px}
+.pi-block .avatar{width:100%;height:auto;aspect-ratio:4/5;border-radius:28px}
 .pi-block h3{font-size:26px}
 .pi-block .role{color:var(--muted);margin-top:4px}
 .pi-block .bio{margin-top:14px;font-size:15.5px}
 .pi-block .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;font-size:14px}
-@media (max-width:700px){ .pi-block{grid-template-columns:1fr;padding:20px} .pi-block .avatar{width:220px;height:220px} }
+@media (max-width:700px){ .pi-block{grid-template-columns:1fr;padding:20px} .pi-block .avatar{width:100%;max-width:320px;height:auto} }
 .pills{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
 .pills button{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 12px;border-radius:999px;background:#EFEFEF;color:var(--fg);font-size:13.5px;font-weight:500}
 .pills button .c{font-family:var(--mono);font-size:11.5px;padding:1px 7px;border-radius:999px;background:var(--surface);color:var(--muted)}
@@ -222,6 +222,7 @@ main{display:block}
 .modal .side{display:grid;gap:12px;align-content:start}
 .modal .side .links{display:grid;gap:4px;font-size:13.5px}
 .modal h2{font-size:26px;margin-top:6px}
+.modal h2 .yrs{font-weight:400;font-size:17px;color:var(--muted);white-space:nowrap;margin-left:6px}
 .modal .role{font-size:15px;color:var(--muted);margin-top:2px}
 .modal .em{font-family:var(--mono);font-size:13px;margin-top:6px;color:var(--muted)}
 .modal .sec{margin-top:20px}
@@ -334,7 +335,8 @@ table.projects td.per{font-family:var(--mono);font-size:13px;white-space:nowrap;
 
 /* Footer */
 footer{border-top:1px solid var(--line);margin-top:40px;background:var(--surface)}
-footer .wrap{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:28px;padding-block:36px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;padding-block:36px;font-size:14px}
+footer .meet .line{white-space:nowrap}
 footer h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
 footer .small{color:var(--muted);font-size:13px;margin-top:14px}
 footer ul{margin:0;padding:0;list-style:none}
@@ -366,6 +368,7 @@ footer li{margin:4px 0}
 .form input,.form select,.form textarea{font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--surface);color:var(--fg);min-width:0;width:100%}
 .form textarea{min-height:72px;resize:vertical}
 .form textarea.tall{min-height:320px;font-family:var(--mono);font-size:12.5px}
+.form textarea.mid{min-height:150px}
 .form .help{font-size:12.5px;color:var(--muted)}
 .form .actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .form .match{font-size:13px;padding:8px 10px;border-radius:var(--radius);background:var(--soft)}
@@ -435,7 +438,7 @@ footer li{margin:4px 0}
   "university": "Korea Advanced Institute of Science and Technology (KAIST)",
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
   "email": "kilwanko@kaist.ac.kr",
-  "meetings": "Meetings are by appointment. Please email first.",
+  "meetings": "Meetings are available by appointment only.\nPlease email me.",
   "center": "",
   "mapUrl": "https://maps.google.com/?q=36.365769,127.362463",
   "legacyUrl": "https://sites.google.com/view/gehl-kaist/home",
@@ -484,7 +487,8 @@ footer li{margin:4px 0}
    "news": "img/uploads/7a706d87aab23214009b74cff9deb207.jpg",
    "join": "img/uploads/54460bc6eaa71e4eb29b97ce5a9eb59a.jpg",
    "blossoms": ""
-  }
+  },
+  "copyright": "© Copyright 2025. Geotechnical Earthquake and Geohazards Lab All Rights Reserved."
  },
  "research": {
   "core": {
@@ -2564,6 +2568,7 @@ footer li{margin:4px 0}
     var mo = MONTHS[parseInt(m[2], 10) - 1] || m[2];
     return (m[3] ? mo + ' ' + parseInt(m[3], 10) + ', ' : mo + ' ') + m[1];
   }
+  function textLines(t) { return String(t || '').split(/\n/).map(function (l) { return l.trim(); }).filter(Boolean).map(function (l) { return '<span class="line">' + esc(l) + '</span>'; }).join('<br>'); }
   function sortByDateDesc(list) { return list.slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); }); }
   function safeUrl(u) { u = String(u || '').trim(); return /^(https?:)?\/\//i.test(u) || /^\/_blob\//.test(u) || /^(img|data)\//.test(u) ? u : ''; }
   function doiUrl(doi) { doi = String(doi || '').trim(); if (!doi) return ''; return /^https?:/i.test(doi) ? doi : 'https://doi.org/' + doi; }
@@ -2578,16 +2583,16 @@ footer li{margin:4px 0}
   }
   // Card photo framed on the detected face, so faces come out the same size on every card (PI excluded).
   // face = {cx, cy, h, ar, nh}: face centre and box height as fractions of the photo, photo aspect ratio, natural height.
-  var FACE_T = 0.19, FACE_CY = 0.27;   // face box = 19% of the card height, centred 27% from the top (matches the preferred reference crop)
+  // Reference framing (Jinyong Kim's card): face box = 19% of the card height, with its top edge 12% below the card's top edge.
+  // A tight head shot cannot be made smaller than the square crop allows; it keeps the crop scale but still gets the same headroom.
+  var FACE_T = 0.19, FACE_TOP = 0.12;
   function cardPhoto(p) {
     var src = avatarSrc(p), f = p.face;
     if (!f || p.group === 'pi' || !safeUrl(p.photo) || f.src !== p.photo || !(f.h > 0) || !(f.ar > 0)) return '<img class="avatar" src="' + attr(src) + '" alt="' + attr(p.name) + '">';
     var s = FACE_T / f.h, cover = Math.max(1, 1 / f.ar), smax = Math.max(cover, (f.nh || 1200) / 300);
-    // a tight head shot cannot be made smaller than the square crop allows: leave it as the plain crop
-    if (s < cover * 0.98) return '<img class="avatar" src="' + attr(src) + '" alt="' + attr(p.name) + '">';
     s = Math.min(Math.max(s, cover), smax);
     var hd = s * 100, wd = s * f.ar * 100;                     // displayed size, % of the square box
-    var top = FACE_CY * 100 - f.cy * hd, left = 50 - f.cx * wd;
+    var top = FACE_TOP * 100 - (f.cy - f.h / 2) * hd, left = 50 - f.cx * wd;
     top = Math.min(0, Math.max(100 - hd, top)); left = Math.min(0, Math.max(100 - wd, left));
     return '<span class="avatar fav"><img src="' + attr(src) + '" alt="' + attr(p.name) + '" style="height:' + hd.toFixed(2) + '%;top:' + top.toFixed(2) + '%;left:' + left.toFixed(2) + '%"></span>';
   }
@@ -2596,7 +2601,7 @@ footer li{margin:4px 0}
   var ALUMNI_LEVEL = { phd: 'Ph.D.', ms: 'M.S.', postdoc: 'Postdoc', ug: 'Undergraduate', staff: 'Staff', pi: 'Faculty' };
   // Alumni list = members marked as alumni (clickable, full profile) + the plain alumni entries, newest first.
   function alumniList() {
-    var out = DATA.people.filter(isAlumnus).map(function (p) { return { pid: p.id, name: p.name + (p.degree ? ', ' + p.degree : ''), level: p.alumniLevel || ALUMNI_LEVEL[p.group] || p.role, years: p.years || '', note: p.now || '' }; });
+    var out = DATA.people.filter(isAlumnus).map(function (p) { return { pid: p.id, name: p.name, level: p.alumniLevel || ALUMNI_LEVEL[p.group] || p.role, years: p.years || '', note: p.now || '' }; });
     DATA.alumni.forEach(function (a) { out.push(a); });
     function endYear(a) { var m = String(a.years || '').match(/\d{4}(?!.*\d{4})/); return m ? parseInt(m[0], 10) : 0; }
     return out.map(function (a, i) { return { a: a, i: i, y: endYear(a) }; }).sort(function (x, y) { return y.y - x.y || x.i - y.i; }).map(function (x) { return x.a; });
@@ -2878,7 +2883,7 @@ footer li{margin:4px 0}
       '<button class="close" data-close aria-label="Close">✕</button>' +
       '<div class="side"><img class="avatar" src="' + attr(avatarSrc(p, 'popup')) + '" alt="' + attr(p.name) + '">' + (links ? '<div class="links">' + links + '</div>' : '') + '</div>' +
       '<div><span class="rpill"><span class="em">' + (EMOJI[p.group] || '') + '</span>' + esc(isAlumnus(p) ? 'Alumni' : p.group === 'pi' ? 'Principal Investigator' : groupOf(p.group).pill) + '</span>' +
-      '<h2 id="pm-title">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</h2>' +
+      '<h2 id="pm-title">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + (isAlumnus(p) && p.years ? ' <span class="yrs">' + esc(p.years) + '</span>' : '') + '</h2>' +
       (isAlumnus(p)
         ? '<div class="role">' + esc(p.role) + (p.years ? ', ' + esc(p.years) : '') + (p.affiliation ? ' · ' + esc(p.affiliation) : '') + '</div>' + (p.now ? '<div class="role">Now: ' + esc(p.now) + '</div>' : '')
         : '<div class="role">' + esc(p.role) + (p.title2 ? ' · ' + esc(p.title2) : '') + (p.since ? ' · since ' + esc(p.since) : '') + (p.affiliation ? ' · ' + esc(p.affiliation) : '') + '</div>') +
@@ -2970,7 +2975,7 @@ footer li{margin:4px 0}
       '<div class="box"><h4>Subject line</h4><div class="v"><code>' + esc(ap.subject) + '</code></div></div>' +
       '<div class="box"><h4>Contents</h4><div class="v">' + esc(ap.contents) + '</div></div>' +
       '<div class="box"><h4>Attachments</h4><div class="v">' + esc(ap.attachments) + '</div></div>' +
-      '</div><p class="muted" style="margin-top:18px;font-size:14px">' + esc(L.meetings) + '</p></section>';
+      '</div><p class="muted" style="margin-top:18px;font-size:14px">' + textLines(L.meetings) + '</p></section>';
     return html + '</div>';
   }
 
@@ -2978,8 +2983,9 @@ footer li{margin:4px 0}
     var L = DATA.lab;
     document.getElementById('footer').innerHTML =
       '<div><h4>' + esc(L.short) + ' · ' + esc(L.name) + '</h4><div>' + esc(L.department) + '<br>' + esc(L.university) + '<br>' + esc(L.address) + '</div>' +
-      '<div class="small">' + esc(L.meetings) + '<br>© ' + new Date().getFullYear() + ' GEHL, KAIST.</div></div>' +
-      '<div><h4>Contact</h4><ul><li><span class="mono">' + esc(L.email) + '</span></li>' + (L.mapUrl ? '<li><a href="' + attr(L.mapUrl) + '" target="_blank" rel="noopener">Map ↗</a></li>' : '') + '</ul></div>' +
+      '<div class="small">' + esc(L.copyright || '© Copyright ' + new Date().getFullYear() + '. ' + L.name + ' All Rights Reserved.') + '</div></div>' +
+      '<div><h4>Contact</h4><ul><li><span class="mono">' + esc(L.email) + '</span></li>' + (L.mapUrl ? '<li><a href="' + attr(L.mapUrl) + '" target="_blank" rel="noopener">Map ↗</a></li>' : '') + '</ul>' +
+      '<div class="small meet">' + textLines(L.meetings) + '</div></div>' +
       '';
   }
 
