@@ -154,17 +154,21 @@ main{display:block}
 @media (max-width:420px){ .news-grid{grid-template-columns:1fr} }
 .ncard{display:grid;gap:10px;align-content:start;text-align:left;color:inherit;min-width:0;font:inherit}
 .ncard .ph{position:relative;display:block;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
-.ncard .ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.ncard .ph img{display:block;width:100%;height:100%;object-fit:contain;position:relative;z-index:1;transition:transform .25s ease}   /* the whole photo ... */
+.ncard .ph img.bg{position:absolute;inset:0;z-index:0;object-fit:cover;filter:blur(18px) brightness(.92) saturate(1.1);transform:scale(1.2)}   /* ... over a blurred copy that fills the 4:3 box */
 .ncard:hover .ph img{transform:scale(1.03)}
+.ncard:hover .ph img.bg{transform:scale(1.2)}
 .ncard .ph-empty{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;opacity:.8}
-.ncard .cnt{position:absolute;right:8px;bottom:8px;font-size:11.5px;padding:2px 8px;border-radius:999px;background:rgba(18,27,43,.72);color:#fff}
+.ncard .cnt{position:absolute;z-index:2;right:8px;bottom:8px;font-size:11.5px;padding:2px 8px;border-radius:999px;background:rgba(18,27,43,.72);color:#fff}
 .ncard .t{font-family:var(--display);font-weight:700;font-size:16.5px;line-height:1.35;color:var(--heading)}
 .ncard:hover .t{color:var(--brand)}
 .ncard .m{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .ncard .m .d{font-size:13.5px;color:var(--muted)}
-.modal .dlg.news{grid-template-columns:1fr;gap:16px;padding:22px 24px 26px;width:min(860px,100%)}
-.modal .dlg.news .car{position:relative;background:#111;border-radius:12px;overflow:hidden}
-.modal .dlg.news .car img{display:block;width:100%;max-height:min(62vh,560px);object-fit:contain;background:#111}
+.modal .dlg.news{grid-template-columns:1fr;gap:16px;padding:22px 24px 26px;width:fit-content;min-width:min(440px,100%);max-width:min(860px,100%)}   /* the box follows the photo's size */
+.modal .dlg.news .nm-body,.modal .dlg.news .strip{width:0;min-width:100%}
+.modal .dlg.news .close{z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.3)}   /* it now sits over the photo */   /* text and thumbnails take the photo's width instead of setting it */
+.modal .dlg.news .car{position:relative;background:var(--soft);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.modal .dlg.news .car img{display:block;width:auto;max-width:100%;height:auto;max-height:min(62vh,560px);margin:0 auto;object-fit:contain}
 .modal .dlg.news .car .nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.88);color:var(--heading);font-size:28px;line-height:1;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .modal .dlg.news .car .nav:hover{background:#fff}
 .modal .dlg.news .car .prev{left:12px} .modal .dlg.news .car .next{right:12px}
@@ -2137,29 +2141,40 @@ footer li{margin:4px 0}
   {
    "id": "n2026-10-20",
    "date": "2026-10-20",
+   "dateLabel": "",
    "kind": "visit",
    "who": "GEHL",
    "title": "GS E&C visited the KOCED Centrifuge Center",
-   "body": "The lab gave GS E&C a tour of the centrifuge center.",
-   "images": []
+   "body": "GS ENC visited KOCED centrifuge center and we gave a tour for them.",
+   "images": [
+    "img/uploads/7892ae3d7285e82f6d061f64c61d3b3a.jpg",
+    "img/uploads/d011c6c6a42b836d80280eac3af4218c.jpg"
+   ]
   },
   {
    "id": "n2026-09-29",
    "date": "2026-09-29",
+   "dateLabel": "",
    "kind": "award",
    "who": "Jinyong Kim and Gunhak Kim",
    "title": "Two awards at the 2026 KGS Fall Conference",
-   "body": "Jinyong Kim received the Best Oral Presentation Award and Gunhak Kim received the Outstanding Poster Award at the 2026 Korean Geotechnical Society Fall Conference.",
-   "images": []
+   "body": "Congratulations to Jinyong and Gunhak on receiving awards at the 2026 KGS Fall Conference! Jinyong received the Best Oral Presentation Award for his presentation, “Arias Intensity-Based Damping Ratio Estimation and Experimental Validation,” and Gunhak received the Outstanding Poster Award for his poster, “SH-Wave Transfer Function for Topographic Amplification.” Great work, Jinyong and Gunhak!",
+   "images": [
+    "img/uploads/33893ff42327461df7630c6702ad57e7.jpg",
+    "img/uploads/19b9d1a810ea151e78a4cf95246d2395.png"
+   ]
   },
   {
    "id": "n2026-09-24",
    "date": "2026-09-24",
+   "dateLabel": "",
    "kind": "publication",
    "who": "Kil-Wan Ko",
    "title": "New paper in Soil Dynamics and Earthquake Engineering",
-   "body": "A probabilistic energy-based framework for performance-based liquefaction hazard assessment, linking triggering to ground settlement, was published in Soil Dynamics and Earthquake Engineering.",
-   "images": []
+   "body": "New paper \"A Probabilistic Energy-Based Framework for Performance-Based Liquefaction Hazard Assessment: From Triggering to Consequence\" published in Soil Dynamics and Earthquake Engineering. This study connects liquefaction triggering assessment with ground settlement estimation within a unified probabilistic framework, helping translate seismic hazard into measurable performance outcomes.",
+   "images": [
+    "img/uploads/e596d677cd438fd1f1386e698f6e0c0d.png"
+   ]
   },
   {
    "id": "n2026-09-17",
@@ -3133,7 +3148,7 @@ footer li{margin:4px 0}
   function newsCard(n) {
     var imgs = newsImages(n);
     return '<button class="ncard" data-news="' + attr(n.id) + '" id="news-' + attr(n.id) + '">' +
-      '<span class="ph">' + (imgs.length ? '<img src="' + attr(imgs[0]) + '" alt="" loading="lazy">' : '<span class="ph-empty">' + (kindEmoji(n.kind) || '\uD83D\uDCF0') + '</span>') + (imgs.length > 1 ? '<span class="cnt">' + imgs.length + ' photos</span>' : '') + '</span>' +
+      '<span class="ph">' + (imgs.length ? '<img class="bg" src="' + attr(imgs[0]) + '" alt="" aria-hidden="true" loading="lazy"><img src="' + attr(imgs[0]) + '" alt="" loading="lazy">' : '<span class="ph-empty">' + (kindEmoji(n.kind) || '\uD83D\uDCF0') + '</span>') + (imgs.length > 1 ? '<span class="cnt">' + imgs.length + ' photos</span>' : '') + '</span>' +
       '<span class="t">' + esc(n.title) + '</span>' +
       '<span class="m"><span class="d">' + esc(fmtDate(n.date, n.dateLabel)) + '</span><span class="chip kind-' + attr(n.kind) + '">' + kindTag(n.kind) + '</span></span>' +
       '</button>';
