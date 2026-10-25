@@ -231,7 +231,7 @@ main{display:block}
 @media (max-width:460px){ .people{grid-template-columns:1fr} }
 .pcard{display:grid;gap:10px;padding:22px;align-content:start;color:inherit;text-align:left;min-width:0;transition:transform .15s ease,box-shadow .15s ease}
 .pcard:hover{text-decoration:none;transform:translateY(-2px)}
-.pcard .avatar{width:100%;max-width:260px;aspect-ratio:1/1;height:auto;border-radius:28px;justify-self:center;margin:4px 0 6px}
+.pcard .avatar{width:100%;max-width:260px;aspect-ratio:4/5;height:auto;border-radius:28px;justify-self:center;margin:4px 0 6px}
 .pcard .fav{position:relative;overflow:hidden;background:var(--soft)}
 .pcard .fav img{position:absolute;display:block;width:auto;max-width:none}
 .pcard .rpill{justify-self:start;margin-top:2px}
@@ -388,13 +388,15 @@ table.outline tr:last-child th,table.outline tr:last-child td{border-bottom:1px 
 
 /* Footer */
 footer{border-top:1px solid var(--line);margin-top:40px;background:#F4F4F4}
-footer .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;padding-block:36px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;padding-block:36px;font-size:14px}
+footer .contact{justify-self:end}                 /* the block's widest line (the meetings note) ends at the right edge of the page content */
+footer .addr a{margin-left:16px;white-space:nowrap}
 footer .meet .line{white-space:nowrap}
 footer h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
 footer .small{color:var(--muted);font-size:13px;margin-top:14px}
 footer ul{margin:0;padding:0;list-style:none}
 footer li{margin:4px 0}
-@media (max-width:720px){ footer .wrap{grid-template-columns:1fr} }
+@media (max-width:720px){ footer .wrap{grid-template-columns:1fr} footer .contact{justify-self:start} }
 
 /* Toast */
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:var(--radius);font-size:14px;box-shadow:var(--shadow);z-index:40;max-width:min(90vw,480px)}
@@ -412,6 +414,7 @@ footer li{margin:4px 0}
 .admin .body{flex:1;overflow:auto;padding:18px 20px 90px}
 .admin .pf{position:absolute;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .admin .panel{position:relative}
+.admin.saving .body,.admin.saving .tabs{pointer-events:none;opacity:.5}
 .admin .status{font-size:13.5px;color:var(--muted);flex:1;min-width:0}
 .admin .status.err{color:var(--accent)}
 .form{display:grid;gap:12px;border:1px solid var(--line-strong);border-radius:var(--radius);padding:16px;margin-bottom:22px;background:var(--surface)}
@@ -491,12 +494,12 @@ footer li{margin:4px 0}
   "short": "GEHL",
   "nameKo": "지반지진 및 재해 연구실",
   "tagline": "We make the world safer",
-  "intro": "GEHL studies how earthquakes and related geohazards affect soils, foundations, and the infrastructure built on them. We combine geotechnical centrifuge modeling, numerical simulation, analytical methods, probabilistic approaches, and earthquake case histories to evaluate what has happened, predict what could happen, and design urban systems that stay resilient through natural disasters.",
-  "department": "Department of Civil and Environmental Engineering",
-  "university": "Korea Advanced Institute of Science and Technology (KAIST)",
+  "intro": "Geotechnical Earthquake and GeoHazards Lab (GEHL) studies geotechnical earthquake engineering and geohazards to evaluate and predict the impact of earthquakes on infrastructure and urban areas. Our goal is to contribute to the development of more resilient urban systems against natural disasters. We combine geotechnical centrifuge modeling, numerical simulation, analytical methods, probabilistic approaches, and earthquake case histories to evaluate what has happened, predict what could happen, and design urban systems that stay resilient through natural disasters.",
+  "department": "Department of Civil and Environmental Engineering, Korea Advanced Institute of Science and Technology (KAIST)",
+  "university": "",
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
   "email": "kilwanko@kaist.ac.kr",
-  "meetings": "Meetings are available by appointment only.\nPlease email me.",
+  "meetings": "Meetings are available by appointment only.",
   "center": "",
   "mapUrl": "https://maps.google.com/?q=36.365769,127.362463",
   "legacyUrl": "https://sites.google.com/view/gehl-kaist/home",
@@ -516,7 +519,7 @@ footer li{margin:4px 0}
    },
    {
     "icon": "site",
-    "title": "Site response and ground motion",
+    "title": "Site response analysis and ground motion modeling",
     "text": "",
     "image": "img/study/site.png"
    },
@@ -793,7 +796,7 @@ footer li{margin:4px 0}
    "links": {
     "Google Scholar": "https://scholar.google.co.kr/citations?hl=en&user=ARuDnCkAAAAJ",
     "LinkedIn": "https://www.linkedin.com/in/kil-wan-ko-16b12118b/",
-    "CV": "https://drive.google.com/file/d/1zBMg1QisFHH7Hp7La9v3d9YR0JtAhXm7/view?usp=drive_link"
+    "CV": "https://drive.google.com/file/d/1-ZvNFNtC99PRniLY1OGvZ0zt14iGRTaB/view?usp=sharing"
    },
    "photo": "img/uploads/ed68f092693d577c79ff817578922110.jpg",
    "photo2": "img/uploads/42ba3a9f0debc5225d9156a914bb1799.jpg",
@@ -806,7 +809,7 @@ footer li{margin:4px 0}
     "nh": 1800,
     "src": "img/uploads/ed68f092693d577c79ff817578922110.jpg"
    },
-   "bio": "Kil-Wan Ko studies geotechnical earthquake engineering and geohazards: dynamic soil-foundation-structure interaction, soil liquefaction, seismic site response, seismic fault modeling, ground-motion characterization, and the cracking and erosion of levees and dams caused by surface fault rupture. Before joining KAIST in 2025 he worked as a postdoctoral researcher at UC Davis, USC, and UC Berkeley.",
+   "bio": "Kil-Wan Ko studies geotechnical earthquake engineering and geohazards: dynamic soil-foundation-structure interaction, soil liquefaction, seismic site response analysis, seismic source modeling, ground motion modeling, and the cracking and erosion of levees and dams caused by surface fault rupture. Before joining KAIST in 2025 he worked as a postdoctoral researcher at UC Davis, USC, and UC Berkeley.",
    "awards": [
     "Teaching Excellence Award, Department of Civil and Environmental Engineering, KAIST, 2026",
     "Young Researcher Award, Korean Society of Civil Engineers (KSCE), 2025",
@@ -1009,15 +1012,17 @@ footer li{margin:4px 0}
     "Yim, C."
    ],
    "links": {},
-   "photo": "img/uploads/9746336097795087e962259e15e82fa3.jpg",
+   "photo": "img/uploads/27de54150245b2b489f178013d2ddf0d.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
-    "cx": 0.4032,
-    "cy": 0.3521,
-    "h": 0.3878,
-    "ar": 0.75,
-    "nh": 1536,
-    "src": "img/uploads/9746336097795087e962259e15e82fa3.jpg"
+    "cx": 0.515,
+    "cy": 0.355,
+    "h": 0.145,
+    "ar": 0.6354,
+    "nh": 1728,
+    "src": "img/uploads/27de54150245b2b489f178013d2ddf0d.jpg",
+    "manual": true
    }
   },
   {
@@ -1812,6 +1817,195 @@ footer li{margin:4px 0}
    "title": "Soil rounding effect of rocking foundation via centrifuge tests",
    "venue": "29th KKHTCNN Symposium on Civil Engineering",
    "detail": "Hong Kong, December 2016"
+  },
+  {
+   "id": "kj4",
+   "type": "kjournal",
+   "year": 2020,
+   "authors": "Kim, Y. A., Lee, H. I., Ko, K. W., and Kim, D. S.*",
+   "title": "Validation of Equivalent Shear Beam Container Using Dynamic Centrifuge Tests",
+   "venue": "Journal of the Korean Geotechnical Society",
+   "detail": "Vol. 36, No. 11, pp. 61-70"
+  },
+  {
+   "id": "kj3",
+   "type": "kjournal",
+   "year": 2020,
+   "authors": "Kim, Y. J., Ko, K. W., Kim, B. M., Park, D. H., Kim, K. S., Han, J. T., and Kim, D. S.*",
+   "title": "Evaluation of Liquefaction Triggering for the Pohang Area Based on SPT and CPT Tests",
+   "venue": "Journal of the Korean Geotechnical Society",
+   "detail": "Vol. 36, No. 10, pp. 57-71"
+  },
+  {
+   "id": "kj2",
+   "type": "kjournal",
+   "year": 2020,
+   "authors": "Kim, Y. J., Ko, K. W., Manandhar, S., Kim, B., and Kim, D. S.*",
+   "title": "Overview on Standards for Liquefaction Triggering Evaluation using the Simplified Method",
+   "venue": "Journal of the Earthquake Engineering Society of Korea",
+   "detail": "Vol. 24, No. 5, pp. 197-209"
+  },
+  {
+   "id": "kj1",
+   "type": "kjournal",
+   "year": 2016,
+   "authors": "Ko, K. W., Ha, J. G., Park, H. J., and Kim, D. S.*",
+   "title": "Evaluation of Rocking Mechanism for Embedded Shallow Foundation via Horizontal Slow Cyclic Tests",
+   "venue": "Journal of the Korean Geotechnical Society",
+   "detail": "Vol. 32, No. 8, pp. 47-59"
+  },
+  {
+   "id": "kc17",
+   "type": "kconference",
+   "year": 2026,
+   "authors": "Kim, J. and Ko, K. W.*",
+   "title": "Arias Intensity-Based Damping Ratio Estimation and Experimental Validation",
+   "venue": "2026 Fall Korean Geotechnical Society Conference",
+   "detail": "Gangwon-do, Korea, September 2026"
+  },
+  {
+   "id": "kc16",
+   "type": "kconference",
+   "year": 2026,
+   "authors": "Kim, G. and Ko, K. W.*",
+   "title": "SH-Wave Transfer Function for Topographic Amplification",
+   "venue": "2026 Fall Korean Geotechnical Society Conference",
+   "detail": "Gangwon-do, Korea, September 2026"
+  },
+  {
+   "id": "kc15",
+   "type": "kconference",
+   "year": 2026,
+   "authors": "Park, H. and Ko, K. W.*",
+   "title": "Seismological Model for RVT-Based Input Motion Simulation and Application to Liquefaction Evaluation",
+   "venue": "2026 Fall Korean Geotechnical Society Conference",
+   "detail": "Gangwon-do, Korea, September 2026"
+  },
+  {
+   "id": "kc14",
+   "type": "kconference",
+   "year": 2026,
+   "authors": "Choi, D. H., Amalesh, J., Badu, P., and Ko, K. W.*",
+   "title": "Energy-Based Liquefaction Evaluation using Field Vibroseis Shaking",
+   "venue": "2026 Spring Earthquake Engineering Society of Korea Conference",
+   "detail": "Gyeongju, Korea, March 2026"
+  },
+  {
+   "id": "kc13",
+   "type": "kconference",
+   "year": 2025,
+   "authors": "Lee, S. B., Kang, Y. H., Won, J., and Ko, K. W.*",
+   "title": "Evaluation of the Behavior of Offshore Wind Friction-supported Structures Using Centrifuge Model Testing",
+   "venue": "Korea Wind Energy Association Conference 2025",
+   "detail": "Jeju Island, Korea, November 2025"
+  },
+  {
+   "id": "kc12",
+   "type": "kconference",
+   "year": 2024,
+   "authors": "Choi, D. H., Ko, K. W., and Kwon, T. H.",
+   "title": "Use of dynamic centrifuge experiments for assessing SFSI of shallow footings on liquefied soil",
+   "venue": "2024 Fall Korean Geotechnical Society Conference",
+   "detail": "Busan, Korea, September 2024"
+  },
+  {
+   "id": "kc11",
+   "type": "kconference",
+   "year": 2021,
+   "authors": "Ko, K. W. and Lee, J. S.",
+   "title": "Investigation of Liquefied Soil Layer Using Dynamic Centrifuge Test and Numerical Analysis",
+   "venue": "2021 Fall Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, October 2021"
+  },
+  {
+   "id": "kc10",
+   "type": "kconference",
+   "year": 2021,
+   "authors": "Kim, Y. A., Ko, K. W., Kim, D. S., Kwon, T. H., and Lee, H. I.",
+   "title": "Investigation of Amplification Characteristics in a Slope During Earthquakes Using Centrifuge Tests",
+   "venue": "2021 Spring Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, March 2021"
+  },
+  {
+   "id": "kc9",
+   "type": "kconference",
+   "year": 2021,
+   "authors": "Ko, K. W., Park, H. J., Ha, J. G., Jin, S., Song, Y. H., and Song, M. J.",
+   "title": "Evaluation of Dynamic Bending Moment of Disconnected Piled Raft Using Centrifuge Tests",
+   "venue": "2021 Spring Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, March 2021"
+  },
+  {
+   "id": "kc8",
+   "type": "kconference",
+   "year": 2020,
+   "authors": "Ko, K. W., Choi, D. H., Kim, Y. J., and Kim, D. S.",
+   "title": "Centrifuge Modeling for Simulating Liquefaction of Pohang Sand Layer During Earthquake",
+   "venue": "2020 Fall Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, September 2020"
+  },
+  {
+   "id": "kc7",
+   "type": "kconference",
+   "year": 2020,
+   "authors": "Kim, Y. A., Ko, K. W., Lee, H. I., and Kim, D. S.",
+   "title": "Evaluation of Dynamic Behavior of Slope During Earthquakes Using Centrifuge Model Tests",
+   "venue": "2020 Fall Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, September 2020"
+  },
+  {
+   "id": "kc6",
+   "type": "kconference",
+   "year": 2019,
+   "authors": "Kim, Y. S., Ko, K. W., and Kim, D. S.",
+   "title": "Dynamic centrifuge testing to investigate the dynamic behavior of gravity-type quay wall",
+   "venue": "2019 Fall Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, September 2019"
+  },
+  {
+   "id": "kc5",
+   "type": "kconference",
+   "year": 2019,
+   "authors": "Ha, J. G., Ko, K. W., and Kim, D. S.",
+   "title": "Experimental Investigation of Soil-Structure Interaction Effect on Seismic Structural Response using Centrifuge Test",
+   "venue": "Transactions of the Korean Nuclear Society Spring Meeting",
+   "detail": "Jeju, Korea, May 2019"
+  },
+  {
+   "id": "kc4",
+   "type": "kconference",
+   "year": 2018,
+   "authors": "Ko, K. W., Ha, J. G., Park, H. J., and Kim, D. S.",
+   "title": "Evaluation of Rocking Behavior of Shallow Foundation using Short Piles",
+   "venue": "2018 Fall Earthquake Engineering Society of Korea Conference",
+   "detail": "Gangwon-do, Korea, September 2018"
+  },
+  {
+   "id": "kc3",
+   "type": "kconference",
+   "year": 2017,
+   "authors": "Ha, J. G., Ko, K. W., Park, H. J., and Kim, D. S.",
+   "title": "Evaluation of Rocking Behavior for Embedded Shallow Foundation using Dynamic Centrifuge Tests",
+   "venue": "2017 Spring Earthquake Engineering Society of Korea Conference",
+   "detail": "Seoul, Korea, March 2017"
+  },
+  {
+   "id": "kc2",
+   "type": "kconference",
+   "year": 2016,
+   "authors": "Ko, K. W., Ha, J. G., Park, H. J., and Kim, D. S.",
+   "title": "Evaluation of Rocking Behavior of Various Type Foundations via Horizontal Slow Cyclic Test",
+   "venue": "KSCE 2016 Convention",
+   "detail": "Jeju, Korea, October 2016"
+  },
+  {
+   "id": "kc1",
+   "type": "kconference",
+   "year": 2016,
+   "authors": "Ko, K. W., Ha, J. G., Park, H. J., and Kim, D. S.",
+   "title": "Evaluation of Rocking and Horizontal Behaviors for Shallow Foundation via Centrifuge Test",
+   "venue": "2016 Spring Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, March 2016"
   }
  ],
  "courses": [
@@ -2780,14 +2974,16 @@ footer li{margin:4px 0}
   // face = {cx, cy, h, ar, nh}: face centre and box height as fractions of the photo, photo aspect ratio, natural height.
   // Reference framing (Jinyong Kim's card): face box = 19% of the card height, with its top edge 12% below the card's top edge.
   // A tight head shot cannot be made smaller than the square crop allows; it keeps the crop scale but still gets the same headroom.
-  var FACE_T = 0.19, FACE_TOP = 0.12;
+  // Team cards: the photo box is 4:5 (CARD_HW = height / width, must match .pcard .avatar); the face is drawn FACE_T of the
+  // box WIDTH tall with FACE_TOP of the width above it, so faces stay the same size whatever the box height.
+  var FACE_T = 0.19, FACE_TOP = 0.12, CARD_HW = 1.25;
   function cardPhoto(p) {
     var src = avatarSrc(p), f = p.face;
     if (!f || p.group === 'pi' || !safeUrl(p.photo) || f.src !== p.photo || !(f.h > 0) || !(f.ar > 0)) return '<img class="avatar" src="' + attr(src) + '" alt="' + attr(p.name) + '">';
-    var s = FACE_T / f.h, cover = Math.max(1, 1 / f.ar), smax = Math.max(cover, (f.nh || 1200) / 300);
-    s = Math.min(Math.max(s, cover), smax);
-    var hd = s * 100, wd = s * f.ar * 100;                     // displayed size, % of the square box
-    var top = FACE_TOP * 100 - (f.cy - f.h / 2) * hd, left = 50 - f.cx * wd;
+    var s = FACE_T / CARD_HW / f.h, cover = Math.max(1, 1 / (f.ar * CARD_HW)), smax = Math.max(cover, (f.nh || 1200) / (300 * CARD_HW));
+    s = Math.min(Math.max(s, cover), smax);                    // s = displayed image height / box height
+    var hd = s * 100, wd = s * f.ar * CARD_HW * 100;           // displayed size, % of the box height and width
+    var top = FACE_TOP / CARD_HW * 100 - (f.cy - f.h / 2) * hd, left = 50 - f.cx * wd;
     top = Math.min(0, Math.max(100 - hd, top)); left = Math.min(0, Math.max(100 - wd, left));
     return '<span class="avatar fav"><img src="' + attr(src) + '" alt="' + attr(p.name) + '" style="height:' + hd.toFixed(2) + '%;top:' + top.toFixed(2) + '%;left:' + left.toFixed(2) + '%"></span>';
   }
@@ -3101,8 +3297,8 @@ footer li{margin:4px 0}
   }
 
   function personModal(p) {
-    var jp = pubsOf(p.id).filter(function (x) { return x.type === 'journal'; }).sort(function (a, b) { return b.year - a.year; });
-    var cp = pubsOf(p.id).filter(function (x) { return x.type === 'conference'; }).sort(function (a, b) { return b.year - a.year; });
+    function ofType(t) { return pubsOf(p.id).filter(function (x) { return x.type === t; }).sort(function (a, b) { return b.year - a.year; }); }
+    var jp = ofType('journal'), cp = ofType('conference'), kj = ofType('kjournal'), kc = ofType('kconference');
     function list(title, arr) { return arr && arr.length ? '<div class="sec"><h4>' + esc(title) + '</h4><ul>' + arr.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>' : ''; }
     function plist(title, arr) {
       if (!arr.length) return '';
@@ -3123,7 +3319,7 @@ footer li{margin:4px 0}
       (p.email ? '<div class="em">' + esc(p.email) + '</div>' : '') +
       (p.bio ? '<div class="sec"><p>' + esc(p.bio) + '</p></div>' : '') +
       list('Research interests', p.interests) + list('Education', p.education) + list('Experience', p.appointments) + list('Awards and honors', p.awards) + list('Professional service', p.service) +
-      plist('Journal papers', jp) + plist('Conference proceedings', cp) +
+      plist('International Journal Papers', jp) + plist('International Conference Proceedings', cp) + plist('Journal Papers in Korean', kj) + plist('Conference Proceedings in Korean', kc) +
       (!jp.length && !cp.length ? '<div class="sec"><h4>Publications</h4><p class="empty-note">No publications listed yet.</p></div>' : '') +
 
       '</div></div></div>';
@@ -3142,6 +3338,8 @@ footer li{margin:4px 0}
     if (/^#news-(?!\d{4}$|before$)/.test(location.hash)) { try { history.replaceState(null, '', '#news'); } catch (e) { } }
   }
 
+  var PUB_TYPES = [['journal', 'International Journal Papers'], ['conference', 'International Conference Proceedings'], ['kjournal', 'Journal Papers in Korean'], ['kconference', 'Conference Proceedings in Korean']];
+  function pubTypeLabel(t) { for (var i = 0; i < PUB_TYPES.length; i++) if (PUB_TYPES[i][0] === t) return PUB_TYPES[i][1]; return t; }
   var pubState = { type: 'journal', year: 'all', q: '' };
   function viewPublications() {
     var all = DATA.publications.filter(function (p) { return p.type === pubState.type; });
@@ -3150,9 +3348,9 @@ footer li{margin:4px 0}
     var q = pubState.q.trim().toLowerCase();
     var shown = all.filter(function (p) { return (pubState.year === 'all' || String(p.year) === pubState.year) && (!q || (p.title + ' ' + p.authors + ' ' + p.venue + ' ' + (p.note || '')).toLowerCase().indexOf(q) >= 0); });
     shown.sort(function (a, b) { return b.year - a.year; });
-    var jn = DATA.publications.filter(function (p) { return p.type === 'journal'; }).length, cn = DATA.publications.length - jn;
+    var counts = {}; DATA.publications.forEach(function (p) { counts[p.type] = (counts[p.type] || 0) + 1; });
     var html = pageBand('publications', 'Publication') + '<div class="wrap">' +
-      '<div class="tabs" role="tablist"><button role="tab" data-pt="journal" aria-selected="' + (pubState.type === 'journal') + '">Journal papers (' + jn + ')</button><button role="tab" data-pt="conference" aria-selected="' + (pubState.type === 'conference') + '">Conference proceedings (' + cn + ')</button></div>' +
+      '<div class="tabs" role="tablist">' + PUB_TYPES.filter(function (t) { return counts[t[0]] || t[0] === 'journal'; }).map(function (t) { return '<button role="tab" data-pt="' + t[0] + '" aria-selected="' + (pubState.type === t[0]) + '">' + t[1] + ' (' + (counts[t[0]] || 0) + ')</button>'; }).join('') + '</div>' +
       '<div class="filters"><button data-py="all" aria-pressed="' + (pubState.year === 'all') + '">All years</button>' + ys.map(function (y) { return '<button data-py="' + y + '" aria-pressed="' + (pubState.year === y) + '">' + y + '</button>'; }).join('') +
       '<input type="search" id="pub-q" placeholder="Search title, author, journal" value="' + attr(pubState.q) + '" aria-label="Search publications"></div>';
     html += '<p class="legend above">' + '<span class="member">Underlined</span> authors are GEHL members. * marks the corresponding author. Numbering counts down from the most recent paper.</p>';
@@ -3222,9 +3420,9 @@ footer li{margin:4px 0}
   function renderFooter() {
     var L = DATA.lab;
     document.getElementById('footer').innerHTML =
-      '<div><h4>' + esc(L.short) + ' · ' + esc(L.name) + '</h4><div>' + esc(L.department) + '<br>' + esc(L.university) + '<br>' + esc(L.address) + '</div>' +
+      '<div><h4>' + esc(L.short) + ' · ' + esc(L.name) + '</h4><div>' + esc(L.department) + '<br><span class="addr">' + esc(L.address) + (L.mapUrl ? '<a href="' + attr(L.mapUrl) + '" target="_blank" rel="noopener">Map ↗</a>' : '') + '</span></div>' +
       '<div class="small">' + esc(L.copyright || '© Copyright ' + new Date().getFullYear() + '. ' + L.name + ' All Rights Reserved.') + '</div></div>' +
-      '<div><h4>Contact</h4><ul><li><span class="mono">' + esc(L.email) + '</span></li>' + (L.mapUrl ? '<li><a href="' + attr(L.mapUrl) + '" target="_blank" rel="noopener">Map ↗</a></li>' : '') + '</ul>' +
+      '<div class="contact"><h4>Contact</h4><ul><li><span class="mono">' + esc(L.email) + '</span></li></ul>' +
       '<div class="small meet">' + textLines(L.meetings) + '</div></div>' +
       '';
   }
@@ -3237,7 +3435,7 @@ footer li{margin:4px 0}
     if (/^person-/.test(h)) return { view: 'people', person: h.slice(7) };
     if (/^news-/.test(h)) { var v = h.slice(5); if (/^\d{4}$/.test(v) || v === 'before') { newsState.era = v; newsState.kind = 'all'; return { view: 'news' }; } return { view: 'news', news: v }; }
     if (h === 'projects') return { view: 'research', scrollTo: 'projects' };
-    if (h === 'journal' || h === 'conference') { pubState.type = h; pubState.year = 'all'; return { view: 'publications' }; }
+    if (PUB_TYPES.some(function (t) { return t[0] === h; })) { pubState.type = h; pubState.year = 'all'; return { view: 'publications' }; }
     return { view: VIEWS[h] ? h : 'home' };
   }
   var NAV_PARENT = { blossoms: 'home' };
@@ -3268,7 +3466,10 @@ footer li{margin:4px 0}
     if (t.hasAttribute('data-close')) { closeModal(); return; }
     if (t.dataset.pf) { peopleFilter = t.dataset.pf; render({ keepScroll: true }); return; }
     if (t.dataset.af) { alumniFilter = t.dataset.af; render({ keepScroll: true }); return; }
-    if (t.dataset.pt) { pubState.type = t.dataset.pt; pubState.year = 'all'; render({ keepScroll: true }); return; }
+    if (t.dataset.pt) {   // a #journal-style hash would pin the type again on render, so drop it first
+      if (PUB_TYPES.some(function (x) { return '#' + x[0] === location.hash; })) history.replaceState(null, '', '#publications');
+      pubState.type = t.dataset.pt; pubState.year = 'all'; render({ keepScroll: true }); return;
+    }
     if (t.dataset.py) { pubState.year = t.dataset.py; render({ keepScroll: true }); return; }
     if (t.dataset.era) { newsState.era = t.dataset.era; newsState.kind = 'all'; render({ keepScroll: true }); return; }
     if (t.dataset.nk) { newsState.kind = t.dataset.nk; render({ keepScroll: true }); return; }
@@ -3313,7 +3514,7 @@ footer li{margin:4px 0}
   render();
   try { var msg = sessionStorage.getItem('gehl-toast'); if (msg) { sessionStorage.removeItem('gehl-toast'); toast(msg, 4000); } } catch (e) { }
 
-  window.GEHL = { pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById, currentView: function () { return currentView; }, nearProjects: function () { var el = document.getElementById('projects'); return !!el && el.getBoundingClientRect().top < window.innerHeight * 0.5; } };
+  window.GEHL = { pubTypes: PUB_TYPES, pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById, currentView: function () { return currentView; }, nearProjects: function () { var el = document.getElementById('projects'); return !!el && el.getBoundingClientRect().top < window.innerHeight * 0.5; } };
 })();
 </script>
 

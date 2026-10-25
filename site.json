@@ -4,12 +4,12 @@
   "short": "GEHL",
   "nameKo": "지반지진 및 재해 연구실",
   "tagline": "We make the world safer",
-  "intro": "GEHL studies how earthquakes and related geohazards affect soils, foundations, and the infrastructure built on them. We combine geotechnical centrifuge modeling, numerical simulation, analytical methods, probabilistic approaches, and earthquake case histories to evaluate what has happened, predict what could happen, and design urban systems that stay resilient through natural disasters.",
-  "department": "Department of Civil and Environmental Engineering",
-  "university": "Korea Advanced Institute of Science and Technology (KAIST)",
+  "intro": "Geotechnical Earthquake and GeoHazards Lab (GEHL) studies geotechnical earthquake engineering and geohazards to evaluate and predict the impact of earthquakes on infrastructure and urban areas. Our goal is to contribute to the development of more resilient urban systems against natural disasters. We combine geotechnical centrifuge modeling, numerical simulation, analytical methods, probabilistic approaches, and earthquake case histories to evaluate what has happened, predict what could happen, and design urban systems that stay resilient through natural disasters.",
+  "department": "Department of Civil and Environmental Engineering, Korea Advanced Institute of Science and Technology (KAIST)",
+  "university": "",
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
   "email": "kilwanko@kaist.ac.kr",
-  "meetings": "Meetings are available by appointment only.\nPlease email me.",
+  "meetings": "Meetings are available by appointment only.",
   "center": "",
   "mapUrl": "https://maps.google.com/?q=36.365769,127.362463",
   "legacyUrl": "https://sites.google.com/view/gehl-kaist/home",
@@ -29,7 +29,7 @@
    },
    {
     "icon": "site",
-    "title": "Site response and ground motion",
+    "title": "Site response analysis and ground motion modeling",
     "text": "",
     "image": "img/study/site.png"
    },
@@ -306,7 +306,7 @@
    "links": {
     "Google Scholar": "https://scholar.google.co.kr/citations?hl=en&user=ARuDnCkAAAAJ",
     "LinkedIn": "https://www.linkedin.com/in/kil-wan-ko-16b12118b/",
-    "CV": "https://drive.google.com/file/d/1zBMg1QisFHH7Hp7La9v3d9YR0JtAhXm7/view?usp=drive_link"
+    "CV": "https://drive.google.com/file/d/1-ZvNFNtC99PRniLY1OGvZ0zt14iGRTaB/view?usp=sharing"
    },
    "photo": "img/uploads/ed68f092693d577c79ff817578922110.jpg",
    "photo2": "img/uploads/42ba3a9f0debc5225d9156a914bb1799.jpg",
@@ -319,7 +319,7 @@
     "nh": 1800,
     "src": "img/uploads/ed68f092693d577c79ff817578922110.jpg"
    },
-   "bio": "Kil-Wan Ko studies geotechnical earthquake engineering and geohazards: dynamic soil-foundation-structure interaction, soil liquefaction, seismic site response, seismic fault modeling, ground-motion characterization, and the cracking and erosion of levees and dams caused by surface fault rupture. Before joining KAIST in 2025 he worked as a postdoctoral researcher at UC Davis, USC, and UC Berkeley.",
+   "bio": "Kil-Wan Ko studies geotechnical earthquake engineering and geohazards: dynamic soil-foundation-structure interaction, soil liquefaction, seismic site response analysis, seismic source modeling, ground motion modeling, and the cracking and erosion of levees and dams caused by surface fault rupture. Before joining KAIST in 2025 he worked as a postdoctoral researcher at UC Davis, USC, and UC Berkeley.",
    "awards": [
     "Teaching Excellence Award, Department of Civil and Environmental Engineering, KAIST, 2026",
     "Young Researcher Award, Korean Society of Civil Engineers (KSCE), 2025",
@@ -522,15 +522,17 @@
     "Yim, C."
    ],
    "links": {},
-   "photo": "img/uploads/9746336097795087e962259e15e82fa3.jpg",
+   "photo": "img/uploads/27de54150245b2b489f178013d2ddf0d.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
-    "cx": 0.4032,
-    "cy": 0.3521,
-    "h": 0.3878,
-    "ar": 0.75,
-    "nh": 1536,
-    "src": "img/uploads/9746336097795087e962259e15e82fa3.jpg"
+    "cx": 0.515,
+    "cy": 0.355,
+    "h": 0.145,
+    "ar": 0.6354,
+    "nh": 1728,
+    "src": "img/uploads/27de54150245b2b489f178013d2ddf0d.jpg",
+    "manual": true
    }
   },
   {
@@ -1325,6 +1327,195 @@
    "title": "Soil rounding effect of rocking foundation via centrifuge tests",
    "venue": "29th KKHTCNN Symposium on Civil Engineering",
    "detail": "Hong Kong, December 2016"
+  },
+  {
+   "id": "kj4",
+   "type": "kjournal",
+   "year": 2020,
+   "authors": "Kim, Y. A., Lee, H. I., Ko, K. W., and Kim, D. S.*",
+   "title": "Validation of Equivalent Shear Beam Container Using Dynamic Centrifuge Tests",
+   "venue": "Journal of the Korean Geotechnical Society",
+   "detail": "Vol. 36, No. 11, pp. 61-70"
+  },
+  {
+   "id": "kj3",
+   "type": "kjournal",
+   "year": 2020,
+   "authors": "Kim, Y. J., Ko, K. W., Kim, B. M., Park, D. H., Kim, K. S., Han, J. T., and Kim, D. S.*",
+   "title": "Evaluation of Liquefaction Triggering for the Pohang Area Based on SPT and CPT Tests",
+   "venue": "Journal of the Korean Geotechnical Society",
+   "detail": "Vol. 36, No. 10, pp. 57-71"
+  },
+  {
+   "id": "kj2",
+   "type": "kjournal",
+   "year": 2020,
+   "authors": "Kim, Y. J., Ko, K. W., Manandhar, S., Kim, B., and Kim, D. S.*",
+   "title": "Overview on Standards for Liquefaction Triggering Evaluation using the Simplified Method",
+   "venue": "Journal of the Earthquake Engineering Society of Korea",
+   "detail": "Vol. 24, No. 5, pp. 197-209"
+  },
+  {
+   "id": "kj1",
+   "type": "kjournal",
+   "year": 2016,
+   "authors": "Ko, K. W., Ha, J. G., Park, H. J., and Kim, D. S.*",
+   "title": "Evaluation of Rocking Mechanism for Embedded Shallow Foundation via Horizontal Slow Cyclic Tests",
+   "venue": "Journal of the Korean Geotechnical Society",
+   "detail": "Vol. 32, No. 8, pp. 47-59"
+  },
+  {
+   "id": "kc17",
+   "type": "kconference",
+   "year": 2026,
+   "authors": "Kim, J. and Ko, K. W.*",
+   "title": "Arias Intensity-Based Damping Ratio Estimation and Experimental Validation",
+   "venue": "2026 Fall Korean Geotechnical Society Conference",
+   "detail": "Gangwon-do, Korea, September 2026"
+  },
+  {
+   "id": "kc16",
+   "type": "kconference",
+   "year": 2026,
+   "authors": "Kim, G. and Ko, K. W.*",
+   "title": "SH-Wave Transfer Function for Topographic Amplification",
+   "venue": "2026 Fall Korean Geotechnical Society Conference",
+   "detail": "Gangwon-do, Korea, September 2026"
+  },
+  {
+   "id": "kc15",
+   "type": "kconference",
+   "year": 2026,
+   "authors": "Park, H. and Ko, K. W.*",
+   "title": "Seismological Model for RVT-Based Input Motion Simulation and Application to Liquefaction Evaluation",
+   "venue": "2026 Fall Korean Geotechnical Society Conference",
+   "detail": "Gangwon-do, Korea, September 2026"
+  },
+  {
+   "id": "kc14",
+   "type": "kconference",
+   "year": 2026,
+   "authors": "Choi, D. H., Amalesh, J., Badu, P., and Ko, K. W.*",
+   "title": "Energy-Based Liquefaction Evaluation using Field Vibroseis Shaking",
+   "venue": "2026 Spring Earthquake Engineering Society of Korea Conference",
+   "detail": "Gyeongju, Korea, March 2026"
+  },
+  {
+   "id": "kc13",
+   "type": "kconference",
+   "year": 2025,
+   "authors": "Lee, S. B., Kang, Y. H., Won, J., and Ko, K. W.*",
+   "title": "Evaluation of the Behavior of Offshore Wind Friction-supported Structures Using Centrifuge Model Testing",
+   "venue": "Korea Wind Energy Association Conference 2025",
+   "detail": "Jeju Island, Korea, November 2025"
+  },
+  {
+   "id": "kc12",
+   "type": "kconference",
+   "year": 2024,
+   "authors": "Choi, D. H., Ko, K. W., and Kwon, T. H.",
+   "title": "Use of dynamic centrifuge experiments for assessing SFSI of shallow footings on liquefied soil",
+   "venue": "2024 Fall Korean Geotechnical Society Conference",
+   "detail": "Busan, Korea, September 2024"
+  },
+  {
+   "id": "kc11",
+   "type": "kconference",
+   "year": 2021,
+   "authors": "Ko, K. W. and Lee, J. S.",
+   "title": "Investigation of Liquefied Soil Layer Using Dynamic Centrifuge Test and Numerical Analysis",
+   "venue": "2021 Fall Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, October 2021"
+  },
+  {
+   "id": "kc10",
+   "type": "kconference",
+   "year": 2021,
+   "authors": "Kim, Y. A., Ko, K. W., Kim, D. S., Kwon, T. H., and Lee, H. I.",
+   "title": "Investigation of Amplification Characteristics in a Slope During Earthquakes Using Centrifuge Tests",
+   "venue": "2021 Spring Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, March 2021"
+  },
+  {
+   "id": "kc9",
+   "type": "kconference",
+   "year": 2021,
+   "authors": "Ko, K. W., Park, H. J., Ha, J. G., Jin, S., Song, Y. H., and Song, M. J.",
+   "title": "Evaluation of Dynamic Bending Moment of Disconnected Piled Raft Using Centrifuge Tests",
+   "venue": "2021 Spring Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, March 2021"
+  },
+  {
+   "id": "kc8",
+   "type": "kconference",
+   "year": 2020,
+   "authors": "Ko, K. W., Choi, D. H., Kim, Y. J., and Kim, D. S.",
+   "title": "Centrifuge Modeling for Simulating Liquefaction of Pohang Sand Layer During Earthquake",
+   "venue": "2020 Fall Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, September 2020"
+  },
+  {
+   "id": "kc7",
+   "type": "kconference",
+   "year": 2020,
+   "authors": "Kim, Y. A., Ko, K. W., Lee, H. I., and Kim, D. S.",
+   "title": "Evaluation of Dynamic Behavior of Slope During Earthquakes Using Centrifuge Model Tests",
+   "venue": "2020 Fall Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, September 2020"
+  },
+  {
+   "id": "kc6",
+   "type": "kconference",
+   "year": 2019,
+   "authors": "Kim, Y. S., Ko, K. W., and Kim, D. S.",
+   "title": "Dynamic centrifuge testing to investigate the dynamic behavior of gravity-type quay wall",
+   "venue": "2019 Fall Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, September 2019"
+  },
+  {
+   "id": "kc5",
+   "type": "kconference",
+   "year": 2019,
+   "authors": "Ha, J. G., Ko, K. W., and Kim, D. S.",
+   "title": "Experimental Investigation of Soil-Structure Interaction Effect on Seismic Structural Response using Centrifuge Test",
+   "venue": "Transactions of the Korean Nuclear Society Spring Meeting",
+   "detail": "Jeju, Korea, May 2019"
+  },
+  {
+   "id": "kc4",
+   "type": "kconference",
+   "year": 2018,
+   "authors": "Ko, K. W., Ha, J. G., Park, H. J., and Kim, D. S.",
+   "title": "Evaluation of Rocking Behavior of Shallow Foundation using Short Piles",
+   "venue": "2018 Fall Earthquake Engineering Society of Korea Conference",
+   "detail": "Gangwon-do, Korea, September 2018"
+  },
+  {
+   "id": "kc3",
+   "type": "kconference",
+   "year": 2017,
+   "authors": "Ha, J. G., Ko, K. W., Park, H. J., and Kim, D. S.",
+   "title": "Evaluation of Rocking Behavior for Embedded Shallow Foundation using Dynamic Centrifuge Tests",
+   "venue": "2017 Spring Earthquake Engineering Society of Korea Conference",
+   "detail": "Seoul, Korea, March 2017"
+  },
+  {
+   "id": "kc2",
+   "type": "kconference",
+   "year": 2016,
+   "authors": "Ko, K. W., Ha, J. G., Park, H. J., and Kim, D. S.",
+   "title": "Evaluation of Rocking Behavior of Various Type Foundations via Horizontal Slow Cyclic Test",
+   "venue": "KSCE 2016 Convention",
+   "detail": "Jeju, Korea, October 2016"
+  },
+  {
+   "id": "kc1",
+   "type": "kconference",
+   "year": 2016,
+   "authors": "Ko, K. W., Ha, J. G., Park, H. J., and Kim, D. S.",
+   "title": "Evaluation of Rocking and Horizontal Behaviors for Shallow Foundation via Centrifuge Test",
+   "venue": "2016 Spring Korean Geotechnical Society Conference",
+   "detail": "Seoul, Korea, March 2016"
   }
  ],
  "courses": [
