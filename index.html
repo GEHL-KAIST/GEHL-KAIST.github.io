@@ -47,7 +47,7 @@ nav.main a:hover{background:var(--soft);text-decoration:none}
 nav.main a[aria-current="page"]{color:var(--heading);box-shadow:inset 0 -2px 0 var(--heading);border-radius:0}
 .menu-btn{display:none;margin-left:auto;padding:8px;border:1px solid var(--line);border-radius:var(--radius)}
 .menu-btn svg{display:block}
-@media (max-width:820px){
+@media (max-width:980px){
   .brand .logo{height:34px}
   .menu-btn{display:block}
   nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:8px max(16px,env(safe-area-inset-left,0px)) 12px;gap:0;box-shadow:var(--shadow)}
@@ -96,9 +96,21 @@ main{display:block}
 .hero .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
 
 /* Group photo (home) and blossom gallery */
-.gp{margin-top:24px;border-top:1px solid var(--line)}
-.gp-card{overflow:hidden;width:70%;margin:0 auto}
-@media (max-width:700px){ .gp-card{width:100%} }
+.home-top{padding-block:28px 48px}
+.home-top .section-head{margin-bottom:18px}
+.home-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(500px,1fr);overflow:hidden;min-height:470px}
+.photo-pane{display:flex;flex-direction:column;min-width:0;border-right:1px solid var(--line)}
+.photo-pane .ph{position:relative;flex:1;min-height:300px;background:var(--soft);display:grid;place-items:center}
+.photo-pane .ph.has img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 75%}
+.photo-pane .ph .empty-ph{text-align:center;color:var(--muted);padding:24px;font-size:15px;max-width:40ch}
+.photo-pane .ph .empty-ph b{display:block;font-family:var(--display);font-weight:700;font-size:20px;color:var(--fg);margin-bottom:6px}
+.photo-pane .cap{padding:14px 22px;border-top:1px solid var(--line);font-family:var(--display);font-weight:400;font-size:17px;color:var(--heading)}
+.photo-pane .cap b{font-weight:400}
+.intro-pane{padding:34px 34px 30px;display:flex;flex-direction:column;min-width:0}
+.intro-pane .intro{font-size:17.5px;line-height:1.75;color:var(--fg)}
+.intro-pane .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:26px}
+@media (max-width:1000px){ .home-card{grid-template-columns:1fr;min-height:0} .photo-pane{border-right:0;border-bottom:1px solid var(--line)} .photo-pane .ph.has{flex:none;aspect-ratio:4/3;min-height:0} }
+.gp-card{overflow:hidden;width:100%;margin:0}
 .gp-card .ph{position:relative;max-width:100%;background:var(--soft);display:grid;place-items:center}
 .gp-card .ph:not(.has){aspect-ratio:16/7}
 .gp-card .ph img{display:block;width:100%;height:auto}
@@ -106,7 +118,7 @@ main{display:block}
 .gp-card .ph .empty-ph b{display:block;font-family:var(--display);font-weight:700;font-size:20px;color:var(--fg);margin-bottom:6px}
 .gp-card .cap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 22px}
 .gp-card .cap .t{font-size:15px}
-.gp-card .cap .t b{font-family:var(--display);font-weight:700;font-size:17px;display:block;margin-bottom:2px;color:var(--heading)}
+.gp-card .cap .t b{font-family:var(--display);font-weight:700;font-size:17px;display:block;margin-bottom:0;color:var(--heading)}
 .blossoms{display:grid;gap:28px;justify-items:stretch}
 .blossom{overflow:hidden;width:70%;margin:0 auto}
 @media (max-width:700px){ .blossom{width:100%} }
@@ -136,6 +148,37 @@ main{display:block}
 .methods{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .methods span{padding:8px 12px;border:1px solid var(--line-strong);border-radius:var(--radius);font-size:14px;background:var(--surface)}
 
+/* News and Gallery: card grid + photo popup */
+.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 28px;margin-top:6px}
+@media (max-width:760px){ .news-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px} }
+@media (max-width:420px){ .news-grid{grid-template-columns:1fr} }
+.ncard{display:grid;gap:10px;align-content:start;text-align:left;color:inherit;min-width:0;font:inherit}
+.ncard .ph{position:relative;display:block;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+.ncard .ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.ncard:hover .ph img{transform:scale(1.03)}
+.ncard .ph-empty{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;opacity:.8}
+.ncard .cnt{position:absolute;right:8px;bottom:8px;font-size:11.5px;padding:2px 8px;border-radius:999px;background:rgba(18,27,43,.72);color:#fff}
+.ncard .t{font-family:var(--display);font-weight:700;font-size:16.5px;line-height:1.35;color:var(--heading)}
+.ncard:hover .t{color:var(--brand)}
+.ncard .m{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ncard .m .d{font-size:13.5px;color:var(--muted)}
+.modal .dlg.news{grid-template-columns:1fr;gap:16px;padding:22px 24px 26px;width:min(860px,100%)}
+.modal .dlg.news .car{position:relative;background:#111;border-radius:12px;overflow:hidden}
+.modal .dlg.news .car img{display:block;width:100%;max-height:min(62vh,560px);object-fit:contain;background:#111}
+.modal .dlg.news .car .nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.88);color:var(--heading);font-size:28px;line-height:1;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.modal .dlg.news .car .nav:hover{background:#fff}
+.modal .dlg.news .car .prev{left:12px} .modal .dlg.news .car .next{right:12px}
+.modal .dlg.news .car .pos{position:absolute;right:12px;bottom:10px;font-size:12.5px;padding:2px 9px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff}
+.modal .dlg.news .strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px}
+.modal .dlg.news .strip .th{flex:0 0 auto;width:72px;height:54px;border-radius:6px;overflow:hidden;border:2px solid transparent;opacity:.65}
+.modal .dlg.news .strip .th img{width:100%;height:100%;object-fit:cover;display:block}
+.modal .dlg.news .strip .th.on{border-color:var(--heading);opacity:1}
+.modal .dlg.news .nm-body .m{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+.modal .dlg.news .nm-body .who{color:var(--muted)}
+.modal .dlg.news h2{font-size:24px;margin-top:8px}
+.modal .dlg.news .b{margin-top:12px;font-size:15.5px;line-height:1.6;white-space:pre-line}
+@media (max-width:640px){ .modal .dlg.news{padding:16px} .modal .dlg.news h2{font-size:20px} }
+
 /* News list */
 .news-list{display:grid;gap:0}
 .news-item{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:20px 0;border-top:1px solid var(--line)}
@@ -156,7 +199,7 @@ main{display:block}
 .news-card:hover h3{color:var(--brand)}
 .news-card p{font-size:14.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .news-card img{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
-@media (max-width:820px){ .news-cards{grid-template-columns:1fr} }
+@media (max-width:980px){ .news-cards{grid-template-columns:1fr} }
 .tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:8px}
 .tabs button{padding:10px 12px;font-size:14.5px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
 .tabs button[aria-selected="true"]{color:var(--brand);border-bottom-color:var(--brand)}
@@ -320,6 +363,12 @@ table.projects td.per{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .course h3{font-size:20px}
 .course p{margin-top:8px;color:var(--muted);font-size:15px;}
 @media (max-width:600px){ .course{grid-template-columns:1fr;gap:6px} }
+.course .outline-btn{margin-top:14px}
+.course .outline-btn .car{font-size:11px;margin-left:2px}
+table.outline{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+table.outline th{width:84px;text-align:left;font-family:var(--mono);font-weight:500;font-size:12.5px;letter-spacing:.04em;color:var(--brand);padding:7px 10px 7px 0;border-top:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.outline td{padding:7px 0;border-top:1px solid var(--line);color:var(--fg);line-height:1.45}
+table.outline tr:last-child th,table.outline tr:last-child td{border-bottom:1px solid var(--line)}
 
 /* Join */
 .values{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px 36px;margin-top:8px}
@@ -390,6 +439,9 @@ footer li{margin:4px 0}
 .thumbs .th{position:relative}
 .thumbs img{width:96px;height:72px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line)}
 .thumbs button{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:var(--fg);color:var(--bg);font-size:12px;line-height:1}
+.thumbs .th.first img{outline:2px solid var(--heading);outline-offset:-2px}
+.thumbs .mkfirst,.thumbs .cover{position:absolute;left:4px;bottom:4px;top:auto;right:auto;width:auto;height:auto;border-radius:4px;font-size:10.5px;padding:2px 6px;line-height:1.2;background:rgba(18,27,43,.8);color:#fff}
+.thumbs .cover{background:var(--heading)}
 .thumbs.face-set{align-items:flex-start;gap:14px}
 .thumbs .th.big{display:inline-block;line-height:0}
 .thumbs .th.big img{width:auto;height:200px;max-width:260px;object-fit:contain;cursor:crosshair}
@@ -439,7 +491,7 @@ footer li{margin:4px 0}
   "short": "GEHL",
   "nameKo": "지반지진 및 재해 연구실",
   "tagline": "We make the world safer",
-  "intro": "GEHL studies how earthquakes and related geohazards affect soils, foundations, and the infrastructure built on them. We combine geotechnical centrifuge modeling, numerical simulation, analytical methods, probabilistic uncertainty quantification, and earthquake case histories to evaluate what has happened, predict what could happen, and design urban systems that stay resilient through natural disasters.",
+  "intro": "GEHL studies how earthquakes and related geohazards affect soils, foundations, and the infrastructure built on them. We combine geotechnical centrifuge modeling, numerical simulation, analytical methods, probabilistic approaches, and earthquake case histories to evaluate what has happened, predict what could happen, and design urban systems that stay resilient through natural disasters.",
   "department": "Department of Civil and Environmental Engineering",
   "university": "Korea Advanced Institute of Science and Technology (KAIST)",
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
@@ -480,7 +532,6 @@ footer li{margin:4px 0}
    "Numerical simulation",
    "Analytical modeling",
    "Probabilistic approaches",
-   "Uncertainty quantification",
    "Earthquake case-history analysis"
   ],
   "founded": "Lab founded in 2025",
@@ -673,35 +724,35 @@ footer li{margin:4px 0}
    "status": "ongoing"
   },
   {
-   "title": "Multi-Scale Framework for Energy-Based Soil Liquefaction Assessment under Integrated Analysis of Cyclic Loadings",
+   "title": "Multi-Scale Framework for Energy-Based Soil Liquefaction Assessment under Integrated Analysis of Cyclic Loadings (Outstanding Young Scientist Grants)",
    "sponsor": "National Research Foundation of Korea",
    "period": "2026.03 – present",
    "role": "PI",
    "status": "ongoing"
   },
   {
-   "title": "Characterization and Validation of the Impact of Topographic Effect Parameters on Site Amplification using Dynamic Centrifuge Tests",
+   "title": "Characterization and Validation of the Impact of Topographic Effect Parameters on Site Amplification using Dynamic Centrifuge Tests (Sponsored Research)",
    "sponsor": "Korea Institute of Geoscience and Mineral Resources",
    "period": "2026.03 – present",
    "role": "PI",
    "status": "ongoing"
   },
   {
-   "title": "Probabilistic Liquefaction Hazard Assessment for Pohang Region under Future Earthquake Scenarios",
+   "title": "Probabilistic Liquefaction Hazard Assessment for Pohang Region under Future Earthquake Scenarios (URP)",
    "sponsor": "KAIST",
    "period": "2026.01 – present",
    "role": "PI",
    "status": "ongoing"
   },
   {
-   "title": "Development of Depth Reduction Factor for Intensity Measures in Liquefiable Soil Layers using Nonlinear Analysis",
+   "title": "Development of Depth Reduction Factor for Intensity Measures in Liquefiable Soil Layers using Nonlinear Analysis (Startup Funding)",
    "sponsor": "KAIST",
    "period": "2025.03 – present",
    "role": "PI",
    "status": "ongoing"
   },
   {
-   "title": "Dynamic Soil-Pile-Structure Interaction of Standard and Lightweight Modular Buildings under Earthquakes",
+   "title": "Dynamic Soil-Pile-Structure Interaction of Standard and Lightweight Modular Buildings under Earthquakes (Sponsored Research)",
    "sponsor": "Land and Housing Research Institute (LH)",
    "period": "2026.03 – 2026.07",
    "role": "PI",
@@ -1769,21 +1820,75 @@ footer li{margin:4px 0}
    "title": "Introduction to Geotechnical Engineering",
    "term": "Spring 2025",
    "level": "Undergraduate",
-   "text": "Geotechnical terminology and the fundamentals of soil mechanics: phase relationships, classification, compaction, effective stress, fluid flow, consolidation and settlement, and shear strength. Laboratory classes are included. The course prepares students for foundation engineering, dam engineering, soil dynamics, and geotechnical earthquake engineering."
+   "text": "Geotechnical terminology and the fundamentals of soil mechanics: phase relationships, classification, compaction, effective stress, fluid flow, consolidation and settlement, and shear strength. Laboratory classes are included. The course prepares students for foundation engineering, dam engineering, soil dynamics, and geotechnical earthquake engineering.",
+   "outline": [
+    "Course Introduction, Phase Diagram",
+    "Phase Relationships, Grain Size Distribution",
+    "Index Properties – Plasticity, Soil Classification",
+    "Clay Minerals, Soil Fabric",
+    "Compaction of Soils",
+    "Field Compaction",
+    "Effective Stress",
+    "Mid-term",
+    "Hydrostatic Water in Soils, Fluid Flow in Soils – Heads, Permeability",
+    "Fluid Flow in Soils – Seepage",
+    "Fluid Flow in Soils – 2D Flow",
+    "Compressibility of Soils",
+    "Time Rate of Consolidation",
+    "Stress Distribution and Settlement in a Soil Mass",
+    "Shear Strength and Failure of Soils",
+    "Final Exam"
+   ]
   },
   {
    "code": "CE.60033",
    "title": "Advanced Soil Dynamics",
    "term": "Fall 2025",
    "level": "Graduate",
-   "text": "Dynamics of simple systems (waves, vibrations, single-degree-of-freedom systems), dynamic soil properties (G/Gmax and damping versus strain), waves in infinite and bounded media, and one-dimensional site response analysis. The course gives the theoretical foundation for geotechnical earthquake engineering."
+   "text": "Dynamics of simple systems (waves, vibrations, single-degree-of-freedom systems), dynamic soil properties (G/Gmax and damping versus strain), waves in infinite and bounded media, and one-dimensional site response analysis. The course gives the theoretical foundation for geotechnical earthquake engineering.",
+   "outline": [
+    "Course Introduction, Fourier Transform",
+    "Harmonic Waves and Complex Numbers, Signal Processing (How to Sample)",
+    "Signal Processing (How to Process), SDOF System (Free Vibration)",
+    "SDOF System (Forced Vibration), Earthquake Response Spectra, Damping and Energy Losses",
+    "Modeling of Soil during Cyclic Loading (LVM, LHM, Elastoplastic Models)",
+    "Modeling of Soil during Cyclic Loading (Bilinear, Hyperbolic, Ramberg-Osgood Models, Masing Criterions); Wave Velocities, Moduli and Damping at Small Strains (Elastic Moduli and Wave Velocities)",
+    "Wave Velocities, Moduli and Damping at Small Strains (Gmax in Clays, Effect of Aging, Number of Cycles; Small Strain Field Tests)",
+    "Mid-term",
+    "Wave Velocities, Moduli and Damping at Small Strains (Small Strain Field Tests)",
+    "Wave Velocities, Moduli and Damping at Large Strains, Wave Equation and Wave Velocity",
+    "Elastic Reflection and Transmission/Refraction of Traveling Waves (Boundary Problems), Radiation Damping",
+    "Kelvin–Voigt Model in Site Response Analysis and Linear Analysis, Wave Energy",
+    "Equivalent Linear Analysis, Nonlinear Analysis",
+    "Site Response Analysis using Equivalent Linear (EQL) Method with RSseismic / Strata",
+    "Input Motion Decision, Design Code Review",
+    "Final Exam"
+   ]
   },
   {
    "code": "CE.50002",
    "title": "Advanced Geomechanics",
    "term": "Spring 2026",
    "level": "Graduate",
-   "text": "Stress- and state-dependent behavior of sands and clays: dilatancy, drained and undrained strength, and stress paths. Critical state soil mechanics and simple models (Mohr–Coulomb, Cam-clay) are used to interpret laboratory tests and to analyze soil strength and deformation."
+   "text": "Stress- and state-dependent behavior of sands and clays: dilatancy, drained and undrained strength, and stress paths. Critical state soil mechanics and simple models (Mohr–Coulomb, Cam-clay) are used to interpret laboratory tests and to analyze soil strength and deformation.",
+   "outline": [
+    "Course Introduction, Phase Properties and Relationships",
+    "Fundamental Engineering Characterization of Soils, Sand-Like Soils",
+    "Clay-Like Soils – Minerals, Atterberg Limits",
+    "Mixed Soils, Effective Stress – Particle Forces",
+    "Effective Stress – Unsaturated Soils, Back to Terzaghi 1D Consolidation",
+    "Shear Strength of Soil (Cohesionless Soils, Cohesive Soils)",
+    "Elasticity and 2D to 3D Space – Stress and Strain",
+    "Mid-term",
+    "2D Stress Path – Practical Problems",
+    "3D Stress Path – Conventional Laboratory Tests",
+    "Critical State – Cohesionless Soils: State Parameters, Taylor's Equation, Dilatancy",
+    "Foundations of Plasticity, Critical State – Cohesive Soils (Cam Clay)",
+    "Cam Clay (Yield Surface) and Critical State: Volume Change in Clay, Triaxial Tests (Drained vs Undrained)",
+    "Undrained Strength of Clay with Cam Clay, Cam Clay Model Parameters",
+    "Review",
+    "Final Exam"
+   ]
   }
  ],
  "teachingPhilosophy": "New research and new technology keep expanding what is known, so a teacher has to keep learning and recognize quickly which new developments matter. That takes a firm grip on the fundamentals. The aim in every course is to close the gap between established and new research, to connect fundamental theory with practice, and to help students become self-directed engineers who can solve problems that did not exist when they were students.",
@@ -2827,23 +2932,48 @@ footer li{margin:4px 0}
     });
     return html;
   }
+  function newsImages(n) { return (n.images || []).map(safeUrl).filter(Boolean); }
+  // News and Gallery card: first photo on top (or a soft placeholder with the category icon), the full title, then the date and category.
   function newsCard(n) {
-    var img = (n.images || []).map(safeUrl).filter(Boolean)[0];
-    return '<a class="news-card card" href="#news" data-news="' + attr(n.id) + '">' +
-      '<div class="d"><span>' + esc(fmtDate(n.date, n.dateLabel)) + '</span><span class="chip kind-' + attr(n.kind) + '">' + kindTag(n.kind) + '</span></div>' +
-      '<h3>' + esc(n.title) + '</h3>' +
-      (n.body ? '<p>' + esc(n.body) + '</p>' : (n.who ? '<p>' + esc(n.who) + '</p>' : '')) +
-      (img ? '<img src="' + attr(img) + '" alt="" loading="lazy">' : '') +
-      '</a>';
+    var imgs = newsImages(n);
+    return '<button class="ncard" data-news="' + attr(n.id) + '" id="news-' + attr(n.id) + '">' +
+      '<span class="ph">' + (imgs.length ? '<img src="' + attr(imgs[0]) + '" alt="" loading="lazy">' : '<span class="ph-empty">' + (kindEmoji(n.kind) || '\uD83D\uDCF0') + '</span>') + (imgs.length > 1 ? '<span class="cnt">' + imgs.length + ' photos</span>' : '') + '</span>' +
+      '<span class="t">' + esc(n.title) + '</span>' +
+      '<span class="m"><span class="d">' + esc(fmtDate(n.date, n.dateLabel)) + '</span><span class="chip kind-' + attr(n.kind) + '">' + kindTag(n.kind) + '</span></span>' +
+      '</button>';
   }
-  function newsItem(n) {
-    var imgs = (n.images || []).map(safeUrl).filter(Boolean);
-    return '<article class="news-item" id="news-' + attr(n.id) + '"><div class="d">' + esc(fmtDate(n.date, n.dateLabel)) + '</div><div>' +
-      '<div class="h"><h3>' + esc(n.title) + '</h3><span class="chip kind-' + attr(n.kind) + '">' + kindTag(n.kind) + '</span></div>' +
-      (n.who ? '<div class="who">' + esc(n.who) + '</div>' : '') +
-      (n.body ? '<p class="b">' + esc(n.body) + '</p>' : '') +
-      (imgs.length ? '<div class="imgs">' + imgs.map(function (u) { return '<img src="' + attr(u) + '" alt="" loading="lazy">'; }).join('') + '</div>' : '') +
-      '</div></article>';
+  var newsModal = { id: null, idx: 0 };
+  function newsModalHtml(n) {
+    var imgs = newsImages(n), i = Math.min(Math.max(newsModal.idx, 0), Math.max(imgs.length - 1, 0));
+    var car = '';
+    if (imgs.length) {
+      car = '<div class="car"><img src="' + attr(imgs[i]) + '" alt="">' +
+        (imgs.length > 1 ? '<button class="nav prev" data-car="-1" aria-label="Previous photo">‹</button><button class="nav next" data-car="1" aria-label="Next photo">›</button><span class="pos">' + (i + 1) + ' / ' + imgs.length + '</span>' : '') + '</div>' +
+        (imgs.length > 1 ? '<div class="strip">' + imgs.map(function (u, k) { return '<button class="th' + (k === i ? ' on' : '') + '" data-carto="' + k + '" aria-label="Photo ' + (k + 1) + '"><img src="' + attr(u) + '" alt=""></button>'; }).join('') + '</div>' : '');
+    }
+    return '<div class="modal" id="news-modal" role="dialog" aria-modal="true" aria-labelledby="nm-title"><div class="dlg news">' +
+      '<button class="close" data-close aria-label="Close">✕</button>' +
+      car +
+      '<div class="nm-body"><div class="m"><span class="d">' + esc(fmtDate(n.date, n.dateLabel)) + '</span><span class="chip kind-' + attr(n.kind) + '">' + kindTag(n.kind) + '</span>' + (n.who ? '<span class="who">' + esc(n.who) + '</span>' : '') + '</div>' +
+      '<h2 id="nm-title">' + esc(n.title) + '</h2>' +
+      (n.body ? '<p class="b">' + esc(n.body) + '</p>' : '') + '</div>' +
+      '</div></div>';
+  }
+  function openNews(id, keepIdx) {
+    var n = DATA.news.filter(function (x) { return x.id === id; })[0]; if (!n) return;
+    if (!keepIdx) newsModal = { id: id, idx: 0 };
+    var root = document.getElementById('modal-root'), dlg = root.querySelector('.dlg'), top = dlg ? dlg.scrollTop : 0;
+    root.innerHTML = newsModalHtml(n);
+    if (keepIdx && top) { var d2 = root.querySelector('.dlg'); if (d2) d2.scrollTop = top; }
+    document.body.style.overflow = 'hidden';
+    if (!keepIdx) { var c = root.querySelector('.close'); if (c) c.focus(); }
+    try { if (location.hash !== '#news-' + id) history.replaceState(null, '', '#news-' + id); } catch (e) { }
+  }
+  function stepNews(delta, to) {
+    var n = DATA.news.filter(function (x) { return x.id === newsModal.id; })[0]; if (!n) return;
+    var len = newsImages(n).length; if (!len) return;
+    newsModal.idx = to != null ? to : (newsModal.idx + delta + len) % len;
+    openNews(newsModal.id, true);
   }
   function copyBtn(text, label) { return '<button class="btn small" data-copy="' + attr(text) + '">' + esc(label || 'Copy') + '</button>'; }
 
@@ -2854,13 +2984,14 @@ footer li{margin:4px 0}
     var cn = DATA.publications.filter(function (p) { return p.type === 'conference'; }).length;
     var pr = DATA.projects.filter(function (p) { return p.status === 'ongoing'; }).length;
     return pageBand('home', L.name, '<div class="row motto"><span class="rule"></span><span class="tag">' + esc(String(L.tagline || '').toUpperCase()) + '</span><span class="rule"></span></div>' + (L.founded ? '<div class="founded">' + esc(L.founded) + '</div>' : '')) +
-      '<section class="hero"><div class="wrap">' +
-      '<p class="intro">' + esc(L.intro) + '</p>' +
-      '<div class="actions"><a class="btn primary" href="#research">Explore the research</a><a class="btn" href="#people">Meet the team</a><a class="btn" href="#join">Join us</a></div>' +
-      '</div></section>' +
-      groupPhotoSection() +
+      '<section class="section home-top"><div class="wrap">' +
+      '<div class="section-head"><h2>GEHL Group Photo</h2><a class="more" href="#blossoms">Cherry blossom photos, every year →</a></div>' +
+      '<div class="card home-card">' + groupPhotoPane() +
+      '<div class="intro-pane"><p class="intro">' + esc(L.intro) + '</p>' +
+      '<div class="actions"><a class="btn primary" href="#research">Explore the research</a><a class="btn" href="#people">Meet the team</a><a class="btn" href="#join">Join us</a></div></div>' +
+      '</div></div></section>' +
       '<section class="section"><div class="wrap"><div class="section-head"><h2>Recent news</h2><a class="more" href="#news">All news and gallery →</a></div>' +
-      (recent.length ? '<div class="news-cards">' + recent.map(newsCard).join('') + '</div>' : '<div class="empty">No news yet.</div>') +
+      (recent.length ? '<div class="news-grid home">' + recent.map(newsCard).join('') + '</div>' : '<div class="empty">No news yet.</div>') +
       '</div></section>' +
       '<section class="section"><div class="wrap"><div class="section-head"><h2>What we study</h2><a class="more" href="#research">Research areas →</a></div>' +
       ICON_DEFS + '<div class="pillars">' + (L.pillars || []).map(function (p, i) { return '<a class="pillar" href="#research"><div class="ill' + (safeUrl(p.image) ? ' photo' : '') + '">' + (safeUrl(p.image) ? '<img src="' + attr(safeUrl(p.image)) + '" alt="' + attr(p.title) + '" loading="lazy">' : (ICONS[p.icon] || '')) + '</div><h3>' + esc(p.title) + '</h3>' + (p.text ? '<p>' + esc(p.text) + '</p>' : '') + '</a>'; }).join('') + '</div>' +
@@ -2870,14 +3001,12 @@ footer li{margin:4px 0}
   }
 
   function latestGroupPhoto() { return DATA.groupPhotos.slice().sort(function (a, b) { return (b.year - a.year) || (b.date || '').localeCompare(a.date || ''); })[0]; }
-  function groupPhotoSection() {
+  function groupPhotoPane() {
     var g = latestGroupPhoto();
     var img = g ? safeUrl(g.image) : '';
     var year = g ? g.year : new Date().getFullYear();
-    return '<section class="section gp"><div class="wrap"><div class="section-head"><h2>GEHL Group Photo</h2><a class="more" href="#blossoms">Cherry blossom photos, every year →</a></div>' +
-      '<div class="card gp-card"><div class="ph' + (img ? ' has' : '') + '">' + (img ? '<img src="' + attr(img) + '" alt="' + attr('GEHL group photo, spring ' + year) + '">' : '<div class="empty-ph"><b>Spring ' + esc(year) + '</b>This year\'s cherry blossom group photo goes here. The site owner can add it from Manage site → Group photos.</div>') + '</div>' +
-      '<div class="cap"><div class="t"><b>GEHL under the cherry blossoms, ' + esc(year) + '</b>' + esc(g && g.caption ? g.caption : 'Every spring the lab takes one group photo under the cherry blossoms on the KAIST campus.') + '</div></div></div>' +
-      '</div></section>';
+    return '<div class="photo-pane"><div class="ph' + (img ? ' has' : '') + '">' + (img ? '<img src="' + attr(img) + '" alt="' + attr('GEHL group photo, spring ' + year) + '">' : '<div class="empty-ph"><b>Spring ' + esc(year) + '</b>This year\'s cherry blossom group photo goes here. The site owner can add it from Manage site → Group photos.</div>') + '</div>' +
+      '<div class="cap"><b>GEHL under the cherry blossoms, ' + esc(year) + '</b></div></div>';
   }
   function viewBlossoms() {
     var list = DATA.groupPhotos.slice().sort(function (a, b) { return (b.year - a.year) || (b.date || '').localeCompare(a.date || ''); });
@@ -3010,6 +3139,7 @@ footer li{margin:4px 0}
   function closeModal() {
     var root = document.getElementById('modal-root'); root.innerHTML = ''; document.body.style.overflow = '';
     if (/^#person-/.test(location.hash)) { try { history.replaceState(null, '', '#people'); } catch (e) { } }
+    if (/^#news-(?!\d{4}$|before$)/.test(location.hash)) { try { history.replaceState(null, '', '#news'); } catch (e) { } }
   }
 
   var pubState = { type: 'journal', year: 'all', q: '' };
@@ -3030,6 +3160,7 @@ footer li{margin:4px 0}
     return html + '</div>';
   }
 
+  var openOutlines = {};
   function viewTeaching() {
     var T = DATA.teaching || {};
     var html = pageBand('teaching', 'Teaching') + '<div class="wrap">';
@@ -3041,7 +3172,12 @@ footer li{margin:4px 0}
     if (fig) html += '<figure><img src="' + attr(fig) + '" alt="' + attr(T.figureCaption || 'Teaching philosophy') + '">' + (T.figureCaption ? '<figcaption>' + esc(T.figureCaption) + '</figcaption>' : '') + '</figure>';
     if (DATA.teachingPhilosophy) html += '<div class="prose" style="margin-top:18px"><p>' + esc(DATA.teachingPhilosophy) + '</p></div>';
     html += '</section>';
-    html += '<section class="section"><div class="section-head"><h2>Courses</h2></div><div class="courses">' + DATA.courses.map(function (c) { return '<div class="course"><div><div class="code">' + esc(c.code) + '</div><div class="term">' + esc(c.term) + (c.level ? ' · ' + esc(c.level) : '') + '</div></div><div><h3>' + esc(c.title) + '</h3><p>' + esc(c.text) + '</p></div></div>'; }).join('') + '</div></section>';
+    html += '<section class="section"><div class="section-head"><h2>Courses</h2></div><div class="courses">' + DATA.courses.map(function (c, i) {
+      var ol = (c.outline || []).filter(Boolean), open = openOutlines[i];
+      return '<div class="course"><div><div class="code">' + esc(c.code) + '</div><div class="term">' + esc(c.term) + (c.level ? ' · ' + esc(c.level) : '') + '</div></div><div><h3>' + esc(c.title) + '</h3><p>' + esc(c.text) + '</p>' +
+        (ol.length ? '<button class="btn small outline-btn" data-outline="' + i + '" aria-expanded="' + !!open + '">' + (open ? 'Hide course outline' : 'Course outline') + ' <span class="car">' + (open ? '▴' : '▾') + '</span></button>' +
+          (open ? '<table class="outline"><tbody>' + ol.map(function (w, k) { return '<tr><th>Week ' + (k + 1 < 10 ? '0' : '') + (k + 1) + '</th><td>' + esc(w) + '</td></tr>'; }).join('') + '</tbody></table>' : '') : '') +
+        '</div></div>'; }).join('') + '</div></section>';
     return html + '</div>';
   }
 
@@ -3060,7 +3196,7 @@ footer li{margin:4px 0}
     var html = pageBand('news', 'News and Gallery') + '<div class="wrap">' +
       '<div class="tabs" role="tablist">' + er.list.map(function (e) { return '<button role="tab" data-era="' + attr(e) + '" aria-selected="' + (newsState.era === e) + '">' + (e === 'before' ? 'Before KAIST (2021–2025)' : esc(e)) + ' <span class="muted">(' + er.counts[e] + ')</span></button>'; }).join('') + '</div>' +
       '<div class="filters"><button data-nk="all" aria-pressed="' + (newsState.kind === 'all') + '">All</button>' + Object.keys(kinds).map(function (k) { return '<button data-nk="' + attr(k) + '" aria-pressed="' + (newsState.kind === k) + '">' + kindTag(k) + ' (' + kinds[k] + ')</button>'; }).join('') + '</div>';
-    html += shown.length ? '<div class="news-list">' + shown.map(newsItem).join('') + '</div>' : '<div class="empty">Nothing here yet.</div>';
+    html += shown.length ? '<div class="news-grid">' + shown.map(newsCard).join('') + '</div>' : '<div class="empty">Nothing here yet.</div>';
     return html + '</div>';
   }
 
@@ -3115,8 +3251,8 @@ footer li{margin:4px 0}
     document.getElementById('menu-btn').setAttribute('aria-expanded', 'false');
     renderFooter();
     fitTitle(); if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitle);
-    if (r.person) openPerson(r.person); else if (!opts.keepModal) closeModal();
-    if (r.news) { var t = document.getElementById('news-' + r.news); if (t) t.scrollIntoView({ block: 'start' }); }
+    if (r.person) openPerson(r.person); else if (!opts.keepModal && !r.news) closeModal();
+    if (r.news) { var t = document.getElementById('news-' + r.news); if (t && !opts.keepScroll) t.scrollIntoView({ block: 'center' }); openNews(r.news); }
     else if (r.scrollTo) { var sec = document.getElementById(r.scrollTo); if (sec) { var top = sec.getBoundingClientRect().top + window.scrollY - 76; window.scrollTo(0, top); } }
     else if (!opts.keepScroll) window.scrollTo(0, 0);
     var q = document.getElementById('pub-q'); if (q && opts.focusSearch) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
@@ -3125,7 +3261,7 @@ footer li{margin:4px 0}
 
   // ---------- events (delegated) ----------
   document.addEventListener('click', function (e) {
-    var t = e.target.closest('[data-person],[data-pf],[data-af],[data-pt],[data-py],[data-era],[data-nk],[data-copy],[data-close],[data-news],#menu-btn');
+    var t = e.target.closest('[data-person],[data-pf],[data-af],[data-pt],[data-py],[data-era],[data-nk],[data-copy],[data-close],[data-news],[data-car],[data-carto],[data-outline],#menu-btn');
     if (!t) { if (e.target.classList && e.target.classList.contains('modal')) closeModal(); return; }
     if (t.id === 'menu-btn') { var nav = document.getElementById('main-nav'); var open = nav.classList.toggle('open'); t.setAttribute('aria-expanded', String(open)); return; }
     if (t.dataset.person) { e.preventDefault(); openPerson(t.dataset.person); return; }
@@ -3136,14 +3272,25 @@ footer li{margin:4px 0}
     if (t.dataset.py) { pubState.year = t.dataset.py; render({ keepScroll: true }); return; }
     if (t.dataset.era) { newsState.era = t.dataset.era; newsState.kind = 'all'; render({ keepScroll: true }); return; }
     if (t.dataset.nk) { newsState.kind = t.dataset.nk; render({ keepScroll: true }); return; }
-    if (t.dataset.news) { e.preventDefault(); var id = t.dataset.news, n = DATA.news.filter(function (x) { return x.id === id; })[0]; if (n) { newsState.era = n.era === 'before' ? 'before' : (n.date || '').slice(0, 4); newsState.kind = 'all'; } location.hash = '#news-' + id; if (location.hash === '#news-' + id) render(); return; }
+    if (t.dataset.outline != null) { openOutlines[t.dataset.outline] = !openOutlines[t.dataset.outline]; render({ keepScroll: true }); return; }
+    if (t.dataset.car) { stepNews(parseInt(t.dataset.car, 10)); return; }
+    if (t.dataset.carto != null) { stepNews(0, parseInt(t.dataset.carto, 10)); return; }
+    if (t.dataset.news) {
+      e.preventDefault(); var id = t.dataset.news, n = DATA.news.filter(function (x) { return x.id === id; })[0];
+      if (currentView === 'news') { openNews(id); return; }   // already on the page: just open the popup
+      if (n) { newsState.era = n.era === 'before' ? 'before' : (n.date || '').slice(0, 4); newsState.kind = 'all'; }
+      location.hash = '#news-' + id; if (location.hash === '#news-' + id) render(); return;
+    }
     if (t.dataset.copy != null) {
       var text = t.dataset.copy, done = function () { toast('Copied: ' + text); };
       try { navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); }); } catch (err) { fallbackCopy(text); done(); }
     }
   });
   document.addEventListener('input', function (e) { if (e.target.id === 'pub-q') { pubState.q = e.target.value; render({ keepScroll: true, focusSearch: true }); } });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { if (document.getElementById('person-modal')) closeModal(); } });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { if (document.getElementById('person-modal') || document.getElementById('news-modal')) closeModal(); return; }
+    if (document.getElementById('news-modal')) { if (e.key === 'ArrowLeft') stepNews(-1); else if (e.key === 'ArrowRight') stepNews(1); }
+  });
   function fallbackCopy(text) { var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) { } document.body.removeChild(ta); }
   var toastTimer;
   function toast(msg, ms) { var r = document.getElementById('toast-root'); r.innerHTML = '<div class="toast" role="status">' + esc(msg) + '</div>'; clearTimeout(toastTimer); toastTimer = setTimeout(function () { r.innerHTML = ''; }, ms || 2600); }
@@ -3166,7 +3313,7 @@ footer li{margin:4px 0}
   render();
   try { var msg = sessionStorage.getItem('gehl-toast'); if (msg) { sessionStorage.removeItem('gehl-toast'); toast(msg, 4000); } } catch (e) { }
 
-  window.GEHL = { pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById };
+  window.GEHL = { pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById, currentView: function () { return currentView; }, nearProjects: function () { var el = document.getElementById('projects'); return !!el && el.getBoundingClientRect().top < window.innerHeight * 0.5; } };
 })();
 </script>
 

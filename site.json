@@ -4,7 +4,7 @@
   "short": "GEHL",
   "nameKo": "지반지진 및 재해 연구실",
   "tagline": "We make the world safer",
-  "intro": "GEHL studies how earthquakes and related geohazards affect soils, foundations, and the infrastructure built on them. We combine geotechnical centrifuge modeling, numerical simulation, analytical methods, probabilistic uncertainty quantification, and earthquake case histories to evaluate what has happened, predict what could happen, and design urban systems that stay resilient through natural disasters.",
+  "intro": "GEHL studies how earthquakes and related geohazards affect soils, foundations, and the infrastructure built on them. We combine geotechnical centrifuge modeling, numerical simulation, analytical methods, probabilistic approaches, and earthquake case histories to evaluate what has happened, predict what could happen, and design urban systems that stay resilient through natural disasters.",
   "department": "Department of Civil and Environmental Engineering",
   "university": "Korea Advanced Institute of Science and Technology (KAIST)",
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
@@ -45,7 +45,6 @@
    "Numerical simulation",
    "Analytical modeling",
    "Probabilistic approaches",
-   "Uncertainty quantification",
    "Earthquake case-history analysis"
   ],
   "founded": "Lab founded in 2025",
@@ -238,35 +237,35 @@
    "status": "ongoing"
   },
   {
-   "title": "Multi-Scale Framework for Energy-Based Soil Liquefaction Assessment under Integrated Analysis of Cyclic Loadings",
+   "title": "Multi-Scale Framework for Energy-Based Soil Liquefaction Assessment under Integrated Analysis of Cyclic Loadings (Outstanding Young Scientist Grants)",
    "sponsor": "National Research Foundation of Korea",
    "period": "2026.03 – present",
    "role": "PI",
    "status": "ongoing"
   },
   {
-   "title": "Characterization and Validation of the Impact of Topographic Effect Parameters on Site Amplification using Dynamic Centrifuge Tests",
+   "title": "Characterization and Validation of the Impact of Topographic Effect Parameters on Site Amplification using Dynamic Centrifuge Tests (Sponsored Research)",
    "sponsor": "Korea Institute of Geoscience and Mineral Resources",
    "period": "2026.03 – present",
    "role": "PI",
    "status": "ongoing"
   },
   {
-   "title": "Probabilistic Liquefaction Hazard Assessment for Pohang Region under Future Earthquake Scenarios",
+   "title": "Probabilistic Liquefaction Hazard Assessment for Pohang Region under Future Earthquake Scenarios (URP)",
    "sponsor": "KAIST",
    "period": "2026.01 – present",
    "role": "PI",
    "status": "ongoing"
   },
   {
-   "title": "Development of Depth Reduction Factor for Intensity Measures in Liquefiable Soil Layers using Nonlinear Analysis",
+   "title": "Development of Depth Reduction Factor for Intensity Measures in Liquefiable Soil Layers using Nonlinear Analysis (Startup Funding)",
    "sponsor": "KAIST",
    "period": "2025.03 – present",
    "role": "PI",
    "status": "ongoing"
   },
   {
-   "title": "Dynamic Soil-Pile-Structure Interaction of Standard and Lightweight Modular Buildings under Earthquakes",
+   "title": "Dynamic Soil-Pile-Structure Interaction of Standard and Lightweight Modular Buildings under Earthquakes (Sponsored Research)",
    "sponsor": "Land and Housing Research Institute (LH)",
    "period": "2026.03 – 2026.07",
    "role": "PI",
@@ -1334,21 +1333,75 @@
    "title": "Introduction to Geotechnical Engineering",
    "term": "Spring 2025",
    "level": "Undergraduate",
-   "text": "Geotechnical terminology and the fundamentals of soil mechanics: phase relationships, classification, compaction, effective stress, fluid flow, consolidation and settlement, and shear strength. Laboratory classes are included. The course prepares students for foundation engineering, dam engineering, soil dynamics, and geotechnical earthquake engineering."
+   "text": "Geotechnical terminology and the fundamentals of soil mechanics: phase relationships, classification, compaction, effective stress, fluid flow, consolidation and settlement, and shear strength. Laboratory classes are included. The course prepares students for foundation engineering, dam engineering, soil dynamics, and geotechnical earthquake engineering.",
+   "outline": [
+    "Course Introduction, Phase Diagram",
+    "Phase Relationships, Grain Size Distribution",
+    "Index Properties – Plasticity, Soil Classification",
+    "Clay Minerals, Soil Fabric",
+    "Compaction of Soils",
+    "Field Compaction",
+    "Effective Stress",
+    "Mid-term",
+    "Hydrostatic Water in Soils, Fluid Flow in Soils – Heads, Permeability",
+    "Fluid Flow in Soils – Seepage",
+    "Fluid Flow in Soils – 2D Flow",
+    "Compressibility of Soils",
+    "Time Rate of Consolidation",
+    "Stress Distribution and Settlement in a Soil Mass",
+    "Shear Strength and Failure of Soils",
+    "Final Exam"
+   ]
   },
   {
    "code": "CE.60033",
    "title": "Advanced Soil Dynamics",
    "term": "Fall 2025",
    "level": "Graduate",
-   "text": "Dynamics of simple systems (waves, vibrations, single-degree-of-freedom systems), dynamic soil properties (G/Gmax and damping versus strain), waves in infinite and bounded media, and one-dimensional site response analysis. The course gives the theoretical foundation for geotechnical earthquake engineering."
+   "text": "Dynamics of simple systems (waves, vibrations, single-degree-of-freedom systems), dynamic soil properties (G/Gmax and damping versus strain), waves in infinite and bounded media, and one-dimensional site response analysis. The course gives the theoretical foundation for geotechnical earthquake engineering.",
+   "outline": [
+    "Course Introduction, Fourier Transform",
+    "Harmonic Waves and Complex Numbers, Signal Processing (How to Sample)",
+    "Signal Processing (How to Process), SDOF System (Free Vibration)",
+    "SDOF System (Forced Vibration), Earthquake Response Spectra, Damping and Energy Losses",
+    "Modeling of Soil during Cyclic Loading (LVM, LHM, Elastoplastic Models)",
+    "Modeling of Soil during Cyclic Loading (Bilinear, Hyperbolic, Ramberg-Osgood Models, Masing Criterions); Wave Velocities, Moduli and Damping at Small Strains (Elastic Moduli and Wave Velocities)",
+    "Wave Velocities, Moduli and Damping at Small Strains (Gmax in Clays, Effect of Aging, Number of Cycles; Small Strain Field Tests)",
+    "Mid-term",
+    "Wave Velocities, Moduli and Damping at Small Strains (Small Strain Field Tests)",
+    "Wave Velocities, Moduli and Damping at Large Strains, Wave Equation and Wave Velocity",
+    "Elastic Reflection and Transmission/Refraction of Traveling Waves (Boundary Problems), Radiation Damping",
+    "Kelvin–Voigt Model in Site Response Analysis and Linear Analysis, Wave Energy",
+    "Equivalent Linear Analysis, Nonlinear Analysis",
+    "Site Response Analysis using Equivalent Linear (EQL) Method with RSseismic / Strata",
+    "Input Motion Decision, Design Code Review",
+    "Final Exam"
+   ]
   },
   {
    "code": "CE.50002",
    "title": "Advanced Geomechanics",
    "term": "Spring 2026",
    "level": "Graduate",
-   "text": "Stress- and state-dependent behavior of sands and clays: dilatancy, drained and undrained strength, and stress paths. Critical state soil mechanics and simple models (Mohr–Coulomb, Cam-clay) are used to interpret laboratory tests and to analyze soil strength and deformation."
+   "text": "Stress- and state-dependent behavior of sands and clays: dilatancy, drained and undrained strength, and stress paths. Critical state soil mechanics and simple models (Mohr–Coulomb, Cam-clay) are used to interpret laboratory tests and to analyze soil strength and deformation.",
+   "outline": [
+    "Course Introduction, Phase Properties and Relationships",
+    "Fundamental Engineering Characterization of Soils, Sand-Like Soils",
+    "Clay-Like Soils – Minerals, Atterberg Limits",
+    "Mixed Soils, Effective Stress – Particle Forces",
+    "Effective Stress – Unsaturated Soils, Back to Terzaghi 1D Consolidation",
+    "Shear Strength of Soil (Cohesionless Soils, Cohesive Soils)",
+    "Elasticity and 2D to 3D Space – Stress and Strain",
+    "Mid-term",
+    "2D Stress Path – Practical Problems",
+    "3D Stress Path – Conventional Laboratory Tests",
+    "Critical State – Cohesionless Soils: State Parameters, Taylor's Equation, Dilatancy",
+    "Foundations of Plasticity, Critical State – Cohesive Soils (Cam Clay)",
+    "Cam Clay (Yield Surface) and Critical State: Volume Change in Clay, Triaxial Tests (Drained vs Undrained)",
+    "Undrained Strength of Clay with Cam Clay, Cam Clay Model Parameters",
+    "Review",
+    "Final Exam"
+   ]
   }
  ],
  "teachingPhilosophy": "New research and new technology keep expanding what is known, so a teacher has to keep learning and recognize quickly which new developments matter. That takes a firm grip on the fundamentals. The aim in every course is to close the gap between established and new research, to connect fundamental theory with practice, and to help students become self-directed engineers who can solve problems that did not exist when they were students.",
