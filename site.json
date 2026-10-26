@@ -1613,7 +1613,7 @@
    ]
   }
  ],
- "teachingPhilosophy": "New research and new technology keep expanding what is known, so a teacher has to keep learning and recognize quickly which new developments matter. That takes a firm grip on the fundamentals. The aim in every course is to close the gap between established and new research, to connect fundamental theory with practice, and to help students become self-directed engineers who can solve problems that did not exist when they were students.",
+ "teachingPhilosophy": "Even at this very moment, cutting-edge technologies and newly published research continue to expand the existing boundaries of knowledge, imposing upon us the obligations to never stop learning. It is my belief, then, that a true educator should be a fast tracker of all recent developments in their field and become a forerunner in delivering the new knowledge to their students. This requires a careful process in which the most essential information is sorted out of a superabundant supply of new knowledge, necessitating the scholar to have already mastered the fundamental rubrics and theories of the field. It is this belief that bases my teaching goal: I want to resolve the gap between existing and new research and alleviate the inconsistency between fundamental theories and practical industry approach, ultimately aiding my students to become more self-directed engineers capable of resolving novel challenges they will inevitably encounter out in the real world.",
  "culture": {
   "lead": "Research begins the moment we confront what \"doesn't work.\"\n\nWe do not merely focus on successful outcomes. Instead, we cultivate a culture where unsolved challenges are brought to light, and their root causes are rigorously explored through fundamentals. GEHL fosters an environment of freedom—not as a lack of order or neglect, but as systematic autonomy that supports self-directed growth through teamwork. We provide flexible yet clear guidelines that allow students to fully immerse themselves in their research and evolve independently.\n\nWe welcome students who are fueled by a passion for discovery, who ponder deeply and relentlessly, and who seek to transcend their own limits through collaborative dialogue with their colleagues.",
   "lookingFor": [
@@ -2478,7 +2478,7 @@
    }
   ],
   "figure": "img/teaching-philosophy.svg",
-  "figureCaption": "Even at this very moment, cutting-edge technologies and newly published research continue to expand the existing boundaries of knowledge, imposing upon us the obligations to never stop learning. It is my belief, then, that a true educator should be a fast tracker of all recent developments in their field and become a forerunner in delivering the new knowledge to their students. This requires a careful process in which the most essential information is sorted out of a superabundant supply of new knowledge, necessitating the scholar to have already mastered the fundamental rubrics and theories of the field. It is this belief that bases my teaching goal: I want to resolve the gap between existing and new research and alleviate the inconsistency between fundamental theories and practical industry approach, ultimately aiding my students to become more self-directed engineers capable of resolving novel challenges they will inevitably encounter out in the real world.",
+  "figureCaption": "",
   "quote": "Learning through Experience, Growing through Discussion, and Opening the future through Innovation"
  }
 }
