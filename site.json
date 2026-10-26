@@ -66,36 +66,35 @@
    "title": "A reliable, realistic, and interactive seismic risk map",
    "paragraphs": [
     "GEHL's vision is a seismic risk map that is reliable, realistic, and interactive: one that engineers, planners, and the public can trust and use. Every project in the lab is a step toward it, and every project follows one chain: characterize the input motion, identify the soil-foundation-structure system, and predict its output. The same framework is being extended from earthquakes to other natural hazards.",
-    "Reaching that map takes methods at every scale, from the laboratory to the city. Laboratory and centrifuge tests expose the micro-mechanics of soil at the particle scale; centrifuge and numerical modeling capture the response of single and multiple structures as one system; and site characterization, from shear-wave velocity profiles to earthquake case histories and drone-based surveys, builds the liquefaction hazard and ground-motion models behind the map. Experimental, numerical, and analytical results are checked against recorded earthquakes from databases such as DesignSafe, KiK-net, and CESMD, and probabilistic methods carry the uncertainty through to the final risk estimate."
+    "Reaching that map takes methods at every scale, from the laboratory to the city. Laboratory and centrifuge tests expose the micro-mechanics of soil at the particle scale; centrifuge and numerical modeling capture the response of single and multiple structures as one system; and site characterization, from shear-wave velocity profiles to earthquake case histories, builds the liquefaction hazard and ground-motion models behind the map. Experimental, numerical, and analytical results are checked against recorded earthquakes from databases such as DesignSafe, KiK-net, and CESMD, and probabilistic methods carry the uncertainty through to the final risk estimate."
    ],
    "framework": [
     {
      "k": "Input",
      "t": "Input motion",
-     "s": "Ground-motion characterization, seismic source and fault modeling, site response"
+     "s": "Ground-motion characterization, seismic source and fault modeling"
     },
     {
      "k": "System",
      "t": "System identification",
-     "s": "Soil, foundation, and structure as one dynamic system: centrifuge tests, element tests, numerical models"
+     "s": "Soil, foundation, and structure as one dynamic system: centrifuge tests, element tests, numerical simulations, subsurface modeling, and site characterization"
     },
     {
      "k": "Output",
      "t": "Output prediction",
-     "s": "Settlement, rotation, pore pressure, cracking, and erosion, with their uncertainty"
+     "s": "System's engineering demand parameters: settlement, rotation, pore pressure, cracking, and erosion, with their uncertainty"
     }
    ],
-   "loop": "Validated against earthquake case histories and fed back into design",
    "chips": [
     "Laboratory tests",
     "Dynamic centrifuge modeling",
     "Numerical modeling",
     "Site characterization",
     "Earthquake case histories",
-    "Probabilistic approaches and uncertainty quantification"
+    "Probabilistic approaches"
    ],
-   "figure": "img/vision-methods.jpg",
-   "figureCaption": "Methods for GEHL's vision, from laboratory to urban scale: laboratory tests and centrifuge modeling for micro-mechanics, centrifuge and numerical modeling for system-level response, and site characterization for seismic hazard and risk maps."
+   "figure": "img/uploads/bbdba09a409c586307bc63f00e94d11b.jpg",
+   "figureCaption": ""
   },
   "areas": [
    {
@@ -103,29 +102,20 @@
     "eyebrow": "Research area 1 | Soil-structure interaction",
     "title": "Dynamic Soil-Foundation-Structure Interaction",
     "paragraphs": [
-     "Seismic design usually treats the structure and the ground separately. We measure how they move together, so that the interaction can be used in design rather than ignored. Dynamic centrifuge tests on shallow foundations, rocking foundations, and disconnected piled rafts give the data; analytical models that couple horizontal structural response with foundation rocking and swaying turn the data into predictions.",
-     "Rocking shallow foundations are a good example: rocking reduces the demand on the superstructure but leaves permanent deformation, so the question is how to use it safely. Short piles, the soil-rounding effect, cyclic versus dynamic rocking, and ground-motion intensity measures for rocking performance all come from this line of work."
+     "Seismic design usually treats the structure and the ground separately. We measure how they move together, so that the interaction can be used in design rather than ignored. Dynamic centrifuge tests on shallow foundations, rocking foundations, and disconnected piled rafts give the data; analytical models that couple horizontal structural response with foundation rocking and swaying turn the data into predictions."
     ],
     "topics": [
-     "Structural inertial interaction",
-     "Period-lengthening ratio of SDOF structures",
-     "Structure-to-foundation mass ratio",
-     "Rocking shallow foundations and short piles",
-     "Disconnected piled raft (DPR)",
-     "Modular buildings on pile foundations"
+     "Soil-Structure Interaction",
+     "Structure-Soil-Structue Interaction",
+     "Rocking Foundation"
     ],
     "pubs": [
-     "j18",
-     "j14",
      "j06",
-     "j11",
-     "j04",
-     "j01",
      "j05",
-     "j07"
+     "j01"
     ],
     "slides": "https://docs.google.com/presentation/d/1yNp8XUofbD9MQDlulWsTB0s0AGLb9GcsaP6zVIXp8k8/present",
-    "figure": "",
+    "figure": "img/uploads/1faeff9dbdd6fe27564b8383fe54a343.jpg",
     "figureCaption": ""
    },
    {
@@ -133,28 +123,19 @@
     "eyebrow": "Research area 2 | Soil liquefaction",
     "title": "Energy-Based Soil Liquefaction Assessment",
     "paragraphs": [
-     "We use the energy dissipated in the soil, rather than cyclic stress alone, to estimate the buildup of excess pore pressure. This makes it possible to evaluate liquefaction without pore-water-pressure transducers, to read the timing of liquefaction directly from recorded ground motions through the spectral energy ratio, and to treat dissipated energy as an index of liquefiability.",
-     "The framework has been validated against case histories such as the 2003 Tokachi-Oki earthquake at the Port of Kushiro and the 2017 Pohang earthquake, and extended into a probabilistic energy-based framework that connects triggering to consequences such as settlement. Ongoing work builds a multi-scale framework for integrated cyclic loadings and a probabilistic liquefaction hazard assessment for the Pohang region."
+     "We use the energy dissipated in the soil, rather than cyclic stress alone, to estimate the buildup of excess pore pressure. This makes it possible to evaluate liquefaction without pore-water-pressure transducers, to read the timing of liquefaction directly from recorded ground motions through the spectral energy ratio, and to treat dissipated energy as an index of liquefiability.\nOngoing work builds a multi-scale framework for integrated cyclic loadings and a probabilistic liquefaction hazard assessment."
     ],
     "topics": [
      "Energy-based triggering evaluation",
-     "Spectral energy ratio and timing of liquefaction",
-     "Pore-pressure estimation without transducers",
-     "Probabilistic liquefaction hazard assessment",
-     "Depth reduction factor in liquefiable layers",
-     "Centrifuge modeling of liquefaction"
+     "Probabilistic liquefaction hazard assessment"
     ],
     "pubs": [
-     "j24",
      "j27",
      "j26",
-     "j23",
-     "j22",
-     "j20",
-     "j10"
+     "j24"
     ],
     "slides": "https://docs.google.com/presentation/d/1tBZnB6CfA8d3flq5uuUR5S-cezs4bpbV5-j-MyKKN0o/present",
-    "figure": "",
+    "figure": "img/study/liq.jpg",
     "figureCaption": ""
    },
    {
@@ -162,16 +143,12 @@
     "eyebrow": "Research area 3 | Dams and levees",
     "title": "Cracking and Concentrated Leak Erosion due to Fault Rupture",
     "paragraphs": [
-     "Many embankment dams sit on or near active faults. A vertical offset in the foundation can crack the crest, and water flowing through that crack can erode the core. We estimate crack dimensions from the offset and judge the erosion potential from the erodibility and swelling of the core material.",
-     "Triaxial, swell, erosion, and beam-bending tests characterize the soil; centrifuge tests with controlled foundation offsets, run in collaboration with UC Davis, Auburn University, and the California Department of Water Resources, show how cracks propagate and how fast water moves through them; numerical models carry the mechanism to prototype scale."
+     "Many embankment dams sit on or near active faults. A vertical offset in the foundation can crack the crest, and water flowing through that crack can erode the core. We estimate crack dimensions from the offset and judge the erosion potential from the erodibility and swelling of the core material."
     ],
     "topics": [
-     "Crack propagation from foundation offsets",
+     "Crack propagation mechanism",
      "Concentrated leak erosion",
-     "Scaling of flow through transverse cracks",
-     "Element testing of core materials",
-     "Centrifuge modeling of embankment dams",
-     "Risk assessment with the RMC toolbox"
+     "Scaling of flow through transverse cracks"
     ],
     "pubs": [
      "c21",
@@ -179,7 +156,7 @@
      "c18"
     ],
     "slides": "https://docs.google.com/presentation/d/1Az3RoOnAzCwC1fUZnlZ8BvYsp5IbqOI-Z43-JngRcxE/present",
-    "figure": "",
+    "figure": "img/uploads/3e018b2988f06cca8bf1bc0a1c9b4879.jpg",
     "figureCaption": ""
    },
    {
@@ -187,25 +164,20 @@
     "eyebrow": "Research area 4 | Site response and ground motion",
     "title": "Seismic Site Response, Topographic Effects, and Ground Motion",
     "paragraphs": [
-     "The motion that reaches a foundation depends on the source, the path, and the site. We work on seismic source and fault modeling, ground-motion characterization for Korean and global conditions, and one- and two-dimensional site response analysis, including the amplification caused by topography.",
-     "Dynamic centrifuge tests of slopes and ridges quantify topographic effect parameters on site amplification, and geophysical investigation (for example MASW) ties the models to real sites. The results feed national seismic design scenarios for mountainous terrain."
+     "The motion that reaches a foundation depends on the source, the path, and the site. We work on seismic source and fault modeling, ground-motion characterization for Korean and global conditions, and one- and two-dimensional site response analysis, including the amplification caused by topography."
     ],
     "topics": [
      "2D site response analysis",
      "Topographic effects on site amplification",
      "Ground-motion modeling",
-     "Seismic fault modeling",
-     "Geophysical investigation (MASW)",
-     "Seismic slope stability"
+     "Seismic fault modeling"
     ],
     "pubs": [
      "j13",
-     "c13",
-     "j15",
-     "j16"
+     "c13"
     ],
     "slides": "https://docs.google.com/presentation/d/1Nd1fRJdZ5oY7-BMlvSkOC53q-OoW4wCiBwLiTe_bX58/present",
-    "figure": "",
+    "figure": "img/study/site.png",
     "figureCaption": ""
    }
   ],

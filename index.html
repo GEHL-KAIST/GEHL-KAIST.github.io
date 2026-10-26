@@ -331,7 +331,16 @@ p.intro + p.intro{margin-top:12px}
 .rcard .chips span{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--soft);color:var(--fg)}
 .rcard figure{margin:20px 0 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
 .rcard figure img{display:block;width:100%;max-height:420px;object-fit:contain;background:#fff}
-.rcard figure.fig-teach img{max-height:none}   /* the teaching diagram fills its frame */
+.rcard figure.fig-teach img,.rcard figure.fig-full img{max-height:none}   /* diagrams fill their frame */
+.areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.rcard.area{padding:26px 28px}
+.rcard.area h3{font-size:22px;line-height:1.25;min-height:2.5em}   /* room for two title lines, so the pictures line up across a row */
+.rcard.area figure{margin-top:16px}
+.rcard.area figure .ph{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#fff}   /* every card's picture box is the same size */
+.rcard.area figure .ph img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;z-index:1}
+.rcard.area figure .ph img.bg{object-fit:cover;filter:blur(18px) brightness(.95) saturate(1.05);transform:scale(1.2);z-index:0}
+.rcard.area .prose p{font-size:15px}
+@media (max-width:860px){ .areas{grid-template-columns:1fr} }
 .rcard figcaption{font-size:12.5px;color:var(--muted);padding:8px 12px;border-top:1px solid var(--line)}
 .rcard .sel{list-style:none;margin:0;padding:0;display:grid;gap:7px}
 .rcard .sel li{font-size:14px;color:var(--muted);padding-left:14px;position:relative}
@@ -453,6 +462,12 @@ footer li{margin:4px 0}
 .arow .b button.del{color:var(--accent);border-color:var(--accent)}
 .arow .b button.mv{padding:4px 6px;min-width:26px}
 .arow .b button[disabled]{opacity:.35;cursor:default}
+.pubfilter{margin-top:-6px}
+.pubpick{max-height:230px;overflow:auto;border:1px solid var(--line-strong);border-radius:var(--radius);padding:6px 10px;display:grid;gap:4px;background:var(--surface)}
+.pubpick .pp{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--fg);cursor:pointer}
+.pubpick .pp input{width:auto;flex:0 0 auto;margin:3px 0 0}
+.pubpick .pp span{flex:1}
+.pubpick .pp i{color:var(--muted)}
 .thumbs{display:flex;gap:8px;flex-wrap:wrap}
 .thumbs .th{position:relative}
 .thumbs.sortable .th{cursor:grab}
@@ -574,36 +589,35 @@ footer li{margin:4px 0}
    "title": "A reliable, realistic, and interactive seismic risk map",
    "paragraphs": [
     "GEHL's vision is a seismic risk map that is reliable, realistic, and interactive: one that engineers, planners, and the public can trust and use. Every project in the lab is a step toward it, and every project follows one chain: characterize the input motion, identify the soil-foundation-structure system, and predict its output. The same framework is being extended from earthquakes to other natural hazards.",
-    "Reaching that map takes methods at every scale, from the laboratory to the city. Laboratory and centrifuge tests expose the micro-mechanics of soil at the particle scale; centrifuge and numerical modeling capture the response of single and multiple structures as one system; and site characterization, from shear-wave velocity profiles to earthquake case histories and drone-based surveys, builds the liquefaction hazard and ground-motion models behind the map. Experimental, numerical, and analytical results are checked against recorded earthquakes from databases such as DesignSafe, KiK-net, and CESMD, and probabilistic methods carry the uncertainty through to the final risk estimate."
+    "Reaching that map takes methods at every scale, from the laboratory to the city. Laboratory and centrifuge tests expose the micro-mechanics of soil at the particle scale; centrifuge and numerical modeling capture the response of single and multiple structures as one system; and site characterization, from shear-wave velocity profiles to earthquake case histories, builds the liquefaction hazard and ground-motion models behind the map. Experimental, numerical, and analytical results are checked against recorded earthquakes from databases such as DesignSafe, KiK-net, and CESMD, and probabilistic methods carry the uncertainty through to the final risk estimate."
    ],
    "framework": [
     {
      "k": "Input",
      "t": "Input motion",
-     "s": "Ground-motion characterization, seismic source and fault modeling, site response"
+     "s": "Ground-motion characterization, seismic source and fault modeling"
     },
     {
      "k": "System",
      "t": "System identification",
-     "s": "Soil, foundation, and structure as one dynamic system: centrifuge tests, element tests, numerical models"
+     "s": "Soil, foundation, and structure as one dynamic system: centrifuge tests, element tests, numerical simulations, subsurface modeling, and site characterization"
     },
     {
      "k": "Output",
      "t": "Output prediction",
-     "s": "Settlement, rotation, pore pressure, cracking, and erosion, with their uncertainty"
+     "s": "System's engineering demand parameters: settlement, rotation, pore pressure, cracking, and erosion, with their uncertainty"
     }
    ],
-   "loop": "Validated against earthquake case histories and fed back into design",
    "chips": [
     "Laboratory tests",
     "Dynamic centrifuge modeling",
     "Numerical modeling",
     "Site characterization",
     "Earthquake case histories",
-    "Probabilistic approaches and uncertainty quantification"
+    "Probabilistic approaches"
    ],
-   "figure": "img/vision-methods.jpg",
-   "figureCaption": "Methods for GEHL's vision, from laboratory to urban scale: laboratory tests and centrifuge modeling for micro-mechanics, centrifuge and numerical modeling for system-level response, and site characterization for seismic hazard and risk maps."
+   "figure": "img/uploads/bbdba09a409c586307bc63f00e94d11b.jpg",
+   "figureCaption": ""
   },
   "areas": [
    {
@@ -611,29 +625,20 @@ footer li{margin:4px 0}
     "eyebrow": "Research area 1 | Soil-structure interaction",
     "title": "Dynamic Soil-Foundation-Structure Interaction",
     "paragraphs": [
-     "Seismic design usually treats the structure and the ground separately. We measure how they move together, so that the interaction can be used in design rather than ignored. Dynamic centrifuge tests on shallow foundations, rocking foundations, and disconnected piled rafts give the data; analytical models that couple horizontal structural response with foundation rocking and swaying turn the data into predictions.",
-     "Rocking shallow foundations are a good example: rocking reduces the demand on the superstructure but leaves permanent deformation, so the question is how to use it safely. Short piles, the soil-rounding effect, cyclic versus dynamic rocking, and ground-motion intensity measures for rocking performance all come from this line of work."
+     "Seismic design usually treats the structure and the ground separately. We measure how they move together, so that the interaction can be used in design rather than ignored. Dynamic centrifuge tests on shallow foundations, rocking foundations, and disconnected piled rafts give the data; analytical models that couple horizontal structural response with foundation rocking and swaying turn the data into predictions."
     ],
     "topics": [
-     "Structural inertial interaction",
-     "Period-lengthening ratio of SDOF structures",
-     "Structure-to-foundation mass ratio",
-     "Rocking shallow foundations and short piles",
-     "Disconnected piled raft (DPR)",
-     "Modular buildings on pile foundations"
+     "Soil-Structure Interaction",
+     "Structure-Soil-Structue Interaction",
+     "Rocking Foundation"
     ],
     "pubs": [
-     "j18",
-     "j14",
      "j06",
-     "j11",
-     "j04",
-     "j01",
      "j05",
-     "j07"
+     "j01"
     ],
     "slides": "https://docs.google.com/presentation/d/1yNp8XUofbD9MQDlulWsTB0s0AGLb9GcsaP6zVIXp8k8/present",
-    "figure": "",
+    "figure": "img/uploads/1faeff9dbdd6fe27564b8383fe54a343.jpg",
     "figureCaption": ""
    },
    {
@@ -641,28 +646,19 @@ footer li{margin:4px 0}
     "eyebrow": "Research area 2 | Soil liquefaction",
     "title": "Energy-Based Soil Liquefaction Assessment",
     "paragraphs": [
-     "We use the energy dissipated in the soil, rather than cyclic stress alone, to estimate the buildup of excess pore pressure. This makes it possible to evaluate liquefaction without pore-water-pressure transducers, to read the timing of liquefaction directly from recorded ground motions through the spectral energy ratio, and to treat dissipated energy as an index of liquefiability.",
-     "The framework has been validated against case histories such as the 2003 Tokachi-Oki earthquake at the Port of Kushiro and the 2017 Pohang earthquake, and extended into a probabilistic energy-based framework that connects triggering to consequences such as settlement. Ongoing work builds a multi-scale framework for integrated cyclic loadings and a probabilistic liquefaction hazard assessment for the Pohang region."
+     "We use the energy dissipated in the soil, rather than cyclic stress alone, to estimate the buildup of excess pore pressure. This makes it possible to evaluate liquefaction without pore-water-pressure transducers, to read the timing of liquefaction directly from recorded ground motions through the spectral energy ratio, and to treat dissipated energy as an index of liquefiability.\nOngoing work builds a multi-scale framework for integrated cyclic loadings and a probabilistic liquefaction hazard assessment."
     ],
     "topics": [
      "Energy-based triggering evaluation",
-     "Spectral energy ratio and timing of liquefaction",
-     "Pore-pressure estimation without transducers",
-     "Probabilistic liquefaction hazard assessment",
-     "Depth reduction factor in liquefiable layers",
-     "Centrifuge modeling of liquefaction"
+     "Probabilistic liquefaction hazard assessment"
     ],
     "pubs": [
-     "j24",
      "j27",
      "j26",
-     "j23",
-     "j22",
-     "j20",
-     "j10"
+     "j24"
     ],
     "slides": "https://docs.google.com/presentation/d/1tBZnB6CfA8d3flq5uuUR5S-cezs4bpbV5-j-MyKKN0o/present",
-    "figure": "",
+    "figure": "img/study/liq.jpg",
     "figureCaption": ""
    },
    {
@@ -670,16 +666,12 @@ footer li{margin:4px 0}
     "eyebrow": "Research area 3 | Dams and levees",
     "title": "Cracking and Concentrated Leak Erosion due to Fault Rupture",
     "paragraphs": [
-     "Many embankment dams sit on or near active faults. A vertical offset in the foundation can crack the crest, and water flowing through that crack can erode the core. We estimate crack dimensions from the offset and judge the erosion potential from the erodibility and swelling of the core material.",
-     "Triaxial, swell, erosion, and beam-bending tests characterize the soil; centrifuge tests with controlled foundation offsets, run in collaboration with UC Davis, Auburn University, and the California Department of Water Resources, show how cracks propagate and how fast water moves through them; numerical models carry the mechanism to prototype scale."
+     "Many embankment dams sit on or near active faults. A vertical offset in the foundation can crack the crest, and water flowing through that crack can erode the core. We estimate crack dimensions from the offset and judge the erosion potential from the erodibility and swelling of the core material."
     ],
     "topics": [
-     "Crack propagation from foundation offsets",
+     "Crack propagation mechanism",
      "Concentrated leak erosion",
-     "Scaling of flow through transverse cracks",
-     "Element testing of core materials",
-     "Centrifuge modeling of embankment dams",
-     "Risk assessment with the RMC toolbox"
+     "Scaling of flow through transverse cracks"
     ],
     "pubs": [
      "c21",
@@ -687,7 +679,7 @@ footer li{margin:4px 0}
      "c18"
     ],
     "slides": "https://docs.google.com/presentation/d/1Az3RoOnAzCwC1fUZnlZ8BvYsp5IbqOI-Z43-JngRcxE/present",
-    "figure": "",
+    "figure": "img/uploads/3e018b2988f06cca8bf1bc0a1c9b4879.jpg",
     "figureCaption": ""
    },
    {
@@ -695,25 +687,20 @@ footer li{margin:4px 0}
     "eyebrow": "Research area 4 | Site response and ground motion",
     "title": "Seismic Site Response, Topographic Effects, and Ground Motion",
     "paragraphs": [
-     "The motion that reaches a foundation depends on the source, the path, and the site. We work on seismic source and fault modeling, ground-motion characterization for Korean and global conditions, and one- and two-dimensional site response analysis, including the amplification caused by topography.",
-     "Dynamic centrifuge tests of slopes and ridges quantify topographic effect parameters on site amplification, and geophysical investigation (for example MASW) ties the models to real sites. The results feed national seismic design scenarios for mountainous terrain."
+     "The motion that reaches a foundation depends on the source, the path, and the site. We work on seismic source and fault modeling, ground-motion characterization for Korean and global conditions, and one- and two-dimensional site response analysis, including the amplification caused by topography."
     ],
     "topics": [
      "2D site response analysis",
      "Topographic effects on site amplification",
      "Ground-motion modeling",
-     "Seismic fault modeling",
-     "Geophysical investigation (MASW)",
-     "Seismic slope stability"
+     "Seismic fault modeling"
     ],
     "pubs": [
      "j13",
-     "c13",
-     "j15",
-     "j16"
+     "c13"
     ],
     "slides": "https://docs.google.com/presentation/d/1Nd1fRJdZ5oY7-BMlvSkOC53q-OoW4wCiBwLiTe_bX58/present",
-    "figure": "",
+    "figure": "img/study/site.png",
     "figureCaption": ""
    }
   ],
@@ -3325,20 +3312,20 @@ footer li{margin:4px 0}
         if (i) html += '<div class="arrow" aria-hidden="true">→</div>';
         html += '<div class="step"><div class="k">' + esc(st.k) + '</div><div class="t">' + esc(st.t) + '</div><div class="s">' + esc(st.s) + '</div></div>';
       });
-      if (C.loop) html += '<div class="loop">↺ ' + esc(C.loop) + '</div>';
       html += '</div>';
     }
     var cfig = safeUrl(C.figure);
-    if (cfig) html += '<figure><img src="' + attr(cfig) + '" alt="' + attr(C.figureCaption || C.title) + '">' + (C.figureCaption ? '<figcaption>' + esc(C.figureCaption) + '</figcaption>' : '') + '</figure>';
+    if (cfig) html += '<figure class="fig-full"><img src="' + attr(cfig) + '" alt="' + attr(C.figureCaption || C.title) + '">' + (C.figureCaption ? '<figcaption>' + esc(C.figureCaption) + '</figcaption>' : '') + '</figure>';
     html += '<div class="prose">' + (C.paragraphs || []).map(function (p) { return rich(p); }).join('') + '</div>';
     if (C.chips && C.chips.length) html += '<div class="sub">Methods, from laboratory to urban scale</div><div class="chips">' + C.chips.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div>';
     html += '</section>';
+    html += '<div class="areas">';   // research areas: two cards per row
     (R.areas || []).forEach(function (a) {
-      html += '<section class="card rcard" id="area-' + attr(a.id) + '"><div class="eyebrow">' + esc(a.eyebrow) + '</div><h3>' + esc(a.title) + '</h3>';
+      html += '<section class="card rcard area" id="area-' + attr(a.id) + '"><div class="eyebrow">' + esc(a.eyebrow) + '</div><h3>' + esc(a.title) + '</h3>';
+      var fig = safeUrl(a.figure);
+      if (fig) html += '<figure class="fig-area"><span class="ph"><img class="bg" src="' + attr(fig) + '" alt="" aria-hidden="true"><img src="' + attr(fig) + '" alt="' + attr(a.figureCaption || a.title) + '"></span>' + (a.figureCaption ? '<figcaption>' + esc(a.figureCaption) + '</figcaption>' : '') + '</figure>';   // same 16:9 box on every card
       html += '<div class="prose">' + (a.paragraphs || []).map(function (p) { return rich(p); }).join('') + '</div>';
       if (a.topics && a.topics.length) html += '<div class="sub">Research topics</div><div class="chips">' + a.topics.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div>';
-      var fig = safeUrl(a.figure);
-      if (fig) html += '<figure><img src="' + attr(fig) + '" alt="' + attr(a.figureCaption || a.title) + '">' + (a.figureCaption ? '<figcaption>' + esc(a.figureCaption) + '</figcaption>' : '') + '</figure>';
       var sel = (a.pubs || []).map(pubById).filter(Boolean);
       if (sel.length) {
         html += '<div class="sub">Selected publications</div><ul class="sel">' + sel.map(function (p) {
@@ -3346,10 +3333,9 @@ footer li{margin:4px 0}
           return '<li>' + shortAuthors(p.authors) + ', “' + (link ? '<a href="' + attr(link) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>' : esc(p.title)) + ',” <i>' + esc(p.venue) + '</i> (' + esc(p.year) + ')</li>';
         }).join('') + '</ul>';
       }
-      if (a.slides) html += '<div class="sl"><a href="' + attr(safeUrl(a.slides)) + '" target="_blank" rel="noopener">Slides on this topic →</a></div>';
       html += '</section>';
     });
-    html += '</div>';
+    html += '</div></div>';
     var on = DATA.projects.filter(function (p) { return p.status !== 'completed'; }), done = DATA.projects.filter(function (p) { return p.status === 'completed'; });
     function ptable(list) { return '<div class="tablewrap"><table class="projects"><colgroup><col class="c-title"><col class="c-sponsor"><col class="c-period"><col class="c-role"></colgroup><thead><tr><th>Project</th><th>Sponsor</th><th>Period</th><th>Role</th></tr></thead><tbody>' + list.map(function (p) { return '<tr><td>' + esc(p.title) + '</td><td>' + esc(p.sponsor) + '</td><td class="per">' + esc(p.period) + '</td><td>' + esc(p.role) + '</td></tr>'; }).join('') + '</tbody></table></div>'; }
     html += '<section class="section" id="projects"><div class="section-head"><h2>Projects</h2></div>' + (on.length ? '<div class="eyebrow" style="margin-bottom:10px">Ongoing</div>' + ptable(on) : '') + (done.length ? '<div class="eyebrow" style="margin:28px 0 10px">Completed</div>' + ptable(done) : '') + '</section>';
