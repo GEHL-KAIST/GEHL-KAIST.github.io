@@ -1655,7 +1655,7 @@
    "kind": "award",
    "who": "Jinyong Kim and Gunhak Kim",
    "title": "Two awards at the 2026 KGS Fall Conference",
-   "body": "Congratulations to Jinyong and Gunhak on receiving awards at the 2026 KGS Fall Conference! Jinyong received the Best Oral Presentation Award for his presentation, “Arias Intensity-Based Damping Ratio Estimation and Experimental Validation,” and Gunhak received the Outstanding Poster Award for his poster, “SH-Wave Transfer Function for Topographic Amplification.” Great work, Jinyong and Gunhak!",
+   "body": "Jinyong received the Best Oral Presentation Award for his presentation, “Arias Intensity-Based Damping Ratio Estimation and Experimental Validation,” and Gunhak received the Outstanding Poster Award for his poster, “SH-Wave Transfer Function for Topographic Amplification.”",
    "images": [
     "img/uploads/33893ff42327461df7630c6702ad57e7.jpg",
     "img/uploads/19b9d1a810ea151e78a4cf95246d2395.png"
@@ -1689,7 +1689,8 @@
     "img/uploads/c8a1b412da7808fdd62bbac280503e72.jpg",
     "img/uploads/0b711000090de7c1e606a77775638091.jpg",
     "img/uploads/da8ff5acc044c898499368923bbdca80.jpg",
-    "img/uploads/6ebec3ff672879fb382c96af2d264044.jpg"
+    "img/uploads/6ebec3ff672879fb382c96af2d264044.jpg",
+    "img/news/n2026-09-17-01.jpg"
    ]
   },
   {
@@ -1715,7 +1716,8 @@
    "images": [
     "img/uploads/a2e6bc827a073401e3458c44dc6a1ed1.jpg",
     "img/uploads/f225a8e0d14b3ed6fdbb599b083683f0.jpg",
-    "img/uploads/956a6d307b694e0e6becd12fefdb7796.jpg"
+    "img/uploads/956a6d307b694e0e6becd12fefdb7796.jpg",
+    "img/news/n2026-08-28-01.jpg"
    ]
   },
   {
@@ -1726,7 +1728,16 @@
    "who": "GEHL",
    "title": "2026 GEHL Summer MT in Muju",
    "body": "",
-   "images": []
+   "images": [
+    "img/news/n2026-08-26-01.jpg",
+    "img/news/n2026-08-26-02.jpg",
+    "img/news/n2026-08-26-03.jpg",
+    "img/news/n2026-08-26-04.jpg",
+    "img/news/n2026-08-26-05.jpg",
+    "img/news/n2026-08-26-06.jpg",
+    "img/news/n2026-08-26-07.jpg",
+    "img/news/n2026-08-26-08.jpg"
+   ]
   },
   {
    "id": "n2026-08-25",
@@ -1734,8 +1745,15 @@
    "kind": "lablife",
    "who": "GEHL",
    "title": "End of the summer study program",
-   "body": "The seven-week program ran three groups on PM4Sand, MASW, and uncertainty quantification. Members shared wrap-up reflections.",
-   "images": []
+   "body": "GEHL completed its seven-week summer study program! We divided into three groups, each focusing on PM4Sand, MASW, and Uncertainty Quantification. All members actively participated throughout the program and successfully achieved the goals they had set. It was a productive summer, and we are proud of our team!\n\nHere are some reflections shared by our members during the wrap-up party.\n\n서해원: 예습할 자료가 있었으면 좋았겠다\n\n이민성: 멘탈케어\n\n박혜림: 주제 수가 적었으면 좋겠다\n\n임창성: Topic이 순환되지 않고, 완전히 다른 주제를 찾아보는건 어떤지\n\n김군학: UQ진도를 잘 계획해주면 좋겠다\n\n정주연: 일정조율 (타연구실)\n\n김진용: 삼축 주제 추가/시기가 안맞으면 너무 힘들듯\n\n강재우: Traditional한 다른 주제/ 스터디 요일 다른요일로\n\n서환우: MASW만 집중했으면? 더 깊이있게 할 수 있었을 듯/ 다음 주제는 새로운주제\n\n최동형: 지오카 레벨은 어려울듯/심화팀, 베이지틱 나누는 것도 좋을듯, 실내실험 스터디",
+   "images": [
+    "img/news/n2026-08-25-01.jpg",
+    "img/news/n2026-08-25-02.jpg",
+    "img/news/n2026-08-25-03.jpg",
+    "img/news/n2026-08-25-04.jpg",
+    "img/news/n2026-08-25-05.jpg",
+    "img/news/n2026-08-25-06.jpg"
+   ]
   },
   {
    "id": "n2026-07-10",
@@ -1743,8 +1761,11 @@
    "kind": "award",
    "who": "Kil-Wan Ko",
    "title": "Joined the Editorial Board of IJPMG",
-   "body": "Dr. Ko joined the editorial board of the International Journal of Physical Modelling in Geotechnics, the SCI journal associated with ISSMGE TC104.",
-   "images": []
+   "body": "I am pleased to share that I have joined the Editorial Board of the International Journal of Physical Modelling in Geotechnics.\n\nIJPMG is an international journal associated with Technical Committee TC104 of the International Society for Soil Mechanics and Geotechnical Engineering (ISSMGE). The journal focuses on research in physical modeling in geotechnical engineering, including centrifuge modeling, 1g modeling, and shaking table testing.\n\nAs physical modelling has been an important part of my research, I look forward to contributing to the journal and supporting high-quality research in this field.",
+   "images": [
+    "img/news/n2026-07-10-01.jpg",
+    "img/news/n2026-07-10-02.jpg"
+   ]
   },
   {
    "id": "n2026-07-09",
@@ -1752,8 +1773,12 @@
    "kind": "visit",
    "who": "GEHL",
    "title": "Welcoming Zayed University leadership",
-   "body": "The President and Vice President of Zayed University visited, discussed research collaboration, and toured the KOCED Geotechnical Centrifuge Center.",
-   "images": []
+   "body": "It was a pleasure to welcome the President and Vice President of Zayed University to the Department of Civil and Environmental Engineering at KAIST.\n\nDuring their visit, we had a productive discussion on potential research collaboration and future academic exchange between our institutions. We also had the opportunity to introduce our research activities and provide a tour of the KOCED Geotechnical Centrifuge Center, where we shared our experimental capabilities for geotechnical and earthquake engineering research.",
+   "images": [
+    "img/news/n2026-07-09-01.jpg",
+    "img/news/n2026-07-09-02.jpg",
+    "img/news/n2026-07-09-03.jpg"
+   ]
   },
   {
    "id": "n2026-07-06",
@@ -1761,8 +1786,10 @@
    "kind": "welcome",
    "who": "GEHL",
    "title": "Welcome new members",
-   "body": "Dr. Hwanwoo Seo and Changsung Yim joined GEHL, and the summer group study began.",
-   "images": []
+   "body": "We are happy to welcome Dr. Seo and Changsung Yim to GEHL. We have also launched a group study to make this summer both productive and meaningful.",
+   "images": [
+    "img/news/n2026-07-06-01.jpg"
+   ]
   },
   {
    "id": "n2026-07-03",
@@ -1770,8 +1797,10 @@
    "kind": "visit",
    "who": "GEHL",
    "title": "Meeting with Professor Onder Cetin",
-   "body": "The group had dinner with Prof. Cetin and discussed liquefaction from a strain-based perspective.",
-   "images": []
+   "body": "It was a great pleasure to meet and have dinner with Professor Onder Cetin. We discussed many interesting fundamentals of liquefaction, particularly how liquefaction can be interpreted from a strain-based perspective.",
+   "images": [
+    "img/news/n2026-07-03-01.jpg"
+   ]
   },
   {
    "id": "n2026-07-01a",
@@ -1797,8 +1826,13 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "Invited seminar at the IAEA",
-   "body": "Dr. Ko presented to the IAEA External Events Safety Section on identifying the timing of liquefaction triggering from ground-motion records.",
-   "images": []
+   "body": "It was great to give a presentation at IAEA meeting. The meeting was for External Events Safety Section (EEES) of IAEA. I gave a talk about how to identify the timing of liquefaction using ground motion records.",
+   "images": [
+    "img/news/n2026-06-29-01.jpg",
+    "img/news/n2026-06-29-02.jpg",
+    "img/news/n2026-06-29-03.jpg",
+    "img/news/n2026-06-29-04.jpg"
+   ]
   },
   {
    "id": "n2026-06-15",
@@ -1807,8 +1841,19 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "ICSMGE 2026 in Vienna",
-   "body": "Dr. Ko presented on crack propagation in dams and levees caused by foundation vertical offsets at the TC210 committee meeting. The work is a collaboration with UC Davis, Auburn University, and the California DWR. The group also visited the Terzaghi Archive at TU Wien.",
-   "images": []
+   "body": "It was great to catch up with friends and colleagues at ICSMGE. I also gave a presentation entitled \"Crack Propagation Mechanisms in Dams and Levees Caused by Vertical Offsets in the Foundation\" at the TC210 Committee Meeting. This work is a collaborative research effort involving UC Davis, Auburn University, and the California Department of Water Resources (DWR). Terzaghi Archive tour in TU Wien was so impressive!",
+   "images": [
+    "img/news/n2026-06-15-01.jpg",
+    "img/news/n2026-06-15-02.jpg",
+    "img/news/n2026-06-15-03.jpg",
+    "img/news/n2026-06-15-04.jpg",
+    "img/news/n2026-06-15-05.jpg",
+    "img/news/n2026-06-15-06.jpg",
+    "img/news/n2026-06-15-07.jpg",
+    "img/news/n2026-06-15-08.jpg",
+    "img/news/n2026-06-15-09.jpg",
+    "img/news/n2026-06-15-10.jpg"
+   ]
   },
   {
    "id": "n2026-06-08",
@@ -1817,8 +1862,19 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "ICPMG 2026 in Zurich",
-   "body": "Dr. Ko chaired a session on onshore and offshore foundations. Mark Bancroft presented on scaling laws for fluids in centrifuge modeling.",
-   "images": []
+   "body": "It was great to catch up with friends and colleagues at ICPMG. I also had the opportunity to chair a session on onshore and offshore foundations. In addition, Mark gave a presentation on the scaling laws for fluids in centrifuge modeling, a topic we have worked on together.",
+   "images": [
+    "img/news/n2026-06-08-01.jpg",
+    "img/news/n2026-06-08-02.jpg",
+    "img/news/n2026-06-08-03.jpg",
+    "img/news/n2026-06-08-04.jpg",
+    "img/news/n2026-06-08-05.jpg",
+    "img/news/n2026-06-08-06.jpg",
+    "img/news/n2026-06-08-07.jpg",
+    "img/news/n2026-06-08-08.jpg",
+    "img/news/n2026-06-08-09.jpg",
+    "img/news/n2026-06-08-10.jpg"
+   ]
   },
   {
    "id": "n2026-05-15",
@@ -1826,8 +1882,10 @@
    "kind": "lablife",
    "who": "GEHL",
    "title": "Teacher's Day",
-   "body": "A thank-you to the students.",
-   "images": []
+   "body": "Grateful for working with such wonderful students. Thank you!",
+   "images": [
+    "img/news/n2026-05-15-01.jpg"
+   ]
   },
   {
    "id": "n2026-04-29",
@@ -1837,7 +1895,18 @@
    "who": "GEHL",
    "title": "InnoCORE USA",
    "body": "",
-   "images": []
+   "images": [
+    "img/news/n2026-04-29-01.jpg",
+    "img/news/n2026-04-29-02.jpg",
+    "img/news/n2026-04-29-03.jpg",
+    "img/news/n2026-04-29-04.jpg",
+    "img/news/n2026-04-29-05.jpg",
+    "img/news/n2026-04-29-06.jpg",
+    "img/news/n2026-04-29-07.jpg",
+    "img/news/n2026-04-29-08.jpg",
+    "img/news/n2026-04-29-09.jpg",
+    "img/news/n2026-04-29-10.jpg"
+   ]
   },
   {
    "id": "n2026-04-10",
@@ -1846,7 +1915,17 @@
    "who": "GEHL",
    "title": "Spring party",
    "body": "",
-   "images": []
+   "images": [
+    "img/news/n2026-04-10-01.jpg",
+    "img/news/n2026-04-10-02.jpg",
+    "img/news/n2026-04-10-03.jpg",
+    "img/news/n2026-04-10-04.jpg",
+    "img/news/n2026-04-10-05.jpg",
+    "img/news/n2026-04-10-06.jpg",
+    "img/news/n2026-04-10-07.jpg",
+    "img/news/n2026-04-10-08.jpg",
+    "img/news/n2026-04-10-09.jpg"
+   ]
   },
   {
    "id": "n2026-04-02",
@@ -1854,8 +1933,12 @@
    "kind": "lablife",
    "who": "GEHL",
    "title": "Spring has arrived at KAIST",
-   "body": "Cherry blossoms were in bloom, and the group held its traditional strawberry party.",
-   "images": []
+   "body": "The cherry blossoms are in full bloom here at KAIST! We celebrated the season with our traditional Strawberry Party.",
+   "images": [
+    "img/news/n2026-04-02-01.jpg",
+    "img/news/n2026-04-02-02.jpg",
+    "img/news/n2026-04-02-03.jpg"
+   ]
   },
   {
    "id": "n2026-03-31",
@@ -1863,8 +1946,13 @@
    "kind": "visit",
    "who": "GEHL",
    "title": "Professor David Frost (Georgia Tech) at KAIST",
-   "body": "Prof. Frost gave a talk, \"Transitioning Bio-Geo-Ideas from Research to Practice,\" toured the centrifuge center, and advised students interested in studying abroad.",
-   "images": []
+   "body": "It was a great pleasure to host Professor David Frost from Georgia Tech at KAIST. Professor Frost gave a talk 'Transitioning Bio-Geo-Ideas from Research to Practice' to GeoKAIST group. We had a productive day touring KAIST centrifuge center and discussing the future of geotechnics. He also met with our students aspiring to study abroad to provide valuable advice and encouragement.",
+   "images": [
+    "img/news/n2026-03-31-01.jpg",
+    "img/news/n2026-03-31-02.jpg",
+    "img/news/n2026-03-31-03.jpg",
+    "img/news/n2026-03-31-04.jpg"
+   ]
   },
   {
    "id": "n2026-03-27",
@@ -1874,7 +1962,12 @@
    "who": "GEHL",
    "title": "2026 KGS Spring Conference",
    "body": "GEHL members attended the Korean Geotechnical Society spring conference.",
-   "images": []
+   "images": [
+    "img/news/n2026-03-27-01.jpg",
+    "img/news/n2026-03-27-02.jpg",
+    "img/news/n2026-03-27-03.jpg",
+    "img/news/n2026-03-27-04.jpg"
+   ]
   },
   {
    "id": "n2026-03-19",
@@ -1883,8 +1976,11 @@
    "kind": "talk",
    "who": "GEHL",
    "title": "2026 EESK Spring Conference",
-   "body": "Dr. Ko, Dr. Choi, and Jaewoo attended the Earthquake Engineering Society of Korea spring conference. Dr. Choi presented on energy-based liquefaction evaluation using field vibroseis shaking.",
-   "images": []
+   "body": "Dr. Ko, Dr. Choi, and Jaewoo attended 2026 Spring Earthquake Engineering Society of Korea Conference. Dr. Choi presented \"Energy-Based Liquefaction Evaluation using Field Vibroseis Shaking.\"",
+   "images": [
+    "img/news/n2026-03-19-01.jpg",
+    "img/news/n2026-03-19-02.jpg"
+   ]
   },
   {
    "id": "n2026-03-06",
@@ -1892,8 +1988,11 @@
    "kind": "award",
    "who": "Kil-Wan Ko",
    "title": "CEE Teaching Excellence Award",
-   "body": "Dr. Ko received the Teaching Excellence Award from the Department of Civil and Environmental Engineering.",
-   "images": []
+   "body": "Dr. Ko has been awarded the CEE Teaching Excellence Award from the Department of Civil and Environmental Engineering at KAIST",
+   "images": [
+    "img/news/n2026-03-06-01.jpg",
+    "img/news/n2026-03-06-02.jpg"
+   ]
   },
   {
    "id": "n2026-03-04",
@@ -1901,8 +2000,11 @@
    "kind": "lablife",
    "who": "GEHL",
    "title": "Welcoming the Spring 2026 semester",
-   "body": "",
-   "images": []
+   "body": "We celebrated the beginning of our spring semester today. Good luck to everyone starting their new classes!",
+   "images": [
+    "img/news/n2026-03-04-01.jpg",
+    "img/news/n2026-03-04-02.jpg"
+   ]
   },
   {
    "id": "n2026-03-01",
@@ -1928,8 +2030,15 @@
    "kind": "award",
    "who": "Dong-Hyeong Choi and Jinyong Kim",
    "title": "Ph.D. and M.S. graduation",
-   "body": "Dr. Dong-Hyeong Choi received his Ph.D. and Jinyong Kim received his M.S.",
-   "images": []
+   "body": "Huge congratulations to Dr. Dong-Hyeong Choi and Jinyong Kim, who officially received their Ph.D. and Master’s degrees today. We are incredibly proud of your hard work and dedication. Congratulations to you both!",
+   "images": [
+    "img/news/n2026-02-20-01.jpg",
+    "img/news/n2026-02-20-02.jpg",
+    "img/news/n2026-02-20-03.jpg",
+    "img/news/n2026-02-20-04.jpg",
+    "img/news/n2026-02-20-05.jpg",
+    "img/news/n2026-02-20-06.jpg"
+   ]
   },
   {
    "id": "n2026-02-13",
@@ -1937,8 +2046,12 @@
    "kind": "talk",
    "who": "Hyelim Park and Kyeongmin Noh",
    "title": "Winter research talk",
-   "body": "Two undergraduate researchers presented on random vibration theory and its application to site response analysis.",
-   "images": []
+   "body": "GEHL’s undergraduate students, Hyelim and Kyungmin, gave a talk on random vibration theory and its application to site response analysis. After working on the topic for two months, they presented their work to our lab members.",
+   "images": [
+    "img/news/n2026-02-13-01.jpg",
+    "img/news/n2026-02-13-02.jpg",
+    "img/news/n2026-02-13-03.jpg"
+   ]
   },
   {
    "id": "n2026-02-11",
@@ -1955,8 +2068,17 @@
    "kind": "lablife",
    "who": "GEHL",
    "title": "Cleaning day",
-   "body": "The centrifuge center was deep cleaned and reorganized.",
-   "images": []
+   "body": "Our centrifuge center just got a deep clean. With the sensor room, model display, and visiting room fully reorganized, we’re ready to work!",
+   "images": [
+    "img/news/n2026-01-26-01.jpg",
+    "img/news/n2026-01-26-02.jpg",
+    "img/news/n2026-01-26-03.jpg",
+    "img/news/n2026-01-26-04.jpg",
+    "img/news/n2026-01-26-05.jpg",
+    "img/news/n2026-01-26-06.jpg",
+    "img/news/n2026-01-26-07.jpg",
+    "img/news/n2026-01-26-08.jpg"
+   ]
   },
   {
    "id": "n2026-01-09",
@@ -1964,8 +2086,13 @@
    "kind": "award",
    "who": "Kil-Wan Ko",
    "title": "2025 KSCE Young Researcher Award",
-   "body": "Dr. Ko received the Young Researcher Award from the Korean Society of Civil Engineers, recognizing the paper on performance evaluation of sieve and curtain pluviators.",
-   "images": []
+   "body": "Dr. Kil-Wan Ko has been awarded the 2025 Young Researcher Award by the Korean Society of Civil Engineers (KSCE). The KSCE recognized Dr. Ko's research achievements, including his paper, 'Performance Evaluation of Sieve and Curtain Pluviators for Reconstituted Sand Specimen in Model Box.'",
+   "images": [
+    "img/news/n2026-01-09-01.jpg",
+    "img/news/n2026-01-09-02.jpg",
+    "img/news/n2026-01-09-03.jpg",
+    "img/news/n2026-01-09-04.jpg"
+   ]
   },
   {
    "id": "n2026-01-02",
@@ -1973,8 +2100,11 @@
    "kind": "visit",
    "who": "GEHL",
    "title": "Dinner with Prof. Amalesh Jana",
-   "body": "The group had dinner with Prof. Jana from Montana State University and discussed energy-based liquefaction assessment.",
-   "images": []
+   "body": "Dinner with Prof. Amalesh Jana from Montana State University. We had a nice dinner in San Jose and discussed our collaborative research on the field applicability of energy-based soil liquefaction assessment.",
+   "images": [
+    "img/news/n2026-01-02-01.jpg",
+    "img/news/n2026-01-02-02.jpg"
+   ]
   },
   {
    "id": "n2025-12-18",
@@ -1982,8 +2112,11 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "Invited seminar for the KGS Dams & Levees Technical Committee",
-   "body": "\"Risk Assessment of Concentrated Leak Erosion in Dams and Levees – RMC Toolbox and Centrifuge Tests.\"",
-   "images": []
+   "body": "Dr. Ko gave a talk at KGS Dams & Levees Technical Committees invited seminar- \"Risk Assessment of Concentrated Leak Erosion in Dams and Levees – RMC toolbox and Centrifuge Tests.\"",
+   "images": [
+    "img/news/n2025-12-18-01.jpg",
+    "img/news/n2025-12-18-02.jpg"
+   ]
   },
   {
    "id": "n2025-12-16",
@@ -2001,8 +2134,12 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "KAIST–NYU Abu Dhabi Joint Workshop",
-   "body": "Dr. Ko gave a talk, \"KAIST Geo-Centrifuge Testing Center,\" at NYU Abu Dhabi. KAIST CEE faculty also met the Dubai Municipality to discuss collaboration.",
-   "images": []
+   "body": "Dr. Ko gave a talk at NYU AD with a topic of \"KAIST Geo-Centrifuge Testing Center.\" Also KAIST CEE faculties had a meeting with Dubai Municipality to discuss collaboration.",
+   "images": [
+    "img/news/n2025-12-08-01.jpg",
+    "img/news/n2025-12-08-02.jpg",
+    "img/news/n2025-12-08-03.jpg"
+   ]
   },
   {
    "id": "n2025-12-01",
@@ -2010,8 +2147,10 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "Invited seminar at UNIST",
-   "body": "\"Geotechnical Centrifuge Modeling and Energy-Based Soil Liquefaction Evaluation.\"",
-   "images": []
+   "body": "Dr. Ko gave a talk at UNIST with a topic of \"Geotechnical Centrifuge Modeling and Energy-Based Soil Liquefaction Evaluation.\"",
+   "images": [
+    "img/news/n2025-12-01-01.jpg"
+   ]
   },
   {
    "id": "n2025-11-12",
@@ -2028,8 +2167,11 @@
    "kind": "lablife",
    "who": "GEHL",
    "title": "Fall welcome walk at Donghaksa",
-   "body": "",
-   "images": []
+   "body": "We took a walk at Donghaksa Temple under the beautiful sunshine!",
+   "images": [
+    "img/news/n2025-11-06-01.jpg",
+    "img/news/n2025-11-06-02.jpg"
+   ]
   },
   {
    "id": "n2025-10-30",
@@ -2038,8 +2180,14 @@
    "kind": "event",
    "who": "GEHL",
    "title": "Open KAIST and Hello KAIST",
-   "body": "The lab gave centrifuge center tours to 201 visitors during Open KAIST and to 11 incoming undergraduates during Hello KAIST.",
-   "images": []
+   "body": "We gave our lab tours for kids and people from outside of the campus in Open KAIST and for incoming undergraduate students in Hello KAIST.\n\n201 people during Open KAIST and 11 students during Hello KAIST visited our lab",
+   "images": [
+    "img/news/n2025-10-30-01.jpg",
+    "img/news/n2025-10-30-02.jpg",
+    "img/news/n2025-10-30-03.jpg",
+    "img/news/n2025-10-30-04.jpg",
+    "img/news/n2025-10-30-05.jpg"
+   ]
   },
   {
    "id": "n2025-09-29",
@@ -2056,8 +2204,14 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "KGS invited seminar and KOCED Centrifuge Center tour",
-   "body": "\"Energy-Based Soil Liquefaction and Estimation of Timing of Liquefaction Using Spectral Energy Ratio.\" Participants toured the KOCED Centrifuge Center, introduced by Dr. Choi, before talks by Dr. Tessari (RPI), Dr. Han (KICT), and Dr. Ko.",
-   "images": []
+   "body": "We invited participants to tour the KOCED Centrifuge Center prior to the KGS seminar. The tour was introduced by Dr. Choi, who presented an overview of our center. Following the tour, an Invited Seminar was held, featuring talks by Dr. Tessari (RPI), Dr. Han (KICT), and Dr. Ko (KAIST).",
+   "images": [
+    "img/news/n2025-09-25-01.jpg",
+    "img/news/n2025-09-25-02.jpg",
+    "img/news/n2025-09-25-03.jpg",
+    "img/news/n2025-09-25-04.jpg",
+    "img/news/n2025-09-25-05.jpg"
+   ]
   },
   {
    "id": "n2025-09-18",
@@ -2066,7 +2220,9 @@
    "who": "GEHL",
    "title": "GeoKAIST gathering",
    "body": "",
-   "images": []
+   "images": [
+    "img/news/n2025-09-18-01.jpg"
+   ]
   },
   {
    "id": "n2025-09-01",
@@ -2083,8 +2239,10 @@
    "kind": "award",
    "who": "Kil-Wan Ko",
    "title": "Dam Safety Subcommittee, KNCOLD",
-   "body": "Dr. Ko became a committee member of the Dam Safety Subcommittee of the Korean National Committee on Large Dams.",
-   "images": []
+   "body": "Dr. Ko became a committee member of the Dam Safety Subcommittee in KNCOLD",
+   "images": [
+    "img/news/n2025-08-19-01.jpg"
+   ]
   },
   {
    "id": "n2025-08-04",
@@ -2093,8 +2251,15 @@
    "kind": "event",
    "who": "GEHL",
    "title": "Collaborative centrifuge tests at UC Davis",
-   "body": "The team ran the centrifuge with Jason DeJong, Mark Bancroft, and Dan Wilson.",
-   "images": []
+   "body": "We ran the centrifuge with Jason DeJong, Mark Bancroft, and Dan Wilson. Had a lot of fun with Davis friends and researchers",
+   "images": [
+    "img/news/n2025-08-04-01.jpg",
+    "img/news/n2025-08-04-02.jpg",
+    "img/news/n2025-08-04-03.jpg",
+    "img/news/n2025-08-04-04.jpg",
+    "img/news/n2025-08-04-05.jpg",
+    "img/news/n2025-08-04-06.jpg"
+   ]
   },
   {
    "id": "n2025-07-29",
@@ -2103,8 +2268,13 @@
    "kind": "event",
    "who": "GEHL",
    "title": "Research meeting at UC Berkeley",
-   "body": "Discussions with Dr. Chen on collaborative research.",
-   "images": []
+   "body": "Discussion with Dr. Chen to explore collaborative research",
+   "images": [
+    "img/news/n2025-07-29-01.jpg",
+    "img/news/n2025-07-29-02.jpg",
+    "img/news/n2025-07-29-03.jpg",
+    "img/news/n2025-07-29-04.jpg"
+   ]
   },
   {
    "id": "n2025-07-25",
@@ -2113,7 +2283,9 @@
    "who": "GEHL",
    "title": "KEPRI visited the KOCED Centrifuge Center",
    "body": "",
-   "images": []
+   "images": [
+    "img/news/n2025-07-25-01.jpg"
+   ]
   },
   {
    "id": "n2025-07-17",
@@ -2121,8 +2293,10 @@
    "kind": "lablife",
    "who": "GEHL",
    "title": "The first group dinner",
-   "body": "",
-   "images": []
+   "body": "We had our first group dinner!",
+   "images": [
+    "img/news/n2025-07-17-01.jpg"
+   ]
   },
   {
    "id": "n2025-07-14",
@@ -2130,8 +2304,10 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "Seminar at Pukyong National University",
-   "body": "\"Geo-Centrifuge Modeling and Geotechnical Earthquake Engineering,\" with the research groups of Prof. Jongchan Kim and Prof. Yeong-Man Kwon.",
-   "images": []
+   "body": "With Prof. Jongchan Kim and Prof. Yeong-Man Kwon's research group",
+   "images": [
+    "img/news/n2025-07-14-01.jpg"
+   ]
   },
   {
    "id": "n2025-07-08",
@@ -2158,7 +2334,23 @@
    "who": "GEHL",
    "title": "Hong Kong PolyU visited the KOCED Centrifuge Center",
    "body": "",
-   "images": []
+   "images": [
+    "img/news/n2025-06-24-01.jpg",
+    "img/news/n2025-06-24-02.jpg",
+    "img/news/n2025-06-24-03.jpg"
+   ]
+  },
+  {
+   "id": "n2025-06-24b",
+   "date": "2025-06-24",
+   "dateLabel": "",
+   "kind": "lablife",
+   "who": "GEHL",
+   "title": "Dinner with the Centrifuge Center staff",
+   "body": "",
+   "images": [
+    "img/news/n2025-06-24b-01.jpg"
+   ]
   },
   {
    "id": "n2025-06-16",
@@ -2175,8 +2367,10 @@
    "kind": "lablife",
    "who": "GEHL",
    "title": "Teacher's Day with the CE230 TAs and Dr. Kim (KAERI)",
-   "body": "",
-   "images": []
+   "body": "With CE230 Class TAs and Dr. Kim from KAERI on Teacher's Day",
+   "images": [
+    "img/news/n2025-05-15-01.jpg"
+   ]
   },
   {
    "id": "n2025-04-11",
@@ -2193,8 +2387,10 @@
    "kind": "award",
    "who": "Kil-Wan Ko",
    "title": "ASCE Editor's Choice",
-   "body": "\"Estimation of Timing of Liquefaction using Spectral Energy Ratio\" was selected as an Editor's Choice paper of the ASCE Journal of Geotechnical and Geoenvironmental Engineering.",
-   "images": []
+   "body": "\"Estimation of Timing of Liquefaction using Spectral Energy Ratio\" has been selected as Editor's Choice from ASCE, Journal of Geotechnical and Geoenvironmental Engineering!",
+   "images": [
+    "img/news/n2025-04-02-01.jpg"
+   ]
   },
   {
    "id": "n2025-04-01",
@@ -2212,8 +2408,10 @@
    "kind": "event",
    "who": "GEHL",
    "title": "2025 KGS Spring Conference",
-   "body": "Attended with Prof. Yeong-Man Kwon of Pukyong National University.",
-   "images": []
+   "body": "With Professor Yeong-Man Kwon at Pukyong National University",
+   "images": [
+    "img/news/n2025-03-27-01.jpg"
+   ]
   },
   {
    "id": "n2025-03-05",
@@ -2240,8 +2438,17 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "Farewell party at UC Davis CGM",
-   "body": "With friends, advisors, and staff of the Center for Geotechnical Modeling.",
-   "images": []
+   "body": "Kil-Wan's Farewell Party at UC Davis CGM with Friends, Advisors and Staff",
+   "images": [
+    "img/news/b2025-01-15-01.jpg",
+    "img/news/b2025-01-15-02.jpg",
+    "img/news/b2025-01-15-03.jpg",
+    "img/news/b2025-01-15-04.jpg",
+    "img/news/b2025-01-15-05.jpg",
+    "img/news/b2025-01-15-06.jpg",
+    "img/news/b2025-01-15-07.jpg",
+    "img/news/b2025-01-15-08.jpg"
+   ]
   },
   {
    "id": "b2024-11-28",
@@ -2250,8 +2457,12 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "Thanksgiving at Prof. Kayen's house",
-   "body": "",
-   "images": []
+   "body": "Thanksgiving day at Prof. Kayen's House with His Family",
+   "images": [
+    "img/news/b2024-11-28-01.jpg",
+    "img/news/b2024-11-28-02.jpg",
+    "img/news/b2024-11-28-03.jpg"
+   ]
   },
   {
    "id": "b2024-11-21",
@@ -2260,8 +2471,12 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "UC Davis GGSS seminar",
-   "body": "",
-   "images": []
+   "body": "UC Davis GGSS Seminar",
+   "images": [
+    "img/news/b2024-11-21-01.jpg",
+    "img/news/b2024-11-21-02.jpg",
+    "img/news/b2024-11-21-03.jpg"
+   ]
   },
   {
    "id": "b2024-11-15",
@@ -2270,8 +2485,10 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "Birthday with UC Davis friends at CGM",
-   "body": "With Laura, Mark, Jose Luis, David, and Hyeonjung.",
-   "images": []
+   "body": "With UC Davis friends at CGM on my birthday (Laura, Mark, Jose Luis, David, and Hyeonjung)",
+   "images": [
+    "img/news/b2024-11-15-01.jpg"
+   ]
   },
   {
    "id": "b2024-08-30",
@@ -2280,8 +2497,12 @@
    "kind": "event",
    "who": "Kil-Wan Ko",
    "title": "Dam erosion centrifuge test at UC Davis CGM",
-   "body": "With Prof. DeJong after the test.",
-   "images": []
+   "body": "Dam Erosion Centrifuge Test at UC Davis CGM (Photo with Prof. DeJong after the Test)\nDiscussion with Jose Ortiz after spinning\nMy Lovely Levee Model",
+   "images": [
+    "img/news/b2024-08-30-01.jpg",
+    "img/news/b2024-08-30-02.jpg",
+    "img/news/b2024-08-30-03.jpg"
+   ]
   },
   {
    "id": "b2024-08-29",
@@ -2290,8 +2511,11 @@
    "kind": "event",
    "who": "Kil-Wan Ko",
    "title": "The first dam cracking centrifuge test at UC Davis CGM",
-   "body": "With Chad, Erik, Anatoliy, Dan, and Jason after the tests, and with Prof. DeJong before the test.",
-   "images": []
+   "body": "The First Dam Cracking Centrifuge Test at UC Davis CGM (Photo with Prof. DeJong before the Test)\nAfter the Centrifuge Tests with Chad, Erik, Anatoliy, Me, Dan, and Jason",
+   "images": [
+    "img/news/b2024-08-29-01.jpg",
+    "img/news/b2024-08-29-02.jpg"
+   ]
   },
   {
    "id": "b2024-08-23",
@@ -2300,8 +2524,10 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "REU undergraduate intern's last day at CGM",
-   "body": "",
-   "images": []
+   "body": "With REU undergraduate research intern at CGM UC Davis on their last day",
+   "images": [
+    "img/news/b2024-08-23-01.jpg"
+   ]
   },
   {
    "id": "b2024-08-01",
@@ -2311,8 +2537,10 @@
    "kind": "event",
    "who": "Kil-Wan Ko",
    "title": "Research discussion with Prof. Kutter",
-   "body": "With David and Jose.",
-   "images": []
+   "body": "Research discussion with Prof. Kutter (David and Jose together)",
+   "images": [
+    "img/news/b2024-08-01-01.jpg"
+   ]
   },
   {
    "id": "b2024-05-30",
@@ -2321,8 +2549,10 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "Prof. Ross Boulanger signing the liquefaction monograph",
-   "body": "After the numerical modeling meeting.",
-   "images": []
+   "body": "Prof. Ross Boulanger was signing on my liquefaction monograph after the meeting for numerical modeling.",
+   "images": [
+    "img/news/b2024-05-30-01.jpg"
+   ]
   },
   {
    "id": "b2024-04-02",
@@ -2331,8 +2561,10 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "Invited talk at Southern Illinois University Carbondale",
-   "body": "",
-   "images": []
+   "body": "After the invited talk at Southern Illinois University Carbondale",
+   "images": [
+    "img/news/b2024-04-02-01.jpg"
+   ]
   },
   {
    "id": "b2023-12-09",
@@ -2341,8 +2573,10 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "Year-end party with GGSS UC Davis friends",
-   "body": "",
-   "images": []
+   "body": "Year end party with GGSS UC Davis friends",
+   "images": [
+    "img/news/b2023-12-09-01.jpg"
+   ]
   },
   {
    "id": "b2023-10-20",
@@ -2352,8 +2586,14 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "Farewells at UC Berkeley and USC",
-   "body": "The last research meeting with Prof. Kayen (UC Berkeley) and Prof. Nweke (USC) before joining the UC Davis geotechnical group; farewells with Yuval, Makbule, and office friends Jhih-Rou, Eric, and Tianyu.",
-   "images": []
+   "body": "Farewell with Yuval\nLunch with Makbule\nFarewell with UC Berkeley office friends (Jihrou, Eric, and Tianyu)\nThe last research meeting with Prof. Kayen at UC Berkeley and Prof. Nweke at USC before I joined UC Davis Geotech Group",
+   "images": [
+    "img/news/b2023-10-20-01.jpg",
+    "img/news/b2023-10-20-02.jpg",
+    "img/news/b2023-10-20-03.jpg",
+    "img/news/b2023-10-20-04.jpg",
+    "img/news/b2023-10-20-05.jpg"
+   ]
   },
   {
    "id": "b2023-08-15",
@@ -2362,8 +2602,10 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "Group dinner with Prof. Nweke's USC group",
-   "body": "Korean BBQ in Los Angeles.",
-   "images": []
+   "body": "Group dinner at the Korean BBQ restaurant in LA with USC Prof. Nweke's group",
+   "images": [
+    "img/news/b2023-08-15-01.jpg"
+   ]
   },
   {
    "id": "b2023-05-05",
@@ -2372,8 +2614,12 @@
    "kind": "event",
    "who": "Kil-Wan Ko",
    "title": "Geosystems Engineering Distinguished Lecture Series at UC Berkeley",
-   "body": "With Profs. Kayen, Soga, and Bray and the Korean postdoc group (Jongchan Kim, Wonjun Cha, Youngseok Jo).",
-   "images": []
+   "body": "Geosystems Engineering Distinguished Lecture Series at UC Berkeley with Prof. Kayen, Soga, and Bray, and Korean postdoc group (Jongchan Kim, Wonjun Cha, Youngseok Jo)",
+   "images": [
+    "img/news/b2023-05-05-01.jpg",
+    "img/news/b2023-05-05-02.jpg",
+    "img/news/b2023-05-05-03.jpg"
+   ]
   },
   {
    "id": "b2022-11-18",
@@ -2382,8 +2628,10 @@
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "Invited talk at the 6th Geotechnical Engineering Research Symposium, UC Berkeley",
-   "body": "",
-   "images": []
+   "body": "Invited Talk in the 6th annual Geotechnical Engineering Research Symposium at UC Berkeley",
+   "images": [
+    "img/news/b2022-11-18-01.jpg"
+   ]
   },
   {
    "id": "b2022-09-21",
@@ -2392,8 +2640,11 @@
    "kind": "award",
    "who": "Kil-Wan Ko",
    "title": "Bright Spark Lecture Award at ICPMG 2022",
-   "body": "",
-   "images": []
+   "body": "Bright Spark Lecture Award during ICPMG2022",
+   "images": [
+    "img/news/b2022-09-21-01.jpg",
+    "img/news/b2022-09-21-02.jpg"
+   ]
   },
   {
    "id": "b2022-08-22",
@@ -2402,8 +2653,10 @@
    "kind": "lablife",
    "who": "Kil-Wan Ko",
    "title": "Yellowstone trip with Taiwanese friends",
-   "body": "With Kevin, Jiyun, and Jhih-Rou.",
-   "images": []
+   "body": "Yellow Stone trip with Taiwanese friends (Kevin, Jiyun, and Jhih-Rou)",
+   "images": [
+    "img/news/b2022-08-22-01.jpg"
+   ]
   },
   {
    "id": "b2021-11-01",
@@ -2412,8 +2665,10 @@
    "kind": "welcome",
    "who": "Kil-Wan Ko",
    "title": "First day of the postdoc at UC Berkeley",
-   "body": "",
-   "images": []
+   "body": "The first day when I started my postdoc at UC Berkeley",
+   "images": [
+    "img/news/b2021-11-01-01.jpg"
+   ]
   }
  ],
  "groupPhotos": [
