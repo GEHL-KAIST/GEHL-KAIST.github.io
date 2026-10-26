@@ -331,6 +331,7 @@ p.intro + p.intro{margin-top:12px}
 .rcard .chips span{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--soft);color:var(--fg)}
 .rcard figure{margin:20px 0 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
 .rcard figure img{display:block;width:100%;max-height:420px;object-fit:contain;background:#fff}
+.rcard figure.fig-teach img{max-height:none}   /* the teaching diagram fills its frame */
 .rcard figcaption{font-size:12.5px;color:var(--muted);padding:8px 12px;border-top:1px solid var(--line)}
 .rcard .sel{list-style:none;margin:0;padding:0;display:grid;gap:7px}
 .rcard .sel li{font-size:14px;color:var(--muted);padding-left:14px;position:relative}
@@ -363,7 +364,7 @@ table.projects td.per{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .cycle{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
 .cstep{border:1px solid var(--line-strong);border-radius:10px;padding:14px 16px;background:var(--surface);min-width:0}
 .cstep .k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.cstep .t{font-family:var(--display);font-weight:700;font-size:16px;margin-top:4px;color:var(--heading)}
+.cstep .t{font-family:var(--display);font-weight:700;font-size:16px;color:var(--heading)}
 .cstep .s{font-size:13.5px;color:var(--brand);margin-top:2px}
 .cstep p{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.45}
 @media (max-width:900px){ .cycle{grid-template-columns:repeat(2,minmax(0,1fr))} }
@@ -801,7 +802,7 @@ footer li{margin:4px 0}
    ],
    "appointments": [
     "Assistant Professor, Civil and Environmental Engineering, KAIST, 2025 – present",
-    "Associate Director, KOCED Geotechnical Centrifuge Testing Center at KAIST, 2025 – present",
+    "Associate Director, KOCED Centrifuge Testing Center at KAIST, 2025 – present",
     "Postdoctoral Scholar, Civil and Environmental Engineering, UC Davis, 2023 – 2025",
     "Postdoctoral Scholar, Civil and Environmental Engineering, USC, 2022 – 2023",
     "Visiting Scholar, Civil and Environmental Engineering, UC Berkeley, 2021 – 2023",
@@ -845,7 +846,7 @@ footer li{margin:4px 0}
     "Member, Earthquake Engineering Society of Korea, 2021 – present",
     "Member, Korean Society of Geotechnical Engineers, 2016 – present"
    ],
-   "title2": "Associate Director, KOCED Geotechnical Centrifuge Testing Center"
+   "title2": "Associate Director, KOCED Centrifuge Testing Center"
   },
   {
    "id": "donghyeongchoi",
@@ -2049,7 +2050,7 @@ footer li{margin:4px 0}
    "title": "Introduction to Geotechnical Engineering",
    "term": "Spring 2025",
    "level": "Undergraduate",
-   "text": "Geotechnical terminology and the fundamentals of soil mechanics: phase relationships, classification, compaction, effective stress, fluid flow, consolidation and settlement, and shear strength. Laboratory classes are included. The course prepares students for foundation engineering, dam engineering, soil dynamics, and geotechnical earthquake engineering.",
+   "text": "The purpose of the course is to introduce students to Geotechnical Engineering terminology and fundamentals of soil mechanics – this course will cover topics viz: phase relationships, soil classification, compaction, effective stress of soil, fluid flow in soil, consolidation and settlement, shear strengths of soil. Adding to regular classes, this course also incorporates laboratory classes to provide students with hands-on experiences in soil mechanics. This course provides students with a firm foundation for advancing to more theoretical and applied areas in geotechnical engineering, including foundation engineering, dam engineering, soil dynamics, and geotechnical earthquake engineering.",
    "outline": [
     "Course Introduction, Phase Diagram",
     "Phase Relationships, Grain Size Distribution",
@@ -2074,7 +2075,7 @@ footer li{margin:4px 0}
    "title": "Advanced Soil Dynamics",
    "term": "Fall 2025",
    "level": "Graduate",
-   "text": "Dynamics of simple systems (waves, vibrations, single-degree-of-freedom systems), dynamic soil properties (G/Gmax and damping versus strain), waves in infinite and bounded media, and one-dimensional site response analysis. The course gives the theoretical foundation for geotechnical earthquake engineering.",
+   "text": "The purpose of the course is to introduce students to Soil Dynamics – this course will cover topics viz: dynamics of simple systems (Fundamentals of waves and vibrations, SDOFs), dynamic soil properties (G/Gmax and damping strain relationship), waves in infinite and bounded media, and one-dimensional site response analysis. This course provides students with a firm foundation and theoretical knowledge for geotechnical earthquake engineering.",
    "outline": [
     "Course Introduction, Fourier Transform",
     "Harmonic Waves and Complex Numbers, Signal Processing (How to Sample)",
@@ -2099,7 +2100,7 @@ footer li{margin:4px 0}
    "title": "Advanced Geomechanics",
    "term": "Spring 2026",
    "level": "Graduate",
-   "text": "Stress- and state-dependent behavior of sands and clays: dilatancy, drained and undrained strength, and stress paths. Critical state soil mechanics and simple models (Mohr–Coulomb, Cam-clay) are used to interpret laboratory tests and to analyze soil strength and deformation.",
+   "text": "The purpose of this course is to introduce students to advanced soil behavior and critical state soil mechanics. Building on fundamental soil mechanics, the course examines stress- and state-dependent responses of sands and clays, including dilative and contractive behavior, drained and undrained strength, and stress paths. Through the framework of critical state soil mechanics and simple constitutive models (e.g., Mohr–Coulomb and Cam-clay), students will learn how to interpret laboratory tests, characterize soil strength and deformation, and develop a mechanistic basis for advanced geotechnical analysis and design.",
    "outline": [
     "Course Introduction, Phase Properties and Relationships",
     "Fundamental Engineering Characterization of Soils, Sand-Like Soils",
@@ -2175,7 +2176,7 @@ footer li{margin:4px 0}
    "dateLabel": "",
    "kind": "visit",
    "who": "GEHL",
-   "title": "GS E&C visited the KOCED Centrifuge Center",
+   "title": "GS E&C visited the KAIST Centrifuge Center",
    "body": "GS ENC visited KOCED centrifuge center and we gave a tour for them.",
    "images": [
     "img/uploads/7892ae3d7285e82f6d061f64c61d3b3a.jpg",
@@ -2960,36 +2961,32 @@ footer li{margin:4px 0}
   }
  ],
  "teaching": {
-  "goal": "World-best decision makers and leaders in risk assessment",
-  "lead": "Courses at GEHL are built on the experiential learning cycle and use every sense a student has. Each class moves from feeling to talking to thinking to doing: a concrete experience, reflection and discussion on it, a concept that explains it, and an experiment that tests it. The aim is engineers who can make decisions about seismic risk, not only calculate it.",
+  "goal": "World-best decision makers and leaders in geotechnical engineering",
+  "lead": "Courses are built on the experiential learning cycle and use every sense a student has. Each class moves from feeling to talking to thinking to doing: a concrete experience, reflection and discussion on it, a concept that explains it, and an experiment that tests it. The aim is engineers who can make decisions about seismic and natural hazard risk, not only calculate it.",
   "cycle": [
    {
-    "k": "Experience",
     "t": "Concrete experience",
     "s": "Feeling",
     "d": "Centrifuge tests, laboratory experiments, and earthquake damage are the starting point. Homework asks students to run an experiment or study a case history before the theory is introduced."
    },
    {
-    "k": "Discussion",
     "t": "Observation and reflection",
     "s": "Talking",
     "d": "Case histories from past earthquakes are introduced and discussed in class, so that students put what they saw into words and compare interpretations."
    },
    {
-    "k": "Discussion",
     "t": "Abstract conceptualization",
     "s": "Thinking",
     "d": "Recorded motions, site response, and the mechanics behind them turn the observation into a concept the student can carry to a new problem."
    },
    {
-    "k": "Innovation",
     "t": "Active experimentation",
     "s": "Doing",
     "d": "Students test the concept in new experiments, analyses, and designs, which produces the next concrete experience and closes the loop."
    }
   ],
-  "figure": "img/teaching-philosophy.jpg",
-  "figureCaption": "Teaching philosophy at GEHL: the experiential learning cycle (concrete experience, observation and reflection, abstract conceptualization, active experimentation) run with experiments, case histories, and recorded ground motions.",
+  "figure": "img/teaching-philosophy.svg",
+  "figureCaption": "Even at this very moment, cutting-edge technologies and newly published research continue to expand the existing boundaries of knowledge, imposing upon us the obligations to never stop learning. It is my belief, then, that a true educator should be a fast tracker of all recent developments in their field and become a forerunner in delivering the new knowledge to their students. This requires a careful process in which the most essential information is sorted out of a superabundant supply of new knowledge, necessitating the scholar to have already mastered the fundamental rubrics and theories of the field. It is this belief that bases my teaching goal: I want to resolve the gap between existing and new research and alleviate the inconsistency between fundamental theories and practical industry approach, ultimately aiding my students to become more self-directed engineers capable of resolving novel challenges they will inevitably encounter out in the real world.",
   "quote": "Learning through Experience, Growing through Discussion, and Opening the future through Innovation"
  }
 }
@@ -3469,9 +3466,9 @@ footer li{margin:4px 0}
     html += '<section class="card rcard"><div class="eyebrow">Teaching philosophy</div><h3>' + esc(T.goal || 'Teaching philosophy') + '</h3>';
     if (T.quote) html += '<p class="quote">“' + esc(T.quote) + '”</p>';
     if (T.lead) html += '<div class="prose">' + rich(T.lead) + '</div>';
-    if (T.cycle && T.cycle.length) html += '<div class="cycle">' + T.cycle.map(function (c, i) { return '<div class="cstep"><div class="k">' + esc(c.k) + '</div><div class="t">' + esc(c.t) + '</div><div class="s">→ ' + esc(c.s) + '</div><p>' + esc(c.d) + '</p></div>'; }).join('') + '</div>';
+    if (T.cycle && T.cycle.length) html += '<div class="cycle">' + T.cycle.map(function (c, i) { return '<div class="cstep"><div class="t">' + esc(c.t) + '</div><div class="s">→ ' + esc(c.s) + '</div><p>' + esc(c.d) + '</p></div>'; }).join('') + '</div>';
     var fig = safeUrl(T.figure);
-    if (fig) html += '<figure><img src="' + attr(fig) + '" alt="' + attr(T.figureCaption || 'Teaching philosophy') + '">' + (T.figureCaption ? '<figcaption>' + esc(T.figureCaption) + '</figcaption>' : '') + '</figure>';
+    if (fig) html += '<figure class="fig-teach"><img src="' + attr(fig) + '" alt="' + attr(T.figureCaption || 'Teaching philosophy') + '">' + (T.figureCaption ? '<figcaption>' + esc(T.figureCaption) + '</figcaption>' : '') + '</figure>';
     if (DATA.teachingPhilosophy) html += '<div class="prose" style="margin-top:18px">' + rich(DATA.teachingPhilosophy) + '</div>';
     html += '</section>';
     html += '<section class="section"><div class="section-head"><h2>Courses</h2></div><div class="courses">' + DATA.courses.map(function (c, i) {
