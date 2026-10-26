@@ -8,7 +8,7 @@
   "department": "Department of Civil and Environmental Engineering, Korea Advanced Institute of Science and Technology (KAIST)",
   "university": "",
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
-  "email": "kilwanko@kaist.ac.kr",
+  "email": "kilwanko at kaist.ac.kr",
   "meetings": "Meetings are available by appointment only.",
   "center": "",
   "mapUrl": "https://maps.google.com/?q=36.365769,127.362463",
@@ -281,7 +281,7 @@
    "role": "Assistant Professor",
    "since": "Spring 2025",
    "affiliation": "",
-   "email": "kilwanko@kaist.ac.kr",
+   "email": "kilwanko at kaist.ac.kr",
    "interests": [
     "Geotechnical earthquake engineering",
     "Soil dynamics",
@@ -348,7 +348,7 @@
    "role": "Postdoctoral Researcher",
    "since": "Fall 2025",
    "affiliation": "",
-   "email": "",
+   "email": "donghyeong1105 at kaist.ac.kr",
    "interests": [
     "Soil liquefaction",
     "Seismic incoherency"
@@ -365,6 +365,7 @@
    "links": {},
    "photo": "img/uploads/604cdc4d11798516471fce1c831adc6b.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.4773,
     "cy": 0.3658,
@@ -382,7 +383,7 @@
    "role": "Postdoctoral Researcher",
    "since": "Summer 2026",
    "affiliation": "",
-   "email": "",
+   "email": "hwanwooseo at kaist.ac.kr",
    "interests": [
     "Ground motion modeling",
     "Geophysical investigation"
@@ -398,6 +399,7 @@
    "links": {},
    "photo": "img/uploads/ca001fbd17cc4c0f76da776b5ad157c6.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.49,
     "cy": 0.35,
@@ -415,7 +417,7 @@
    "role": "Ph.D. Student",
    "since": "Fall 2025",
    "affiliation": "",
-   "email": "",
+   "email": "jaewoo.kang at kaist.ac.kr",
    "interests": [
     "Dynamic soil-foundation-structure interaction"
    ],
@@ -429,6 +431,7 @@
    "links": {},
    "photo": "img/uploads/2e6c66ebd9e0abe7f786123078ac1403.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.4625,
     "cy": 0.4313,
@@ -446,7 +449,7 @@
    "role": "Ph.D. Student",
    "since": "Spring 2027",
    "affiliation": "",
-   "email": "",
+   "email": "wlsdyd0596 at kaist.ac.kr",
    "interests": [
     "Soil liquefaction",
     "Dynamic soil-foundation-structure interaction"
@@ -462,6 +465,7 @@
    "links": {},
    "photo": "img/uploads/53fde91f37c0dada6bfb07f25b460bfb.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.4511,
     "cy": 0.2879,
@@ -479,7 +483,7 @@
    "role": "M.S. Student",
    "since": "Spring 2026",
    "affiliation": "",
-   "email": "",
+   "email": "gunhak at kaist.ac.kr",
    "interests": [
     "Topographic effects on site amplification"
    ],
@@ -493,6 +497,7 @@
    "links": {},
    "photo": "img/uploads/8730b658673d6be2d1478ea3ed757729.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.5944,
     "cy": 0.2958,
@@ -510,7 +515,7 @@
    "role": "M.S. Student",
    "since": "Fall 2026",
    "affiliation": "",
-   "email": "",
+   "email": "cs.yim at kaist.ac.kr",
    "interests": [
     "Centrifuge and numerical modeling of blast-induced ground response"
    ],
@@ -543,7 +548,7 @@
    "role": "M.S. Student",
    "since": "Spring 2027",
    "affiliation": "",
-   "email": "",
+   "email": "minseong at kaist.ac.kr",
    "interests": [
     "Geophysical investigation"
    ],
@@ -557,6 +562,7 @@
    "links": {},
    "photo": "img/uploads/69c3b0b5ab25c75435bac72fa965ce27.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.5167,
     "cy": 0.3021,
@@ -574,7 +580,7 @@
    "role": "Undergraduate Researcher",
    "since": "Spring 2025",
    "affiliation": "",
-   "email": "",
+   "email": "hyelim040323 at kaist.ac.kr",
    "interests": [
     "Soil liquefaction",
     "Probabilistic liquefaction hazard assessment"
@@ -589,6 +595,7 @@
    "links": {},
    "photo": "img/uploads/90bddd809654f7cb5948ecf9d23f661f.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.3776,
     "cy": 0.3337,
@@ -606,7 +613,7 @@
    "role": "Undergraduate Researcher",
    "since": "Fall 2025",
    "affiliation": "",
-   "email": "",
+   "email": "nkm5714 at kaist.ac.kr",
    "interests": [
     "Ground motion modeling"
    ],
@@ -620,6 +627,7 @@
    "links": {},
    "photo": "img/uploads/905ccab9111f3028e89ab42e3f4f3016.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.3843,
     "cy": 0.3427,
@@ -637,7 +645,7 @@
    "role": "Undergraduate Researcher",
    "since": "Fall 2026",
    "affiliation": "",
-   "email": "",
+   "email": "korean1won at kaist.ac.kr",
    "interests": [],
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
@@ -649,6 +657,7 @@
    "links": {},
    "photo": "img/uploads/b62f4621904d1085fb011d97c3e86a86.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.47,
     "cy": 0.25,
@@ -666,7 +675,7 @@
    "role": "Administrative Assistant",
    "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
-   "email": "",
+   "email": "lcs3013 at kaist.ac.kr",
    "interests": [],
    "education": [],
    "appointments": [],
@@ -676,6 +685,7 @@
    "links": {},
    "photo": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.5249,
     "cy": 0.4826,
@@ -693,7 +703,7 @@
    "role": "Researcher and Operations Manager",
    "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
-   "email": "",
+   "email": "lee_sb at kaist.ac.kr",
    "interests": [],
    "education": [],
    "appointments": [],
@@ -703,6 +713,7 @@
    "links": {},
    "photo": "img/uploads/f26dab579d7b7aac5d9c780b95b4e4ed.png",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.5535,
     "cy": 0.3524,
@@ -720,7 +731,7 @@
    "role": "Research Engineer",
    "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
-   "email": "",
+   "email": "sdthings0268 at guest.kaist.ac.kr",
    "interests": [],
    "education": [],
    "appointments": [],
@@ -730,6 +741,7 @@
    "links": {},
    "photo": "img/uploads/330ddc1c779edb545ea3d9e5f24da96d.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.4894,
     "cy": 0.3677,
@@ -1371,7 +1383,10 @@
    "authors": "Kim, J. and Ko, K. W.*",
    "title": "Arias Intensity-Based Damping Ratio Estimation and Experimental Validation",
    "venue": "2026 Fall Korean Geotechnical Society Conference",
-   "detail": "Gangwon-do, Korea, September 2026"
+   "detail": "Gangwon-do, Korea, September 2026",
+   "doi": "",
+   "url": "",
+   "note": "Best Oral Presentation Award"
   },
   {
    "id": "kc16",
@@ -1380,7 +1395,10 @@
    "authors": "Kim, G. and Ko, K. W.*",
    "title": "SH-Wave Transfer Function for Topographic Amplification",
    "venue": "2026 Fall Korean Geotechnical Society Conference",
-   "detail": "Gangwon-do, Korea, September 2026"
+   "detail": "Gangwon-do, Korea, September 2026",
+   "doi": "",
+   "url": "",
+   "note": "Outstanding Poster Award"
   },
   {
    "id": "kc15",
@@ -1597,7 +1615,7 @@
  ],
  "teachingPhilosophy": "New research and new technology keep expanding what is known, so a teacher has to keep learning and recognize quickly which new developments matter. That takes a firm grip on the fundamentals. The aim in every course is to close the gap between established and new research, to connect fundamental theory with practice, and to help students become self-directed engineers who can solve problems that did not exist when they were students.",
  "culture": {
-  "lead": "Research begins where something does not work. We go after unsolved problems and trace them back to fundamentals, with the freedom of structured autonomy: flexible but clear guidelines, self-directed growth, and teamwork.",
+  "lead": "Research begins the moment we confront what \"doesn't work.\"\n\nWe do not merely focus on successful outcomes. Instead, we cultivate a culture where unsolved challenges are brought to light, and their root causes are rigorously explored through fundamentals. GEHL fosters an environment of freedom—not as a lack of order or neglect, but as systematic autonomy that supports self-directed growth through teamwork. We provide flexible yet clear guidelines that allow students to fully immerse themselves in their research and evolve independently.\n\nWe welcome students who are fueled by a passion for discovery, who ponder deeply and relentlessly, and who seek to transcend their own limits through collaborative dialogue with their colleagues.",
   "lookingFor": [
    {
     "title": "Teamwork",
@@ -1609,7 +1627,7 @@
    },
    {
     "title": "Logical communication",
-    "text": "A clear argument, in a figure or a paragraph, is as much a research skill as a good test."
+    "text": "Students who can articulate their thoughts clearly based on \"Why\" and \"How,\" while remaining flexible enough to embrace the opinions of others."
    },
    {
     "title": "Persistence and resilience",
@@ -1631,10 +1649,10 @@
    "Tool-centric shortcuts",
    "Isolated individualism"
   ],
-  "positions": "We welcome undergraduate interns and graduate students (M.S. and Ph.D.) who are interested in geotechnical earthquake engineering and natural hazards. Character and mindset matter as much as academic record: an inquisitive spirit, persistence, respect, humility, and logical thinking. We are always open to discussing methodologies, research ideas, and emerging topics.",
+  "positions": "We welcome undergraduate interns, graduate students (M.S. and Ph.D.), and postdoc researchers who are interested in geotechnical earthquake engineering and natural hazards. Character and mindset matter as much as academic record: an inquisitive spirit, persistence, respect, humility, and logical thinking. We are always open to discussing methodologies, research ideas, and emerging topics.\n\n지반지진 및 재해 연구실(GEHL)은 지반지진공학 및 자연재해에 관한 공학적 연구에 관심 있는 학부인턴/대학원생/박사후연구원을 모집합니다. GEHL은 연구자로서 순수한 열정과 지적 호기심, 그리고 공학자로서 책임감을 지닌 학생들을 환영합니다. GEHL은 지진/자연재해에 대한 의미 있는 연구로 다음 세 가지를 추구합니다. \n\n   1. 과학적/역학적 이해를 바탕으로한 지진/자연재해 문제의 메커니즘 분석\n\n   2. 미래에 발생 가능한 지진/지반공학적 위험 예측 및 해결책 제안\n\n   3. 지진/자연재해에 대한 사회기반시설물 및 도시 시스템의 안정성을 평가할 수 있는 효율적/혁신적 방법론 개발\n\nGEHL은 독창적인 방법론, 새로운 연구 아이디어, 그리고 새롭게 떠오르는 주제에 대한 논의를 환영합니다. 연구실 진학 또는 관련 분야 진로 상담을 희망하는 경우, 고길완 교수(kilwanko at kaist.ac.kr)에게 연락주시기 바랍니다.",
   "goalsKo": [
    "재해 발생 메커니즘 분석",
-   "미래 위험 예측과 해결책 제시",
+   "미래 재해 시나리오 예측과 분석",
    "사회기반시설 안정성 평가 기법 개발"
   ],
   "apply": {
@@ -1689,26 +1707,43 @@
    "kind": "event",
    "who": "GEHL",
    "title": "2026 KGS Fall Conference",
-   "body": "Jinyong gave an oral presentation, and Gunhak and Hyelim presented posters. The group also spent time with GeoKAIST members.",
-   "images": []
+   "body": "GEHL attended 2026 KGS Fall. Jinyong gave an oral presentation with the title of \"Arias Intensity-Based Damping Ratio Estimation and Experimental Validation.\" Gunhak and Hyelim did poster presentation with the title of \"SH-Wave Transfer Function for Topographic Amplification,\" and \"Seismological Model for RVT-Based Input Motion Simulation and Application to Liquefaction Evaluation.\" We also had a fun time with GeoKAIST members!",
+   "images": [
+    "img/uploads/20b9da52d3be238f18f93ca024244812.jpg",
+    "img/uploads/c8b8d2e791f36e9f8e13ab27632438f0.jpg",
+    "img/uploads/92b6f86f47a004f49fc0ac2b5dc6ece8.jpg",
+    "img/uploads/b6c9f0d591151a0813fd816ca12ae3d5.jpg",
+    "img/uploads/c8a1b412da7808fdd62bbac280503e72.jpg",
+    "img/uploads/0b711000090de7c1e606a77775638091.jpg",
+    "img/uploads/da8ff5acc044c898499368923bbdca80.jpg",
+    "img/uploads/6ebec3ff672879fb382c96af2d264044.jpg"
+   ]
   },
   {
    "id": "n2026-09-09",
    "date": "2026-09-09",
+   "dateLabel": "",
    "kind": "lablife",
    "who": "GEHL",
    "title": "Group dinner at Vesta",
    "body": "",
-   "images": []
+   "images": [
+    "img/uploads/4fcbc2a522f478e5396807a8b8c838e0.jpg"
+   ]
   },
   {
    "id": "n2026-08-28",
    "date": "2026-08-28",
+   "dateLabel": "",
    "kind": "visit",
    "who": "GEHL",
    "title": "ADD visited the KAIST Centrifuge Center",
-   "body": "The Agency for Defense Development visited the centrifuge center. Dr. Ko introduced the facility and the group discussed possible collaboration.",
-   "images": []
+   "body": "The Agency for Defense Development visited our centrifuge center. Dr. Ko introduced the center and the principles of centrifuge modeling, followed by a discussion on potential research collaboration. Thank you for visiting us!",
+   "images": [
+    "img/uploads/a2e6bc827a073401e3458c44dc6a1ed1.jpg",
+    "img/uploads/f225a8e0d14b3ed6fdbb599b083683f0.jpg",
+    "img/uploads/956a6d307b694e0e6becd12fefdb7796.jpg"
+   ]
   },
   {
    "id": "n2026-08-26",

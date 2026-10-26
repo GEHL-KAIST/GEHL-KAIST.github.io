@@ -68,6 +68,7 @@ main{display:block}
 .lede.full{max-width:none}
 .prose{}
 .prose p + p{margin-top:12px}
+p.intro + p.intro{margin-top:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid #B5B5B5;border-radius:var(--radius);color:#333;font-weight:500;font-size:14.5px;line-height:1.2;background:var(--surface)}
 .btn:hover{background:#F0F0F0;border-color:#8C8C8C;text-decoration:none}
 .btn.primary{background:var(--surface);color:#333;border-color:#B5B5B5}
@@ -169,7 +170,12 @@ main{display:block}
 .modal .dlg.news .close{z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.3)}   /* it now sits over the photo */   /* text and thumbnails take the photo's width instead of setting it */
 .modal .dlg.news .car{position:relative;background:var(--soft);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .modal .dlg.news .car img{display:block;width:auto;max-width:100%;height:auto;max-height:min(62vh,560px);margin:0 auto;object-fit:contain}
-.modal .dlg.news .car .nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.88);color:var(--heading);font-size:28px;line-height:1;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.modal .dlg.news .car.fixed{max-width:100%}
+.modal .dlg.news .car.fixed img.fg{position:relative;z-index:1;width:100%;height:100%;max-height:none;object-fit:contain}
+.modal .dlg.news .car.fixed img.bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;max-height:none;object-fit:cover;filter:blur(18px) brightness(.92) saturate(1.1);transform:scale(1.2)}
+.modal .dlg.news .car .nav,.modal .dlg.news .car .pos{z-index:2}
+.modal .dlg.news .car .nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.88);color:var(--heading);display:grid;place-items:center;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.modal .dlg.news .car .nav svg{display:block}
 .modal .dlg.news .car .nav:hover{background:#fff}
 .modal .dlg.news .car .prev{left:12px} .modal .dlg.news .car .next{right:12px}
 .modal .dlg.news .car .pos{position:absolute;right:12px;bottom:10px;font-size:12.5px;padding:2px 9px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff}
@@ -180,7 +186,8 @@ main{display:block}
 .modal .dlg.news .nm-body .m{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
 .modal .dlg.news .nm-body .who{color:var(--muted)}
 .modal .dlg.news h2{font-size:24px;margin-top:8px}
-.modal .dlg.news .b{margin-top:12px;font-size:15.5px;line-height:1.6;white-space:pre-line}
+.modal .dlg.news .b{margin-top:12px;font-size:15.5px;line-height:1.6}
+.modal .dlg.news .b p + p{margin-top:10px}
 @media (max-width:640px){ .modal .dlg.news{padding:16px} .modal .dlg.news h2{font-size:20px} }
 
 /* News list */
@@ -223,6 +230,7 @@ main{display:block}
 .pi-block h3{font-size:26px}
 .pi-block .role{color:var(--muted);margin-top:4px}
 .pi-block .bio{margin-top:14px;font-size:15.5px}
+.pi-block .bio + .bio{margin-top:10px}
 .pi-block .links{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:16px;font-size:14px}
 @media (max-width:700px){ .pi-block{grid-template-columns:1fr;padding:20px} .pi-block .avatar{width:100%;max-width:320px;height:auto} }
 .pills{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
@@ -241,6 +249,7 @@ main{display:block}
 .pcard .rpill{justify-self:start;margin-top:2px}
 .pcard .nm{font-family:var(--display);font-weight:700;font-size:22px;color:var(--heading)}
 .pcard:hover .nm{color:var(--brand)}
+.pcard .ml{font-size:14.5px;color:var(--muted);margin-top:-4px;overflow-wrap:anywhere}   /* email: … under the name */
 .pcard .in{font-size:15.5px;color:var(--muted);line-height:1.45}
 .rpill .em{font-size:13px;margin-right:6px;letter-spacing:0;line-height:1;display:inline-block}
 .legend-em{font-size:14px;color:var(--fg);margin:0 0 10px}
@@ -366,6 +375,7 @@ table.projects td.per{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .course .term{font-size:13px;color:var(--muted);margin-top:4px}
 .course h3{font-size:20px}
 .course p{margin-top:8px;color:var(--muted);font-size:15px;}
+.course .prose p + p{margin-top:6px}
 @media (max-width:600px){ .course{grid-template-columns:1fr;gap:6px} }
 .course .outline-btn{margin-top:14px}
 .course .outline-btn .car{font-size:11px;margin-left:2px}
@@ -383,7 +393,7 @@ table.outline tr:last-child th,table.outline tr:last-child td{border-bottom:1px 
 .apply .box{border:1px solid var(--line-strong);border-radius:var(--radius);padding:18px;background:var(--surface)}
 .apply .box h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .apply .box .v{margin-top:8px;font-size:15px}
-.apply .box code{font-family:var(--mono);font-size:14px;background:var(--soft);padding:2px 6px;border-radius:3px}
+.apply .box code{font-family:inherit;font-size:inherit}
 .copy-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
 .copy-row .addr{font-family:var(--mono);font-size:15px;user-select:all}
 .dislist{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
@@ -444,6 +454,9 @@ footer li{margin:4px 0}
 .arow .b button[disabled]{opacity:.35;cursor:default}
 .thumbs{display:flex;gap:8px;flex-wrap:wrap}
 .thumbs .th{position:relative}
+.thumbs.sortable .th{cursor:grab}
+.thumbs.sortable .th.dragging{opacity:.35}
+.thumbs.sortable .th.over img{outline:2px dashed var(--brand);outline-offset:2px}
 .thumbs img{width:96px;height:72px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line)}
 .thumbs button{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:var(--fg);color:var(--bg);font-size:12px;line-height:1}
 .thumbs .th.first img{outline:2px solid var(--heading);outline-offset:-2px}
@@ -502,7 +515,7 @@ footer li{margin:4px 0}
   "department": "Department of Civil and Environmental Engineering, Korea Advanced Institute of Science and Technology (KAIST)",
   "university": "",
   "address": "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea",
-  "email": "kilwanko@kaist.ac.kr",
+  "email": "kilwanko at kaist.ac.kr",
   "meetings": "Meetings are available by appointment only.",
   "center": "",
   "mapUrl": "https://maps.google.com/?q=36.365769,127.362463",
@@ -775,7 +788,7 @@ footer li{margin:4px 0}
    "role": "Assistant Professor",
    "since": "Spring 2025",
    "affiliation": "",
-   "email": "kilwanko@kaist.ac.kr",
+   "email": "kilwanko at kaist.ac.kr",
    "interests": [
     "Geotechnical earthquake engineering",
     "Soil dynamics",
@@ -842,7 +855,7 @@ footer li{margin:4px 0}
    "role": "Postdoctoral Researcher",
    "since": "Fall 2025",
    "affiliation": "",
-   "email": "",
+   "email": "donghyeong1105 at kaist.ac.kr",
    "interests": [
     "Soil liquefaction",
     "Seismic incoherency"
@@ -859,6 +872,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/604cdc4d11798516471fce1c831adc6b.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.4773,
     "cy": 0.3658,
@@ -876,7 +890,7 @@ footer li{margin:4px 0}
    "role": "Postdoctoral Researcher",
    "since": "Summer 2026",
    "affiliation": "",
-   "email": "",
+   "email": "hwanwooseo at kaist.ac.kr",
    "interests": [
     "Ground motion modeling",
     "Geophysical investigation"
@@ -892,6 +906,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/ca001fbd17cc4c0f76da776b5ad157c6.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.49,
     "cy": 0.35,
@@ -909,7 +924,7 @@ footer li{margin:4px 0}
    "role": "Ph.D. Student",
    "since": "Fall 2025",
    "affiliation": "",
-   "email": "",
+   "email": "jaewoo.kang at kaist.ac.kr",
    "interests": [
     "Dynamic soil-foundation-structure interaction"
    ],
@@ -923,6 +938,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/2e6c66ebd9e0abe7f786123078ac1403.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.4625,
     "cy": 0.4313,
@@ -940,7 +956,7 @@ footer li{margin:4px 0}
    "role": "Ph.D. Student",
    "since": "Spring 2027",
    "affiliation": "",
-   "email": "",
+   "email": "wlsdyd0596 at kaist.ac.kr",
    "interests": [
     "Soil liquefaction",
     "Dynamic soil-foundation-structure interaction"
@@ -956,6 +972,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/53fde91f37c0dada6bfb07f25b460bfb.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.4511,
     "cy": 0.2879,
@@ -973,7 +990,7 @@ footer li{margin:4px 0}
    "role": "M.S. Student",
    "since": "Spring 2026",
    "affiliation": "",
-   "email": "",
+   "email": "gunhak at kaist.ac.kr",
    "interests": [
     "Topographic effects on site amplification"
    ],
@@ -987,6 +1004,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/8730b658673d6be2d1478ea3ed757729.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.5944,
     "cy": 0.2958,
@@ -1004,7 +1022,7 @@ footer li{margin:4px 0}
    "role": "M.S. Student",
    "since": "Fall 2026",
    "affiliation": "",
-   "email": "",
+   "email": "cs.yim at kaist.ac.kr",
    "interests": [
     "Centrifuge and numerical modeling of blast-induced ground response"
    ],
@@ -1037,7 +1055,7 @@ footer li{margin:4px 0}
    "role": "M.S. Student",
    "since": "Spring 2027",
    "affiliation": "",
-   "email": "",
+   "email": "minseong at kaist.ac.kr",
    "interests": [
     "Geophysical investigation"
    ],
@@ -1051,6 +1069,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/69c3b0b5ab25c75435bac72fa965ce27.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.5167,
     "cy": 0.3021,
@@ -1068,7 +1087,7 @@ footer li{margin:4px 0}
    "role": "Undergraduate Researcher",
    "since": "Spring 2025",
    "affiliation": "",
-   "email": "",
+   "email": "hyelim040323 at kaist.ac.kr",
    "interests": [
     "Soil liquefaction",
     "Probabilistic liquefaction hazard assessment"
@@ -1083,6 +1102,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/90bddd809654f7cb5948ecf9d23f661f.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.3776,
     "cy": 0.3337,
@@ -1100,7 +1120,7 @@ footer li{margin:4px 0}
    "role": "Undergraduate Researcher",
    "since": "Fall 2025",
    "affiliation": "",
-   "email": "",
+   "email": "nkm5714 at kaist.ac.kr",
    "interests": [
     "Ground motion modeling"
    ],
@@ -1114,6 +1134,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/905ccab9111f3028e89ab42e3f4f3016.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.3843,
     "cy": 0.3427,
@@ -1131,7 +1152,7 @@ footer li{margin:4px 0}
    "role": "Undergraduate Researcher",
    "since": "Fall 2026",
    "affiliation": "",
-   "email": "",
+   "email": "korean1won at kaist.ac.kr",
    "interests": [],
    "education": [
     "B.S. candidate, Civil and Environmental Engineering, KAIST"
@@ -1143,6 +1164,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/b62f4621904d1085fb011d97c3e86a86.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.47,
     "cy": 0.25,
@@ -1160,7 +1182,7 @@ footer li{margin:4px 0}
    "role": "Administrative Assistant",
    "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
-   "email": "",
+   "email": "lcs3013 at kaist.ac.kr",
    "interests": [],
    "education": [],
    "appointments": [],
@@ -1170,6 +1192,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.5249,
     "cy": 0.4826,
@@ -1187,7 +1210,7 @@ footer li{margin:4px 0}
    "role": "Researcher and Operations Manager",
    "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
-   "email": "",
+   "email": "lee_sb at kaist.ac.kr",
    "interests": [],
    "education": [],
    "appointments": [],
@@ -1197,6 +1220,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/f26dab579d7b7aac5d9c780b95b4e4ed.png",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.5535,
     "cy": 0.3524,
@@ -1214,7 +1238,7 @@ footer li{margin:4px 0}
    "role": "Research Engineer",
    "since": "",
    "affiliation": "KOCED Geotechnical Centrifuge Testing Center",
-   "email": "",
+   "email": "sdthings0268 at guest.kaist.ac.kr",
    "interests": [],
    "education": [],
    "appointments": [],
@@ -1224,6 +1248,7 @@ footer li{margin:4px 0}
    "links": {},
    "photo": "img/uploads/330ddc1c779edb545ea3d9e5f24da96d.jpg",
    "photo2": "",
+   "status": "current",
    "face": {
     "cx": 0.4894,
     "cy": 0.3677,
@@ -1865,7 +1890,10 @@ footer li{margin:4px 0}
    "authors": "Kim, J. and Ko, K. W.*",
    "title": "Arias Intensity-Based Damping Ratio Estimation and Experimental Validation",
    "venue": "2026 Fall Korean Geotechnical Society Conference",
-   "detail": "Gangwon-do, Korea, September 2026"
+   "detail": "Gangwon-do, Korea, September 2026",
+   "doi": "",
+   "url": "",
+   "note": "Best Oral Presentation Award"
   },
   {
    "id": "kc16",
@@ -1874,7 +1902,10 @@ footer li{margin:4px 0}
    "authors": "Kim, G. and Ko, K. W.*",
    "title": "SH-Wave Transfer Function for Topographic Amplification",
    "venue": "2026 Fall Korean Geotechnical Society Conference",
-   "detail": "Gangwon-do, Korea, September 2026"
+   "detail": "Gangwon-do, Korea, September 2026",
+   "doi": "",
+   "url": "",
+   "note": "Outstanding Poster Award"
   },
   {
    "id": "kc15",
@@ -2091,7 +2122,7 @@ footer li{margin:4px 0}
  ],
  "teachingPhilosophy": "New research and new technology keep expanding what is known, so a teacher has to keep learning and recognize quickly which new developments matter. That takes a firm grip on the fundamentals. The aim in every course is to close the gap between established and new research, to connect fundamental theory with practice, and to help students become self-directed engineers who can solve problems that did not exist when they were students.",
  "culture": {
-  "lead": "Research begins where something does not work. We go after unsolved problems and trace them back to fundamentals, with the freedom of structured autonomy: flexible but clear guidelines, self-directed growth, and teamwork.",
+  "lead": "Research begins the moment we confront what \"doesn't work.\"\n\nWe do not merely focus on successful outcomes. Instead, we cultivate a culture where unsolved challenges are brought to light, and their root causes are rigorously explored through fundamentals. GEHL fosters an environment of freedom—not as a lack of order or neglect, but as systematic autonomy that supports self-directed growth through teamwork. We provide flexible yet clear guidelines that allow students to fully immerse themselves in their research and evolve independently.\n\nWe welcome students who are fueled by a passion for discovery, who ponder deeply and relentlessly, and who seek to transcend their own limits through collaborative dialogue with their colleagues.",
   "lookingFor": [
    {
     "title": "Teamwork",
@@ -2103,7 +2134,7 @@ footer li{margin:4px 0}
    },
    {
     "title": "Logical communication",
-    "text": "A clear argument, in a figure or a paragraph, is as much a research skill as a good test."
+    "text": "Students who can articulate their thoughts clearly based on \"Why\" and \"How,\" while remaining flexible enough to embrace the opinions of others."
    },
    {
     "title": "Persistence and resilience",
@@ -2125,10 +2156,10 @@ footer li{margin:4px 0}
    "Tool-centric shortcuts",
    "Isolated individualism"
   ],
-  "positions": "We welcome undergraduate interns and graduate students (M.S. and Ph.D.) who are interested in geotechnical earthquake engineering and natural hazards. Character and mindset matter as much as academic record: an inquisitive spirit, persistence, respect, humility, and logical thinking. We are always open to discussing methodologies, research ideas, and emerging topics.",
+  "positions": "We welcome undergraduate interns, graduate students (M.S. and Ph.D.), and postdoc researchers who are interested in geotechnical earthquake engineering and natural hazards. Character and mindset matter as much as academic record: an inquisitive spirit, persistence, respect, humility, and logical thinking. We are always open to discussing methodologies, research ideas, and emerging topics.\n\n지반지진 및 재해 연구실(GEHL)은 지반지진공학 및 자연재해에 관한 공학적 연구에 관심 있는 학부인턴/대학원생/박사후연구원을 모집합니다. GEHL은 연구자로서 순수한 열정과 지적 호기심, 그리고 공학자로서 책임감을 지닌 학생들을 환영합니다. GEHL은 지진/자연재해에 대한 의미 있는 연구로 다음 세 가지를 추구합니다. \n\n   1. 과학적/역학적 이해를 바탕으로한 지진/자연재해 문제의 메커니즘 분석\n\n   2. 미래에 발생 가능한 지진/지반공학적 위험 예측 및 해결책 제안\n\n   3. 지진/자연재해에 대한 사회기반시설물 및 도시 시스템의 안정성을 평가할 수 있는 효율적/혁신적 방법론 개발\n\nGEHL은 독창적인 방법론, 새로운 연구 아이디어, 그리고 새롭게 떠오르는 주제에 대한 논의를 환영합니다. 연구실 진학 또는 관련 분야 진로 상담을 희망하는 경우, 고길완 교수(kilwanko at kaist.ac.kr)에게 연락주시기 바랍니다.",
   "goalsKo": [
    "재해 발생 메커니즘 분석",
-   "미래 위험 예측과 해결책 제시",
+   "미래 재해 시나리오 예측과 분석",
    "사회기반시설 안정성 평가 기법 개발"
   ],
   "apply": {
@@ -2183,26 +2214,43 @@ footer li{margin:4px 0}
    "kind": "event",
    "who": "GEHL",
    "title": "2026 KGS Fall Conference",
-   "body": "Jinyong gave an oral presentation, and Gunhak and Hyelim presented posters. The group also spent time with GeoKAIST members.",
-   "images": []
+   "body": "GEHL attended 2026 KGS Fall. Jinyong gave an oral presentation with the title of \"Arias Intensity-Based Damping Ratio Estimation and Experimental Validation.\" Gunhak and Hyelim did poster presentation with the title of \"SH-Wave Transfer Function for Topographic Amplification,\" and \"Seismological Model for RVT-Based Input Motion Simulation and Application to Liquefaction Evaluation.\" We also had a fun time with GeoKAIST members!",
+   "images": [
+    "img/uploads/20b9da52d3be238f18f93ca024244812.jpg",
+    "img/uploads/c8b8d2e791f36e9f8e13ab27632438f0.jpg",
+    "img/uploads/92b6f86f47a004f49fc0ac2b5dc6ece8.jpg",
+    "img/uploads/b6c9f0d591151a0813fd816ca12ae3d5.jpg",
+    "img/uploads/c8a1b412da7808fdd62bbac280503e72.jpg",
+    "img/uploads/0b711000090de7c1e606a77775638091.jpg",
+    "img/uploads/da8ff5acc044c898499368923bbdca80.jpg",
+    "img/uploads/6ebec3ff672879fb382c96af2d264044.jpg"
+   ]
   },
   {
    "id": "n2026-09-09",
    "date": "2026-09-09",
+   "dateLabel": "",
    "kind": "lablife",
    "who": "GEHL",
    "title": "Group dinner at Vesta",
    "body": "",
-   "images": []
+   "images": [
+    "img/uploads/4fcbc2a522f478e5396807a8b8c838e0.jpg"
+   ]
   },
   {
    "id": "n2026-08-28",
    "date": "2026-08-28",
+   "dateLabel": "",
    "kind": "visit",
    "who": "GEHL",
    "title": "ADD visited the KAIST Centrifuge Center",
-   "body": "The Agency for Defense Development visited the centrifuge center. Dr. Ko introduced the facility and the group discussed possible collaboration.",
-   "images": []
+   "body": "The Agency for Defense Development visited our centrifuge center. Dr. Ko introduced the center and the principles of centrifuge modeling, followed by a discussion on potential research collaboration. Thank you for visiting us!",
+   "images": [
+    "img/uploads/a2e6bc827a073401e3458c44dc6a1ed1.jpg",
+    "img/uploads/f225a8e0d14b3ed6fdbb599b083683f0.jpg",
+    "img/uploads/956a6d307b694e0e6becd12fefdb7796.jpg"
+   ]
   },
   {
    "id": "n2026-08-26",
@@ -2961,6 +3009,11 @@ footer li{margin:4px 0}
   DATA.research = DATA.research || { areas: [] }; DATA.lab = DATA.lab || {}; DATA.culture = DATA.culture || {}; DATA.groupPhotos = DATA.groupPhotos || [];
 
   // ---------- helpers ----------
+  // E-mail addresses are kept and shown as "name at domain" so that address harvesters reading the page find no "@";
+  // a mailto: link is assembled here, in the browser, from that text.
+  function toAddr(e) { return String(e || '').trim().replace(/\s*(\[at\]|\(at\)|\bat\b)\s*/i, '@').replace(/\s*(\[dot\]|\(dot\))\s*/gi, '.'); }
+  function emailText(e) { return toAddr(e).replace('@', ' at '); }
+  function emailLink(e, cls) { var a = toAddr(e); return a ? '<a class="' + (cls || 'mail') + '" href="#" data-mail="' + attr(a.replace('@', ' at ')) + '" title="Write an e-mail">' + esc(a.replace('@', ' at ')) + '</a>' : ''; }   // the mailto: is made only when clicked
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function attr(s) { return esc(s); }
   var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -2971,6 +3024,14 @@ footer li{margin:4px 0}
     if (!m) return iso;
     var mo = MONTHS[parseInt(m[2], 10) - 1] || m[2];
     return (m[3] ? mo + ' ' + parseInt(m[3], 10) + ', ' : mo + ' ') + m[1];
+  }
+  // Free text from the Manage forms keeps its line breaks: a blank line starts a new paragraph, a single break stays a break.
+  function rich(t, cls) {
+    var ps = String(t || '').replace(/\r/g, '').split(/\n[ \t]*\n/).map(function (x) { return x.replace(/^\n+|\s+$/g, ''); }).filter(function (x) { return x.trim(); });
+    return ps.map(function (x) {
+      var lines = x.split('\n').map(function (l) { var m = l.match(/^[ \t]*/)[0].length; return new Array(m + 1).join('&nbsp;') + esc(l.replace(/^[ \t]+|\s+$/g, '')); });   // leading spaces are kept as indentation
+      return '<p' + (cls ? ' class="' + cls + '"' : '') + '>' + lines.join('<br>') + '</p>';
+    }).join('');
   }
   function textLines(t) { return String(t || '').split(/\n/).map(function (l) { return l.trim(); }).filter(Boolean).map(function (l) { return '<span class="line">' + esc(l) + '</span>'; }).join('<br>'); }
   function sortByDateDesc(list) { return list.slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); }); }
@@ -3154,12 +3215,38 @@ footer li{margin:4px 0}
       '</button>';
   }
   var newsModal = { id: null, idx: 0 };
+  // The photo box of a news popup keeps one size for all photos of the item: as wide as its widest photo and as tall as
+  // its tallest one (each fitted to the viewer), so the arrows stay put; photos that do not fill it sit on a blurred copy.
+  var imgSizes = {};
+  function photoBox(imgs) {
+    var maxW = Math.min(860, window.innerWidth - 32) - (window.innerWidth <= 640 ? 32 : 48), maxH = Math.min(560, window.innerHeight * 0.62), W = 0, H = 0;
+    for (var k = 0; k < imgs.length; k++) {
+      var sz = imgSizes[imgs[k]]; if (!sz) return null;
+      var sc = Math.min(maxW / sz.w, maxH / sz.h); W = Math.max(W, sz.w * sc); H = Math.max(H, sz.h * sc);
+    }
+    return { w: Math.round(W), h: Math.round(H) };
+  }
+  function loadSizes(imgs, done) {
+    var left = 0;
+    imgs.forEach(function (u) {
+      if (imgSizes[u]) return; left++;
+      var im = new Image();
+      im.onload = function () { imgSizes[u] = { w: im.naturalWidth || 1, h: im.naturalHeight || 1 }; if (--left === 0) done(); };
+      im.onerror = function () { imgSizes[u] = { w: 4, h: 3 }; if (--left === 0) done(); };
+      im.src = u;
+    });
+    return left === 0;
+  }
+  var CHEV_L = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>';
+  var CHEV_R = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
   function newsModalHtml(n) {
     var imgs = newsImages(n), i = Math.min(Math.max(newsModal.idx, 0), Math.max(imgs.length - 1, 0));
     var car = '';
     if (imgs.length) {
-      car = '<div class="car"><img src="' + attr(imgs[i]) + '" alt="">' +
-        (imgs.length > 1 ? '<button class="nav prev" data-car="-1" aria-label="Previous photo">‹</button><button class="nav next" data-car="1" aria-label="Next photo">›</button><span class="pos">' + (i + 1) + ' / ' + imgs.length + '</span>' : '') + '</div>' +
+      var box = photoBox(imgs);
+      car = '<div class="car' + (box ? ' fixed' : '') + '"' + (box ? ' style="width:' + box.w + 'px;height:' + box.h + 'px"' : '') + '>' +
+        (box ? '<img class="bg" src="' + attr(imgs[i]) + '" alt="" aria-hidden="true">' : '') + '<img class="fg" src="' + attr(imgs[i]) + '" alt="">' +
+        (imgs.length > 1 ? '<button class="nav prev" data-car="-1" aria-label="Previous photo">' + CHEV_L + '</button><button class="nav next" data-car="1" aria-label="Next photo">' + CHEV_R + '</button><span class="pos">' + (i + 1) + ' / ' + imgs.length + '</span>' : '') + '</div>' +
         (imgs.length > 1 ? '<div class="strip">' + imgs.map(function (u, k) { return '<button class="th' + (k === i ? ' on' : '') + '" data-carto="' + k + '" aria-label="Photo ' + (k + 1) + '"><img src="' + attr(u) + '" alt=""></button>'; }).join('') + '</div>' : '');
     }
     return '<div class="modal" id="news-modal" role="dialog" aria-modal="true" aria-labelledby="nm-title"><div class="dlg news">' +
@@ -3167,7 +3254,7 @@ footer li{margin:4px 0}
       car +
       '<div class="nm-body"><div class="m"><span class="d">' + esc(fmtDate(n.date, n.dateLabel)) + '</span><span class="chip kind-' + attr(n.kind) + '">' + kindTag(n.kind) + '</span>' + (n.who ? '<span class="who">' + esc(n.who) + '</span>' : '') + '</div>' +
       '<h2 id="nm-title">' + esc(n.title) + '</h2>' +
-      (n.body ? '<p class="b">' + esc(n.body) + '</p>' : '') + '</div>' +
+      (n.body ? '<div class="b">' + rich(n.body) + '</div>' : '') + '</div>' +
       '</div></div>';
   }
   function openNews(id, keepIdx) {
@@ -3176,6 +3263,7 @@ footer li{margin:4px 0}
     var root = document.getElementById('modal-root'), dlg = root.querySelector('.dlg'), top = dlg ? dlg.scrollTop : 0;
     root.innerHTML = newsModalHtml(n);
     if (keepIdx && top) { var d2 = root.querySelector('.dlg'); if (d2) d2.scrollTop = top; }
+    loadSizes(newsImages(n), function () { if (newsModal.id === id && document.getElementById('news-modal')) openNews(id, true); });   // lock the photo box once the sizes are known
     document.body.style.overflow = 'hidden';
     if (!keepIdx) { var c = root.querySelector('.close'); if (c) c.focus(); }
     try { if (location.hash !== '#news-' + id) history.replaceState(null, '', '#news-' + id); } catch (e) { }
@@ -3198,7 +3286,7 @@ footer li{margin:4px 0}
       '<section class="section home-top"><div class="wrap">' +
       '<div class="section-head"><h2>GEHL Group Photo</h2><a class="more" href="#blossoms">Cherry blossom photos, every year →</a></div>' +
       '<div class="card home-card">' + groupPhotoPane() +
-      '<div class="intro-pane"><p class="intro">' + esc(L.intro) + '</p>' +
+      '<div class="intro-pane">' + rich(L.intro, 'intro') +
       '<div class="actions"><a class="btn primary" href="#research">Explore the research</a><a class="btn" href="#people">Meet the team</a><a class="btn" href="#join">Join us</a></div></div>' +
       '</div></div></section>' +
       '<section class="section"><div class="wrap"><div class="section-head"><h2>Recent news</h2><a class="more" href="#news">All news and gallery →</a></div>' +
@@ -3245,12 +3333,12 @@ footer li{margin:4px 0}
     }
     var cfig = safeUrl(C.figure);
     if (cfig) html += '<figure><img src="' + attr(cfig) + '" alt="' + attr(C.figureCaption || C.title) + '">' + (C.figureCaption ? '<figcaption>' + esc(C.figureCaption) + '</figcaption>' : '') + '</figure>';
-    html += '<div class="prose">' + (C.paragraphs || []).map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>';
+    html += '<div class="prose">' + (C.paragraphs || []).map(function (p) { return rich(p); }).join('') + '</div>';
     if (C.chips && C.chips.length) html += '<div class="sub">Methods, from laboratory to urban scale</div><div class="chips">' + C.chips.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div>';
     html += '</section>';
     (R.areas || []).forEach(function (a) {
       html += '<section class="card rcard" id="area-' + attr(a.id) + '"><div class="eyebrow">' + esc(a.eyebrow) + '</div><h3>' + esc(a.title) + '</h3>';
-      html += '<div class="prose">' + (a.paragraphs || []).map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>';
+      html += '<div class="prose">' + (a.paragraphs || []).map(function (p) { return rich(p); }).join('') + '</div>';
       if (a.topics && a.topics.length) html += '<div class="sub">Research topics</div><div class="chips">' + a.topics.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div>';
       var fig = safeUrl(a.figure);
       if (fig) html += '<figure><img src="' + attr(fig) + '" alt="' + attr(a.figureCaption || a.title) + '">' + (a.figureCaption ? '<figcaption>' + esc(a.figureCaption) + '</figcaption>' : '') + '</figure>';
@@ -3281,7 +3369,7 @@ footer li{margin:4px 0}
       html += '<section class="card pi-block"><img class="avatar" src="' + attr(avatarSrc(p)) + '" alt="' + attr(p.name) + '"><div>' +
         '<span class="rpill g-pi"><span class="em">' + EMOJI.pi + '</span>Principal Investigator</span><h3 style="margin-top:8px">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</h3>' +
         '<div class="role">' + esc(p.role) + (p.title2 ? ' · ' + esc(p.title2) : '') + '</div>' +
-        (p.bio ? '<p class="bio">' + esc(p.bio) + '</p>' : '') +
+        (p.bio ? rich(p.bio, 'bio') : '') +
         '<div class="links">' + Object.keys(p.links || {}).map(function (k) { var u = safeUrl(p.links[k]); return u ? '<a href="' + attr(u) + '" target="_blank" rel="noopener">' + esc(k) + ' ↗</a>' : ''; }).join('') + '<button class="btn small" data-person="' + attr(p.id) + '">Full profile</button></div>' +
         '</div></section>';
     });
@@ -3294,6 +3382,7 @@ footer li{margin:4px 0}
         cardPhoto(p) +
         '<span class="rpill"><span class="em">' + (EMOJI[p.group] || '') + '</span>' + esc(groupOf(p.group).pill) + '</span>' +
         '<span class="nm">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</span>' +
+        (p.email ? '<span class="ml">email: ' + esc(emailText(p.email)) + '</span>' : '') +
         '<span class="in">' + esc((p.interests || []).join(', ') || p.affiliation || p.role) + '</span></button>';
     }).join('') + '</div>';
     var al = alumniList();
@@ -3331,8 +3420,8 @@ footer li{margin:4px 0}
       (isAlumnus(p)
         ? '<div class="role">' + esc(p.role) + (p.years ? ', ' + esc(p.years) : '') + (p.affiliation ? ' · ' + esc(p.affiliation) : '') + '</div>' + (p.now ? '<div class="role">Now: ' + esc(p.now) + '</div>' : '')
         : '<div class="role">' + esc(p.role) + (p.title2 ? ' · ' + esc(p.title2) : '') + (p.since ? ' · since ' + esc(p.since) : '') + (p.affiliation ? ' · ' + esc(p.affiliation) : '') + '</div>') +
-      (p.email ? '<div class="em">' + esc(p.email) + '</div>' : '') +
-      (p.bio ? '<div class="sec"><p>' + esc(p.bio) + '</p></div>' : '') +
+      (p.email ? '<div class="em">' + emailLink(p.email) + '</div>' : '') +
+      (p.bio ? '<div class="sec prose">' + rich(p.bio) + '</div>' : '') +
       list('Research interests', p.interests) + list('Education', p.education) + list('Experience', p.appointments) + list('Awards and honors', p.awards) + list('Professional service', p.service) +
       plist('International Journal Papers', jp) + plist('International Conference Proceedings', cp) + plist('Journal Papers in Korean', kj) + plist('Conference Proceedings in Korean', kc) +
       (!jp.length && !cp.length ? '<div class="sec"><h4>Publications</h4><p class="empty-note">No publications listed yet.</p></div>' : '') +
@@ -3379,15 +3468,15 @@ footer li{margin:4px 0}
     var html = pageBand('teaching', 'Teaching') + '<div class="wrap">';
     html += '<section class="card rcard"><div class="eyebrow">Teaching philosophy</div><h3>' + esc(T.goal || 'Teaching philosophy') + '</h3>';
     if (T.quote) html += '<p class="quote">“' + esc(T.quote) + '”</p>';
-    if (T.lead) html += '<div class="prose"><p>' + esc(T.lead) + '</p></div>';
+    if (T.lead) html += '<div class="prose">' + rich(T.lead) + '</div>';
     if (T.cycle && T.cycle.length) html += '<div class="cycle">' + T.cycle.map(function (c, i) { return '<div class="cstep"><div class="k">' + esc(c.k) + '</div><div class="t">' + esc(c.t) + '</div><div class="s">→ ' + esc(c.s) + '</div><p>' + esc(c.d) + '</p></div>'; }).join('') + '</div>';
     var fig = safeUrl(T.figure);
     if (fig) html += '<figure><img src="' + attr(fig) + '" alt="' + attr(T.figureCaption || 'Teaching philosophy') + '">' + (T.figureCaption ? '<figcaption>' + esc(T.figureCaption) + '</figcaption>' : '') + '</figure>';
-    if (DATA.teachingPhilosophy) html += '<div class="prose" style="margin-top:18px"><p>' + esc(DATA.teachingPhilosophy) + '</p></div>';
+    if (DATA.teachingPhilosophy) html += '<div class="prose" style="margin-top:18px">' + rich(DATA.teachingPhilosophy) + '</div>';
     html += '</section>';
     html += '<section class="section"><div class="section-head"><h2>Courses</h2></div><div class="courses">' + DATA.courses.map(function (c, i) {
       var ol = (c.outline || []).filter(Boolean), open = openOutlines[i];
-      return '<div class="course"><div><div class="code">' + esc(c.code) + '</div><div class="term">' + esc(c.term) + (c.level ? ' · ' + esc(c.level) : '') + '</div></div><div><h3>' + esc(c.title) + '</h3><p>' + esc(c.text) + '</p>' +
+      return '<div class="course"><div><div class="code">' + esc(c.code) + '</div><div class="term">' + esc(c.term) + (c.level ? ' · ' + esc(c.level) : '') + '</div></div><div><h3>' + esc(c.title) + '</h3><div class="prose">' + rich(c.text) + '</div>' +
         (ol.length ? '<button class="btn small outline-btn" data-outline="' + i + '" aria-expanded="' + !!open + '">' + (open ? 'Hide course outline' : 'Course outline') + ' <span class="car">' + (open ? '▴' : '▾') + '</span></button>' +
           (open ? '<table class="outline"><tbody>' + ol.map(function (w, k) { return '<tr><th>Week ' + (k + 1 < 10 ? '0' : '') + (k + 1) + '</th><td>' + esc(w) + '</td></tr>'; }).join('') + '</tbody></table>' : '') : '') +
         '</div></div>'; }).join('') + '</div></section>';
@@ -3416,19 +3505,19 @@ footer li{margin:4px 0}
   function viewJoin() {
     var C = DATA.culture, L = DATA.lab, ap = C.apply || {};
     var html = pageBand('join', 'Join Us') + '<div class="wrap">';
-    if (C.lead) html += '<p class="lede">' + esc(C.lead) + '</p>';
+    if (C.lead) html += '<div class="prose">' + rich(C.lead, 'lede') + '</div>';
     html += '<section class="section"><div class="section-head"><h2>Who we are looking for</h2></div><div class="values">' + (C.lookingFor || []).map(function (v) { return '<div class="value"><h3>' + esc(v.title) + '</h3><p>' + esc(v.text) + '</p></div>'; }).join('') + '</div>';
     if (C.discourage && C.discourage.length) html += '<div class="eyebrow" style="margin-top:30px">What we discourage</div><div class="dislist">' + C.discourage.map(function (d) { return '<span>' + esc(d) + '</span>'; }).join('') + '</div>';
     html += '</section>';
-    html += '<section class="section"><div class="section-head"><h2>Open positions</h2></div><p class="prose">' + esc(C.positions || '') + '</p>' +
-      (C.goalsKo && C.goalsKo.length ? '<p class="ko">연구 목표: ' + C.goalsKo.map(esc).join(' · ') + '</p>' : '') + '</section>';
+    html += '<section class="section"><div class="section-head"><h2>Open positions</h2></div><div class="prose">' + rich(C.positions) + '</div>' +
+      '</section>';
     html += '<section class="section"><div class="section-head"><h2>How to apply</h2></div><p class="prose">Email Prof. Kil-Wan Ko. One message with the items below is enough; there is no separate application form.</p>' +
       '<div class="apply">' +
-      '<div class="box"><h4>Email</h4><div class="copy-row"><span class="addr">' + esc(L.email) + '</span></div></div>' +
+      '<div class="box"><h4>Email</h4><div class="copy-row"><span class="addr">' + emailLink(L.email) + '</span></div></div>' +
       '<div class="box"><h4>Subject line</h4><div class="v"><code>' + esc(ap.subject) + '</code></div></div>' +
       '<div class="box"><h4>Contents</h4><div class="v">' + esc(ap.contents) + '</div></div>' +
       '<div class="box"><h4>Attachments</h4><div class="v">' + esc(ap.attachments) + '</div></div>' +
-      '</div><p class="muted" style="margin-top:18px;font-size:14px">' + textLines(L.meetings) + '</p></section>';
+      '</div></section>';
     return html + '</div>';
   }
 
@@ -3437,7 +3526,7 @@ footer li{margin:4px 0}
     document.getElementById('footer').innerHTML =
       '<div><h4>' + esc(L.short) + ' · ' + esc(L.name) + '</h4><div>' + esc(L.department) + '<br><span class="addr">' + esc(L.address) + (L.mapUrl ? '<a href="' + attr(L.mapUrl) + '" target="_blank" rel="noopener">Map ↗</a>' : '') + '</span></div>' +
       '<div class="small">' + esc(L.copyright || '© Copyright ' + new Date().getFullYear() + '. ' + L.name + ' All Rights Reserved.') + '</div></div>' +
-      '<div class="contact"><h4>Contact</h4><ul><li><span class="mono">' + esc(L.email) + '</span></li></ul>' +
+      '<div class="contact"><h4>Contact</h4><ul><li>' + emailLink(L.email, 'mono') + '</li></ul>' +
       '<div class="small meet">' + textLines(L.meetings) + '</div></div>' +
       '';
   }
@@ -3474,9 +3563,10 @@ footer li{margin:4px 0}
 
   // ---------- events (delegated) ----------
   document.addEventListener('click', function (e) {
-    var t = e.target.closest('[data-person],[data-pf],[data-af],[data-pt],[data-py],[data-era],[data-nk],[data-copy],[data-close],[data-news],[data-car],[data-carto],[data-outline],#menu-btn');
+    var t = e.target.closest('[data-mail],[data-person],[data-pf],[data-af],[data-pt],[data-py],[data-era],[data-nk],[data-copy],[data-close],[data-news],[data-car],[data-carto],[data-outline],#menu-btn');
     if (!t) { if (e.target.classList && e.target.classList.contains('modal')) closeModal(); return; }
     if (t.id === 'menu-btn') { var nav = document.getElementById('main-nav'); var open = nav.classList.toggle('open'); t.setAttribute('aria-expanded', String(open)); return; }
+    if (t.dataset.mail) { e.preventDefault(); location.href = 'mailto:' + toAddr(t.dataset.mail); return; }
     if (t.dataset.person) { e.preventDefault(); openPerson(t.dataset.person); return; }
     if (t.hasAttribute('data-close')) { closeModal(); return; }
     if (t.dataset.pf) { peopleFilter = t.dataset.pf; render({ keepScroll: true }); return; }
@@ -3529,7 +3619,7 @@ footer li{margin:4px 0}
   render();
   try { var msg = sessionStorage.getItem('gehl-toast'); if (msg) { sessionStorage.removeItem('gehl-toast'); toast(msg, 4000); } } catch (e) { }
 
-  window.GEHL = { pubTypes: PUB_TYPES, pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById, currentView: function () { return currentView; }, nearProjects: function () { var el = document.getElementById('projects'); return !!el && el.getBoundingClientRect().top < window.innerHeight * 0.5; } };
+  window.GEHL = { toAddr: toAddr, emailText: emailText, pubTypes: PUB_TYPES, pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById, currentView: function () { return currentView; }, nearProjects: function () { var el = document.getElementById('projects'); return !!el && el.getBoundingClientRect().top < window.innerHeight * 0.5; } };
 })();
 </script>
 
