@@ -1805,20 +1805,26 @@
   {
    "id": "n2026-07-01a",
    "date": "2026-07-01",
+   "dateLabel": "",
    "kind": "welcome",
    "who": "Hwanwoo Seo",
    "title": "Dr. Hwanwoo Seo joined GEHL",
    "body": "Dr. Seo joined the lab as a postdoctoral researcher.",
-   "images": []
+   "images": [
+    "img/uploads/39342bf45336b0e77ecb1b3536407b18.jpg"
+   ]
   },
   {
    "id": "n2026-07-01b",
    "date": "2026-07-01",
+   "dateLabel": "",
    "kind": "award",
    "who": "Hyelim Park",
    "title": "Presidential Science Scholarship",
    "body": "Undergraduate researcher Hyelim Park was selected for the Presidential Science Scholarship.",
-   "images": []
+   "images": [
+    "img/uploads/9165b12acfa56d4d74967c2b4aa5824f.png"
+   ]
   },
   {
    "id": "n2026-06-29",
@@ -2009,20 +2015,26 @@
   {
    "id": "n2026-03-01",
    "date": "2026-03-01",
+   "dateLabel": "",
    "kind": "welcome",
    "who": "Gunhak Kim, Jinyong Kim, and Changsung Yim",
    "title": "Three new members joined GEHL",
    "body": "Gunhak Kim, Jinyong Kim, and Changsung Yim joined the lab.",
-   "images": []
+   "images": [
+    "img/uploads/12bd980ac1542f86920453779ec42a39.jpg"
+   ]
   },
   {
    "id": "n2026-02-28",
    "date": "2026-02-28",
+   "dateLabel": "",
    "kind": "award",
    "who": "Dong-Hyeong Choi",
    "title": "Sejong Science Fellowship",
    "body": "Dr. Choi received the Sejong Science Fellowship for five years.",
-   "images": []
+   "images": [
+    "img/uploads/4f84810a10dad7b9012947f17cb70aeb.jpg"
+   ]
   },
   {
    "id": "n2026-02-20",
@@ -2056,11 +2068,14 @@
   {
    "id": "n2026-02-11",
    "date": "2026-02-11",
+   "dateLabel": "",
    "kind": "publication",
    "who": "Kil-Wan Ko",
    "title": "Keynote paper in the Indian Geotechnical Journal",
    "body": "\"Energy-Based Methods for Seismic Soil Liquefaction: Past, Present, and Future,\" a keynote paper of the Indian Geotechnical Conference 2025, was published in the Indian Geotechnical Journal.",
-   "images": []
+   "images": [
+    "img/uploads/f4b94a572546754a69d1fc744c09576d.png"
+   ]
   },
   {
    "id": "n2026-01-26",
@@ -2192,11 +2207,14 @@
   {
    "id": "n2025-09-29",
    "date": "2025-09-29",
+   "dateLabel": "",
    "kind": "talk",
    "who": "Kil-Wan Ko",
    "title": "K-water and KGS Dams & Levees invited seminar",
    "body": "\"Centrifuge Modeling for Crack Propagation and Concentrated Leak Erosion Mechanisms in Dams and Levees.\"",
-   "images": []
+   "images": [
+    "img/uploads/cfe1862bc1e79308a05db3cf412d801f.jpg"
+   ]
   },
   {
    "id": "n2025-09-25",
@@ -2227,11 +2245,14 @@
   {
    "id": "n2025-09-01",
    "date": "2025-09-01",
+   "dateLabel": "",
    "kind": "welcome",
    "who": "Dong-Hyeong Choi",
    "title": "Dr. Dong-Hyeong Choi joined GEHL",
    "body": "",
-   "images": []
+   "images": [
+    "img/uploads/16948de07f56e24d420ba10e3d48eb1d.jpg"
+   ]
   },
   {
    "id": "n2025-08-19",
@@ -2312,11 +2333,14 @@
   {
    "id": "n2025-07-08",
    "date": "2025-07-08",
+   "dateLabel": "",
    "kind": "welcome",
    "who": "Jaewoo Kang",
    "title": "Jaewoo Kang joined GEHL",
    "body": "Jaewoo joined the lab for his Ph.D. study.",
-   "images": []
+   "images": [
+    "img/uploads/e05329a7e8ec87c6a6b9f4cb35f1c8c8.jpg"
+   ]
   },
   {
    "id": "n2025-07-07",
@@ -2395,11 +2419,14 @@
   {
    "id": "n2025-04-01",
    "date": "2025-04-01",
+   "dateLabel": "",
    "kind": "publication",
    "who": "Kil-Wan Ko",
    "title": "New paper in the ASCE Journal of Geotechnical and Geoenvironmental Engineering",
    "body": "\"Estimation of Timing of Liquefaction using Spectral Energy Ratio\" was published.",
-   "images": []
+   "images": [
+    "img/uploads/68552b7b9955d90f476695d20aed0acd.jpg"
+   ]
   },
   {
    "id": "n2025-03-27",
@@ -2425,11 +2452,14 @@
   {
    "id": "n2025-03-01",
    "date": "2025-03-01",
+   "dateLabel": "",
    "kind": "welcome",
    "who": "Kil-Wan Ko",
    "title": "GEHL opens at KAIST",
    "body": "Dr. Ko started as an assistant professor in the Department of Civil and Environmental Engineering at KAIST.",
-   "images": []
+   "images": [
+    "img/uploads/39c6c637e009cb5d0a59a36e6b866a68.jpg"
+   ]
   },
   {
    "id": "b2025-01-15",
