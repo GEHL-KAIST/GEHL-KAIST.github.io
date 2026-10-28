@@ -143,7 +143,7 @@ p.intro + p.intro{margin-top:12px}
 .pillar:hover .ill{border-color:var(--brand)}
 .pillar h3{font-size:16.5px;margin-top:4px}
 .pillar:hover h3{color:var(--brand)}
-.pillar p{font-size:13.5px;color:var(--fg);line-height:1.45}
+.pillar p{font-size:15px;color:var(--fg);line-height:1.45}
 @media (max-width:900px){ .pillars{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:480px){ .pillars{grid-template-columns:1fr} }
 .methods{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
@@ -208,7 +208,7 @@ p.intro + p.intro{margin-top:12px}
 .news-card .d{font-family:var(--mono);font-size:12.5px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .news-card h3{font-size:18px}
 .news-card:hover h3{color:var(--brand)}
-.news-card p{font-size:14.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.news-card p{font-size:15.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .news-card img{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
 @media (max-width:980px){ .news-cards{grid-template-columns:1fr} }
 .tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:8px}
@@ -328,7 +328,7 @@ p.intro + p.intro{margin-top:12px}
 .rcard .prose p{font-size:15.5px;line-height:1.6}
 .rcard .sub{font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px}
 .rcard .chips{display:flex;flex-wrap:wrap;gap:8px}
-.rcard .chips span{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--soft);color:var(--fg)}
+.rcard .chips span{font-size:14px;padding:5px 11px;border-radius:999px;background:var(--soft);color:var(--fg)}
 .rcard figure{margin:20px 0 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
 .rcard figure img{display:block;width:100%;max-height:420px;object-fit:contain;background:#fff}
 .rcard figure.fig-teach img,.rcard figure.fig-full img{max-height:none}   /* diagrams fill their frame */
@@ -339,11 +339,11 @@ p.intro + p.intro{margin-top:12px}
 .rcard.area figure .ph{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#fff}   /* every card's picture box is the same size */
 .rcard.area figure .ph img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;z-index:1}
 .rcard.area figure .ph img.bg{object-fit:cover;filter:blur(18px) brightness(.95) saturate(1.05);transform:scale(1.2);z-index:0}
-.rcard.area .prose p{font-size:15px}
+.rcard.area .prose p{font-size:16.5px;line-height:1.6}
 @media (max-width:860px){ .areas{grid-template-columns:1fr} }
 .rcard figcaption{font-size:12.5px;color:var(--muted);padding:8px 12px;border-top:1px solid var(--line)}
 .rcard .sel{list-style:none;margin:0;padding:0;display:grid;gap:7px}
-.rcard .sel li{font-size:14px;color:var(--muted);padding-left:14px;position:relative}
+.rcard .sel li{font-size:15px;color:var(--muted);padding-left:14px;position:relative}
 .rcard .sel li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--brand)}
 .rcard .sel li a{color:var(--fg)}
 .rcard .sel li i{font-style:italic}
@@ -353,7 +353,7 @@ p.intro + p.intro{margin-top:12px}
 .framework .step{border:1px solid var(--line-strong);border-radius:10px;padding:14px 16px;background:var(--surface);min-width:0}
 .framework .step .k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
 .framework .step .t{font-family:var(--display);font-weight:700;font-size:17px;margin-top:4px;color:var(--heading)}
-.framework .step .s{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.45}
+.framework .step .s{font-size:15px;color:var(--muted);margin-top:6px;line-height:1.5}
 .framework .arrow{color:var(--muted);font-size:22px;align-self:center}
 .framework .loop{grid-column:1 / -1;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:2px}
 .framework .loop::before,.framework .loop::after{content:"";flex:1;border-top:1px dashed var(--line-strong)}
@@ -375,7 +375,7 @@ table.projects td.per{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .cstep .k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .cstep .t{font-family:var(--display);font-weight:700;font-size:16px;color:var(--heading)}
 .cstep .s{font-size:13.5px;color:var(--brand);margin-top:2px}
-.cstep p{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.45}
+.cstep p{font-size:15px;color:var(--muted);margin-top:8px;line-height:1.45}
 @media (max-width:900px){ .cycle{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:520px){ .cycle{grid-template-columns:1fr} }
 /* Teaching */
@@ -384,7 +384,7 @@ table.projects td.per{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .course .code{font-family:var(--mono);font-size:13.5px;color:var(--brand)}
 .course .term{font-size:13px;color:var(--muted);margin-top:4px}
 .course h3{font-size:20px}
-.course p{margin-top:8px;color:var(--muted);font-size:15px;}
+.course p{margin-top:8px;color:var(--muted);font-size:16px;}
 .course .prose p + p{margin-top:6px}
 @media (max-width:600px){ .course{grid-template-columns:1fr;gap:6px} }
 .course .outline-btn{margin-top:14px}
@@ -398,14 +398,14 @@ table.outline tr:last-child th,table.outline tr:last-child td{border-bottom:1px 
 .values{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px 36px;margin-top:8px}
 .value{border-top:1px solid var(--line);padding-top:14px}
 .value h3{font-size:17px}
-.value p{margin-top:6px;color:var(--muted);font-size:14.5px}
+.value p{margin-top:6px;color:var(--muted);font-size:16px;line-height:1.55}
 .apply{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:20px}
 .apply .box{border:1px solid var(--line-strong);border-radius:var(--radius);padding:18px;background:var(--surface)}
 .apply .box h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.apply .box .v{margin-top:8px;font-size:15px}
+.apply .box .v{margin-top:8px;font-size:18px;line-height:1.5}
 .apply .box code{font-family:inherit;font-size:inherit}
 .copy-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
-.copy-row .addr{font-family:var(--mono);font-size:15px;user-select:all}
+.copy-row .addr{font-family:var(--mono);font-size:18px;user-select:all}
 .dislist{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .dislist span{font-size:13.5px;padding:5px 10px;border:1px dashed var(--line-strong);border-radius:var(--radius);color:var(--muted)}
 .ko{font-size:14px;color:var(--muted);margin-top:16px}
@@ -631,7 +631,8 @@ footer li{margin:4px 0}
     "topics": [
      "Soil-structure Interaction",
      "Structure-soil-structue Interaction",
-     "Rocking foundation"
+     "Rocking foundation",
+     "Disconnected-piled raft"
     ],
     "pubs": [
      "j06",
@@ -3258,12 +3259,12 @@ footer li{margin:4px 0}
    {
     "t": "Concrete experience",
     "s": "Feeling",
-    "d": "Centrifuge tests, laboratory experiments, and earthquake damage are the starting point. Homework asks students to run an experiment or study a case history before the theory is introduced."
+    "d": "Centrifuge tests, laboratory experiments, and earthquake damage are the starting point."
    },
    {
     "t": "Observation and reflection",
     "s": "Talking",
-    "d": "Case histories from past earthquakes are introduced and discussed in class, so that students put what they saw into words and compare interpretations."
+    "d": "Case histories from past earthquakes are introduced and discussed in class."
    },
    {
     "t": "Abstract conceptualization",
@@ -3796,9 +3797,9 @@ footer li{margin:4px 0}
     html += '<section class="section"><div class="section-head"><h2>Who we are looking for</h2></div><div class="values">' + (C.lookingFor || []).map(function (v) { return '<div class="value"><h3>' + esc(v.title) + '</h3><p>' + esc(v.text) + '</p></div>'; }).join('') + '</div>';
     if (C.discourage && C.discourage.length) html += '<div class="eyebrow" style="margin-top:30px">What we discourage</div><div class="dislist">' + C.discourage.map(function (d) { return '<span>' + esc(d) + '</span>'; }).join('') + '</div>';
     html += '</section>';
-    html += '<section class="section"><div class="section-head"><h2>Open positions</h2></div><div class="prose">' + rich(C.positions) + '</div>' +
+    html += '<section class="section"><div class="section-head"><h2>Open positions</h2></div><div class="prose">' + rich(C.positions, 'lede') + '</div>' +
       '</section>';
-    html += '<section class="section"><div class="section-head"><h2>How to apply</h2></div><p class="prose">Email Prof. Kil-Wan Ko. One message with the items below is enough; there is no separate application form.</p>' +
+    html += '<section class="section"><div class="section-head"><h2>How to apply</h2></div><p class="lede">Email Prof. Kil-Wan Ko. One message with the items below is enough; there is no separate application form.</p>' +
       '<div class="apply">' +
       '<div class="box"><h4>Email</h4><div class="copy-row"><span class="addr">' + emailLink(L.email) + '</span></div></div>' +
       '<div class="box"><h4>Subject line</h4><div class="v"><code>' + esc(ap.subject) + '</code></div></div>' +

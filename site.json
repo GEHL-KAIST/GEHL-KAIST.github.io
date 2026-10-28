@@ -108,7 +108,8 @@
     "topics": [
      "Soil-structure Interaction",
      "Structure-soil-structue Interaction",
-     "Rocking foundation"
+     "Rocking foundation",
+     "Disconnected-piled raft"
     ],
     "pubs": [
      "j06",
@@ -2735,12 +2736,12 @@
    {
     "t": "Concrete experience",
     "s": "Feeling",
-    "d": "Centrifuge tests, laboratory experiments, and earthquake damage are the starting point. Homework asks students to run an experiment or study a case history before the theory is introduced."
+    "d": "Centrifuge tests, laboratory experiments, and earthquake damage are the starting point."
    },
    {
     "t": "Observation and reflection",
     "s": "Talking",
-    "d": "Case histories from past earthquakes are introduced and discussed in class, so that students put what they saw into words and compare interpretations."
+    "d": "Case histories from past earthquakes are introduced and discussed in class."
    },
    {
     "t": "Abstract conceptualization",
