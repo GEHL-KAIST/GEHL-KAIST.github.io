@@ -197,6 +197,8 @@
  },
  "projects": [
   {
+   "id": "prj1",
+   "short": "InnoCORE – SMR disaster prevention platform",
    "title": "Development of an AX-based Intelligent Disaster Prevention Platform for Ultra-Safe SMR Construction Against Extreme External Hazards (InnoCORE)",
    "sponsor": "Ministry of Science and ICT",
    "period": "2026.07 – present",
@@ -204,6 +206,8 @@
    "status": "ongoing"
   },
   {
+   "id": "prj2",
+   "short": "InnoCORE – T-RAX railway",
    "title": "Transformative Railway with AX Research Center (T-RAX, InnoCORE)",
    "sponsor": "Ministry of Science and ICT",
    "period": "2026.05 – present",
@@ -211,6 +215,8 @@
    "status": "ongoing"
   },
   {
+   "id": "prj3",
+   "short": "Energy-based liquefaction framework (NRF)",
    "title": "Multi-Scale Framework for Energy-Based Soil Liquefaction Assessment under Integrated Analysis of Cyclic Loadings (Outstanding Young Scientist Grants)",
    "sponsor": "National Research Foundation of Korea",
    "period": "2026.03 – present",
@@ -218,6 +224,8 @@
    "status": "ongoing"
   },
   {
+   "id": "prj4",
+   "short": "Topographic effects on site amplification (KIGAM)",
    "title": "Characterization and Validation of the Impact of Topographic Effect Parameters on Site Amplification using Dynamic Centrifuge Tests (Sponsored Research)",
    "sponsor": "Korea Institute of Geoscience and Mineral Resources",
    "period": "2026.03 – present",
@@ -225,6 +233,8 @@
    "status": "ongoing"
   },
   {
+   "id": "prj5",
+   "short": "Pohang liquefaction hazard (URP)",
    "title": "Probabilistic Liquefaction Hazard Assessment for Pohang Region under Future Earthquake Scenarios (URP)",
    "sponsor": "KAIST",
    "period": "2026.01 – present",
@@ -232,6 +242,8 @@
    "status": "ongoing"
   },
   {
+   "id": "prj6",
+   "short": "Depth reduction factor for liquefiable layers (KAIST)",
    "title": "Development of Depth Reduction Factor for Intensity Measures in Liquefiable Soil Layers using Nonlinear Analysis (Startup Funding)",
    "sponsor": "KAIST",
    "period": "2025.03 – present",
@@ -239,6 +251,8 @@
    "status": "ongoing"
   },
   {
+   "id": "prj7",
+   "short": "Soil-pile-structure interaction of modular buildings (LH)",
    "title": "Dynamic Soil-Pile-Structure Interaction of Standard and Lightweight Modular Buildings under Earthquakes (Sponsored Research)",
    "sponsor": "Land and Housing Research Institute (LH)",
    "period": "2026.03 – 2026.07",
@@ -336,6 +350,9 @@
    "aliases": [
     "Choi, D. H."
    ],
+   "projects": [
+    "prj3"
+   ],
    "links": {},
    "photo": "img/uploads/604cdc4d11798516471fce1c831adc6b.jpg",
    "photo2": "",
@@ -369,6 +386,9 @@
    "appointments": [],
    "aliases": [
     "Seo, H."
+   ],
+   "projects": [
+    "prj2"
    ],
    "links": {},
    "photo": "img/uploads/ca001fbd17cc4c0f76da776b5ad157c6.jpg",
@@ -436,6 +456,10 @@
    "aliases": [
     "Kim, J."
    ],
+   "projects": [
+    "prj3",
+    "prj7"
+   ],
    "links": {},
    "photo": "img/uploads/53fde91f37c0dada6bfb07f25b460bfb.jpg",
    "photo2": "",
@@ -467,6 +491,9 @@
    "appointments": [],
    "aliases": [
     "Kim, G."
+   ],
+   "projects": [
+    "prj4"
    ],
    "links": {},
    "photo": "img/uploads/8730b658673d6be2d1478ea3ed757729.jpg",
@@ -507,7 +534,7 @@
    "face": {
     "cx": 0.515,
     "cy": 0.355,
-    "h": 0.145,
+    "h": 0.27,
     "ar": 0.6354,
     "nh": 1728,
     "src": "img/uploads/27de54150245b2b489f178013d2ddf0d.jpg",
@@ -532,6 +559,9 @@
    "appointments": [],
    "aliases": [
     "Lee, M."
+   ],
+   "projects": [
+    "prj1"
    ],
    "links": {},
    "photo": "img/uploads/69c3b0b5ab25c75435bac72fa965ce27.jpg",
@@ -565,6 +595,9 @@
    "appointments": [],
    "aliases": [
     "Park, H."
+   ],
+   "projects": [
+    "prj5"
    ],
    "links": {},
    "photo": "img/uploads/90bddd809654f7cb5948ecf9d23f661f.jpg",
@@ -663,12 +696,13 @@
    "photo2": "",
    "status": "current",
    "face": {
-    "cx": 0.5249,
-    "cy": 0.4826,
-    "h": 0.0871,
+    "cx": 0.52,
+    "cy": 0.4612,
+    "h": 0.08,
     "ar": 1,
     "nh": 1280,
-    "src": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg"
+    "src": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg",
+    "manual": true
    }
   },
   {

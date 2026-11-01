@@ -251,6 +251,7 @@ p.intro + p.intro{margin-top:12px}
 .pcard:hover .nm{color:var(--brand)}
 .pcard .ml{font-size:14.5px;color:var(--muted);margin-top:-4px;overflow-wrap:anywhere}   /* email: … under the name */
 .pcard .in{font-size:15.5px;color:var(--muted);line-height:1.45}
+.pcard .in.pj{margin-top:-4px}
 .legend-em{font-size:14px;color:var(--fg);margin:0 0 10px}
 .rpill{display:inline-block;justify-self:start;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:1px 0 1px 10px;border-left:3px solid var(--heading);line-height:16px;color:var(--heading)}   /* role label: small capitals behind a short navy bar */
 .avatar{display:block;border-radius:var(--radius);object-fit:cover;background:var(--soft);border:1px solid var(--line)}
@@ -295,6 +296,7 @@ p.intro + p.intro{margin-top:12px}
 .modal .mp .a .member{color:var(--fg);text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:3px}
 .modal .mp .v{color:var(--muted);font-size:12.5px;font-family:var(--mono)}
 .modal .empty-note{font-size:13.5px;color:var(--muted)}
+.modal .seeall{margin-top:8px;font-size:13.5px}
 @media (max-width:640px){ .modal .dlg{grid-template-columns:1fr;padding:20px;gap:16px} .modal .avatar{width:160px;height:auto} }
 
 /* Publications */
@@ -360,10 +362,13 @@ p.intro + p.intro{margin-top:12px}
 .interests li{break-inside:avoid;margin:4px 0}
 @media (max-width:600px){ .interests{columns:1} }
 table.projects{width:100%;border-collapse:collapse;font-size:14.5px;table-layout:fixed}
-table.projects .c-title{width:54%} table.projects .c-sponsor{width:22%} table.projects .c-period{width:13%} table.projects .c-role{width:11%}
+table.projects .c-title{width:52%} table.projects .c-sponsor{width:22%} table.projects .c-period{width:13%} table.projects .c-role{width:13%}
 table.projects th{text-align:left;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:8px 10px 8px 0;border-bottom:1px solid var(--line-strong)}
 table.projects td{padding:12px 10px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
 table.projects td.per{font-family:var(--mono);font-size:13px;color:var(--muted)}
+table.projects .pm{margin-top:4px;font-size:13px;color:var(--muted)}
+table.projects .pm button{color:var(--brand);font-size:13px}
+table.projects .pm button:hover{text-decoration:underline}
 .tablewrap{overflow-x:auto}
 @media (max-width:700px){ table.projects{min-width:620px} }
 
@@ -718,6 +723,8 @@ footer li{margin:4px 0}
  },
  "projects": [
   {
+   "id": "prj1",
+   "short": "InnoCORE – SMR disaster prevention platform",
    "title": "Development of an AX-based Intelligent Disaster Prevention Platform for Ultra-Safe SMR Construction Against Extreme External Hazards (InnoCORE)",
    "sponsor": "Ministry of Science and ICT",
    "period": "2026.07 – present",
@@ -725,6 +732,8 @@ footer li{margin:4px 0}
    "status": "ongoing"
   },
   {
+   "id": "prj2",
+   "short": "InnoCORE – T-RAX railway",
    "title": "Transformative Railway with AX Research Center (T-RAX, InnoCORE)",
    "sponsor": "Ministry of Science and ICT",
    "period": "2026.05 – present",
@@ -732,6 +741,8 @@ footer li{margin:4px 0}
    "status": "ongoing"
   },
   {
+   "id": "prj3",
+   "short": "Energy-based liquefaction framework (NRF)",
    "title": "Multi-Scale Framework for Energy-Based Soil Liquefaction Assessment under Integrated Analysis of Cyclic Loadings (Outstanding Young Scientist Grants)",
    "sponsor": "National Research Foundation of Korea",
    "period": "2026.03 – present",
@@ -739,6 +750,8 @@ footer li{margin:4px 0}
    "status": "ongoing"
   },
   {
+   "id": "prj4",
+   "short": "Topographic effects on site amplification (KIGAM)",
    "title": "Characterization and Validation of the Impact of Topographic Effect Parameters on Site Amplification using Dynamic Centrifuge Tests (Sponsored Research)",
    "sponsor": "Korea Institute of Geoscience and Mineral Resources",
    "period": "2026.03 – present",
@@ -746,6 +759,8 @@ footer li{margin:4px 0}
    "status": "ongoing"
   },
   {
+   "id": "prj5",
+   "short": "Pohang liquefaction hazard (URP)",
    "title": "Probabilistic Liquefaction Hazard Assessment for Pohang Region under Future Earthquake Scenarios (URP)",
    "sponsor": "KAIST",
    "period": "2026.01 – present",
@@ -753,6 +768,8 @@ footer li{margin:4px 0}
    "status": "ongoing"
   },
   {
+   "id": "prj6",
+   "short": "Depth reduction factor for liquefiable layers (KAIST)",
    "title": "Development of Depth Reduction Factor for Intensity Measures in Liquefiable Soil Layers using Nonlinear Analysis (Startup Funding)",
    "sponsor": "KAIST",
    "period": "2025.03 – present",
@@ -760,6 +777,8 @@ footer li{margin:4px 0}
    "status": "ongoing"
   },
   {
+   "id": "prj7",
+   "short": "Soil-pile-structure interaction of modular buildings (LH)",
    "title": "Dynamic Soil-Pile-Structure Interaction of Standard and Lightweight Modular Buildings under Earthquakes (Sponsored Research)",
    "sponsor": "Land and Housing Research Institute (LH)",
    "period": "2026.03 – 2026.07",
@@ -857,6 +876,9 @@ footer li{margin:4px 0}
    "aliases": [
     "Choi, D. H."
    ],
+   "projects": [
+    "prj3"
+   ],
    "links": {},
    "photo": "img/uploads/604cdc4d11798516471fce1c831adc6b.jpg",
    "photo2": "",
@@ -890,6 +912,9 @@ footer li{margin:4px 0}
    "appointments": [],
    "aliases": [
     "Seo, H."
+   ],
+   "projects": [
+    "prj2"
    ],
    "links": {},
    "photo": "img/uploads/ca001fbd17cc4c0f76da776b5ad157c6.jpg",
@@ -957,6 +982,10 @@ footer li{margin:4px 0}
    "aliases": [
     "Kim, J."
    ],
+   "projects": [
+    "prj3",
+    "prj7"
+   ],
    "links": {},
    "photo": "img/uploads/53fde91f37c0dada6bfb07f25b460bfb.jpg",
    "photo2": "",
@@ -988,6 +1017,9 @@ footer li{margin:4px 0}
    "appointments": [],
    "aliases": [
     "Kim, G."
+   ],
+   "projects": [
+    "prj4"
    ],
    "links": {},
    "photo": "img/uploads/8730b658673d6be2d1478ea3ed757729.jpg",
@@ -1028,7 +1060,7 @@ footer li{margin:4px 0}
    "face": {
     "cx": 0.515,
     "cy": 0.355,
-    "h": 0.145,
+    "h": 0.27,
     "ar": 0.6354,
     "nh": 1728,
     "src": "img/uploads/27de54150245b2b489f178013d2ddf0d.jpg",
@@ -1053,6 +1085,9 @@ footer li{margin:4px 0}
    "appointments": [],
    "aliases": [
     "Lee, M."
+   ],
+   "projects": [
+    "prj1"
    ],
    "links": {},
    "photo": "img/uploads/69c3b0b5ab25c75435bac72fa965ce27.jpg",
@@ -1086,6 +1121,9 @@ footer li{margin:4px 0}
    "appointments": [],
    "aliases": [
     "Park, H."
+   ],
+   "projects": [
+    "prj5"
    ],
    "links": {},
    "photo": "img/uploads/90bddd809654f7cb5948ecf9d23f661f.jpg",
@@ -1184,12 +1222,13 @@ footer li{margin:4px 0}
    "photo2": "",
    "status": "current",
    "face": {
-    "cx": 0.5249,
-    "cy": 0.4826,
-    "h": 0.0871,
+    "cx": 0.52,
+    "cy": 0.4612,
+    "h": 0.08,
     "ar": 1,
     "nh": 1280,
-    "src": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg"
+    "src": "img/uploads/c73e3f00bfeab5e33c3182491c57a1ff.jpg",
+    "manual": true
    }
   },
   {
@@ -3319,6 +3358,11 @@ footer li{margin:4px 0}
   migrateAlumni(DATA);
   DATA.news = DATA.news || []; DATA.projects = DATA.projects || []; DATA.courses = DATA.courses || [];
   DATA.research = DATA.research || { areas: [] }; DATA.lab = DATA.lab || {}; DATA.culture = DATA.culture || {}; DATA.groupPhotos = DATA.groupPhotos || [];
+  DATA.projects.forEach(function (p, i) { if (!p.id) p.id = 'prj' + (i + 1); });   // members are linked to projects by these ids
+  function projectById(id) { for (var i = 0; i < DATA.projects.length; i++) if (DATA.projects[i].id === id) return DATA.projects[i]; return null; }
+  function projectsOf(p) { return (p.projects || []).map(projectById).filter(Boolean); }
+  function piRoleLabel() { var pi = DATA.people.filter(function (p) { return p.group === 'pi'; })[0]; var last = pi ? String(pi.name).trim().split(/\s+/).pop() : ''; return last ? 'Prof. ' + last + "'s role" : 'Role'; }   // the Role column is the PI's role in the project
+  function membersOf(pr) { return DATA.people.filter(function (p) { return p.status !== 'alumni' && (p.projects || []).indexOf(pr.id) >= 0; }); }
 
   // ---------- helpers ----------
   // E-mail addresses are kept and shown as "name at domain" so that address harvesters reading the page find no "@";
@@ -3665,7 +3709,7 @@ footer li{margin:4px 0}
     });
     html += '</div></div>';
     var on = DATA.projects.filter(function (p) { return p.status !== 'completed'; }), done = DATA.projects.filter(function (p) { return p.status === 'completed'; });
-    function ptable(list) { return '<div class="tablewrap"><table class="projects"><colgroup><col class="c-title"><col class="c-sponsor"><col class="c-period"><col class="c-role"></colgroup><thead><tr><th>Project</th><th>Sponsor</th><th>Period</th><th>Role</th></tr></thead><tbody>' + list.map(function (p) { return '<tr><td>' + esc(p.title) + '</td><td>' + esc(p.sponsor) + '</td><td class="per">' + esc(p.period) + '</td><td>' + esc(p.role) + '</td></tr>'; }).join('') + '</tbody></table></div>'; }
+    function ptable(list) { return '<div class="tablewrap"><table class="projects"><colgroup><col class="c-title"><col class="c-sponsor"><col class="c-period"><col class="c-role"></colgroup><thead><tr><th>Project</th><th>Sponsor</th><th>Period</th><th>' + esc(piRoleLabel()) + '</th></tr></thead><tbody>' + list.map(function (p) { var mem = membersOf(p); return '<tr><td>' + esc(p.title) + (mem.length ? '<div class="pm">Researchers: ' + mem.map(function (m) { return '<button data-person="' + attr(m.id) + '">' + esc(m.name) + '</button>'; }).join(', ') + '</div>' : '') + '</td><td>' + esc(p.sponsor) + '</td><td class="per">' + esc(p.period) + '</td><td>' + esc(p.role) + '</td></tr>'; }).join('') + '</tbody></table></div>'; }
     html += '<section class="section" id="projects"><div class="section-head"><h2>Projects</h2></div>' + (on.length ? '<div class="eyebrow" style="margin-bottom:10px">Ongoing</div>' + ptable(on) : '') + (done.length ? '<div class="eyebrow" style="margin:28px 0 10px">Completed</div>' + ptable(done) : '') + '</section>';
     return html + '</div>';
   }
@@ -3694,7 +3738,8 @@ footer li{margin:4px 0}
         '<span class="rpill">' + esc(groupOf(p.group).pill) + '</span>' +
         '<span class="nm">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</span>' +
         (p.email ? '<span class="ml">email: ' + esc(emailText(p.email)) + '</span>' : '') +
-        '<span class="in">' + ((p.interests || []).length ? 'Research Interest: ' + esc(p.interests.join(', ')) : esc(p.affiliation || p.role)) + '</span></button>';
+        '<span class="in">' + ((p.interests || []).length ? 'Research Interest: ' + esc(p.interests.join(', ')) : esc(p.affiliation || p.role)) + '</span>' +
+        (projectsOf(p).length ? '<span class="in pj">Project: ' + esc(projectsOf(p).map(function (x) { return x.short || x.title; }).join('; ')) + '</span>' : '') + '</button>';
     }).join('') + '</div>';
     var al = alumniList();
     if (al.length) {
@@ -3734,6 +3779,7 @@ footer li{margin:4px 0}
       (p.email ? '<div class="em">' + emailLink(p.email) + '</div>' : '') +
       (p.bio ? '<div class="sec prose">' + rich(p.bio) + '</div>' : '') +
       list('Research interests', p.interests) + list('Education', p.education) + list('Experience', p.appointments) + list('Awards and honors', p.awards) + list('Professional service', p.service) +
+      (projectsOf(p).length ? '<div class="sec"><h4>Projects <span class="cnt">' + projectsOf(p).length + '</span></h4><ul class="mp">' + projectsOf(p).map(function (x) { return '<li><div class="t">' + esc(x.title) + '</div><div class="v">' + esc([x.sponsor, x.period, x.status === 'completed' ? 'completed' : ''].filter(Boolean).join(' · ')) + '</div></li>'; }).join('') + '</ul><p class="seeall"><a href="#projects" data-close>All projects on the Research page →</a></p></div>' : '') +
       plist('International Journal Papers', jp) + plist('International Conference Proceedings', cp) + plist('Journal Papers in Korean', kj) + plist('Conference Proceedings in Korean', kc) +
       (!jp.length && !cp.length ? '<div class="sec"><h4>Publications</h4><p class="empty-note">No publications listed yet.</p></div>' : '') +
 
@@ -3930,7 +3976,7 @@ footer li{margin:4px 0}
   render();
   try { var msg = sessionStorage.getItem('gehl-toast'); if (msg) { sessionStorage.removeItem('gehl-toast'); toast(msg, 4000); } } catch (e) { }
 
-  window.GEHL = { toAddr: toAddr, emailText: emailText, pubTypes: PUB_TYPES, pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById, currentView: function () { return currentView; }, nearProjects: function () { var el = document.getElementById('projects'); return !!el && el.getBoundingClientRect().top < window.innerHeight * 0.5; } };
+  window.GEHL = { toAddr: toAddr, emailText: emailText, pubTypes: PUB_TYPES, pageKeys: PAGE_KEYS, data: DATA, render: render, toast: toast, esc: esc, parseAuthors: parseAuthors, matchMembers: matchMembers, autoAlias: autoAlias, rebuildIndex: buildMemberIndex, groups: GROUPS, kinds: KINDS, kindEmoji: kindEmoji, avatarSrc: avatarSrc, fmtDate: fmtDate, safeUrl: safeUrl, personById: personById, projectsOf: projectsOf, currentView: function () { return currentView; }, nearProjects: function () { var el = document.getElementById('projects'); return !!el && el.getBoundingClientRect().top < window.innerHeight * 0.5; } };
 })();
 </script>
 
