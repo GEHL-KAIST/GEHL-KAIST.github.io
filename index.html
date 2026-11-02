@@ -296,7 +296,6 @@ p.intro + p.intro{margin-top:12px}
 .modal .mp .a .member{color:var(--fg);text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:3px}
 .modal .mp .v{color:var(--muted);font-size:12.5px;font-family:var(--mono)}
 .modal .empty-note{font-size:13.5px;color:var(--muted)}
-.modal .seeall{margin-top:8px;font-size:13.5px}
 @media (max-width:640px){ .modal .dlg{grid-template-columns:1fr;padding:20px;gap:16px} .modal .avatar{width:160px;height:auto} }
 
 /* Publications */
@@ -3739,7 +3738,7 @@ footer li{margin:4px 0}
         '<span class="nm">' + esc(p.name) + (p.degree ? ', ' + esc(p.degree) : '') + '</span>' +
         (p.email ? '<span class="ml">email: ' + esc(emailText(p.email)) + '</span>' : '') +
         '<span class="in">' + ((p.interests || []).length ? 'Research Interest: ' + esc(p.interests.join(', ')) : esc(p.affiliation || p.role)) + '</span>' +
-        (projectsOf(p).length ? '<span class="in pj">Project: ' + esc(projectsOf(p).map(function (x) { return x.short || x.title; }).join('; ')) + '</span>' : '') + '</button>';
+        (projectsOf(p).length ? '<span class="in pj">Project: ' + esc(projectsOf(p).map(function (x) { return x.short || x.title; }).join('; ')) + '</span>' : p.group === 'staff' ? '' : '<span class="in pj">Project: N/A</span>') + '</button>';
     }).join('') + '</div>';
     var al = alumniList();
     if (al.length) {
@@ -3779,9 +3778,9 @@ footer li{margin:4px 0}
       (p.email ? '<div class="em">' + emailLink(p.email) + '</div>' : '') +
       (p.bio ? '<div class="sec prose">' + rich(p.bio) + '</div>' : '') +
       list('Research interests', p.interests) + list('Education', p.education) + list('Experience', p.appointments) + list('Awards and honors', p.awards) + list('Professional service', p.service) +
-      (projectsOf(p).length ? '<div class="sec"><h4>Projects <span class="cnt">' + projectsOf(p).length + '</span></h4><ul class="mp">' + projectsOf(p).map(function (x) { return '<li><div class="t">' + esc(x.title) + '</div><div class="v">' + esc([x.sponsor, x.period, x.status === 'completed' ? 'completed' : ''].filter(Boolean).join(' · ')) + '</div></li>'; }).join('') + '</ul><p class="seeall"><a href="#projects" data-close>All projects on the Research page →</a></p></div>' : '') +
+      (projectsOf(p).length ? '<div class="sec"><h4>Projects <span class="cnt">' + projectsOf(p).length + '</span></h4><ul class="mp">' + projectsOf(p).map(function (x) { return '<li><div class="t">' + esc(x.title) + '</div><div class="v">' + esc([x.sponsor, x.period, x.status === 'completed' ? 'completed' : ''].filter(Boolean).join(' · ')) + '</div></li>'; }).join('') + '</ul></div>' : '') +
       plist('International Journal Papers', jp) + plist('International Conference Proceedings', cp) + plist('Journal Papers in Korean', kj) + plist('Conference Proceedings in Korean', kc) +
-      (!jp.length && !cp.length ? '<div class="sec"><h4>Publications</h4><p class="empty-note">No publications listed yet.</p></div>' : '') +
+      (!jp.length && !cp.length && !kj.length && !kc.length ? '<div class="sec"><h4>Publications</h4><p class="empty-note">No publications listed yet.</p></div>' : '') +
 
       '</div></div></div>';
   }
